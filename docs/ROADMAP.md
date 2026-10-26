@@ -16,9 +16,13 @@
 - [x] Inventory accessible reference files and SLX metadata at a pinned source commit.
 - [x] Document source-supported physics/control findings and unresolved discrepancies.
 - [x] Define migration architecture, MATLAB automation strategy and dataset contract.
-- [ ] Review Phase 1A before starting Phase 1B.
+- [x] Review Phase 1A before starting Phase 1B (user confirmed).
 
-### Phase 1B — reference execution (not started)
+### Phase 1B — reference execution
+
+- [x] Phase 1B.1: prepare reviewed-load MATLAB diagnostics and university execution guide.
+- [ ] Execute Phase 1B.1 on university MATLAB and return diagnostic reports.
+- [ ] Review diagnostics before beginning Phase 1B.2.
 
 - [ ] Acquire and inventory the original thesis model and supporting files.
 - [ ] Establish MATLAB/Simulink release, toolboxes, execution access and baseline run.
@@ -61,4 +65,5 @@
 - [ ] Add PostgreSQL only when the persistence requirements justify it.
 
 Phase 0 is locally validated. Phase 1A static analysis is complete; MATLAB runtime
-verification remains pending. Phase 1B and all later implementation await review.
+verification remains pending. Phase 1B.1 diagnostic implementation is prepared;
+Phase 1B.2 and later implementation await university diagnostic results.

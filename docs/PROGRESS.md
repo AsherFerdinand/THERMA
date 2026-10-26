@@ -82,3 +82,47 @@ GitHub Actions verification is user-reported; not independently queried in this 
 Next: review Phase 1A. Only after review, Phase 1B should confirm the model on licensed
 MATLAB R2024b, resolve scenario/control/units/index questions and establish a raw baseline
 before writing automation. Do not start Phase 1B or Python physics implementation yet.
+
+## 2026-10-26 — Phase 1B.1 diagnostic workflow prepared
+
+User confirmed Phase 1A review. Added `scripts/matlab/diagnose_reference.m` and
+`docs/MATLAB_DIAGNOSTICS.md`. Default mode verifies the pinned source SHA-256 and copy,
+extracts archive evidence without loading, inventories callback/code fields and traces
+saved room/Mux/valve mappings. A matching explicit ReviewedHash is required before
+load/expression resolution; Compile=true separately authorises compile/terminate only.
+No simulation, model edits, original saves or scenario reconstruction are performed.
+
+Loaded diagnostics are designed to record installed products/licence availability,
+solver/duration, known scientific workspace values, effective dialog parameters/units,
+connectivity, library link status, embedded controllers, thermostat candidates and optional
+compiled port metadata. Errors and load/compile console warnings are retained with partial
+report checkpoints. Model close-without-save, temporary-copy cleanup and final source
+hash checking protect the original; no success is claimed until a report verifies it.
+
+Outputs and extracted archives go to ignored `outputs/matlab/<unique-run>/`. Added ignore
+rules for outputs, Simulink caches and MATLAB autosaves. University users must review
+reports for paths/licence diagnostics before sharing private attachments; no generated
+reports, reference binaries, datasets or machine licence details are committed.
+
+Additional source-backed static finding: following the saved floor and root Mux/tag/
+Memory wiring maps 1/13/25 to EG/Raum1, OG1/Raum1 and OG2/Raum1. Their saved room
+subtrees contain neither gate valves nor radiator pipes; author intent and runtime
+activation remain unconfirmed. The function exports these associations and unresolved
+cases rather than creating missing actuators or local control logic.
+
+Checks completed:
+
+- MISS_HIT 0.9.44 MATLAB syntax/lint: one file analysed, no findings. Tool ran in an
+  isolated temporary uv tool environment; project dependencies/lockfile are unchanged.
+- Static review of review-before-load gate, temporary-copy load target, original-file
+  read-only operations, close-without-save, cleanup and final hash handling.
+- Actual pinned SLX hash/ZIP integrity, room-vector wiring and 33-valve/selector structure
+  inspected independently through XML; original hash remained unchanged.
+- Output root derivation, Git ignore rules, documentation links and Git whitespace checks.
+- Existing Python checks: 11 tests passed; Ruff lint/format and strict mypy passed.
+
+MATLAB execution, MathWorks checkcode, loading, licensing, compilation and physical-unit
+resolution remain unrun in cloud. Third-party syntax lint is not a Simulink validation.
+Next: execute the guide's archive review on university MATLAB R2024b, then reviewed load
+and optional compile if safe; return sanitised JSON reports. Do not begin Phase 1B.2
+until these diagnostic results are available. No Python physics, ML or web work started.

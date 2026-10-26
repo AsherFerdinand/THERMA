@@ -14,3 +14,9 @@ build/
 !/data/raw/README.md
 /data/processed/*
 !/data/processed/README.md
+
+# Local MATLAB diagnostics, extracted reference assets and Simulink caches
+/outputs/
+slprj/
+*.slxc
+*.asv
