@@ -11,6 +11,15 @@
 
 ## Phase 1 — Simulink automation
 
+### Phase 1A — analysis and preparation
+
+- [x] Inventory accessible reference files and SLX metadata at a pinned source commit.
+- [x] Document source-supported physics/control findings and unresolved discrepancies.
+- [x] Define migration architecture, MATLAB automation strategy and dataset contract.
+- [ ] Review Phase 1A before starting Phase 1B.
+
+### Phase 1B — reference execution (not started)
+
 - [ ] Acquire and inventory the original thesis model and supporting files.
 - [ ] Establish MATLAB/Simulink release, toolboxes, execution access and baseline run.
 - [ ] Document signals, physical units, parameters, initial conditions and controls.
@@ -51,4 +60,5 @@
 - [ ] Document public demonstration limitations and reproducibility.
 - [ ] Add PostgreSQL only when the persistence requirements justify it.
 
-Phase 0 is complete only after local validation. Later phases are intentionally unstarted.
+Phase 0 is locally validated. Phase 1A static analysis is complete; MATLAB runtime
+verification remains pending. Phase 1B and all later implementation await review.

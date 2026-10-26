@@ -3,9 +3,10 @@
 A research project for a modular, web-based digital twin of hydronic building heating.
 The reference is a MATLAB/Simulink bachelor's thesis describing a three-storey apartment
 building with 36 rooms, a central boiler, distribution pipes, radiators and controllers.
-The reference model and its datasets have **not yet been supplied**.
+The reference repository has been inspected statically; see [the inventory](docs/SIMULINK_INVENTORY.md).
+Reference assets are not vendored, and raw validation datasets are not yet available.
 
-Current scope: **Phase 0 — project setup**. No physics solver, surrogate, API or web UI
+Current scope: **Phase 1A — reference analysis and migration planning**. No physics solver, surrogate, API or web UI
 is implemented. There are no validated simulation or performance results.
 
 ## Development
@@ -39,7 +40,7 @@ print(config.name)
 
 Paths resolve from the caller's working directory. The loader rejects unknown keys,
 empty names and incorrect types. Physical schema, units and solver controls are deferred
-until the reference model has been inspected; no default physical values are assumed.
+until the reference model has been verified in MATLAB; no default physical values are assumed.
 
 ## Layout
 
@@ -53,3 +54,6 @@ until the reference model has been inspected; no default physical values are ass
 
 Read [the roadmap](docs/ROADMAP.md), [progress](docs/PROGRESS.md), and
 [development guidance](docs/DEVELOPMENT.md) before contributing.
+
+Phase 1A deliverables: [migration plan](docs/MIGRATION_PLAN.md) and
+[reference data plan](docs/REFERENCE_DATA_PLAN.md). Phase 1B awaits review of this analysis.
