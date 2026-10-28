@@ -89,3 +89,33 @@ def test_reject_reference_revision_change(registry):
     registry["repositories"]["ideas"]["commit"] = "unverified"
     with pytest.raises(ValueError, match="revision"):
         audit.extract_envelope(registry)
+
+
+def test_matlab_layer_assignment_schema():
+    """Static guard for the reported MATLAB failure, not MATLAB execution."""
+    import re
+
+    source = (ROOT / "scripts/matlab/boptest/load_boptest_envelope_parameters.m").read_text()
+    template = re.search(r"layerTemplate = struct\((.*?)\);", source, re.S)
+    assignment = re.search(r"component\.layers\(layer\) = struct\((.*?)\);", source, re.S)
+    assert template is not None and assignment is not None
+
+    def fields(text):
+        return re.findall(r"'([A-Za-z][A-Za-z0-9_]*)'\s*,", text)
+
+    expected = [
+        "material",
+        "d_m",
+        "k_W_mK",
+        "rho_kg_m3",
+        "cp_J_kgK",
+        "n_source",
+        "R_K_W",
+        "C_J_K",
+        "local_C_J_K",
+    ]
+    assert fields(template.group(1)) == fields(assignment.group(1)) == expected
+    initialization = "component.layers = repmat(layerTemplate, 1, nLayers);"
+    assert initialization in source
+    assert source.index(initialization) < assignment.start()
+    assert "struct([])" not in source

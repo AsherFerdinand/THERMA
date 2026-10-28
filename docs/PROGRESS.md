@@ -338,3 +338,35 @@ registry SHA-256 remains f91141d78668908525d484a4900dc69af1a163c4c5e07f5a5fbd0c4
 Generated outputs, environments and caches remain ignored. MATLAB generation and
 verification remain pending. Publication outcome is reported separately after the
 Git push attempt.
+
+## 2026-10-28 — C1 layer-structure loading fix for review
+
+University MATLAB execution was attempted and failed in the parameter loader before
+model generation: subscripted assignment between dissimilar structures. The layers
+field was initialized with fieldless struct([]), whereas each assigned material
+record has nine fields: material, d_m, k_W_mK, rho_kg_m3, cp_J_kgK, n_source,
+R_K_W, C_J_K and local_C_J_K. Replaced that destination with an explicit nine-field
+layer template preallocated to nLayers. The indexed assignment retains the same
+values, expressions and exterior-to-interior loop ordering. Also replaced the
+similar fieldless P.components initialization with direct first-component assignment;
+subsequent components retain the same complete schema. No other indexed struct
+constructor assignments/fieldless initializations were found in the MATLAB scripts.
+
+Added a Python static regression guard comparing template and assigned field names
+and enforcing preallocation, plus tests/matlab/test_boptest_envelope_loader.m for
+actual MATLAB loader execution, checking every layer schema, ordered properties,
+registry source provenance, R/C calculations and state counts. Run in MATLAB from
+repository root:
+results = runtests('tests/matlab/test_boptest_envelope_loader.m'); assertSuccess(results);
+Then rerun verify_boptest_envelope_c1 after adding scripts/matlab/boptest to the path.
+
+Checks executed here: all 47 Python tests pass; Ruff lint/format, strict package
+mypy, independent static parameter audit (27 nodes), git diff whitespace checks,
+and MISS_HIT lint of all eight MATLAB files pass. Frozen registry SHA-256 remains
+f91141d78668908525d484a4900dc69af1a163c4c5e07f5a5fbd0c43eae4451c; no physical
+parameters/equations or reference bytes changed. MATLAB/Octave remain unavailable
+in the cloud; MATLAB regression and subsequent model generation remain unverified.
+No C2 work, commit or push. Fix awaits review and university rerun.
+
+User subsequently authorized publication of this fix to the work branch.
+MATLAB regression and university verification remain pending.

@@ -54,7 +54,10 @@ expectedAreas = [P.geometry.length_m*P.geometry.height_m-P.geometry.window_m2, .
     P.geometry.length_m*P.geometry.height_m, ...
     P.geometry.width_m*P.geometry.height_m, P.geometry.width_m*P.geometry.height_m, ...
     P.geometry.floor_m2, P.geometry.floor_m2];
-P.components = struct([]);
+% Explicit schema: indexed assignment must never target a fieldless struct.
+layerTemplate = struct('material', '', 'd_m', [], 'k_W_mK', [], ...
+    'rho_kg_m3', [], 'cp_J_kgK', [], 'n_source', [], ...
+    'R_K_W', [], 'C_J_K', [], 'local_C_J_K', []);
 for face = 1:numel(names)
     kind = kinds{face};
     area = number(areas{face}, 'm2');
@@ -63,8 +66,9 @@ for face = 1:numel(names)
     nLayers = numel(layerEntries);
     assert(nLayers >= 1, 'THERMA:MissingLayer', 'No material layers for %s.', kind);
     component = struct('name', names{face}, 'kind', kind, 'area_m2', area, ...
-        'adiabatic_exterior', strcmp(kind, 'floor'), 'layers', struct([]), ...
+        'adiabatic_exterior', strcmp(kind, 'floor'), 'layers', [], ...
         'C_J_K', [], 'G_W_K', [], 'layer_nodes', {{}}, 'source_local_nodes', {{}});
+    component.layers = repmat(layerTemplate, 1, nLayers);
     for layer = 1:nLayers
         prefix = sprintf('%s.layer%d', kind, layer);
         material = entry(prefix + ".material");
@@ -115,7 +119,11 @@ for face = 1:numel(names)
     near(sum(component.C_J_K), component.C_total_J_K, names{face} + " network C");
     near(component.R_total_K_W*area, ...
         number(kind + ".R_material_areal", 'm2.K/W'), names{face} + " registry R");
-    P.components(face) = component;
+    if face == 1
+        P.components = component;
+    else
+        P.components(face) = component;
+    end
 end
 near(sum([P.components(1:4).area_m2]), ...
     number('building.wall_total_opaque_area', 'm2'), 'Opaque wall area');
