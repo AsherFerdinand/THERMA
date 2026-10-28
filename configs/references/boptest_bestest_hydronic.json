@@ -1,0 +1,5051 @@
+{
+  "schema_version": 1,
+  "reference_id": "boptest.bestest_hydronic",
+  "extracted_on": "2026-10-28",
+  "scope": "Static source and FMU XML/resource inspection only. No Modelica/FMU/MATLAB execution; no DIN compliance claim. Not consumed by the existing thesis/EN12831 builder.",
+  "repositories": {
+    "boptest": {
+      "url": "https://github.com/ibpsa/project1-boptest",
+      "commit": "a29024f8c453517ccbd1186006a3fa6af8de1ae2"
+    },
+    "ideas": {
+      "url": "https://github.com/open-ideas/IDEAS",
+      "commit": "f1fdd8b22d39dc50297c47b6433e44381e40d0ff"
+    },
+    "msl": {
+      "url": "https://github.com/modelica/ModelicaStandardLibrary",
+      "commit": "2da48301b8c3071158aa5ada8693767e6717ca47",
+      "tag": "v3.2.3",
+      "note": "Canonical MSL 3.2.3 inspected for inherited definitions; the precise compiler-bundled MSL revision used for the stored FMU is not recorded upstream."
+    }
+  },
+  "dependency_selection": {
+    "source": "testcases/bestest_hydronic/models/library_versions.json",
+    "ideas_declared_package_version": "2.2.1",
+    "ideas_build_commit": "f1fdd8b22d39dc50297c47b6433e44381e40d0ff",
+    "msl_declared_version": "3.2.3"
+  },
+  "sources": {
+    "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+      "sha256": "9866a230f719cca701d645181e4c2027a753e5e7da4c0d1b46c32469ef7e802a",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Cases/Case900Template.mo"
+    },
+    "ideas:IDEAS/Types/Azimuth/package.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Types/Azimuth/package.mo",
+      "sha256": "8f596bf06d52ae1edd74f66260eeaf5b52924aef46206090a9ff16aa5e21143c",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Types/Azimuth/package.mo"
+    },
+    "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+      "sha256": "1855e4356ad9d54ddac50b41147df336810fd722f53c42fcdc43c5915f6ccc5f",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo",
+      "sha256": "b914e2c01b204f49be143e6b24b5ea92846609be2dfccaeff359a7b19e025cd1",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyWall.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Constructions/HeavyWall.mo",
+      "sha256": "60982c7012ce3fb734ec3f9c6943ab19751a1c0e952a187abb5c2ab10636b2c8",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Constructions/HeavyWall.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Materials/WoodSiding.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Materials/WoodSiding.mo",
+      "sha256": "44c9df74c99459c5fd4169599c1d890c4bef0f884a04a5d1e10a3cc273385127",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Materials/WoodSiding.mo"
+    },
+    "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Data/Interfaces/Material.mo",
+      "sha256": "22b81b269f9771d506d48ab141f88b9042dacce82ff03ccad99e767e78ff74fc",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Data/Interfaces/Material.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+      "sha256": "55591b2969eb23f498905786ca15f16ad70d449278e9723fa0fb70b92c2916af",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Insulation/FoamInsulation.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Insulation/FoamInsulation.mo",
+      "sha256": "f3ad05008aafe99eebd1e276e30fed6de3f897e67cd27fcdaf3224a2f66e10c3",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Insulation/FoamInsulation.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteBlock.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Materials/ConcreteBlock.mo",
+      "sha256": "913de7ec9f2597a8faf7dc95585f824b9bfa17998e59324311fae2287a084315",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Materials/ConcreteBlock.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/OuterWall.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/OuterWall.mo",
+      "sha256": "b9a3bbc67248f231e1504242fb6670f128cfc347ee8385bf29b3c5c549bab001",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/OuterWall.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Constructions/LightRoof.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Constructions/LightRoof.mo",
+      "sha256": "4ceede788105545c5b44b2fb732336c0a174f3c541ab5c18ffe12c570ff17595",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Constructions/LightRoof.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Materials/Roofdeck.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Materials/Roofdeck.mo",
+      "sha256": "c94442b2c7157b321a276e2a6df9a335a70e98dd9c878419875a70259ba1e51c",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Materials/Roofdeck.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Insulation/FiberGlass.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Insulation/FiberGlass.mo",
+      "sha256": "66e7d1933280f1ab4c523752cddad530d300687a9d90366c77ce34c6e5c89d7c",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Insulation/FiberGlass.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Materials/PlasterBoard.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Materials/PlasterBoard.mo",
+      "sha256": "02356b764a65b453cf43db3c5ea736750c97ad98e1e6d4a1684ab6d8d3d2e750",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Materials/PlasterBoard.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyFloor.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Constructions/HeavyFloor.mo",
+      "sha256": "28c832a7be3836e85ad96d33571c056dce599734f9009bd21bf93e586bcdca46",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Constructions/HeavyFloor.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Insulation/InsulationFloor.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Insulation/InsulationFloor.mo",
+      "sha256": "02e50e4514e5b59bd48ae5ed1623de78eab74f290ca01106003a91dc1e5aacf5",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Insulation/InsulationFloor.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteSlab.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Materials/ConcreteSlab.mo",
+      "sha256": "2838affd45af2f21227fff75c647eaf025e71f299d07da562fd13f124badf53c",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Materials/ConcreteSlab.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/BoundaryWall.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/BoundaryWall.mo",
+      "sha256": "152a27d711f5087c6bfc1ac271b52832edae556d840490095753c2e59120db5a",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/BoundaryWall.mo"
+    },
+    "ideas:IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo",
+      "sha256": "1198d3672feb549546e887325d7c805e065b8b480dbd55dd40e1d00e97c35378",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo"
+    },
+    "ideas:IDEAS/Buildings/Data/Materials/Glass.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Data/Materials/Glass.mo",
+      "sha256": "ac226e0f766467c16a32201d41023721a081e538ef7ed7df2fe3729ba1abeeb2",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Data/Materials/Glass.mo"
+    },
+    "ideas:IDEAS/Buildings/Data/Materials/Air.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Data/Materials/Air.mo",
+      "sha256": "0cba72418bb87c8e0bdc5ca497af423010c54b43ad1d0ba8b191e6dfb2b4bc61",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Data/Materials/Air.mo"
+    },
+    "ideas:IDEAS/BoundaryConditions/Interfaces/PartialSimInfoManager.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/BoundaryConditions/Interfaces/PartialSimInfoManager.mo",
+      "sha256": "69c5c14aa00c2c5882e27612a9ed64eb454b25bb099d2ae019b942bbdc07b30b",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/BoundaryConditions/Interfaces/PartialSimInfoManager.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/Interfaces/PartialZone.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/Interfaces/PartialZone.mo",
+      "sha256": "16ec21229cff33d3c90ed093b106bb8366e5cf2146590d862fa308ce072f9c7f",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/Interfaces/PartialZone.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/InterzonalAirFlow/BaseClasses/PartialInterzonalAirFlown50.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/InterzonalAirFlow/BaseClasses/PartialInterzonalAirFlown50.mo",
+      "sha256": "b34a2dbc0b98b156f0afa85b3c27719ffe9c3f5e6a075325b37d068384d59799",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/InterzonalAirFlow/BaseClasses/PartialInterzonalAirFlown50.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/InterzonalAirFlow/Sim.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/InterzonalAirFlow/Sim.mo",
+      "sha256": "cad4d5127691cf399e728ce80f159112da94fc7c9ecf0ed01a1bfe4506752c56",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/InterzonalAirFlow/Sim.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/OccupancyType/OfficeWork.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/OccupancyType/OfficeWork.mo",
+      "sha256": "ae326a4f29103fe09df855a65904a5e75bb2331d85553bbafc7a9d43423009e1",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/OccupancyType/OfficeWork.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/InternalGains/Occupants.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/InternalGains/Occupants.mo",
+      "sha256": "696dfa3f47963203dcb20a05751d4adecb49220710890e114edc5821485ab102",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/InternalGains/Occupants.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/LightingType/None.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/LightingType/None.mo",
+      "sha256": "db5262cdd1a91a131b5d4b339dcbdbb316e3d3f09d366788e791b20429bf823a",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/LightingType/None.mo"
+    },
+    "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+      "sha256": "cb9a33a86180069541123add93422999543dc905e935144b6f991774b5aa9195",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo"
+    },
+    "msl:Modelica/Media/Water/package.mo": {
+      "repository": "msl",
+      "path": "Modelica/Media/Water/package.mo",
+      "sha256": "a96fe60be3c99fd7cc66807653ca70f511d817d5eb0b09b1647f9daf29e5b071",
+      "url": "https://github.com/modelica/ModelicaStandardLibrary/blob/2da48301b8c3071158aa5ada8693767e6717ca47/Modelica/Media/Water/package.mo"
+    },
+    "boptest:testcases/bestest_hydronic/models/wrapped.fmu": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/wrapped.fmu",
+      "sha256": "365b3085d97cc4620c06b6036156126a056d7f160fcc4f181d6b2fac4b05743b",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/wrapped.fmu"
+    },
+    "ideas:IDEAS/Fluid/Movers/Data/Generic.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Fluid/Movers/Data/Generic.mo",
+      "sha256": "36afc0d6bc5421601077ccbacad825f4580b54ad91b34e97a88cb27c58d90471",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Fluid/Movers/Data/Generic.mo"
+    },
+    "ideas:IDEAS/Fluid/HeatExchangers/Heater_T.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Fluid/HeatExchangers/Heater_T.mo",
+      "sha256": "01e0d32eeec8a3faba4dbe6cdf4b8df3d0787e38219821596015a7f7b54a5c1e",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Fluid/HeatExchangers/Heater_T.mo"
+    },
+    "ideas:IDEAS/Controls/Discrete/HysteresisRelease.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Controls/Discrete/HysteresisRelease.mo",
+      "sha256": "94c5a5cf789f97cc1cbe2c9ef1d658def70b62d909fb1300231149f89f9c3c42",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Controls/Discrete/HysteresisRelease.mo"
+    },
+    "boptest:testcases/bestest_hydronic/models/config.json": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/config.json",
+      "sha256": "e60598097b91655c410244ea235efc98fa52f0ab474846c798af6d8e08811128",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/config.json"
+    },
+    "boptest:testcases/bestest_hydronic/models/generate_data.py": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/generate_data.py",
+      "sha256": "4d7efd1397cad94afe55ea0425678ac09961aabcd2f180787be28e90797ce7be",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/generate_data.py"
+    },
+    "boptest:testcases/bestest_hydronic/models/days.json": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/days.json",
+      "sha256": "38d9db80dc3f69228f827caa2d44d64f657e8b0699f02c8ff1812f1ae6373021",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/days.json"
+    },
+    "boptest:testcase.py": {
+      "repository": "boptest",
+      "path": "testcase.py",
+      "sha256": "804e0941dcf653e46b32733b475d5517b8819ddfd2f31b7cfc79797ba96f8d4e",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcase.py"
+    },
+    "ideas:IDEAS/Resources/weatherdata/Brussels.mos": {
+      "repository": "ideas",
+      "path": "IDEAS/Resources/weatherdata/Brussels.mos",
+      "sha256": "809d9b66b5283202d3dcaf05c6bb3db448ca94e7d6017740cacd75da537ee12b",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Resources/weatherdata/Brussels.mos"
+    },
+    "boptest:testcases/bestest_hydronic/models/Resources/Brussels.mos": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/Resources/Brussels.mos",
+      "sha256": "0c800b9e861ced6e1c863ac4eafaa48c327c7fa3311784e657f0fb2343774469",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/Resources/Brussels.mos"
+    },
+    "boptest:testcases/bestest_hydronic/models/Resources/weather.csv": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/Resources/weather.csv",
+      "sha256": "3f3afbb90b5d1f890335271c47b856c2238f134493e4d375725e22a7dee55265",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/Resources/weather.csv"
+    },
+    "boptest:testcases/bestest_hydronic/models/Resources/dataFromModel.csv": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/Resources/dataFromModel.csv",
+      "sha256": "2a6913ce614bf7345d0473a363dd653123af594488b017a45ad37109a5129d70",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/Resources/dataFromModel.csv"
+    },
+    "boptest:testcases/bestest_hydronic/models/Resources/prices.csv": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/Resources/prices.csv",
+      "sha256": "780557cbede5305a735740ea6c38d6b6c0e90c4783dae4e6a277b6df20004758",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/Resources/prices.csv"
+    },
+    "boptest:testcases/bestest_hydronic/models/Resources/emissions.csv": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/Resources/emissions.csv",
+      "sha256": "cf4397f269ede21732c18de7f10290c4ea3527795e8774778331f1c742b94317",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/Resources/emissions.csv"
+    },
+    "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MonoLayerDynamic.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MonoLayerDynamic.mo",
+      "sha256": "512d75f52017db0cd5851bfc534859c7be46029c3a752877a2288dba0857b69a",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MonoLayerDynamic.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/BaseClasses/ConvectiveHeatTransfer/InteriorConvection.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/BaseClasses/ConvectiveHeatTransfer/InteriorConvection.mo",
+      "sha256": "7071c344ec46fc88fc61659691c13ed32c4b13bc0cefaa9ea16f26ddb3025ad9",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/BaseClasses/ConvectiveHeatTransfer/InteriorConvection.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/BaseClasses/ConvectiveHeatTransfer/ExteriorConvection.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/BaseClasses/ConvectiveHeatTransfer/ExteriorConvection.mo",
+      "sha256": "ae30e7e42aae9d9c752f40f9d746ca7de6396c0042082a0679e7dda1b68eef51",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/BaseClasses/ConvectiveHeatTransfer/ExteriorConvection.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/HeatRadiation.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/HeatRadiation.mo",
+      "sha256": "b70c2506c3a532814fe4336703a59dfa5b034b941a379090f22e15ac48449992",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/HeatRadiation.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/ExteriorHeatRadiation.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/ExteriorHeatRadiation.mo",
+      "sha256": "d3a895ccd9311fb9d0c69d810cce70edfce7d95aa331c3f89cc6741a3ae30cde",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/ExteriorHeatRadiation.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/ZoneLwGainDistribution.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/ZoneLwGainDistribution.mo",
+      "sha256": "e487d1fc12bba762bf4541434810af358166a2e1b5d76f718febb76c38aff4a3",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/ZoneLwGainDistribution.mo"
+    },
+    "ideas:IDEAS/Media/Water.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Media/Water.mo",
+      "sha256": "38f3f60e0832d7c3698d25ce0eccafad4db39688f8390e6ab51fcb758612fe0c",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Media/Water.mo"
+    },
+    "ideas:IDEAS/Fluid/Interfaces/PrescribedOutlet.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Fluid/Interfaces/PrescribedOutlet.mo",
+      "sha256": "0fbc4cb0261c416a2dd00a8aac3c1b253e754de2b89eb0dd80bbdf66de3e973a",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Fluid/Interfaces/PrescribedOutlet.mo"
+    },
+    "ideas:IDEAS/Fluid/FixedResistances/PressureDrop.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Fluid/FixedResistances/PressureDrop.mo",
+      "sha256": "2576710b9b5ca349da1d636817015579fa1393edf93d4b96059e505e4ab41240",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Fluid/FixedResistances/PressureDrop.mo"
+    },
+    "msl:Modelica/Blocks/Continuous.mo": {
+      "repository": "msl",
+      "path": "Modelica/Blocks/Continuous.mo",
+      "sha256": "04a92a0f89924ec9322dd15a51ead82dd2128345f0baf169aa23b4eb3a8b9c61",
+      "url": "https://github.com/modelica/ModelicaStandardLibrary/blob/2da48301b8c3071158aa5ada8693767e6717ca47/Modelica/Blocks/Continuous.mo"
+    },
+    "boptest:testcases/bestest_hydronic/models/library_versions.json": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/library_versions.json",
+      "sha256": "cb43dd9b1263c5d701f1691dca0de8be4b3b34e1238b784d625d756db23f3bed",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/library_versions.json"
+    },
+    "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/package.mo": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/BESTESTHydronic/package.mo",
+      "sha256": "260f26eac9bf08b94139fdcf905b3ba2a98089df20684c61d95f484567a114ee",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/BESTESTHydronic/package.mo"
+    },
+    "boptest:testcases/bestest_hydronic/models/kpis.json": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/kpis.json",
+      "sha256": "72c6849c49fa154c8f7bc381f61f374325f6bf2d12276103329b73943ed00c0a",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/kpis.json"
+    },
+    "boptest:testcases/bestest_hydronic/models/wrapped.mo": {
+      "repository": "boptest",
+      "path": "testcases/bestest_hydronic/models/wrapped.mo",
+      "sha256": "697e3e5042125ddb4f1b3e7cdcb9322ea82102f8b688984efb0ef9471f238923",
+      "url": "https://github.com/ibpsa/project1-boptest/blob/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic/models/wrapped.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/Shading/Interfaces/ShadingProperties.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/Shading/Interfaces/ShadingProperties.mo",
+      "sha256": "e9eaf7b8096efa89bef7450cfd13025a1e3c149e648521e1965c1a287b0643a9",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/Shading/Interfaces/ShadingProperties.mo"
+    },
+    "ideas:IDEAS/Fluid/Movers/FlowControlled_dp.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Fluid/Movers/FlowControlled_dp.mo",
+      "sha256": "626ee312b962fea7ddfa794cd32ca84c25cac722b6142221ff556c750f75c8e3",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Fluid/Movers/FlowControlled_dp.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/Window.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/Window.mo",
+      "sha256": "2cae4b480f26377a50ceb0873f07f368cb3e33e5a76c1e9d6c326372302d5d19",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/Window.mo"
+    },
+    "ideas:IDEAS/Buildings/Components/ZoneAirModels/WellMixedAir.mo": {
+      "repository": "ideas",
+      "path": "IDEAS/Buildings/Components/ZoneAirModels/WellMixedAir.mo",
+      "sha256": "a304d26f39fbea8234de21d6533cf3e1605397c5d42567f1eb14aad746be924f",
+      "url": "https://github.com/open-ideas/IDEAS/blob/f1fdd8b22d39dc50297c47b6433e44381e40d0ff/IDEAS/Buildings/Components/ZoneAirModels/WellMixedAir.mo"
+    }
+  },
+  "parameters": [
+    {
+      "id": "building.length",
+      "value": 8,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            33,
+            33
+          ],
+          "anchor": "    l=8"
+        }
+      ]
+    },
+    {
+      "id": "building.width",
+      "value": 6,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            34,
+            34
+          ],
+          "anchor": "    w=6"
+        }
+      ]
+    },
+    {
+      "id": "building.height",
+      "value": 2.7,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "    h=2.7"
+        }
+      ]
+    },
+    {
+      "id": "building.window_area",
+      "value": 12,
+      "unit": "m2",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            35,
+            35
+          ],
+          "anchor": "    A_winA=12"
+        }
+      ]
+    },
+    {
+      "id": "building.window_frame_fraction",
+      "value": 0,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            23,
+            23
+          ],
+          "anchor": "    fracA=0"
+        }
+      ]
+    },
+    {
+      "id": "building.south_azimuth",
+      "value": 0,
+      "unit": "rad",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Types/Azimuth/package.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "Angle S = 0"
+        }
+      ]
+    },
+    {
+      "id": "building.initial_temperature",
+      "value": 293.15,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            9,
+            9
+          ],
+          "anchor": "    T_start=293.15"
+        }
+      ]
+    },
+    {
+      "id": "building.air_sensible_multiplier",
+      "value": 1,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "    mSenFac=1"
+        }
+      ],
+      "note": "Overrides Case900Template mSenFac=0.822."
+    },
+    {
+      "id": "building.floor_area",
+      "value": 48,
+      "unit": "m2",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo",
+          "lines": [
+            1052,
+            1056
+          ],
+          "anchor": "AWallANet ="
+        },
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            33,
+            35
+          ],
+          "anchor": "    l=8"
+        }
+      ],
+      "note": "Geometry, not a fitted parameter.",
+      "expression": "length*width",
+      "inputs": [
+        "building.length",
+        "building.width"
+      ]
+    },
+    {
+      "id": "building.volume",
+      "value": 129.6,
+      "unit": "m3",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo",
+          "lines": [
+            1052,
+            1056
+          ],
+          "anchor": "AWallANet ="
+        },
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            33,
+            35
+          ],
+          "anchor": "    l=8"
+        }
+      ],
+      "note": "Geometry, not a fitted parameter.",
+      "expression": "length*width*height",
+      "inputs": [
+        "building.length",
+        "building.width",
+        "building.height"
+      ]
+    },
+    {
+      "id": "building.wall_south_opaque_area",
+      "value": 9.6,
+      "unit": "m2",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo",
+          "lines": [
+            1052,
+            1056
+          ],
+          "anchor": "AWallANet ="
+        },
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            33,
+            35
+          ],
+          "anchor": "    l=8"
+        }
+      ],
+      "note": "Geometry, not a fitted parameter.",
+      "expression": "length*height-window_area",
+      "inputs": [
+        "building.length",
+        "building.height",
+        "building.window_area"
+      ]
+    },
+    {
+      "id": "building.wall_north_opaque_area",
+      "value": 21.6,
+      "unit": "m2",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo",
+          "lines": [
+            1052,
+            1056
+          ],
+          "anchor": "AWallANet ="
+        },
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            33,
+            35
+          ],
+          "anchor": "    l=8"
+        }
+      ],
+      "note": "Geometry, not a fitted parameter.",
+      "expression": "length*height",
+      "inputs": [
+        "building.length",
+        "building.height"
+      ]
+    },
+    {
+      "id": "building.wall_west_opaque_area",
+      "value": 16.2,
+      "unit": "m2",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo",
+          "lines": [
+            1052,
+            1056
+          ],
+          "anchor": "AWallANet ="
+        },
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            33,
+            35
+          ],
+          "anchor": "    l=8"
+        }
+      ],
+      "note": "Geometry, not a fitted parameter.",
+      "expression": "width*height",
+      "inputs": [
+        "building.width",
+        "building.height"
+      ]
+    },
+    {
+      "id": "building.wall_east_opaque_area",
+      "value": 16.2,
+      "unit": "m2",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo",
+          "lines": [
+            1052,
+            1056
+          ],
+          "anchor": "AWallANet ="
+        },
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            33,
+            35
+          ],
+          "anchor": "    l=8"
+        }
+      ],
+      "note": "Geometry, not a fitted parameter.",
+      "expression": "width*height",
+      "inputs": [
+        "building.width",
+        "building.height"
+      ]
+    },
+    {
+      "id": "building.wall_total_opaque_area",
+      "value": 63.6,
+      "unit": "m2",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo",
+          "lines": [
+            1052,
+            1056
+          ],
+          "anchor": "AWallANet ="
+        },
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            33,
+            35
+          ],
+          "anchor": "    l=8"
+        }
+      ],
+      "note": "Geometry, not a fitted parameter.",
+      "expression": "2*(length+width)*height-window_area",
+      "inputs": [
+        "building.length",
+        "building.width",
+        "building.height",
+        "building.window_area"
+      ]
+    },
+    {
+      "id": "building.roof_area",
+      "value": 48,
+      "unit": "m2",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo",
+          "lines": [
+            1052,
+            1056
+          ],
+          "anchor": "AWallANet ="
+        },
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Cases/Case900Template.mo",
+          "lines": [
+            33,
+            35
+          ],
+          "anchor": "    l=8"
+        }
+      ],
+      "note": "Geometry, not a fitted parameter.",
+      "expression": "length*width",
+      "inputs": [
+        "building.length",
+        "building.width"
+      ]
+    },
+    {
+      "id": "wall.layer1.material",
+      "value": "WoodSiding",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyWall.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "WoodSiding(d="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer1.thickness",
+      "value": 0.009,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyWall.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "WoodSiding(d="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer1.k",
+      "value": 0.14,
+      "unit": "W/(m.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/WoodSiding.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "k="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer1.rho",
+      "value": 530.0,
+      "unit": "kg/m3",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/WoodSiding.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "rho="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer1.c",
+      "value": 900.0,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/WoodSiding.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "c="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer1.epsLw",
+      "value": 0.9,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/WoodSiding.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "epsLw="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer1.epsSw",
+      "value": 0.6,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/WoodSiding.mo",
+          "lines": [
+            9,
+            9
+          ],
+          "anchor": "epsSw="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer1.R_areal",
+      "value": 0.06428571428571428,
+      "unit": "m2.K/W",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "R=d/k"
+        }
+      ],
+      "expression": "thickness/k",
+      "inputs": [
+        "wall.layer1.thickness",
+        "wall.layer1.k"
+      ]
+    },
+    {
+      "id": "wall.layer1.C_areal",
+      "value": 4293.0,
+      "unit": "J/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "expression": "thickness*rho*c",
+      "inputs": [
+        "wall.layer1.thickness",
+        "wall.layer1.rho",
+        "wall.layer1.c"
+      ]
+    },
+    {
+      "id": "wall.layer1.material_node_count",
+      "value": 2,
+      "unit": "1",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            30,
+            31
+          ],
+          "anchor": "final parameter Integer nSta"
+        }
+      ],
+      "note": "Material discretization before assembly/merging of shared boundary states.",
+      "expression": "max(2,ceil(3*thickness/sqrt(k/(rho*c))/224))",
+      "inputs": [
+        "wall.layer1.thickness",
+        "wall.layer1.k",
+        "wall.layer1.rho",
+        "wall.layer1.c"
+      ]
+    },
+    {
+      "id": "wall.layer2.material",
+      "value": "FoamInsulation",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyWall.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "FoamInsulation(d="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer2.thickness",
+      "value": 0.0615,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyWall.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "FoamInsulation(d="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer2.k",
+      "value": 0.04,
+      "unit": "W/(m.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/FoamInsulation.mo",
+          "lines": [
+            4,
+            4
+          ],
+          "anchor": "k="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer2.rho",
+      "value": 10.0,
+      "unit": "kg/m3",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/FoamInsulation.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "rho="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer2.c",
+      "value": 1400.0,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/FoamInsulation.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "c="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer2.epsLw",
+      "value": 0.9,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/FoamInsulation.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "epsLw="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer2.epsSw",
+      "value": 0.6,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/FoamInsulation.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "epsSw="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer2.R_areal",
+      "value": 1.5374999999999999,
+      "unit": "m2.K/W",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "R=d/k"
+        }
+      ],
+      "expression": "thickness/k",
+      "inputs": [
+        "wall.layer2.thickness",
+        "wall.layer2.k"
+      ]
+    },
+    {
+      "id": "wall.layer2.C_areal",
+      "value": 861.0,
+      "unit": "J/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "expression": "thickness*rho*c",
+      "inputs": [
+        "wall.layer2.thickness",
+        "wall.layer2.rho",
+        "wall.layer2.c"
+      ]
+    },
+    {
+      "id": "wall.layer2.material_node_count",
+      "value": 2,
+      "unit": "1",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            30,
+            31
+          ],
+          "anchor": "final parameter Integer nSta"
+        }
+      ],
+      "note": "Material discretization before assembly/merging of shared boundary states.",
+      "expression": "max(2,ceil(3*thickness/sqrt(k/(rho*c))/224))",
+      "inputs": [
+        "wall.layer2.thickness",
+        "wall.layer2.k",
+        "wall.layer2.rho",
+        "wall.layer2.c"
+      ]
+    },
+    {
+      "id": "wall.layer3.material",
+      "value": "ConcreteBlock",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyWall.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "ConcreteBlock(d="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer3.thickness",
+      "value": 0.1,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyWall.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "ConcreteBlock(d="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer3.k",
+      "value": 0.51,
+      "unit": "W/(m.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteBlock.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "k="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer3.rho",
+      "value": 1400.0,
+      "unit": "kg/m3",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteBlock.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "rho="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer3.c",
+      "value": 1000.0,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteBlock.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "c="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer3.epsLw",
+      "value": 0.9,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteBlock.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "epsLw="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer3.epsSw",
+      "value": 0.6,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteBlock.mo",
+          "lines": [
+            9,
+            9
+          ],
+          "anchor": "epsSw="
+        }
+      ]
+    },
+    {
+      "id": "wall.layer3.R_areal",
+      "value": 0.19607843137254902,
+      "unit": "m2.K/W",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "R=d/k"
+        }
+      ],
+      "expression": "thickness/k",
+      "inputs": [
+        "wall.layer3.thickness",
+        "wall.layer3.k"
+      ]
+    },
+    {
+      "id": "wall.layer3.C_areal",
+      "value": 140000.0,
+      "unit": "J/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "expression": "thickness*rho*c",
+      "inputs": [
+        "wall.layer3.thickness",
+        "wall.layer3.rho",
+        "wall.layer3.c"
+      ]
+    },
+    {
+      "id": "wall.layer3.material_node_count",
+      "value": 3,
+      "unit": "1",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            30,
+            31
+          ],
+          "anchor": "final parameter Integer nSta"
+        }
+      ],
+      "note": "Material discretization before assembly/merging of shared boundary states.",
+      "expression": "max(2,ceil(3*thickness/sqrt(k/(rho*c))/224))",
+      "inputs": [
+        "wall.layer3.thickness",
+        "wall.layer3.k",
+        "wall.layer3.rho",
+        "wall.layer3.c"
+      ]
+    },
+    {
+      "id": "wall.R_material_areal",
+      "value": 1.7978641456582631,
+      "unit": "m2.K/W",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            13,
+            13
+          ],
+          "anchor": "R=sum"
+        }
+      ],
+      "note": "Excludes all surface heat-transfer films.",
+      "expression": "sum(layer.R_areal)",
+      "inputs": [
+        "wall.layer1.R_areal",
+        "wall.layer2.R_areal",
+        "wall.layer3.R_areal"
+      ]
+    },
+    {
+      "id": "wall.C_material_areal",
+      "value": 145154.0,
+      "unit": "J/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "expression": "sum(layer.C_areal)",
+      "inputs": [
+        "wall.layer1.C_areal",
+        "wall.layer2.C_areal",
+        "wall.layer3.C_areal"
+      ]
+    },
+    {
+      "id": "wall.C_material_total",
+      "value": 9231794.4,
+      "unit": "J/K",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "note": "Stored fabric capacity, not a single room-air capacity.",
+      "expression": "C_material_areal*area",
+      "inputs": [
+        "wall.C_material_areal",
+        "building.wall_total_opaque_area"
+      ]
+    },
+    {
+      "id": "wall.U_design",
+      "value": 0.5094596089148297,
+      "unit": "W/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/OuterWall.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "U_value="
+        }
+      ],
+      "note": "Library design coefficient only; actual convection/radiation is not a fixed U-law.",
+      "expression": "1/(1/8+R_material_areal+1/25)",
+      "inputs": [
+        "wall.R_material_areal"
+      ]
+    },
+    {
+      "id": "roof.layer1.material",
+      "value": "Roofdeck",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/LightRoof.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "Roofdeck(d="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer1.thickness",
+      "value": 0.019,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/LightRoof.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "Roofdeck(d="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer1.k",
+      "value": 0.14,
+      "unit": "W/(m.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/Roofdeck.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "k="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer1.rho",
+      "value": 530.0,
+      "unit": "kg/m3",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/Roofdeck.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "rho="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer1.c",
+      "value": 900.0,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/Roofdeck.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "c="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer1.epsLw",
+      "value": 0.9,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/Roofdeck.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "epsLw="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer1.epsSw",
+      "value": 0.6,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/Roofdeck.mo",
+          "lines": [
+            9,
+            9
+          ],
+          "anchor": "epsSw="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer1.R_areal",
+      "value": 0.1357142857142857,
+      "unit": "m2.K/W",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "R=d/k"
+        }
+      ],
+      "expression": "thickness/k",
+      "inputs": [
+        "roof.layer1.thickness",
+        "roof.layer1.k"
+      ]
+    },
+    {
+      "id": "roof.layer1.C_areal",
+      "value": 9063.0,
+      "unit": "J/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "expression": "thickness*rho*c",
+      "inputs": [
+        "roof.layer1.thickness",
+        "roof.layer1.rho",
+        "roof.layer1.c"
+      ]
+    },
+    {
+      "id": "roof.layer1.material_node_count",
+      "value": 2,
+      "unit": "1",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            30,
+            31
+          ],
+          "anchor": "final parameter Integer nSta"
+        }
+      ],
+      "note": "Material discretization before assembly/merging of shared boundary states.",
+      "expression": "max(2,ceil(3*thickness/sqrt(k/(rho*c))/224))",
+      "inputs": [
+        "roof.layer1.thickness",
+        "roof.layer1.k",
+        "roof.layer1.rho",
+        "roof.layer1.c"
+      ]
+    },
+    {
+      "id": "roof.layer2.material",
+      "value": "FiberGlass",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/LightRoof.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "FiberGlass(d="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer2.thickness",
+      "value": 0.1118,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/LightRoof.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "FiberGlass(d="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer2.k",
+      "value": 0.04,
+      "unit": "W/(m.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/FiberGlass.mo",
+          "lines": [
+            4,
+            4
+          ],
+          "anchor": "k="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer2.rho",
+      "value": 12.0,
+      "unit": "kg/m3",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/FiberGlass.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "rho="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer2.c",
+      "value": 840.0,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/FiberGlass.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "c="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer2.epsLw",
+      "value": 0.9,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/FiberGlass.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "epsLw="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer2.epsSw",
+      "value": 0.6,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/FiberGlass.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "epsSw="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer2.R_areal",
+      "value": 2.795,
+      "unit": "m2.K/W",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "R=d/k"
+        }
+      ],
+      "expression": "thickness/k",
+      "inputs": [
+        "roof.layer2.thickness",
+        "roof.layer2.k"
+      ]
+    },
+    {
+      "id": "roof.layer2.C_areal",
+      "value": 1126.944,
+      "unit": "J/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "expression": "thickness*rho*c",
+      "inputs": [
+        "roof.layer2.thickness",
+        "roof.layer2.rho",
+        "roof.layer2.c"
+      ]
+    },
+    {
+      "id": "roof.layer2.material_node_count",
+      "value": 2,
+      "unit": "1",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            30,
+            31
+          ],
+          "anchor": "final parameter Integer nSta"
+        }
+      ],
+      "note": "Material discretization before assembly/merging of shared boundary states.",
+      "expression": "max(2,ceil(3*thickness/sqrt(k/(rho*c))/224))",
+      "inputs": [
+        "roof.layer2.thickness",
+        "roof.layer2.k",
+        "roof.layer2.rho",
+        "roof.layer2.c"
+      ]
+    },
+    {
+      "id": "roof.layer3.material",
+      "value": "PlasterBoard",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/LightRoof.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "PlasterBoard(d="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer3.thickness",
+      "value": 0.01,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/LightRoof.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "PlasterBoard(d="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer3.k",
+      "value": 0.16,
+      "unit": "W/(m.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/PlasterBoard.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "k="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer3.rho",
+      "value": 950.0,
+      "unit": "kg/m3",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/PlasterBoard.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "rho="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer3.c",
+      "value": 840.0,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/PlasterBoard.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "c="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer3.epsLw",
+      "value": 0.9,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/PlasterBoard.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "epsLw="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer3.epsSw",
+      "value": 0.6,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/PlasterBoard.mo",
+          "lines": [
+            9,
+            9
+          ],
+          "anchor": "epsSw="
+        }
+      ]
+    },
+    {
+      "id": "roof.layer3.R_areal",
+      "value": 0.0625,
+      "unit": "m2.K/W",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "R=d/k"
+        }
+      ],
+      "expression": "thickness/k",
+      "inputs": [
+        "roof.layer3.thickness",
+        "roof.layer3.k"
+      ]
+    },
+    {
+      "id": "roof.layer3.C_areal",
+      "value": 7980.0,
+      "unit": "J/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "expression": "thickness*rho*c",
+      "inputs": [
+        "roof.layer3.thickness",
+        "roof.layer3.rho",
+        "roof.layer3.c"
+      ]
+    },
+    {
+      "id": "roof.layer3.material_node_count",
+      "value": 2,
+      "unit": "1",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            30,
+            31
+          ],
+          "anchor": "final parameter Integer nSta"
+        }
+      ],
+      "note": "Material discretization before assembly/merging of shared boundary states.",
+      "expression": "max(2,ceil(3*thickness/sqrt(k/(rho*c))/224))",
+      "inputs": [
+        "roof.layer3.thickness",
+        "roof.layer3.k",
+        "roof.layer3.rho",
+        "roof.layer3.c"
+      ]
+    },
+    {
+      "id": "roof.R_material_areal",
+      "value": 2.9932142857142856,
+      "unit": "m2.K/W",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            13,
+            13
+          ],
+          "anchor": "R=sum"
+        }
+      ],
+      "note": "Excludes all surface heat-transfer films.",
+      "expression": "sum(layer.R_areal)",
+      "inputs": [
+        "roof.layer1.R_areal",
+        "roof.layer2.R_areal",
+        "roof.layer3.R_areal"
+      ]
+    },
+    {
+      "id": "roof.C_material_areal",
+      "value": 18169.944,
+      "unit": "J/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "expression": "sum(layer.C_areal)",
+      "inputs": [
+        "roof.layer1.C_areal",
+        "roof.layer2.C_areal",
+        "roof.layer3.C_areal"
+      ]
+    },
+    {
+      "id": "roof.C_material_total",
+      "value": 872157.3119999999,
+      "unit": "J/K",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "note": "Stored fabric capacity, not a single room-air capacity.",
+      "expression": "C_material_areal*area",
+      "inputs": [
+        "roof.C_material_areal",
+        "building.floor_area"
+      ]
+    },
+    {
+      "id": "roof.U_design",
+      "value": 0.3166346262580572,
+      "unit": "W/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/OuterWall.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "U_value="
+        }
+      ],
+      "note": "Library design coefficient only; actual convection/radiation is not a fixed U-law.",
+      "expression": "1/(1/8+R_material_areal+1/25)",
+      "inputs": [
+        "roof.R_material_areal"
+      ]
+    },
+    {
+      "id": "floor.layer1.material",
+      "value": "InsulationFloor",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyFloor.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "InsulationFloor(d="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer1.thickness",
+      "value": 1.007,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyFloor.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "InsulationFloor(d="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer1.k",
+      "value": 0.04,
+      "unit": "W/(m.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/InsulationFloor.mo",
+          "lines": [
+            4,
+            4
+          ],
+          "anchor": "k="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer1.rho",
+      "value": 10.0,
+      "unit": "kg/m3",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/InsulationFloor.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "rho="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer1.c",
+      "value": 10.0,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/InsulationFloor.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "c="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer1.epsLw",
+      "value": 0.9,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/InsulationFloor.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "epsLw="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer1.epsSw",
+      "value": 0.6,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Insulation/InsulationFloor.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "epsSw="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer1.R_areal",
+      "value": 25.174999999999997,
+      "unit": "m2.K/W",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "R=d/k"
+        }
+      ],
+      "expression": "thickness/k",
+      "inputs": [
+        "floor.layer1.thickness",
+        "floor.layer1.k"
+      ]
+    },
+    {
+      "id": "floor.layer1.C_areal",
+      "value": 100.69999999999999,
+      "unit": "J/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "expression": "thickness*rho*c",
+      "inputs": [
+        "floor.layer1.thickness",
+        "floor.layer1.rho",
+        "floor.layer1.c"
+      ]
+    },
+    {
+      "id": "floor.layer1.material_node_count",
+      "value": 2,
+      "unit": "1",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            30,
+            31
+          ],
+          "anchor": "final parameter Integer nSta"
+        }
+      ],
+      "note": "Material discretization before assembly/merging of shared boundary states.",
+      "expression": "max(2,ceil(3*thickness/sqrt(k/(rho*c))/224))",
+      "inputs": [
+        "floor.layer1.thickness",
+        "floor.layer1.k",
+        "floor.layer1.rho",
+        "floor.layer1.c"
+      ]
+    },
+    {
+      "id": "floor.layer2.material",
+      "value": "ConcreteSlab",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyFloor.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "ConcreteSlab(d="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer2.thickness",
+      "value": 0.08,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Constructions/HeavyFloor.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "ConcreteSlab(d="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer2.k",
+      "value": 1.13,
+      "unit": "W/(m.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteSlab.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "k="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer2.rho",
+      "value": 1400.0,
+      "unit": "kg/m3",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteSlab.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "rho="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer2.c",
+      "value": 1000.0,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteSlab.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "c="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer2.epsLw",
+      "value": 0.9,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteSlab.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "epsLw="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer2.epsSw",
+      "value": 0.6,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Materials/ConcreteSlab.mo",
+          "lines": [
+            9,
+            9
+          ],
+          "anchor": "epsSw="
+        }
+      ]
+    },
+    {
+      "id": "floor.layer2.R_areal",
+      "value": 0.07079646017699116,
+      "unit": "m2.K/W",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "R=d/k"
+        }
+      ],
+      "expression": "thickness/k",
+      "inputs": [
+        "floor.layer2.thickness",
+        "floor.layer2.k"
+      ]
+    },
+    {
+      "id": "floor.layer2.C_areal",
+      "value": 112000.0,
+      "unit": "J/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "expression": "thickness*rho*c",
+      "inputs": [
+        "floor.layer2.thickness",
+        "floor.layer2.rho",
+        "floor.layer2.c"
+      ]
+    },
+    {
+      "id": "floor.layer2.material_node_count",
+      "value": 2,
+      "unit": "1",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Interfaces/Material.mo",
+          "lines": [
+            30,
+            31
+          ],
+          "anchor": "final parameter Integer nSta"
+        }
+      ],
+      "note": "Material discretization before assembly/merging of shared boundary states.",
+      "expression": "max(2,ceil(3*thickness/sqrt(k/(rho*c))/224))",
+      "inputs": [
+        "floor.layer2.thickness",
+        "floor.layer2.k",
+        "floor.layer2.rho",
+        "floor.layer2.c"
+      ]
+    },
+    {
+      "id": "floor.R_material_areal",
+      "value": 25.245796460176987,
+      "unit": "m2.K/W",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            13,
+            13
+          ],
+          "anchor": "R=sum"
+        }
+      ],
+      "note": "Excludes all surface heat-transfer films.",
+      "expression": "sum(layer.R_areal)",
+      "inputs": [
+        "floor.layer1.R_areal",
+        "floor.layer2.R_areal"
+      ]
+    },
+    {
+      "id": "floor.C_material_areal",
+      "value": 112100.7,
+      "unit": "J/(m2.K)",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "expression": "sum(layer.C_areal)",
+      "inputs": [
+        "floor.layer1.C_areal",
+        "floor.layer2.C_areal"
+      ]
+    },
+    {
+      "id": "floor.C_material_total",
+      "value": 5380833.6,
+      "unit": "J/K",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            15,
+            15
+          ],
+          "anchor": "C = sum"
+        }
+      ],
+      "note": "Stored fabric capacity, not a single room-air capacity.",
+      "expression": "C_material_areal*area",
+      "inputs": [
+        "floor.C_material_areal",
+        "building.floor_area"
+      ]
+    },
+    {
+      "id": "floor.use_T_fixed",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BoundaryWall.mo",
+          "lines": [
+            13,
+            13
+          ],
+          "anchor": "Boolean use_T_fixed"
+        }
+      ]
+    },
+    {
+      "id": "floor.use_T_in",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BoundaryWall.mo",
+          "lines": [
+            19,
+            19
+          ],
+          "anchor": "Boolean use_T_in"
+        }
+      ]
+    },
+    {
+      "id": "floor.use_Q_in",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BoundaryWall.mo",
+          "lines": [
+            22,
+            22
+          ],
+          "anchor": "Boolean use_Q_in"
+        }
+      ]
+    },
+    {
+      "id": "window.U_rating",
+      "value": 3,
+      "unit": "W/(m2.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo",
+          "lines": [
+            53,
+            53
+          ],
+          "anchor": "U_value=3.0"
+        }
+      ]
+    },
+    {
+      "id": "window.g_rating",
+      "value": 0.87,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo",
+          "lines": [
+            54,
+            54
+          ],
+          "anchor": "g_value=0.87"
+        }
+      ]
+    },
+    {
+      "id": "window.glass_thickness",
+      "value": 0.003175,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "d=0.003175"
+        }
+      ]
+    },
+    {
+      "id": "window.air_gap_thickness",
+      "value": 0.013,
+      "unit": "m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "Air(d=0.013)"
+        }
+      ]
+    },
+    {
+      "id": "window.glass_k",
+      "value": 1.06,
+      "unit": "W/(m.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "k=1.06"
+        }
+      ]
+    },
+    {
+      "id": "window.glass_epsLw",
+      "value": 0.9,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "epsLw=0.9"
+        }
+      ]
+    },
+    {
+      "id": "window.diffuse_transmittance",
+      "value": 0.652331,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo",
+          "lines": [
+            56,
+            56
+          ],
+          "anchor": "SwTransDif=0.652331"
+        }
+      ]
+    },
+    {
+      "id": "window.SwTrans",
+      "value": [
+        [
+          0.0,
+          0.747454
+        ],
+        [
+          10.0,
+          0.746824
+        ],
+        [
+          20.0,
+          0.744654
+        ],
+        [
+          30.0,
+          0.739491
+        ],
+        [
+          40.0,
+          0.729832
+        ],
+        [
+          45.0,
+          0.720922
+        ],
+        [
+          50.0,
+          0.707331
+        ],
+        [
+          60.0,
+          0.652331
+        ],
+        [
+          70.0,
+          0.516754
+        ],
+        [
+          80.0,
+          0.263009
+        ],
+        [
+          88.9,
+          0.0
+        ],
+        [
+          90.0,
+          0.0
+        ]
+      ],
+      "unit": "mixed: first column deg; remaining fractions",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo",
+          "lines": [
+            13,
+            26
+          ],
+          "anchor": "final SwTrans=["
+        }
+      ],
+      "note": "Full source table retained, including unusual 89.5-degree absorption entry; no correction inferred."
+    },
+    {
+      "id": "window.SwAbs",
+      "value": [
+        [
+          0.0,
+          0.0643,
+          0.0,
+          0.0522
+        ],
+        [
+          20.0,
+          0.0659,
+          0.0,
+          0.0534
+        ],
+        [
+          30.0,
+          0.0679,
+          0.0,
+          0.0548
+        ],
+        [
+          40.0,
+          0.0708,
+          0.0,
+          0.0566
+        ],
+        [
+          48.0,
+          0.0738,
+          0.0,
+          0.058
+        ],
+        [
+          55.0,
+          0.0769,
+          0.0,
+          0.0587
+        ],
+        [
+          57.0,
+          0.0779,
+          0.0,
+          0.0587
+        ],
+        [
+          60.0,
+          0.0796,
+          0.0,
+          0.0585
+        ],
+        [
+          63.0,
+          0.0815,
+          0.0,
+          0.0579
+        ],
+        [
+          66.0,
+          0.0837,
+          0.0,
+          0.0568
+        ],
+        [
+          68.0,
+          0.0852,
+          0.0,
+          0.0558
+        ],
+        [
+          70.0,
+          0.0858,
+          0.0,
+          0.0544
+        ],
+        [
+          72.0,
+          0.089,
+          0.0,
+          0.0521
+        ],
+        [
+          75.0,
+          0.0911,
+          0.0,
+          0.0495
+        ],
+        [
+          77.5,
+          0.0929,
+          0.0,
+          0.0457
+        ],
+        [
+          80.0,
+          0.094,
+          0.0,
+          0.0413
+        ],
+        [
+          82.0,
+          0.0937,
+          0.0,
+          0.0372
+        ],
+        [
+          83.5,
+          0.0924,
+          0.0,
+          0.0335
+        ],
+        [
+          85.0,
+          0.0892,
+          0.0,
+          0.0291
+        ],
+        [
+          86.0,
+          0.0854,
+          0.0,
+          0.0254
+        ],
+        [
+          87.0,
+          0.079,
+          0.0,
+          0.0205
+        ],
+        [
+          88.0,
+          0.0671,
+          0.0,
+          0.0128
+        ],
+        [
+          89.0,
+          0.0473,
+          0.0,
+          0.0043
+        ],
+        [
+          89.5,
+          0.304,
+          0.0,
+          0.0004
+        ],
+        [
+          89.99,
+          0.001,
+          0.0,
+          0.0
+        ],
+        [
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "unit": "mixed: first column deg; remaining fractions",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo",
+          "lines": [
+            26,
+            53
+          ],
+          "anchor": "final SwAbs=["
+        }
+      ],
+      "note": "Full source table retained, including unusual 89.5-degree absorption entry; no correction inferred."
+    },
+    {
+      "id": "window.diffuse_absorptance",
+      "value": [
+        0.0796,
+        0,
+        0.0585
+      ],
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Validation/Data/Glazing/GlaBesTest.mo",
+          "lines": [
+            55,
+            55
+          ],
+          "anchor": "SwAbsDif="
+        }
+      ]
+    },
+    {
+      "id": "window.glass_c",
+      "value": 750,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Materials/Glass.mo",
+          "lines": [
+            4,
+            4
+          ],
+          "anchor": "c=750"
+        }
+      ]
+    },
+    {
+      "id": "window.glass_rho",
+      "value": 2500,
+      "unit": "kg/m3",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Materials/Glass.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "rho=2500"
+        }
+      ]
+    },
+    {
+      "id": "window.gap_k",
+      "value": 0.0241,
+      "unit": "W/(m.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Materials/Air.mo",
+          "lines": [
+            3,
+            3
+          ],
+          "anchor": "k=0.0241"
+        }
+      ]
+    },
+    {
+      "id": "window.gap_c",
+      "value": 1008,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Materials/Air.mo",
+          "lines": [
+            4,
+            4
+          ],
+          "anchor": "c=1008"
+        }
+      ]
+    },
+    {
+      "id": "window.gap_rho",
+      "value": 1.23,
+      "unit": "kg/m3",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Data/Materials/Air.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "rho=1.23"
+        }
+      ]
+    },
+    {
+      "id": "window.dynamics",
+      "value": "Two",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/RectangularZoneTemplateInterface.mo",
+          "lines": [
+            162,
+            162
+          ],
+          "anchor": "windowDynamicsType="
+        }
+      ],
+      "note": "One lumped glazing capacity; no frame mass because frame fraction is zero."
+    },
+    {
+      "id": "surfaces.linIntCon",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/BoundaryConditions/Interfaces/PartialSimInfoManager.mo",
+          "lines": [
+            59,
+            59
+          ],
+          "anchor": "Boolean linIntCon="
+        }
+      ]
+    },
+    {
+      "id": "surfaces.linExtCon",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/BoundaryConditions/Interfaces/PartialSimInfoManager.mo",
+          "lines": [
+            62,
+            62
+          ],
+          "anchor": "Boolean linExtCon="
+        }
+      ]
+    },
+    {
+      "id": "surfaces.linIntRad",
+      "value": true,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/BoundaryConditions/Interfaces/PartialSimInfoManager.mo",
+          "lines": [
+            65,
+            65
+          ],
+          "anchor": "Boolean linIntRad="
+        }
+      ]
+    },
+    {
+      "id": "surfaces.linExtRad",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/BoundaryConditions/Interfaces/PartialSimInfoManager.mo",
+          "lines": [
+            68,
+            68
+          ],
+          "anchor": "Boolean linExtRad="
+        }
+      ]
+    },
+    {
+      "id": "surfaces.linExtRadWin",
+      "value": true,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/BoundaryConditions/Interfaces/PartialSimInfoManager.mo",
+          "lines": [
+            72,
+            72
+          ],
+          "anchor": "Boolean linExtRadWin="
+        }
+      ]
+    },
+    {
+      "id": "infiltration.n50",
+      "value": 10,
+      "unit": "1/h",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            27,
+            27
+          ],
+          "anchor": "    n50=10"
+        }
+      ],
+      "note": "Overrides the template n50 expression; NOT 10 operating air changes/hour."
+    },
+    {
+      "id": "infiltration.n50_to_ach",
+      "value": 20,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/PartialZone.mo",
+          "lines": [
+            31,
+            31
+          ],
+          "anchor": "Real n50toAch=20"
+        }
+      ]
+    },
+    {
+      "id": "infiltration.operating_ach",
+      "value": 0.5,
+      "unit": "1/h",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/InterzonalAirFlow/BaseClasses/PartialInterzonalAirFlown50.mo",
+          "lines": [
+            9,
+            9
+          ],
+          "anchor": "V*rho_default/3600"
+        },
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/InterzonalAirFlow/Sim.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "n50_int="
+        }
+      ],
+      "note": "Default Sim airflow and single-zone custom n50 path; confirm flattened n50_int at initialization.",
+      "expression": "n50/n50_to_ach",
+      "inputs": [
+        "infiltration.n50",
+        "infiltration.n50_to_ach"
+      ]
+    },
+    {
+      "id": "infiltration.volume_flow",
+      "value": 0.018,
+      "unit": "m3/s",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/InterzonalAirFlow/BaseClasses/PartialInterzonalAirFlown50.mo",
+          "lines": [
+            9,
+            9
+          ],
+          "anchor": "V*rho_default/3600"
+        }
+      ],
+      "expression": "volume*operating_ach/3600",
+      "inputs": [
+        "building.volume",
+        "infiltration.operating_ach"
+      ]
+    },
+    {
+      "id": "gains.QsenPp",
+      "value": 73,
+      "unit": "W/person",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/OccupancyType/OfficeWork.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "QsenPp="
+        }
+      ]
+    },
+    {
+      "id": "gains.QlatPp",
+      "value": 45,
+      "unit": "W/person",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/OccupancyType/OfficeWork.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "QlatPp="
+        }
+      ]
+    },
+    {
+      "id": "gains.radFra",
+      "value": 0.6,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/OccupancyType/OfficeWork.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "radFra="
+        }
+      ]
+    },
+    {
+      "id": "gains.sensible_convective_per_person",
+      "value": 29.2,
+      "unit": "W/person",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/InternalGains/Occupants.mo",
+          "lines": [
+            42,
+            42
+          ],
+          "anchor": "Gain gainCon(final k=1 - radFra)"
+        }
+      ],
+      "expression": "QsenPp*(1-radFra)",
+      "inputs": [
+        "gains.QsenPp",
+        "gains.radFra"
+      ]
+    },
+    {
+      "id": "gains.sensible_radiative_per_person",
+      "value": 43.8,
+      "unit": "W/person",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/InternalGains/Occupants.mo",
+          "lines": [
+            40,
+            40
+          ],
+          "anchor": "Gain gain(final k=radFra)"
+        }
+      ],
+      "expression": "QsenPp*radFra",
+      "inputs": [
+        "gains.QsenPp",
+        "gains.radFra"
+      ]
+    },
+    {
+      "id": "gains.occupancy_expression",
+      "value": "if (hour < 7 or hour > 19) or weekDay > 5 then 1 else 0",
+      "unit": "person",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            71,
+            72
+          ],
+          "anchor": "yOcc(y=if"
+        }
+      ],
+      "note": "On weekdays, zero during hours 7..19 and one outside; weekends one. This contradicts the comment. No replacement schedule inferred."
+    },
+    {
+      "id": "gains.calendar_epoch",
+      "value": "NY2019",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            69,
+            69
+          ],
+          "anchor": "CalendarTime calTim("
+        }
+      ]
+    },
+    {
+      "id": "gains.lighting",
+      "value": "None; zero gain",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/LightingType/None.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "K = Modelica.Constants.inf"
+        }
+      ]
+    },
+    {
+      "id": "radiator.Q_nominal",
+      "value": 5000,
+      "unit": "W",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            36,
+            36
+          ],
+          "anchor": "    Q_flow_nominal=5000"
+        }
+      ],
+      "note": "Nominal water temperatures are rating conditions, not fixed operating temperatures."
+    },
+    {
+      "id": "radiator.inlet_nominal",
+      "value": 343.15,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            33,
+            33
+          ],
+          "anchor": "    T_a_nominal=273.15 + 70"
+        }
+      ],
+      "note": "Nominal water temperatures are rating conditions, not fixed operating temperatures."
+    },
+    {
+      "id": "radiator.outlet_nominal",
+      "value": 323.15,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            34,
+            34
+          ],
+          "anchor": "    T_b_nominal=273.15 + 50"
+        }
+      ],
+      "note": "Nominal water temperatures are rating conditions, not fixed operating temperatures."
+    },
+    {
+      "id": "heater.Q_max",
+      "value": 5000,
+      "unit": "W",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            46,
+            46
+          ],
+          "anchor": "    QMax_flow=5000"
+        }
+      ]
+    },
+    {
+      "id": "heater.dp_nominal",
+      "value": 0,
+      "unit": "Pa",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            45,
+            45
+          ],
+          "anchor": "    dp_nominal=0"
+        }
+      ]
+    },
+    {
+      "id": "pump.dp_nominal",
+      "value": 100000,
+      "unit": "Pa",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            56,
+            56
+          ],
+          "anchor": "    dp_nominal=100000"
+        }
+      ]
+    },
+    {
+      "id": "radiator.n_elements",
+      "value": 5,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            16,
+            16
+          ],
+          "anchor": "Integer nEle(min=1) = 5"
+        }
+      ]
+    },
+    {
+      "id": "radiator.radiant_fraction",
+      "value": 0.35,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            18,
+            18
+          ],
+          "anchor": "Real fraRad(min=0, max=1) = 0.35"
+        }
+      ]
+    },
+    {
+      "id": "radiator.exponent",
+      "value": 1.24,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            37,
+            37
+          ],
+          "anchor": "Real n = 1.24"
+        }
+      ]
+    },
+    {
+      "id": "radiator.nominal_air_temperature",
+      "value": 293.15,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            30,
+            30
+          ],
+          "anchor": "TAir_nominal = 293.15"
+        }
+      ]
+    },
+    {
+      "id": "radiator.transition_fraction",
+      "value": 0.3,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            44,
+            44
+          ],
+          "anchor": "deltaM(min=0.01) = 0.3"
+        }
+      ]
+    },
+    {
+      "id": "radiator.from_dp",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            50,
+            50
+          ],
+          "anchor": "Boolean from_dp = false"
+        }
+      ]
+    },
+    {
+      "id": "radiator.linearized_resistance",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            57,
+            57
+          ],
+          "anchor": "Boolean linearized = false"
+        }
+      ]
+    },
+    {
+      "id": "water.cp",
+      "value": 4184,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "msl:Modelica/Media/Water/package.mo",
+          "lines": [
+            53,
+            53
+          ],
+          "anchor": "cp_const=4184"
+        }
+      ],
+      "note": "Inherited ConstantPropertyLiquidWater values; IDEAS sets cv=cp and h=u=cp*(T-273.15)."
+    },
+    {
+      "id": "water.density",
+      "value": 995.586,
+      "unit": "kg/m3",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "msl:Modelica/Media/Water/package.mo",
+          "lines": [
+            55,
+            55
+          ],
+          "anchor": "d_const=995.586"
+        }
+      ],
+      "note": "Inherited ConstantPropertyLiquidWater values; IDEAS sets cv=cp and h=u=cp*(T-273.15)."
+    },
+    {
+      "id": "radiator.mass_flow_nominal",
+      "value": 0.05975143403441682,
+      "unit": "kg/s",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "m_flow_nominal=abs("
+        }
+      ],
+      "expression": "Q_nominal/(water.cp*(inlet_nominal-outlet_nominal))",
+      "inputs": [
+        "radiator.Q_nominal",
+        "water.cp",
+        "radiator.inlet_nominal",
+        "radiator.outlet_nominal"
+      ]
+    },
+    {
+      "id": "radiator.water_volume",
+      "value": 0.029,
+      "unit": "m3",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            38,
+            38
+          ],
+          "anchor": "VWat = 5.8E-6"
+        }
+      ],
+      "expression": "5.8e-6*Q_nominal",
+      "inputs": [
+        "radiator.Q_nominal"
+      ]
+    },
+    {
+      "id": "radiator.dry_mass",
+      "value": 131.5,
+      "unit": "kg",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            41,
+            41
+          ],
+          "anchor": "mDry = 0.0263"
+        }
+      ],
+      "expression": "0.0263*Q_nominal",
+      "inputs": [
+        "radiator.Q_nominal"
+      ]
+    },
+    {
+      "id": "radiator.total_heat_capacity",
+      "value": 186550.422896,
+      "unit": "J/K",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            10,
+            11
+          ],
+          "anchor": "final mSenFac = 1 + 500*mDry"
+        }
+      ],
+      "note": "Metal cp=500 J/(kg.K) is built into the library formula, not an assumed generic metal property.",
+      "expression": "water_volume*water.density*water.cp + dry_mass*500",
+      "inputs": [
+        "radiator.water_volume",
+        "water.density",
+        "water.cp",
+        "radiator.dry_mass"
+      ]
+    },
+    {
+      "id": "radiator.metal_cp_in_formula",
+      "value": 500,
+      "unit": "J/(kg.K)",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            10,
+            10
+          ],
+          "anchor": "final mSenFac = 1 + 500*mDry"
+        }
+      ]
+    },
+    {
+      "id": "radiator.regularization_delta",
+      "value": 0.05,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            137,
+            137
+          ],
+          "anchor": "delta=0.05)"
+        }
+      ]
+    },
+    {
+      "id": "radiator.fmu_nominal_flow",
+      "value": 0.05975143403441683,
+      "unit": "kg/s",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/wrapped.fmu",
+          "archive_member": "modelDescription.xml",
+          "xpath": "/fmiModelDescription/ModelVariables/ScalarVariable[@name='mod.rad.m_flow_nominal']/Real/@start"
+        }
+      ],
+      "note": " Static stored FMU metadata; no FMU execution. Original variability=constant."
+    },
+    {
+      "id": "radiator.initial_temperature",
+      "value": 293.15,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/wrapped.fmu",
+          "archive_member": "modelDescription.xml",
+          "xpath": "/fmiModelDescription/ModelVariables/ScalarVariable[@name='mod.rad.T_start']/Real/@start"
+        }
+      ],
+      "note": " Static stored FMU metadata; no FMU execution. Original variability=fixed."
+    },
+    {
+      "id": "circuit.absolute_pressure_boundary",
+      "value": 300000.0,
+      "unit": "Pa",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/wrapped.fmu",
+          "archive_member": "modelDescription.xml",
+          "xpath": "/fmiModelDescription/ModelVariables/ScalarVariable[@name='mod.bou.p']/Real/@start"
+        }
+      ],
+      "note": " Static stored FMU metadata; no FMU execution. Original variability=fixed."
+    },
+    {
+      "id": "pump.hydraulic_efficiency",
+      "value": 0.7,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/wrapped.fmu",
+          "archive_member": "modelDescription.xml",
+          "xpath": "/fmiModelDescription/ModelVariables/ScalarVariable[@name='mod.pump.per.hydraulicEfficiency.eta[1]']/Real/@start"
+        }
+      ],
+      "note": " Static stored FMU metadata; no FMU execution. Original variability=fixed."
+    },
+    {
+      "id": "pump.motor_efficiency",
+      "value": 0.7,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/wrapped.fmu",
+          "archive_member": "modelDescription.xml",
+          "xpath": "/fmiModelDescription/ModelVariables/ScalarVariable[@name='mod.pump.per.motorEfficiency.eta[1]']/Real/@start"
+        }
+      ],
+      "note": " Static stored FMU metadata; no FMU execution. Original variability=fixed."
+    },
+    {
+      "id": "controller.antiwindup_Ni",
+      "value": 0.9,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/wrapped.fmu",
+          "archive_member": "modelDescription.xml",
+          "xpath": "/fmiModelDescription/ModelVariables/ScalarVariable[@name='mod.conPI.Ni']/Real/@start"
+        }
+      ],
+      "note": " Static stored FMU metadata; no FMU execution. Original variability=fixed."
+    },
+    {
+      "id": "controller.integrator_initial_state",
+      "value": 0.0,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/wrapped.fmu",
+          "archive_member": "modelDescription.xml",
+          "xpath": "/fmiModelDescription/ModelVariables/ScalarVariable[@name='mod.conPI.xi_start']/Real/@start"
+        }
+      ],
+      "note": " Static stored FMU metadata; no FMU execution. Original variability=fixed."
+    },
+    {
+      "id": "pump.nominal_total_efficiency",
+      "value": 0.49,
+      "unit": "1",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/Movers/Data/Generic.mo",
+          "lines": [
+            19,
+            23
+          ],
+          "anchor": "hydraulicEfficiency("
+        },
+        {
+          "source_id": "ideas:IDEAS/Fluid/Movers/Data/Generic.mo",
+          "lines": [
+            26,
+            30
+          ],
+          "anchor": "motorEfficiency("
+        }
+      ],
+      "expression": "hydraulic_efficiency*motor_efficiency",
+      "inputs": [
+        "pump.hydraulic_efficiency",
+        "pump.motor_efficiency"
+      ]
+    },
+    {
+      "id": "pump.addPowerToMedium",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            51,
+            51
+          ],
+          "anchor": "    addPowerToMedium="
+        }
+      ]
+    },
+    {
+      "id": "pump.use_inputFilter",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            52,
+            52
+          ],
+          "anchor": "    use_inputFilter="
+        }
+      ]
+    },
+    {
+      "id": "pump.input_type",
+      "value": "Stages",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            55,
+            55
+          ],
+          "anchor": "inputType=IDEAS.Fluid.Types.InputType.Stages"
+        }
+      ]
+    },
+    {
+      "id": "heater.energy_dynamics",
+      "value": "SteadyState",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Heater_T.mo",
+          "lines": [
+            25,
+            25
+          ],
+          "anchor": "Dynamics energyDynamics="
+        }
+      ]
+    },
+    {
+      "id": "radiator.energy_dynamics",
+      "value": "FixedInitial",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            35,
+            35
+          ],
+          "anchor": "energyDynamics=Modelica.Fluid.Types.Dynamics.FixedInitial"
+        }
+      ]
+    },
+    {
+      "id": "heater.efficiency_polynomial",
+      "value": [
+        -6.017763e-11,
+        2.130271e-08,
+        -3.058709e-06,
+        0.0002266453,
+        -0.00904847,
+        0.1805752,
+        -0.4540036
+      ],
+      "unit": "mixed: coefficients for Celsius powers 6..0",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            16,
+            16
+          ],
+          "anchor": "Efficiency eta ="
+        }
+      ],
+      "note": "eta is dimensionless; evaluate at Celsius return temperature clipped to [25,75]."
+    },
+    {
+      "id": "heater.efficiency_temperature_clip",
+      "value": [
+        25,
+        75
+      ],
+      "unit": "degC",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            17,
+            17
+          ],
+          "anchor": "Real TCorr=min(max("
+        }
+      ]
+    },
+    {
+      "id": "controller.heating_unoccupied",
+      "value": 288.15,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            9,
+            9
+          ],
+          "anchor": "TSetHeaUno ="
+        }
+      ]
+    },
+    {
+      "id": "controller.heating_occupied",
+      "value": 294.15,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            10,
+            10
+          ],
+          "anchor": "TSetHeaOcc ="
+        }
+      ]
+    },
+    {
+      "id": "controller.cooling_unoccupied",
+      "value": 303.15,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            7,
+            7
+          ],
+          "anchor": "TSetCooUno ="
+        }
+      ]
+    },
+    {
+      "id": "controller.cooling_occupied",
+      "value": 297.15,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            8,
+            8
+          ],
+          "anchor": "TSetCooOcc ="
+        }
+      ]
+    },
+    {
+      "id": "controller.heating_offset",
+      "value": 0.1,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            89,
+            89
+          ],
+          "anchor": "Constant offSet(k=0.1"
+        }
+      ]
+    },
+    {
+      "id": "controller.PI_k",
+      "value": 10,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            157,
+            157
+          ],
+          "anchor": "    k=10"
+        }
+      ]
+    },
+    {
+      "id": "controller.PI_Ti",
+      "value": 300,
+      "unit": "s",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            158,
+            158
+          ],
+          "anchor": "    Ti=300"
+        }
+      ]
+    },
+    {
+      "id": "controller.supply_min",
+      "value": 293.15,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            160,
+            160
+          ],
+          "anchor": "    yMin=273.15 + 20"
+        }
+      ]
+    },
+    {
+      "id": "controller.supply_max",
+      "value": 353.15,
+      "unit": "K",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            159,
+            159
+          ],
+          "anchor": "    yMax=273.15 + 80"
+        }
+      ]
+    },
+    {
+      "id": "controller.pump_revert",
+      "value": true,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            107,
+            107
+          ],
+          "anchor": "HysteresisRelease con(revert=true)"
+        }
+      ]
+    },
+    {
+      "id": "controller.pump_initial_memory",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Controls/Discrete/HysteresisRelease.mo",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "Boolean y_start = false"
+        }
+      ],
+      "note": "pre(y_boolean), not a guarantee of pump state after event initialization."
+    },
+    {
+      "id": "controller.pump_logic",
+      "value": "T_op < heating_target OR (pre(on) AND T_op <= cooling_target)",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Controls/Discrete/HysteresisRelease.mo",
+          "lines": [
+            52,
+            52
+          ],
+          "anchor": "y_boolean = u < uLow_internal"
+        }
+      ],
+      "note": "Heating target includes the 0.1 K offset; cooling target does not."
+    },
+    {
+      "id": "controller.PI_initialization",
+      "value": "InitialState",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            161,
+            161
+          ],
+          "anchor": "initType=Modelica.Blocks.Types.InitPID.InitialState"
+        }
+      ]
+    },
+    {
+      "id": "simulation.model_stop_time",
+      "value": 604800,
+      "unit": "s",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            233,
+            233
+          ],
+          "anchor": "experiment(StopTime=604800"
+        }
+      ]
+    },
+    {
+      "id": "simulation.documented_algorithm",
+      "value": "Dassl",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            233,
+            233
+          ],
+          "anchor": "__Dymola_Algorithm=\"Dassl\""
+        }
+      ],
+      "note": "Model annotation, not the BOPTEST runtime solver guarantee."
+    },
+    {
+      "id": "simulation.api_default_step",
+      "value": 3600,
+      "unit": "s",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/config.json",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "\"step\""
+        }
+      ]
+    },
+    {
+      "id": "simulation.config_start",
+      "value": 0,
+      "unit": "s",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/config.json",
+          "lines": [
+            4,
+            4
+          ],
+          "anchor": "\"start_time\""
+        }
+      ]
+    },
+    {
+      "id": "simulation.config_warmup",
+      "value": 0,
+      "unit": "s",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/config.json",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "\"warmup_period\""
+        }
+      ]
+    },
+    {
+      "id": "simulation.resource_interval",
+      "value": 900,
+      "unit": "s",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/generate_data.py",
+          "lines": [
+            18,
+            18
+          ],
+          "anchor": "Data_Generator(resources_dir, period=900)"
+        }
+      ]
+    },
+    {
+      "id": "scenario.peak_heat_day.center_day",
+      "value": 318,
+      "unit": "day",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/days.json",
+          "lines": [
+            1,
+            1
+          ],
+          "anchor": "peak_heat_day"
+        }
+      ]
+    },
+    {
+      "id": "scenario.peak_heat_day.start",
+      "value": 26870400,
+      "unit": "s",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "boptest:testcase.py",
+          "lines": [
+            1032,
+            1036
+          ],
+          "anchor": "warmup_period = 7*24*3600."
+        }
+      ],
+      "expression": "(center_day-7)*86400",
+      "inputs": [
+        "scenario.peak_heat_day.center_day"
+      ]
+    },
+    {
+      "id": "scenario.peak_heat_day.end",
+      "value": 28080000,
+      "unit": "s",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "boptest:testcase.py",
+          "lines": [
+            1032,
+            1036
+          ],
+          "anchor": "warmup_period = 7*24*3600."
+        }
+      ],
+      "expression": "(center_day+7)*86400",
+      "inputs": [
+        "scenario.peak_heat_day.center_day"
+      ]
+    },
+    {
+      "id": "scenario.peak_heat_day.warmup",
+      "value": 604800,
+      "unit": "s",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "boptest:testcase.py",
+          "lines": [
+            1032,
+            1036
+          ],
+          "anchor": "warmup_period = 7*24*3600."
+        }
+      ],
+      "expression": "7*86400",
+      "inputs": [
+        "scenario.peak_heat_day.center_day"
+      ]
+    },
+    {
+      "id": "scenario.typical_heat_day.center_day",
+      "value": 341,
+      "unit": "day",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/days.json",
+          "lines": [
+            1,
+            1
+          ],
+          "anchor": "typical_heat_day"
+        }
+      ]
+    },
+    {
+      "id": "scenario.typical_heat_day.start",
+      "value": 28857600,
+      "unit": "s",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "boptest:testcase.py",
+          "lines": [
+            1032,
+            1036
+          ],
+          "anchor": "warmup_period = 7*24*3600."
+        }
+      ],
+      "expression": "(center_day-7)*86400",
+      "inputs": [
+        "scenario.typical_heat_day.center_day"
+      ]
+    },
+    {
+      "id": "scenario.typical_heat_day.end",
+      "value": 30067200,
+      "unit": "s",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "boptest:testcase.py",
+          "lines": [
+            1032,
+            1036
+          ],
+          "anchor": "warmup_period = 7*24*3600."
+        }
+      ],
+      "expression": "(center_day+7)*86400",
+      "inputs": [
+        "scenario.typical_heat_day.center_day"
+      ]
+    },
+    {
+      "id": "scenario.typical_heat_day.warmup",
+      "value": 604800,
+      "unit": "s",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "boptest:testcase.py",
+          "lines": [
+            1032,
+            1036
+          ],
+          "anchor": "warmup_period = 7*24*3600."
+        }
+      ],
+      "expression": "7*86400",
+      "inputs": [
+        "scenario.typical_heat_day.center_day"
+      ]
+    },
+    {
+      "id": "weather.file",
+      "value": "modelica://IDEAS/Resources/weatherdata/Brussels.mos",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/BoundaryConditions/Interfaces/PartialSimInfoManager.mo",
+          "lines": [
+            6,
+            6
+          ],
+          "anchor": "modelica://IDEAS/Resources/weatherdata/Brussels.mos"
+        }
+      ],
+      "note": "The TestCase string loading Uccle.TMY only forces resource inclusion; it does not select the active sim weather file."
+    },
+    {
+      "id": "weather.location",
+      "value": [
+        50.9,
+        4.53,
+        1.0,
+        58.0
+      ],
+      "unit": "mixed: latitude deg, longitude deg, timezone h, elevation m",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Resources/weatherdata/Brussels.mos",
+          "lines": [
+            3,
+            3
+          ],
+          "anchor": "#LOCATION,"
+        }
+      ]
+    },
+    {
+      "id": "window.shading_type",
+      "value": "None",
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Shading/Interfaces/ShadingProperties.mo",
+          "lines": [
+            14,
+            14
+          ],
+          "anchor": "ShadingType.None"
+        }
+      ]
+    },
+    {
+      "id": "window.shading_controlled",
+      "value": false,
+      "unit": "1",
+      "status": "explicit",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Shading/Interfaces/ShadingProperties.mo",
+          "lines": [
+            5,
+            5
+          ],
+          "anchor": "Boolean controlled = false"
+        }
+      ]
+    },
+    {
+      "id": "radiator.nominal_radiative_temperature",
+      "value": 293.15,
+      "unit": "K",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            33,
+            33
+          ],
+          "anchor": "TRad_nominal = TAir_nominal"
+        }
+      ],
+      "expression": "TAir_nominal",
+      "inputs": [
+        "radiator.nominal_air_temperature"
+      ]
+    },
+    {
+      "id": "radiator.element_heat_capacity",
+      "value": 37310.084579200004,
+      "unit": "J/K",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            80,
+            80
+          ],
+          "anchor": "each V=VWat/nEle"
+        }
+      ],
+      "expression": "total_heat_capacity/n_elements",
+      "inputs": [
+        "radiator.total_heat_capacity",
+        "radiator.n_elements"
+      ]
+    },
+    {
+      "id": "pump.on_stage_head",
+      "value": [
+        100000
+      ],
+      "unit": "Pa",
+      "status": "derived",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/Movers/FlowControlled_dp.mo",
+          "lines": [
+            51,
+            51
+          ],
+          "anchor": "dp_nominal*{(per.speeds[i]"
+        },
+        {
+          "source_id": "ideas:IDEAS/Fluid/Movers/Data/Generic.mo",
+          "lines": [
+            67,
+            67
+          ],
+          "anchor": "speeds_rpm = {speed_rpm_nominal}"
+        }
+      ],
+      "note": "Default single normalized speed. Stage zero selects off, not an additional physical curve.",
+      "expression": "dp_nominal*(speeds/speeds[end])^2",
+      "inputs": [
+        "pump.dp_nominal"
+      ]
+    },
+    {
+      "id": "wall.G_material_total",
+      "value": 35.37530917093501,
+      "unit": "W/K",
+      "status": "derived",
+      "expression": "area/R_material_areal",
+      "inputs": [
+        "building.wall_total_opaque_area",
+        "wall.R_material_areal"
+      ],
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            13,
+            13
+          ],
+          "anchor": "R=sum"
+        }
+      ],
+      "note": "Material-only through-construction conductance; excludes surface films. Floor back is adiabatic, so this is not an ambient heat-loss conductance."
+    },
+    {
+      "id": "roof.G_material_total",
+      "value": 16.03627252117886,
+      "unit": "W/K",
+      "status": "derived",
+      "expression": "area/R_material_areal",
+      "inputs": [
+        "building.roof_area",
+        "roof.R_material_areal"
+      ],
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            13,
+            13
+          ],
+          "anchor": "R=sum"
+        }
+      ],
+      "note": "Material-only through-construction conductance; excludes surface films. Floor back is adiabatic, so this is not an ambient heat-loss conductance."
+    },
+    {
+      "id": "floor.G_material_total",
+      "value": 1.901306622499146,
+      "unit": "W/K",
+      "status": "derived",
+      "expression": "area/R_material_areal",
+      "inputs": [
+        "building.floor_area",
+        "floor.R_material_areal"
+      ],
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MultiLayer.mo",
+          "lines": [
+            13,
+            13
+          ],
+          "anchor": "R=sum"
+        }
+      ],
+      "note": "Material-only through-construction conductance; excludes surface films. Floor back is adiabatic, so this is not an ambient heat-loss conductance."
+    },
+    {
+      "id": "window.lumped_glazing_capacity",
+      "value": 143068.41504,
+      "unit": "J/K",
+      "status": "derived",
+      "expression": "window_area*(2*glass_thickness*glass_rho*glass_c+air_gap_thickness*gap_rho*gap_c)",
+      "inputs": [
+        "building.window_area",
+        "window.glass_thickness",
+        "window.glass_rho",
+        "window.glass_c",
+        "window.air_gap_thickness",
+        "window.gap_rho",
+        "window.gap_c"
+      ],
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Window.mo",
+          "lines": [
+            94,
+            94
+          ],
+          "anchor": "Cgla = layMul.C"
+        }
+      ],
+      "note": "Window Two-dynamics uses the sum of material capacities from layMul; no frame capacity here. Material gas-layer constants differ from zone moist-air properties."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "room.single_RC_capacity",
+      "value": null,
+      "unit": "J/K",
+      "status": "unresolved",
+      "reason": "No unique equivalent room RC capacity exists without model reduction/identification; fabric capacity totals cannot be assigned to air.",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/PartialZone.mo",
+          "lines": [
+            35,
+            38
+          ],
+          "anchor": "mSenFac"
+        }
+      ]
+    },
+    {
+      "id": "air.effective_capacity",
+      "value": null,
+      "unit": "J/K",
+      "status": "unresolved",
+      "reason": "Moist-air medium and initialization dependent; not replaced by typical rho/cp.",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/ZoneAirModels/WellMixedAir.mo",
+          "lines": [
+            2,
+            13
+          ],
+          "anchor": "model WellMixedAir"
+        }
+      ]
+    },
+    {
+      "id": "infiltration.mass_flow",
+      "value": null,
+      "unit": "kg/s",
+      "status": "unresolved",
+      "reason": "Formula is 0.018*rho_default; initialize the specified moist-air medium to resolve rho_default and n50_int.",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/InterzonalAirFlow/BaseClasses/PartialInterzonalAirFlown50.mo",
+          "lines": [
+            9,
+            9
+          ],
+          "anchor": "V*rho_default/3600"
+        }
+      ]
+    },
+    {
+      "id": "radiator.UAEle",
+      "value": null,
+      "unit": "W/K (Modelica declaration)",
+      "status": "unresolved",
+      "reason": "Solved by the five-element nominal rating initial equations. No numeric start in FMU XML; do not use its start guess as calibrated value. Library ThermalConductance declaration; empirical emission also includes a temperature-power factor.",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+          "lines": [
+            111,
+            113
+          ],
+          "anchor": "ThermalConductance UAEle"
+        }
+      ]
+    },
+    {
+      "id": "water.operating_supply_return",
+      "value": null,
+      "unit": "K",
+      "status": "unresolved",
+      "reason": "Dynamic variables, not fixed 70/50 C. Requires actual reference run.",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            31,
+            58
+          ],
+          "anchor": "RadiatorEN442_2 rad("
+        }
+      ]
+    },
+    {
+      "id": "valve.parameters",
+      "value": null,
+      "unit": "1",
+      "status": "unresolved",
+      "reason": "No separate valve component in executable TestCase despite a thermostatic-valve description in prose. Do not invent Kv/Cv or valve dynamics.",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            2,
+            181
+          ],
+          "anchor": "model TestCase"
+        }
+      ]
+    },
+    {
+      "id": "pipes.length_diameter",
+      "value": null,
+      "unit": "m",
+      "status": "unresolved",
+      "reason": "No separate distribution-pipe components/geometry in this TestCase; no values to extract.",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/BESTESTHydronic/TestCase.mo",
+          "lines": [
+            2,
+            181
+          ],
+          "anchor": "model TestCase"
+        }
+      ]
+    },
+    {
+      "id": "initial.all_states",
+      "value": null,
+      "unit": "mixed",
+      "status": "unresolved",
+      "reason": "Stored parameter/initial-state declarations are known; event-initialized consistent full state vector requires FMU initialization.",
+      "sources": [
+        {
+          "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/PartialZone.mo",
+          "lines": [
+            51,
+            55
+          ],
+          "anchor": "T_start=Medium.T_default"
+        }
+      ]
+    },
+    {
+      "id": "simulation.actual_solver_tolerances",
+      "value": null,
+      "unit": "mixed",
+      "status": "unresolved",
+      "reason": "Dymola annotation is not the BOPTEST PyFMI/CVode runtime configuration; capture actual run options.",
+      "sources": [
+        {
+          "source_id": "boptest:testcase.py",
+          "lines": [
+            92,
+            94
+          ],
+          "anchor": "self.options = self.fmu.simulate_options()"
+        }
+      ]
+    },
+    {
+      "id": "validation.acceptance_thresholds",
+      "value": null,
+      "unit": "mixed",
+      "status": "unresolved",
+      "reason": "No Simulink/BOPTEST runs or error measurements; establish convergence and define tolerances before acceptance.",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/config.json",
+          "lines": [
+            2,
+            6
+          ],
+          "anchor": "\"name\""
+        }
+      ]
+    },
+    {
+      "id": "build.compiler_MSL_revision",
+      "value": null,
+      "unit": "1",
+      "status": "unresolved",
+      "reason": "Package requests MSL 3.2.3; exact JModelica-bundled MSL revision is not recorded by library_versions.json.",
+      "sources": [
+        {
+          "source_id": "boptest:testcases/bestest_hydronic/models/library_versions.json",
+          "lines": [
+            2,
+            2
+          ],
+          "anchor": "IDEAS_COMMIT"
+        }
+      ]
+    }
+  ],
+  "equation_sources": [
+    {
+      "id": "conduction",
+      "source": {
+        "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConductiveHeatTransfer/MonoLayerDynamic.mo",
+        "lines": [
+          52,
+          73
+        ],
+        "anchor": "equation"
+      }
+    },
+    {
+      "id": "convection_interior",
+      "source": {
+        "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConvectiveHeatTransfer/InteriorConvection.mo",
+        "lines": [
+          44,
+          73
+        ],
+        "anchor": "equation"
+      }
+    },
+    {
+      "id": "convection_exterior",
+      "source": {
+        "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/ConvectiveHeatTransfer/ExteriorConvection.mo",
+        "lines": [
+          8,
+          47
+        ],
+        "anchor": "equation"
+      }
+    },
+    {
+      "id": "longwave",
+      "source": {
+        "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/HeatRadiation.mo",
+        "lines": [
+          26,
+          45
+        ],
+        "anchor": "equation"
+      }
+    },
+    {
+      "id": "exterior_longwave",
+      "source": {
+        "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/ExteriorHeatRadiation.mo",
+        "lines": [
+          32,
+          66
+        ],
+        "anchor": "equation"
+      }
+    },
+    {
+      "id": "solar_distribution",
+      "source": {
+        "source_id": "ideas:IDEAS/Buildings/Components/BaseClasses/RadiativeHeatTransfer/ZoneLwGainDistribution.mo",
+        "lines": [
+          82,
+          96
+        ],
+        "anchor": "initial equation"
+      }
+    },
+    {
+      "id": "operative_temperature",
+      "source": {
+        "source_id": "ideas:IDEAS/Buildings/Components/Interfaces/PartialZone.mo",
+        "lines": [
+          213,
+          213
+        ],
+        "anchor": "Math.Sum add(nin=2, k={0.5,0.5})"
+      }
+    },
+    {
+      "id": "water_energy",
+      "source": {
+        "source_id": "ideas:IDEAS/Media/Water.mo",
+        "lines": [
+          58,
+          59
+        ],
+        "anchor": "h = cp_const*(T-reference_T)"
+      }
+    },
+    {
+      "id": "heater_limit",
+      "source": {
+        "source_id": "ideas:IDEAS/Fluid/Interfaces/PrescribedOutlet.mo",
+        "lines": [
+          285,
+          308
+        ],
+        "anchor": "if restrictHeat and restrictCool then"
+      }
+    },
+    {
+      "id": "radiator_rating_calibration",
+      "source": {
+        "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+        "lines": [
+          185,
+          229
+        ],
+        "anchor": "initial equation"
+      }
+    },
+    {
+      "id": "radiator_emission",
+      "source": {
+        "source_id": "ideas:IDEAS/Fluid/HeatExchangers/Radiators/RadiatorEN442_2.mo",
+        "lines": [
+          132,
+          161
+        ],
+        "anchor": "RealExpression QCon[nEle]"
+      }
+    },
+    {
+      "id": "pressure_drop",
+      "source": {
+        "source_id": "ideas:IDEAS/Fluid/FixedResistances/PressureDrop.mo",
+        "lines": [
+          25,
+          74
+        ],
+        "anchor": "equation"
+      }
+    },
+    {
+      "id": "PI",
+      "source": {
+        "source_id": "msl:Modelica/Blocks/Continuous.mo",
+        "lines": [
+          804,
+          903
+        ],
+        "anchor": "block LimPID"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "source_id": "boptest:testcases/bestest_hydronic/models/Resources/Brussels.mos"
+    },
+    {
+      "source_id": "boptest:testcases/bestest_hydronic/models/Resources/weather.csv",
+      "columns": [
+        "time",
+        "pAtm",
+        "lon",
+        "lat",
+        "TDewPoi",
+        "HDirNor",
+        "HDifHor",
+        "HGloHor",
+        "relHum",
+        "nTot",
+        "ceiHei",
+        "winSpe",
+        "winDir",
+        "nOpa",
+        "TBlaSky",
+        "HHorIR",
+        "cloTim",
+        "solZen",
+        "solAlt",
+        "solDec",
+        "solTim",
+        "solHouAng",
+        "TDryBul",
+        "TWetBul"
+      ],
+      "rows": 35041,
+      "start_time_s": 0.0,
+      "end_time_s": 31536000.0
+    },
+    {
+      "source_id": "boptest:testcases/bestest_hydronic/models/Resources/dataFromModel.csv",
+      "columns": [
+        "time",
+        "Occupancy[1]",
+        "LowerSetp[1]",
+        "InternalGainsLat[1]",
+        "UpperSetp[1]",
+        "InternalGainsCon[1]",
+        "InternalGainsRad[1]",
+        "UpperCO2[1]"
+      ],
+      "rows": 35041,
+      "start_time_s": 0.0,
+      "end_time_s": 31536000.0
+    },
+    {
+      "source_id": "boptest:testcases/bestest_hydronic/models/Resources/prices.csv",
+      "columns": [
+        "time",
+        "PriceElectricPowerConstant",
+        "PriceElectricPowerDynamic",
+        "PriceElectricPowerHighlyDynamic",
+        "PriceGasPower"
+      ],
+      "rows": 35041,
+      "start_time_s": 0.0,
+      "end_time_s": 31536000.0
+    },
+    {
+      "source_id": "boptest:testcases/bestest_hydronic/models/Resources/emissions.csv",
+      "columns": [
+        "time",
+        "EmissionsElectricPower",
+        "EmissionsGasPower"
+      ],
+      "rows": 35041,
+      "start_time_s": 0.0,
+      "end_time_s": 31536000.0
+    }
+  ],
+  "stored_fmu": {
+    "source_id": "boptest:testcases/bestest_hydronic/models/wrapped.fmu",
+    "metadata": {
+      "fmiVersion": "2.0",
+      "modelName": "wrapped",
+      "guid": "fce82f399466019f31505387170b3b40",
+      "generationTool": "JModelica.org",
+      "generationDateAndTime": "2024-09-14T01:07:17",
+      "variableNamingConvention": "structured",
+      "numberOfEventIndicators": "41"
+    },
+    "members": [
+      {
+        "member": "modelDescription.xml",
+        "sha256": "f181acdca7167a092a993e68bf4fbbd4f3edfa90b629074d06abf39a90a96fd8",
+        "bytes": 3939694
+      },
+      {
+        "member": "resources/0/Brussels.mos",
+        "sha256": "809d9b66b5283202d3dcaf05c6bb3db448ca94e7d6017740cacd75da537ee12b",
+        "bytes": 1105400
+      },
+      {
+        "member": "resources/1/Uccle.TMY",
+        "sha256": "950f96820bbeadcc2b97e84a1f014be8d8ffbdbb01b28c93899358456bfb699e",
+        "bytes": 1049389
+      },
+      {
+        "member": "resources/weather.csv",
+        "sha256": "b5996aeb0b034e1dc5895b8f345e707d37bd33e23ffd23fe3a563f3778503f53",
+        "bytes": 9473115
+      },
+      {
+        "member": "resources/dataFromModel.csv",
+        "sha256": "7e0b12f0ddf6bd88f8eed909fd8ea847a526d88d73e268b2dec0595a73b1942b",
+        "bytes": 1699881
+      },
+      {
+        "member": "resources/config.json",
+        "sha256": "4a7bd1bd3d53b1608ef4992e4c7098c642c813a236ae19c257ebc4119bca9ba7",
+        "bytes": 228
+      },
+      {
+        "member": "resources/days.json",
+        "sha256": "38d9db80dc3f69228f827caa2d44d64f657e8b0699f02c8ff1812f1ae6373021",
+        "bytes": 48
+      },
+      {
+        "member": "resources/kpis.json",
+        "sha256": "00477c67556f1577e5bb673d19b115a4e080ccec5ee66ea4a4f8970a4dcbb33d",
+        "bytes": 731
+      }
+    ],
+    "note": "No binaries loaded. XML start values for exact constants/parameters only; not simulated trajectories."
+  }
+}

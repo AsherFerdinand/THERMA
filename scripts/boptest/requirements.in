@@ -1,0 +1,4 @@
+# Isolated FMI/plotting tools; not a Python heating-model implementation.
+fmpy==0.3.20
+numpy==1.26.4
+matplotlib==3.10.8

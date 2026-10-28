@@ -1,13 +1,14 @@
 # THERMA
 
 A research project for a modular, web-based digital twin of hydronic building heating.
-The reference is a MATLAB/Simulink bachelor's thesis describing a three-storey apartment
+The project began with a MATLAB/Simulink bachelor's thesis describing a three-storey apartment
 building with 36 rooms, a central boiler, distribution pipes, radiators and controllers.
 The reference repository has been inspected statically; see [the inventory](docs/SIMULINK_INVENTORY.md).
 Reference assets are not vendored, and raw validation datasets are not yet available.
 
-Current scope: **Phase 1A — reference analysis and migration planning**. No physics solver, surrogate, API or web UI
-is implemented. There are no validated simulation or performance results.
+Current scope: **Phase B — original BOPTEST FMU baseline executed**. No Python physics solver, surrogate, API or web UI
+is implemented. Original-FMU reference outputs exist; no THERMA/Simulink equivalence
+or performance improvement is claimed.
 
 ## Development
 
@@ -56,4 +57,19 @@ Read [the roadmap](docs/ROADMAP.md), [progress](docs/PROGRESS.md), and
 [development guidance](docs/DEVELOPMENT.md) before contributing.
 
 Phase 1A deliverables: [migration plan](docs/MIGRATION_PLAN.md) and
-[reference data plan](docs/REFERENCE_DATA_PLAN.md). Phase 1B awaits review of this analysis.
+[reference data plan](docs/REFERENCE_DATA_PLAN.md). University MATLAB diagnostics remain pending.
+
+The selected independent reconstruction reference is now BOPTEST `bestest_hydronic`
+(BESTEST Case 900 envelope). Read [the pinned physical/reference extraction](docs/BOPTEST_REFERENCE.md)
+and its [machine-readable parameters](configs/references/boptest_bestest_hydronic.json).
+The thesis model and local EN 12831 room-builder draft remain separate; neither has
+been validated as a BOPTEST reconstruction. The original BOPTEST FMU has now run via
+an isolated FMI runtime; MATLAB simulation is still pending.
+
+See [baseline results and reproduction commands](docs/BOPTEST_BASELINE.md) and the
+[envelope-first Simulink contract](docs/BOPTEST_SIMULINK_CONTRACT.md). Generated CSVs,
+plots, FMUs and runtime environments remain under ignored `outputs/boptest/`.
+
+The [C1 layered-envelope builder and university execution guide](docs/BOPTEST_SIMULINK_C1.md)
+are prepared with 27 source-derived thermal states. MATLAB generation, compilation
+and physics verification remain pending; no C2 room-air model is included.

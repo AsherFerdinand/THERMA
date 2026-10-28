@@ -9,6 +9,29 @@
 - [x] Add initial tests and automated CI checks.
 - [x] Run tests, lint, formatting, type checks and package build locally.
 
+## Current reference track — BOPTEST
+
+The user selected BOPTEST `bestest_hydronic` as the independent single-zone reference.
+Keep its parameters separate from the thesis and the unvalidated EN 12831 builder.
+
+- [x] BOPTEST-A: pin upstream/dependencies; extract physical parameters, equations,
+  measurements, limitations and staged architecture into documentation and JSON.
+- [x] Use the Phase A extraction to establish a pinned direct-FMI runtime.
+- [x] Phase B: execute typical and peak reference periods with seven-day warm-up,
+  export measurements/plots, verify quality and fresh-process repeatability.
+- [x] Review pinned IDEAS layer discretisation and prepare C1 envelope builder,
+  parameter loader, A–G verification scripts and static parameter audits.
+- [ ] Generate/open/compile the C1 model on university MATLAB and run verification.
+- [ ] Review C1 numerical results before adding C2 room-air and surface exchange.
+
+BOPTEST-A is static extraction; Phase B has executed the unchanged original FMU.
+C1 MATLAB implementation is prepared, but no generated Simulink model or MATLAB
+runtime verification is claimed. No Python physics, ML or web work is included. The thesis diagnostic track below remains preserved and pending independently.
+See [BOPTEST_REFERENCE.md](BOPTEST_REFERENCE.md),
+[BOPTEST_BASELINE.md](BOPTEST_BASELINE.md) and
+[BOPTEST_SIMULINK_CONTRACT.md](BOPTEST_SIMULINK_CONTRACT.md) and
+[BOPTEST_SIMULINK_C1.md](BOPTEST_SIMULINK_C1.md).
+
 ## Phase 1 — Simulink automation
 
 ### Phase 1A — analysis and preparation

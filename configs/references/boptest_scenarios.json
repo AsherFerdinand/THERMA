@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "boptest_commit": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+  "ideas_commit": "f1fdd8b22d39dc50297c47b6433e44381e40d0ff",
+  "source_locations": [
+    "testcases/bestest_hydronic/models/days.json",
+    "testcase.py:initialize",
+    "testcase.py:set_scenario",
+    "testcase.py:__simulation"
+  ],
+  "communication_step_s": 30,
+  "step_rationale": "Pinned BOPTEST requests approximately 30-second communication points. This is not the adaptive internal integration step.",
+  "scenarios": {
+    "typical_heat_day": {"center_day": 341, "evaluation_start_day": 334, "evaluation_end_day": 348, "warmup_days": 7},
+    "peak_heat_day": {"center_day": 318, "evaluation_start_day": 311, "evaluation_end_day": 325, "warmup_days": 7}
+  },
+  "baseline": "All overwrite activation inputs must stay false; no controls, weather or model parameters are changed. Initialize at max(evaluation_start-warmup,0), advance continuously through evaluation start without resetting, then finish at evaluation end."
+}
