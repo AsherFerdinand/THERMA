@@ -28,3 +28,12 @@ Successful status is executed_partial_not_validated, not a BOPTEST validation pa
 Return evaluation.csv, comparison_metadata.json and replay_run.json from the printed
 run directory to Codex. On failure return replay_run.json and the MATLAB diagnostic.
 The ZIP's bytes are unchanged from the originally prepared transfer artifact.
+
+
+## Actual C2.5C results-only bundle
+
+Download THERMA_first_typical_actual_analysis.zip for six PNG/PDF figure pairs,
+metrics.json, engineering_summary.md and supplementary integrity/input/temperature
+reports and reproduction script. Check C25C_ANALYSIS_SHA256SUMS. This bundle excludes
+raw MATLAB uploads, reference CSV datasets, simulation models and runtime caches.
+Results are exploratory partial-forcing comparisons, not BOPTEST validation.
