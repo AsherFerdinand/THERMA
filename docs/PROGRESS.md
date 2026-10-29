@@ -740,3 +740,46 @@ Added docs/C25C_REPLAY_ANALYSIS.md and updated README/roadmap with truthful exec
 and pending-data status. User authorized commit/push to work; generated outputs remain
 ignored. Next: upload actual evaluation.csv/comparison_metadata.json/replay_run.json,
 run the reproducible analysis, inspect the first exploratory comparison before C2.6.
+
+
+## 2026-10-29 — Actual first typical replay attachments analyzed
+
+Successfully downloaded all three actual attachments (evaluation.csv 10,688,915 bytes,
+comparison_metadata.json 2,207 bytes, replay_run.json 16,384 bytes) and copied them
+unchanged to ignored outputs/boptest/replays/first_typical_actual. CSV SHA-256 matches
+metadata: 2f23cbda2c8c1c49e347004a2429ff2a1e9764798cbda33e2a6bd9d05539a424.
+Attachment/copy hashes were compared before and after processing. No synthetic data
+was substituted, no MATLAB execution occurred, and no original/reference artifact
+or thermal implementation was changed.
+
+Executed the existing C2.5C pipeline against hash-matched typical_heat_day_ailcox5y.
+Verified actual run completion flags, model/reference/manifest identity, units, strict
+time ordering, exact 14-day coverage (28857600–30067200 s) and warm-up exclusion.
+Actual replay has 58,008 adaptive evaluation samples; metrics use 40,321 native
+reference timestamps. Air-temperature MAE=2.3405322638114505 K, RMSE=2.8055004126523566 K,
+maximum sampled absolute error=7.43410485371686 K, bias=-2.3351963931473314 K.
+Generated actual metrics.json/engineering_summary.md and all six PNG/PDF figure pairs.
+Visually reviewed figures; no clipping, smoothing, clamping or calibration performed.
+
+Investigated raw union-grid heating comparison discrepancies with a supplementary
+hash-checked full-trajectory audit at actual candidate timestamps. Both delivered
+heating components match their original source holds within 5.01e-12 W at every
+sample. Outdoor linear forcing matches within 3.61e-11 K, internal gains within
+3.55e-15 W. Raw sparse-log reconstruction discrepancies around switching times are
+not evidence of an actual source sign/driver mismatch. Preserved both diagnostic
+views and their limits in generated artifacts and the engineering summary.
+
+Actual total heating has 392 negative samples (min -27.82466 W); radiative has 580
+(min -32.38456 W); convective stays positive. These match signed source exchange.
+Component sum discrepancy <=1.07e-11 W; maximum instantaneous power residual is
+2.81943e-11 W, RMS 6.38965e-12 W. Storage changes +49.47423 MJ. Full integrated
+external-energy closure remains blocked by missing exported net external power.
+Missing absorbed solar, provisional initial states and reduced physics prevent a
+reference validation claim. First/second-week biases -3.15352/-1.51691 K cannot be
+uniquely attributed to initialization or omitted physics.
+
+Saved supplementary derivation script and integrity/audit JSON alongside results;
+prepared results-only ZIP locally, excluding raw uploads/reference datasets/caches.
+Updated README, roadmap and analysis guide; added docs/C25C_FIRST_ACTUAL_RESULTS.md.
+No C2.6 implementation. Original MATLAB files and all generated datasets/plots stay
+ignored; only the small human-readable results/progress documentation is versioned.

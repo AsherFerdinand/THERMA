@@ -36,8 +36,9 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [x] Explicitly set final-value holding and add interval/endpoint regressions; MATLAB rerun pending.
 - [x] Prepare recursive exception diagnostics and explicit replay-source binding regressions.
 - [x] Implement C2.5C read-only replay analysis, publication plots and original-reference sign audit.
-- [ ] Import actual evaluation.csv, comparison_metadata.json and replay_run.json from successful replay.
-- [ ] Run first exploratory THERMA-versus-BOPTEST comparison and review limits before C2.6.
+- [x] Import actual three MATLAB exports unchanged; validate CSV/reference provenance.
+- [x] Execute first actual exploratory comparison: MAE 2.34053 K, bias -2.33520 K; limitations recorded.
+- [ ] Review missing forcing/initialization and energy-export gaps before any C2.6 implementation.
 - [ ] C2.6: resolve absorbed forcing, initialization and prioritized reference-physics gaps.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [ ] Satisfy C3 readiness gates before hydronic implementation.

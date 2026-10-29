@@ -104,8 +104,10 @@ Missing absorbed solar/full initial states and simplified physics limit comparis
 ## C2.5C replay analysis
 
 The user reports the first 21-day partial replay completed on MATLAB R2025a. Its
-actual three export files are still awaiting upload here; no replay temperature
-metrics or validation claim have been made. The read-only
+actual three export files have now been imported unchanged and analyzed: air-temperature
+MAE **2.341 K**, RMSE **2.806 K**, bias **-2.335 K** over the 14-day evaluation.
+See [the actual-results engineering summary](docs/C25C_FIRST_ACTUAL_RESULTS.md).
+This exploratory partial-forcing comparison is not BOPTEST validation. The read-only
 [analysis pipeline and sign audit](docs/C25C_REPLAY_ANALYSIS.md) generate PNG/PDF
 figures, metrics JSON and an engineering summary from actual exports. Original
 BOPTEST trajectories are available locally; matching uses air temperature, not

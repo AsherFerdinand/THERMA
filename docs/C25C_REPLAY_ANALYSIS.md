@@ -3,8 +3,9 @@
 The user reports successful 21-day MATLAB R2025a/Simulink R2025a execution:
 `executed_partial_not_validated`, `simulation_returned=true` and
 `matlab_execution_completed=true`, eleven drivers and 60,481 input samples. The
-three actual export files have **not yet been supplied to Codex**. No THERMA replay
-plots, temperature errors or new replay evidence archive have been invented.
+three actual export files have now been supplied, preserved unchanged and analyzed.
+See [the actual-results summary](C25C_FIRST_ACTUAL_RESULTS.md). No MATLAB rerun or
+synthetic replacement was used.
 The earlier ten-scenario C2 verification report remains a separate evidence category.
 
 ## Files needed from the university computer
