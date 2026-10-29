@@ -1,9 +1,12 @@
 # Phase C1 — layered envelope reconstruction
 
-Implementation scripts and static checks are prepared. **MATLAB verification is pending.**
-MATLAB and Octave are absent from the cloud environment; no `.slx` has been generated,
-opened, compiled or simulated here. Generation and runtime acceptance remain to be
-confirmed on university MATLAB R2024b with Simulink. Simscape is not required.
+Current evidence (2026-10-29): the user reports successful C1 generation and A–G
+verification on MATLAB R2025a (`status=passed`, `matlab_verified=true`). The full
+report and exact local source snapshot were not supplied or committed. Codex has
+not executed MATLAB. Reproducible publication verification still requires archiving
+those artifacts and rerunning the published scripts if local edits differed.
+The scripts now accept both file and built-in `new_system` availability.
+See [the sprint audit](SPRINT_AUDIT.md) and [reduced C2 handoff](BOPTEST_SIMULINK_C2.md).
 
 ## Scope and provenance
 

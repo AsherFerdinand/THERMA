@@ -2,7 +2,7 @@ function reportFile = verify_boptest_envelope_c1()
 %VERIFY_BOPTEST_ENVELOPE_C1 A-G component checks, not BOPTEST/room validation.
 % Creates only new models in ignored unique output directories. Requires Simulink.
 P = load_boptest_envelope_parameters();
-assert(exist('new_system', 'file') ~= 0, 'THERMA:NoSimulink', 'MATLAB/Simulink required.');
+assert((exist('new_system', 'file') ~= 0 || exist('new_system', 'builtin') == 5), 'THERMA:NoSimulink', 'MATLAB/Simulink required.');
 root = fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));
 output = fullfile(root, 'outputs', 'boptest', 'simulink_c1', 'verification');
 if ~isfolder(output), mkdir(output); end

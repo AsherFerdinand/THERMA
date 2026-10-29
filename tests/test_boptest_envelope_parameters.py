@@ -119,3 +119,16 @@ def test_matlab_layer_assignment_schema():
     assert initialization in source
     assert source.index(initialization) < assignment.start()
     assert "struct([])" not in source
+
+
+def test_simulink_detection_accepts_builtins():
+    for file in [
+        ROOT / "scripts/matlab/build_room_heating_model.m",
+        ROOT / "scripts/matlab/boptest/build_boptest_envelope_c1.m",
+        ROOT / "scripts/matlab/boptest/verify_boptest_envelope_c1.m",
+        ROOT / "scripts/matlab/boptest/build_boptest_zone_c2.m",
+    ]:
+        source = file.read_text()
+        # Targeted regression for R2025a's built-in new_system detection.
+        normalized = source.replace(" ", "")
+        assert "exist('new_system','file')~=0||exist('new_system','builtin')==5" in normalized

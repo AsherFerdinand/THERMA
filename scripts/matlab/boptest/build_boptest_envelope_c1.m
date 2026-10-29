@@ -7,7 +7,7 @@ arguments
     options.ShowModel (1,1) logical = true
 end
 P = load_boptest_envelope_parameters(options.RegistryFile);
-assert(exist('new_system', 'file') ~= 0, 'THERMA:NoSimulink', 'MATLAB/Simulink required.');
+assert((exist('new_system', 'file') ~= 0 || exist('new_system', 'builtin') == 5), 'THERMA:NoSimulink', 'MATLAB/Simulink required.');
 model = 'THERMA_BOPTEST_Envelope_C1';
 assert(~bdIsLoaded(model), 'THERMA:AlreadyLoaded', ...
     'Close/save your existing %s model before building another.', model);
@@ -55,7 +55,7 @@ try
             outputName = sprintf('Boundary_%02d_W', outputPort);
             add_block('simulink/Sinks/Out1', [boundary '/' outputName], ...
                 'Port', num2str(outputPort), ...
-                'Position', [250+100*(j-1) face*65 280+100*(j-1) face*65+20]);
+                'Position', [250+100*(j-1) (outputPort-1)*65+30 280+100*(j-1) (outputPort-1)*65+50]);
             add_line(boundary, sprintf('%s/%d', split, face), [outputName '/1'], 'autorouting', 'on');
         end
     end

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "model_kind": "reduced_dry_air_zone_not_exact_BOPTEST",
+  "description": "Explicit provisional engineering fixture. Not calibrated, not reference defaults.",
+  "parameters": {
+    "rho_air_kg_m3": {"value": 1.2, "unit": "kg/m3", "status": "provisional", "source": "Constant dry-air approximation; not the reference moist-air operating density."},
+    "cp_air_J_kgK": {"value": 1006, "unit": "J/(kg.K)", "status": "provisional", "source": "Constant dry-air engineering approximation, not an extracted medium property."},
+    "h_interior_W_m2K": {"value": 3, "unit": "W/(m2.K)", "status": "provisional", "source": "Constant interior convection engineering fixture; source uses nonlinear exchange."},
+    "h_exterior_W_m2K": {"value": 15, "unit": "W/(m2.K)", "status": "provisional", "source": "Constant opaque exterior convection fixture, not weather-dependent reference exchange."},
+    "h_radiation_W_m2K": {"value": 4, "unit": "W/(m2.K)", "status": "provisional", "source": "Linear reciprocal opaque-surface radiation fixture; not reference view factors."}
+  },
+  "approximations": [
+    "Dry air with fixed rho and cp; no moisture, latent heat or CO2.",
+    "Interior/exterior constant convection; exterior longwave omitted.",
+    "Symmetric all-to-all linear opaque-surface radiation; glazing excluded from radiation network.",
+    "Static window UA uses source rating U times source area; no glazing storage/optics.",
+    "Absorbed solar is an explicit per-surface power input, not calculated from irradiance.",
+    "Convective and radiative heating/internal gains are separate explicit power inputs.",
+    "Radiative gains distributed by opaque interior area, not exact reference view factors."
+  ]
+}

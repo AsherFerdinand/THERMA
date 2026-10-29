@@ -40,7 +40,7 @@ assert(abs(p.setpoint_K - p.initial_room_K) > p.thermostat_deadband_K/2, ...
 assert(p.relative_tolerance < 1, 'THERMA:InvalidTolerance', 'Relative tolerance must be below 1.');
 
 model = 'therma_room_reference';
-assert(exist('new_system', 'file') ~= 0, 'THERMA:NoSimulink', 'Simulink is required.');
+assert((exist('new_system', 'file') ~= 0 || exist('new_system', 'builtin') == 5), 'THERMA:NoSimulink', 'Simulink is required.');
 assert(~bdIsLoaded(model), 'THERMA:AlreadyLoaded', ...
     'Close your existing therma_room_reference model before building a new one.');
 projectRoot = fileparts(fileparts(fileparts(mfilename('fullpath'))));

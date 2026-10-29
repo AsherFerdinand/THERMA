@@ -6,7 +6,7 @@ building with 36 rooms, a central boiler, distribution pipes, radiators and cont
 The reference repository has been inspected statically; see [the inventory](docs/SIMULINK_INVENTORY.md).
 Reference assets are not vendored, and raw validation datasets are not yet available.
 
-Current scope: **Phase B — original BOPTEST FMU baseline executed**. No Python physics solver, surrogate, API or web UI
+Current scope: **C2 reduced thermal-zone implementation prepared for local MATLAB verification**. No Python physics solver, surrogate, API or web UI
 is implemented. Original-FMU reference outputs exist; no THERMA/Simulink equivalence
 or performance improvement is claimed.
 
@@ -71,5 +71,13 @@ See [baseline results and reproduction commands](docs/BOPTEST_BASELINE.md) and t
 plots, FMUs and runtime environments remain under ignored `outputs/boptest/`.
 
 The [C1 layered-envelope builder and university execution guide](docs/BOPTEST_SIMULINK_C1.md)
-are prepared with 27 source-derived thermal states. MATLAB generation, compilation
-and physics verification remain pending; no C2 room-air model is included.
+use 27 source-derived thermal states. C1 success on R2025a is user-reported;
+the full verification report and exact local source revision remain to be archived.
+
+
+The user reports C1 verification passed on R2025a; the full local report is not yet
+archived. See the [sprint audit](docs/SPRINT_AUDIT.md),
+[C2 equations and exact MATLAB commands](docs/BOPTEST_SIMULINK_C2.md),
+[comparison tools](docs/REFERENCE_COMPARISON.md) and [C3 gates](docs/C3_READINESS.md).
+C2 uses explicit provisional dry-air/surface assumptions and is not an exact
+BOPTEST reconstruction. No C2 MATLAB verification is claimed.

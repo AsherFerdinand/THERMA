@@ -370,3 +370,80 @@ No C2 work, commit or push. Fix awaits review and university rerun.
 
 User subsequently authorized publication of this fix to the work branch.
 MATLAB regression and university verification remain pending.
+
+## 2026-10-29 — Extended sprint: C1 compatibility and reduced C2 handoff
+
+User now reports full C1 verification passed on university MATLAB R2025a, including
+A–G, with status=passed and matlab_verified=true. Full local report, generated model,
+source hashes and local compatibility edits were not supplied. Recorded this as
+user-reported evidence, separate from cloud execution or archived/reviewed artifacts.
+No MATLAB or Octave is available in Codex. Did not fabricate or overwrite C1 results.
+
+Audit: reused existing uv/pytest/Ruff/mypy/CI, frozen registry, Phase B manifests and
+runner, and C1 construction helper. Fixed every existing file-only new_system guard
+to also accept built-ins (R2025a issue), with a targeted Python regression. Moved C1
+boundary-output positions to distinct rows; no C1 topology, material values, equations
+or state ownership changed. Existing structure-array regression remains protected.
+
+Prepared THERMA_BOPTEST_ThermalZone_C2 builder: 27 unchanged fabric states + one air
+state, interior/exterior convection, reciprocal linear opaque-surface radiation,
+static aggregate window UA, sensible infiltration, explicit split convective/radiative
+heating/internal gains and six absorbed-solar inputs. Floor back remains adiabatic.
+This is a clearly labelled reduced dry-air subset, NOT exact BOPTEST. All provisional
+rho/cp/h choices are in a mandatory explicit versioned assumptions file with status,
+units and rationale; no missing reference field gets a silent default. Provenance
+matrix, equations, states, sign conventions and missing moist-air/glazing/solar/
+nonlinear surface/sky radiation physics are documented in BOPTEST_SIMULINK_C2.md.
+
+Added 10 independent MATLAB scenarios and an analytical nodal matrix-exponential
+verification oracle for all 28 states. Checks cover uniform equilibrium, warm/cold
+infiltration, surface convection, heating/cooling, gain accounting, radiation
+cancellation, stored energy, instantaneous/integral balance and two solver settings.
+Raw quadrature bias is separated from corrected energy residual; heuristic numerical
+budgets and refinement checks are explicit. MATLAB-only parameter/network regression
+checks stability, state count, per-W conservation and no direct radiant gains to air.
+Unique ignored outputs preserve partial JSON, completed CSVs and plots. Reports
+record MATLAB/Simulink/model versions, assumptions and source/registry hashes.
+These MATLAB scripts have NOT generated, compiled or executed C2 in Codex.
+
+Implemented Python Series contracts and metrics in therma.comparison; CSV normalization
+and generic comparison CLIs. Reject invalid samples, duplicate times/columns,
+missing coverage/metadata, incompatible units, scenarios, revisions and physical
+quantities. Explicit linear/previous alignment preserves known switching timestamps;
+power and cumulative-energy metrics remain distinct, with null relative error for
+zero reference energy. Reports identify missing quantities and do not apply invented
+accuracy criteria. No Python thermal integrator or engine was implemented.
+
+Executed normalization against hash-checked existing typical_heat_day_ailcox5y and
+its original-FMU repeat typical_heat_day_t8_7qbxh: all 10 selected signals available,
+zero maximum absolute difference for each. This is original-FMU processing and
+repeatability evidence only, NOT C2 validation. No new FMU simulation was run.
+Generated data stays ignored under outputs/boptest/normalized/.
+
+Checks: 72 Python tests pass; Ruff lint/format and strict mypy pass; MISS_HIT 0.9.44
+passes 16 MATLAB files; wheel/sdist build and git diff whitespace checks pass.
+New documentation links resolve. CI adds pinned MATLAB static lint, explicitly not
+MATLAB execution. Frozen registry hash remains f91141d78668908525d484a4900dc69af1a163c4c5e07f5a5fbd0c43eae4451c;
+original FMU remains 365b3085d97cc4620c06b6036156126a056d7f160fcc4f181d6b2fac4b05743b.
+
+Added sprint audit, C2 handoff, reference-comparison guide and C3 interface/gates;
+updated README, C1 evidence status and roadmap. No hydronic equipment, 36-room model,
+ML or web work. No commit or push for this sprint. Prepared a source-only working
+snapshot ZIP under ignored outputs/boptest/handoff for university transfer, excluding
+environments, caches, datasets, generated models and Git credentials/history.
+
+Next: archive the complete local C1 report/source identity; run tests/matlab and the
+new C2 verification suite on R2025a, return the actual reports, resolve runtime/API/
+numerical failures, then review reference-physics gaps before replay or C3.
+
+
+## 2026-10-29 — C2 sprint publication
+
+User authorized committing all relevant sprint source, configuration, tests and
+documentation to the current work branch. Existing ignore rules exclude outputs,
+handoff ZIP, simulation data, environments, caches, build artifacts and MATLAB
+backups; no generated artifacts or files over 1 MB are among commit candidates.
+Repeated checks: 72 Python tests, Ruff lint/format, strict mypy, static MATLAB lint
+(16 files), and whitespace checks pass. Frozen registry hash remains unchanged.
+C2 MATLAB verification remains pending. Publication uses a normal branch push,
+without force-pushing or merging main; final remote result is reported in chat.

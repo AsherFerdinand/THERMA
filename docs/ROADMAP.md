@@ -21,12 +21,17 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
   export measurements/plots, verify quality and fresh-process repeatability.
 - [x] Review pinned IDEAS layer discretisation and prepare C1 envelope builder,
   parameter loader, A–G verification scripts and static parameter audits.
-- [ ] Generate/open/compile the C1 model on university MATLAB and run verification.
-- [ ] Review C1 numerical results before adding C2 room-air and surface exchange.
+- [x] User reports C1 generation and A–G verification passed on R2025a.
+- [ ] Archive full C1 verification report and exact local source revision.
+- [x] Prepare reduced C2 28-state dry-air model, explicit provisional assumptions,
+  analytical MATLAB verification scenarios and data comparison infrastructure.
+- [ ] Generate/compile/verify C2 locally and review conservation/convergence reports.
+- [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
+- [ ] Satisfy C3 readiness gates before hydronic implementation.
 
 BOPTEST-A is static extraction; Phase B has executed the unchanged original FMU.
-C1 MATLAB implementation is prepared, but no generated Simulink model or MATLAB
-runtime verification is claimed. No Python physics, ML or web work is included. The thesis diagnostic track below remains preserved and pending independently.
+C1 success is user-reported; its full local report is not in the repository.
+C2 implementation is a labelled reduced subset and has not executed in cloud MATLAB. No Python physics, ML or web work is included. The thesis diagnostic track below remains preserved and pending independently.
 See [BOPTEST_REFERENCE.md](BOPTEST_REFERENCE.md),
 [BOPTEST_BASELINE.md](BOPTEST_BASELINE.md) and
 [BOPTEST_SIMULINK_CONTRACT.md](BOPTEST_SIMULINK_CONTRACT.md) and
