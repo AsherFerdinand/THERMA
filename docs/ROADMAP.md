@@ -32,7 +32,9 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
   explicitly partial replay preparation/runner and classified comparison reports/plots.
 - [x] User reports C2.5 MATLAB suite 8/8 passed, 23.5779 s; no raw test log supplied.
 - [x] Prepare hash-checked first typical replay/reference transfer ZIP; no Git needed at university.
-- [ ] Current priority: execute first partial replay locally and compare actual outputs before C2.6.
+- [ ] Current blocker: two real replay attempts failed with an aggregate Simulink error.
+- [x] Prepare recursive exception diagnostics and explicit replay-source binding regressions.
+- [ ] Run new driver tests, resolve nested errors, then execute/compare first partial replay before C2.6.
 - [ ] C2.6: resolve absorbed forcing, initialization and prioritized reference-physics gaps.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [ ] Satisfy C3 readiness gates before hydronic implementation.

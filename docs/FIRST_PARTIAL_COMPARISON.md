@@ -45,6 +45,11 @@ included for offline comparison, and original provenance plus per-file hashes ma
 the transfer traceable. Full original 61-column datasets and the FMU are unnecessary
 for this run; original-data reproduction remains available on Linux if needed.
 
+The first two actual replay attempts failed with an aggregate Simulink exception.
+Download updated work source and first follow the [diagnostic regression/reproduction guide](C25_REPLAY_DIAGNOSTICS.md).
+The same data ZIP remains valid; the updated runner preserves nested causes and
+uses explicit timeseries/SimulationInput drivers. No successful replay is claimed.
+
 ## Exact MATLAB commands
 
 Save and close any old generated C2 model before building another. Replace example

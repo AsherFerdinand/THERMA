@@ -16,11 +16,17 @@ folder = tempname(parent); mkdir(folder); reportFile = fullfile(folder,'replay_r
 report = struct('status','running','matlab_verified',false, ...
     'classification','exploratory_comparison','matlab_version',version, ...
     'simulink',ver('Simulink'),'replay_metadata',metadata, ...
-    'replay_packet_sha256',boptest_file_sha256(replayFile));
+    'replay_packet_sha256',boptest_file_sha256(replayFile), ...
+    'stage','load_model','matlab_execution_completed',false, ...
+    'simulation_returned',false);
 write_boptest_json(reportFile,report);
 try
     [model,~,Z] = build_boptest_zone_c2(assumptionsFile,'ShowModel',false);
     cleanup = onCleanup(@() close_system(model,0));
+    report.stage = 'configure_drivers';
+    report.model_name = model;
+    report.generated_model = fullfile(folder,[model '.slx']);
+    write_boptest_json(reportFile,report);
     initial = metadata.initial_conditions.temperature_K(:)'; first = 1;
     for face = 1:6
         n = Z.envelope.components(face).n_states;
@@ -39,28 +45,14 @@ try
     delete_block([model '/Inputs']);
     add_block('simulink/Signal Routing/Mux',[model '/Inputs'],'Inputs','11', ...
         'Position',[300 20 310 400]);
-    for channel = 1:11
-        [time,index] = unique(data(:,1),'last');
-        values = data(index,channel+1);
-        variable = sprintf('Replay_input_%02d',channel);
-        assignin(workspace,variable,[time values]);
-        name = sprintf('Replay_Source_%02d',channel);
-        if iscell(metadata.channels), channelInfo = metadata.channels{channel};
-        else, channelInfo = metadata.channels(channel); end
-        if strcmp(channelInfo.interpolation,'linear'), interpolate = 'on';
-        else, interpolate = 'off'; end
-        add_block('simulink/Sources/From Workspace',[model '/' name], ...
-            'VariableName',variable,'Interpolate',interpolate,'SampleTime','0', ...
-            'ZeroCross','on','Position',[20 channel*60 230 channel*60+35]);
-        add_line(model,[name '/1'],sprintf('Inputs/%d',channel));
-    end
+    [simulationInput,report.drivers] = configure_boptest_replay_sources(model,metadata,data);
     destinations = {'Outdoor_K','Heating_conv_W','Heating_rad_W', ...
         'Internal_conv_W','Internal_rad_W','Solar_absorbed_W','Log_inputs_used'};
     for j = 1:numel(destinations)
         add_line(model,'Inputs/1',[destinations{j} '/1'],'autorouting','on');
     end
     evaluationRelative = metadata.evaluation_start_s-metadata.time_origin_s;
-    set_param(model,'StopTime',num2str(metadata.duration_s,17), ...
+    set_param(model,'StartTime','0','StopTime',num2str(metadata.duration_s,17), ...
         'OutputOption','AdditionalOutputTimes', ...
         'OutputTimes',mat2str([0 evaluationRelative metadata.duration_s],17));
     Simulink.BlockDiagram.arrangeSystem(model);
@@ -72,8 +64,16 @@ try
     report.solver = struct('name',get_param(model,'Solver'), ...
         'RelTol',get_param(model,'RelTol'),'AbsTol',get_param(model,'AbsTol'), ...
         'MaxStep_s',get_param(model,'MaxStep'));
+    report.start_time_s = get_param(model,'StartTime');
+    report.stop_time_s = get_param(model,'StopTime');
+    report.simulation_input_class = class(simulationInput);
+    report.stage = 'compile'; write_boptest_json(reportFile,report);
     set_param(model,'SimulationCommand','update');
-    result = sim(model);
+    report.stage = 'simulate'; write_boptest_json(reportFile,report);
+    result = sim(simulationInput);
+    report.simulation_returned = true;
+    report.matlab_execution_completed = true;
+    report.stage = 'export'; write_boptest_json(reportFile,report);
     save(fullfile(folder,'simulation.mat'),'result');
     names = {'T_air_K','q_heating_W','q_vent_W','E_J','residual_W','T_opaque_mean_K'};
     columns = {'air_temperature','delivered_heating_power','ventilation_sensible_power', ...
@@ -116,12 +116,17 @@ try
         'classification','exploratory_comparison','missing_inputs',{metadata.missing_inputs}, ...
         'assumptions',{metadata.assumptions},'limitations',{metadata.limitations});
     write_boptest_json(fullfile(folder,'comparison_metadata.json'),comparison);
-    report.status = 'executed_partial_not_validated'; report.matlab_execution_completed = true;
+    report.status = 'executed_partial_not_validated'; report.stage = 'completed';
 catch problem
-    report.status = 'failed'; report.matlab_execution_completed = false;
-    report.error = struct('identifier',problem.identifier,'message',problem.message);
+    report.status = 'failed';
+    report.error = boptest_exception_diagnostic(problem);
+    % Persist the original exception before printing/rethrowing anything else.
+    write_boptest_json(reportFile,report);
+    print_boptest_exception(problem,reportFile);
+    failure = MException('THERMA:ReplayFailed', ...
+        'Replay failed during %s. Full diagnostic report: %s',report.stage,reportFile);
+    failure = addCause(failure,problem);
+    throw(failure);
 end
 write_boptest_json(reportFile,report); fprintf('Replay report: %s\n',reportFile);
-assert(strcmp(report.status,'executed_partial_not_validated'), ...
-    'THERMA:ReplayFailed','See preserved diagnostic report %s.',reportFile);
 end

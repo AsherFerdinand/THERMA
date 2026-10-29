@@ -598,3 +598,47 @@ only the four pending documentation files, not the ZIP or generated data. Update
 the first-comparison guide with the direct GitHub download link. No force-push or
 merge into either development branch. The user-reported 8/8 MATLAB result remains
 explicitly separate from supplied archived evidence and Codex execution.
+
+
+## 2026-10-29 — Real replay failure: full diagnostics and driver regression
+
+User reports two R2025a real replay failures after successful 60481-by-12 packet
+loading and C2 generation. Earlier eight MATLAB tests passed, but they did not
+compile/simulate the new long-replay source configuration. Only an aggregate
+MATLAB:MException:MultipleErrors message survived in replay_run.json. Static review
+confirmed the catch discarded stacks/causes and the final status assertion masked
+context. The underlying source/compile/simulation cause remains unconfirmed without
+its nested exceptions; input-source evaluation is the leading replay-specific area
+to isolate, not a demonstrated thermal physics defect. Numeric time/value matrices
+are supported Simulink data; their previous use alone does not establish a bug.
+
+Implemented recursive exception serialization with identifier/message/stack and all
+causes plus extended reports. Runner saves failed JSON before printing or throwing,
+prints the complete cause tree, and adds the original MException as the final wrapper's
+cause. Reports distinguish configure/compile/simulate/export stages and whether sim
+returned, so export failures are not mislabeled as simulations that never completed.
+
+Extracted driver setup into configure_boptest_replay_sources: named scalar timeseries,
+explicit linear/zoh methods and From Workspace interpolation, Model Workspace plus
+SimulationInput bindings, continuous sample time and enabled zero-crossing detection.
+Recorded per-driver class/dimensions/coverage/value endpoints/workspace/settings.
+Relative start time is explicitly zero; solver/tolerances and packet duration remain
+unchanged. No verified C1/C2 thermal code, assumptions or reference data changed.
+
+Added real MATLAB MException tree/JSON/printing regressions and a two-second,
+eleven-source compile/sim fixture checking linear outdoor and held gain values.
+An intentionally invalid source verifies the original variable/block diagnostic is
+retained. Python static regressions guard recursion, preservation/print/throw order,
+original addCause chain, staged reports and explicit source binding. New tests are
+prepared for R2025a; MATLAB/Octave remain unavailable here, so no driver execution or
+resolution of the user's replay failure is claimed.
+
+Checks executed: 116 Python tests pass, Ruff lint/format and strict mypy pass, archive
+integrity and 14 signal mappings pass, MISS_HIT 0.9.44 passes all 28 MATLAB files,
+package wheel/sdist builds pass and whitespace checks pass. Registry hash remains
+f91141d78668908525d484a4900dc69af1a163c4c5e07f5a5fbd0c43eae4451c; assumptions hash remains
+de81bc5fe282ff6f91c95a167d4db797cce66f0deeb4806bc6a0db3cfc1ffc61. Existing successful
+verification report and original transfer ZIP remain untouched. Added exact targeted
+and full-rerun instructions in docs/C25_REPLAY_DIAGNOSTICS.md and linked the first
+comparison guide. C2.6 stays blocked until the real replay works. User authorized
+normal commit/push to work; no force-push or merge into main/transfer branches.
