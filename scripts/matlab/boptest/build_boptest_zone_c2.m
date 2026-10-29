@@ -27,7 +27,13 @@ try
         'surface assumptions. Not an exact BOPTEST reconstruction. ' ...
         'All material parameters remain in frozen Model Workspace Z.envelope.']);
     add_block('simulink/Sources/In1',[model '/Inputs'], ...
-        'PortDimensions','11','Position',[20 40 50 60]);
+        'PortDimensions','11','Interpolate','off','Position',[20 40 50 60]);
+    % Root Inport owns external-input interpolation; timeseries zoh alone is
+    % insufficient to specify the generated model's input reconstruction.
+    add_block('simulink/Sinks/To Workspace',[model '/Log_inputs_used'], ...
+        'VariableName','inputs_used','SaveFormat','Timeseries','MaxDataPoints','inf', ...
+        'Decimation','1','Position',[80 20 220 50]);
+    add_line(model,'Inputs/1','Log_inputs_used/1');
     cursor = 0;
     tout = select('Outdoor_K','Inputs/1','1',11);
     heatC = select('Heating_conv_W','Inputs/1','2',11);

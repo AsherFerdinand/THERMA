@@ -238,3 +238,12 @@ nonlinear surface exchange, full glazing/solar and sky-longwave behaviour before
 attempting faithful original-FMU weather/gain replay. Heating replay must retain
 convective/radiative splits and full warm-up. See [comparison contracts](REFERENCE_COMPARISON.md)
 and [C3 readiness](C3_READINESS.md). No hydronic network is implemented in this sprint.
+
+
+## Step-input correction
+
+The first user-reported R2025a run generated/executed C2 but passed only five of ten
+scenarios; the step scenarios failed. Root input interpolation is now explicitly
+disabled, actual input channels are logged and checked, and piecewise step/energy
+handling has dedicated regressions. See [the diagnosis and rerun guide](C2_STEP_DEBUGGING.md).
+The corrected suite still needs university execution; no C2 verification pass is claimed.

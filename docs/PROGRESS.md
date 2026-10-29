@@ -447,3 +447,49 @@ Repeated checks: 72 Python tests, Ruff lint/format, strict mypy, static MATLAB l
 (16 files), and whitespace checks pass. Frozen registry hash remains unchanged.
 C2 MATLAB verification remains pending. Publication uses a normal branch push,
 without force-pushing or merging main; final remote result is reported in chat.
+
+## 2026-10-29 — C2 step-input debugging correction
+
+User reports C2 generated/executed on R2025a: equilibrium, cold outdoors, constant
+heating, warm ventilation and surface perturbation passed, while all five step
+scenarios failed. Full local traces/report were not supplied. Traced heating step
+through scenario times, root Inport, selector mapping, B inputs and the analytical
+propagator. The latter already split intervals correctly; no constant-final-input
+or port-order defect was found. Root Inputs previously left Interpolate unspecified,
+while the verifier assumed holds. A root linear ramp predicts discrepancies at
+3599 s of 999.722 W heating, 299.917 W internal, 209.942 W solar and 217.236 W
+infiltration for the outdoor change, matching the reported error scale. This is a
+strong code/equation-supported diagnosis, not a replay of unavailable local logs.
+
+Explicitly set root Interpolate=off and assert it in verification. Log all 11 actual
+root input channels; use them for accounting, independently enforce equivalence to
+the prescribed hold schedule, and preserve raw input CSVs including duplicate event
+timestamps. Added helper functions for explicit left/right hold limits, exact hold
+integrals, piecewise linear-system reference propagation and per-event diagnostics.
+The reference never follows a potentially wrong logged waveform. State continuity
+is preserved at initial/final/non-grid events. Exact event logs may contain a whole
+left/right limit vector; intermediate ramps or mixed channel limits still fail.
+Non-event samples remain strictly checked; no finite event interval is excluded.
+
+Energy checking now quadratures the continuous state-dependent power separately
+from the exact integral of piecewise-constant direct-input power. Existing raw
+residual fields remain, with new piecewise/quadrature fields and before/after input
+and temperature diagnostics. Additional output times request event logging. No
+physical parameters, C1 scripts, A/B nodal equations, solver tolerances, conservation
+budgets or convergence requirements were changed or disabled.
+
+Added MATLAB regressions for all scenario hold values/areas, initial/final steps,
+non-grid transitions, duplicate event/output times, both limits, state continuity,
+ramp/mixed-limit rejection and generated Inport/selector configuration. Python
+static/input regressions guard interpolation, raw logging, all channel mappings,
+actual-versus-prescribed checking and all five ramp/step discrepancy patterns.
+
+Executed: 79 Python tests pass; Ruff lint/format, strict mypy, MISS_HIT 0.9.44 across
+21 MATLAB files and git whitespace checks pass. Frozen registry SHA-256 remains
+f91141d78668908525d484a4900dc69af1a163c4c5e07f5a5fbd0c43eae4451c. MATLAB/Octave are
+not installed here: new MATLAB regressions and all ten corrected scenarios require
+university execution. Do NOT treat reported failures as confirmed resolved yet.
+Documented diagnosis and exact commands in docs/C2_STEP_DEBUGGING.md; updated C2
+handoff and roadmap. User authorized normal commit/push to work after checks, without
+force-push or main merge. Next: rebuild from updated scripts, run tests/matlab and
+verify_boptest_zone_c2, return JSON and raw input/trajectory CSVs if any failure persists.

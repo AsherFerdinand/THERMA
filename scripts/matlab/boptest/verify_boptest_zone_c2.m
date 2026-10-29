@@ -27,6 +27,9 @@ try
         report.source_sha256.(key) = boptest_file_sha256( ...
             fullfile(sourceFiles(source).folder,sourceFiles(source).name));
     end
+    assert(strcmp(get_param([model '/Inputs'],'Interpolate'),'off'), ...
+        'THERMA:C2Interpolation','Root input must disable interpolation for step scenarios.');
+    report.input_interpolation = get_param([model '/Inputs'],'Interpolate');
     set_param(model,'SimulationCommand','update');
     assert(numel(find_system(model,'BlockType','Integrator')) == 28, ...
         'THERMA:C2StateCount','Expected 27 fabric + 1 air states.');
@@ -78,11 +81,16 @@ input = input.setVariable('Z',Z,'Workspace',model);
 input = input.setExternalInput(signal);
 input = input.setModelParameter('StopTime',num2str(c.time_s(end)), ...
     'RelTol',num2str(relative,17),'AbsTol',num2str(absolute,17),'MaxStep',num2str(step));
+% Additional output samples expose exact event limits without interpolating inputs.
+input = input.setModelParameter('OutputOption','AdditionalOutputTimes', ...
+    'OutputTimes',mat2str(unique(c.time_s)',17));
 output = sim(input);
 names = {'T_states_K','E_J','dE_dt_W','q_net_W','residual_W','q_vent_W','q_window_W', ...
     'q_air_to_surfaces_W','T_interior_K','q_exterior_W','q_heating_W', ...
     'q_internal_W','q_solar_W','q_radiation_exchange_W'};
 series = output.get(names{1}); t = series.Time(:);
+assert(all(isfinite(t)) && all(diff(t)>=0),'THERMA:C2Time', ...
+    'Output timestamps must be finite/nondecreasing; duplicate events are permitted.');
 % Keep rightmost event sample; never average across a discontinuity.
 [t,index] = unique(t,'last');
 trace = struct('t',t,'solver',struct('name','ode15s','RelTol',relative, ...
@@ -93,29 +101,28 @@ for j = 1:numel(names)
     assert(isequal(s.Time(:),series.Time(:)),'THERMA:C2Time','Log time grids differ.');
     trace.(names{j}) = data(index,:);
 end
+rawInputs = output.get('inputs_used');
+trace.raw_input_time_s = rawInputs.Time(:);
+trace.raw_inputs = squeeze(rawInputs.Data);
+if size(trace.raw_inputs,1) ~= numel(trace.raw_input_time_s), trace.raw_inputs = trace.raw_inputs'; end
+assert(size(trace.raw_inputs,2)==11,'THERMA:C2Inputs','Expected 11 logged input channels.');
+trace.inputs_used = boptest_hold_values(trace.raw_input_time_s,trace.raw_inputs,t,"right");
+trace.duplicate_output_samples = numel(series.Time)-numel(t);
 trace.states = trace.T_states_K;
 assert(all(isfinite(trace.states),'all') && size(trace.states,2)==28, ...
     'THERMA:C2Trace','Invalid state count or nonfinite temperatures.');
 end
 
 function metrics = analyse(trace,c,Z,A,B,C,initial)
-t = trace.t; exact = zeros(numel(t),numel(initial)); state = initial;
-% Absolute temperature offset avoids expm cancellation of large equilibrium terms.
+t = trace.t;
+% Analytical trajectory always follows the prescribed holds, never a possibly
+% misconfigured logged waveform. Offset only the outdoor-temperature channel.
 reference = Z.initial_K;
-state = state-reference;
-for sample = 1:numel(t)
-    if sample == 1, previous = 0; else, previous = t(sample-1); end
-    points = [previous; c.time_s(c.time_s>previous & c.time_s<t(sample)); t(sample)];
-    for interval = 1:numel(points)-1
-        u = c.values(find(c.time_s<=points(interval),1,'last'),:)'; u(1) = u(1)-reference;
-        augmented = [A B*u;zeros(1,29)];
-        propagated = expm(augmented*(points(interval+1)-points(interval)))*[state;1];
-        state = propagated(1:28);
-    end
-    exact(sample,:) = state'+reference;
-end
+values = c.values; values(:,1) = values(:,1)-reference;
+exact = boptest_piecewise_reference(A,B,initial-reference,c.time_s,values,t)+reference;
 budgetK = 20*(trace.solver.AbsTol_K+trace.solver.RelTol*max(abs(exact),[],'all'));
-u = interp1(c.time_s,c.values,t,'previous');
+[inputDiagnostics,expectedInputs,eventMask] = boptest_input_diagnostics(c,t,trace.inputs_used);
+u = trace.inputs_used; % Accounting uses signals actually entering the model.
 expectedVent = Z.assumptions.parameters.rho_air_kg_m3.value * ...
     Z.assumptions.parameters.cp_air_J_kgK.value * Z.volume_flow_m3_s * ...
     (u(:,1)-trace.states(:,end));
@@ -137,7 +144,17 @@ for sample = 1:numel(t)
         B*(u(sample,:)'-[reference;zeros(10,1)]));
 end
 bias = exactEnergy-exactEnergy(1)-cumtrapz(t,exactPower);
-corrected = raw-bias;
+% Remove the known input jump before quadrature. The state-dependent power
+% is continuous; integrate prescribed direct-feedthrough powers exactly by segment.
+D = C'*B;
+offsetInputs = u; offsetInputs(:,1) = offsetInputs(:,1)-reference;
+continuousPower = trace.q_net_W-offsetInputs*D';
+exactContinuousPower = (exact-reference)*(C'*A)';
+directEnergy = boptest_hold_integral(c.time_s,values,t)*D';
+directEnergy = directEnergy-directEnergy(1);
+piecewiseRaw = trace.E_J-trace.E_J(1)-cumtrapz(t,continuousPower)-directEnergy;
+piecewiseBias = exactEnergy-exactEnergy(1)-cumtrapz(t,exactContinuousPower)-directEnergy;
+corrected = piecewiseRaw-piecewiseBias;
 boundaryH = sum(Z.H_exterior_W_K)+Z.H_vent_W_K+Z.UA_window_W_K;
 energyBudget = 2*sum(C)*budgetK+2*t(end)*boundaryH*budgetK;
 % Include absolute-temperature products that cancel in surface matrix arithmetic.
@@ -162,10 +179,28 @@ metrics = struct('solver',trace.solver,'temperature_error_K',temperatureError, .
     'relative_integral_residual',max(abs(corrected))/max(1,max(abs(exactEnergy-exactEnergy(1)))), ...
     'energy_budget_J',energyBudget,'stored_energy_identity_error_J',max(abs(trace.E_J-stateEnergy)), ...
     'ventilation_error_W',ventError,'surface_convection_error_W',convError, ...
-    'input_accounting_error_W',inputError,'physical_direction',direction);
+    'input_accounting_error_W',inputError,'physical_direction',direction, ...
+    'input_diagnostics',inputDiagnostics, ...
+    'input_accounting_error_excluding_events_W',outsideMax( ...
+        [trace.q_heating_W-(expectedInputs(:,2)+expectedInputs(:,3)), ...
+        trace.q_internal_W-(expectedInputs(:,4)+expectedInputs(:,5)), ...
+        trace.q_solar_W-sum(expectedInputs(:,6:11),2)],eventMask), ...
+    'piecewise_integral_residual_J',max(abs(piecewiseRaw)), ...
+    'piecewise_analytical_quadrature_bias_J',max(abs(piecewiseBias)), ...
+    'ventilation_error_excluding_events_W',outsideMax( ...
+        trace.q_vent_W-Z.H_vent_W_K*(expectedInputs(:,1)-trace.states(:,end)),eventMask), ...
+    'duplicate_output_samples',trace.duplicate_output_samples, ...
+    'temperature_error_before_after_steps',{{}});
+for event = 1:numel(inputDiagnostics.step_times_s)
+    stepTime = inputDiagnostics.step_times_s(event);
+    metrics.temperature_error_before_after_steps{end+1} = struct('step_time_s',stepTime, ...
+        'before_K',subsetMax(abs(trace.states-exact),t<stepTime), ...
+        'at_or_after_K',subsetMax(abs(trace.states-exact),t>=stepTime));
+end
 metrics.passed = temperatureError<=budgetK && max(abs(trace.residual_W))<=powerBudget && ...
     max(abs(corrected))<=energyBudget && max(abs(trace.E_J-stateEnergy))<=energyBudget && ...
     ventError<=powerBudget && convError<=powerBudget && inputError<=powerBudget && direction && ...
+    inputDiagnostics.passed && ...
     max(abs(sum(trace.q_radiation_exchange_W,2)))<=powerBudget;
 if strcmp(c.name,'equilibrium')
     metrics.equilibrium_drift_K = max(abs(trace.states-reference),[],'all');
@@ -175,10 +210,15 @@ end
 
 function writeTrace(file,trace)
 header = [{'time_s'},cellstr(compose('T_state_%02d_K',1:28)), ...
-    {'E_J','q_net_W','residual_W','q_vent_W','q_heating_W','q_exterior_W'}];
+    {'E_J','q_net_W','residual_W','q_vent_W','q_heating_W','q_exterior_W'}, ...
+    cellstr(compose('input_%02d',1:11))];
 data = [trace.t trace.states trace.E_J trace.q_net_W trace.residual_W ...
-    trace.q_vent_W trace.q_heating_W trace.q_exterior_W];
+    trace.q_vent_W trace.q_heating_W trace.q_exterior_W trace.inputs_used];
 writetable(array2table(data,'VariableNames',header),file);
+[parent,name] = fileparts(file);
+rawHeader = [{'time_s'},cellstr(compose('input_%02d',1:11))];
+writetable(array2table([trace.raw_input_time_s trace.raw_inputs], ...
+    'VariableNames',rawHeader),fullfile(parent,[name '_inputs_raw.csv']));
 end
 
 function plotCase(folder,coarse,fine,name)
@@ -191,4 +231,12 @@ subplot(3,2,5); plot(fine.t/3600,fine.residual_W); ylabel('Power residual W');
 subplot(3,2,6); plot(coarse.t/3600,coarse.states(:,end),fine.t/3600,fine.states(:,end));
 ylabel('Air K'); legend('Coarse','Refined'); sgtitle(name,'Interpreter','none');
 exportgraphics(f,fullfile(folder,'diagnostics.png'));
+end
+
+function value = subsetMax(data,mask)
+if any(mask), value = max(data(mask,:),[],'all'); else, value = []; end
+end
+
+function value = outsideMax(data,eventMask)
+value = subsetMax(abs(data),~eventMask);
 end

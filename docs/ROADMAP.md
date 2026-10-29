@@ -25,7 +25,9 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [ ] Archive full C1 verification report and exact local source revision.
 - [x] Prepare reduced C2 28-state dry-air model, explicit provisional assumptions,
   analytical MATLAB verification scenarios and data comparison infrastructure.
-- [ ] Generate/compile/verify C2 locally and review conservation/convergence reports.
+- [x] User reports C2 generation/execution on R2025a; 5/10 scenarios passed.
+- [x] Prepare explicit root-input hold policy, actual-input diagnostics and step regressions.
+- [ ] Rerun corrected C2 locally; review input equivalence, conservation and convergence.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [ ] Satisfy C3 readiness gates before hydronic implementation.
 
