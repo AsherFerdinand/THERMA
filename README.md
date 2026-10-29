@@ -37,3 +37,11 @@ metrics.json, engineering_summary.md and supplementary integrity/input/temperatu
 reports and reproduction script. Check C25C_ANALYSIS_SHA256SUMS. This bundle excludes
 raw MATLAB uploads, reference CSV datasets, simulation models and runtime caches.
 Results are exploratory partial-forcing comparisons, not BOPTEST validation.
+
+
+## C2.6 solar-resolved partial replay
+
+Download [THERMA_C26_solar_replay.zip](THERMA_C26_solar_replay.zip). SHA-256: `117ce27286e078080fb6766c77b1e9ad0939d6ecb39ae2b86f1f354d666364aa`.
+Use updated work-branch source and docs/C26_SOLAR_BENCHMARK.md. This archive contains
+actual original-FMU reference data, not a completed solar-resolved MATLAB replay.
+No transfer-branch merge into development is intended.
