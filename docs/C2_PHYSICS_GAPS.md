@@ -28,3 +28,14 @@ feedback. Keep provisional assumptions explicit and compare input reconstruction
 sensitivity separately from model error. Do not tune coefficients solely to hide
 missing forcing. C3 should remain pending until emitter feedback and demand estimates
 have a defensible reference boundary.
+
+
+## Subsequent prerequisite findings
+
+See [the pinned-FMU C2.6 prerequisite investigation](C26_PREREQUISITES.md).
+The solar-only six opaque powers are derivable from readable transmitted-solar inputs
+and source weights; seven receivers include glazing. All 27 opaque temperatures are
+readable and actually initialize to the same 293.15 K used by C2. Thus initial
+fabric-temperature inaccessibility is not an established cause of the observed bias.
+Existing CSV exports still omit these observations; full FMI restart remains unsupported.
+These findings revise data-access gaps, not physics or calibration parameters.

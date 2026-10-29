@@ -783,3 +783,36 @@ prepared results-only ZIP locally, excluding raw uploads/reference datasets/cach
 Updated README, roadmap and analysis guide; added docs/C25C_FIRST_ACTUAL_RESULTS.md.
 No C2.6 implementation. Original MATLAB files and all generated datasets/plots stay
 ignored; only the small human-readable results/progress documentation is versioned.
+
+## 2026-10-29 — Results transfer published; C2.6 prerequisites investigated
+
+Published the unchanged 1,804,074-byte results-only ZIP on replay-transfer at
+4f35abfa919a707034ff0ec64114fd0430bd9cbf. A fresh isolated fetch from GitHub confirmed
+SHA-256 108a5502e5604993a0782dad7759fa7f099732ddcb34c152063bcd1848e10314.
+Archive contains six PNG/PDF pairs, metrics, engineering summary and supplementary
+reports/script, excluding raw MATLAB uploads, reference datasets and generated models.
+No transfer-branch merge into work/main occurred.
+
+Inspected the unchanged pinned original FMU and hash-verified IDEAS sources. A short
+original-FMU initialization/readability probe (24 x 1800 s, not a replacement baseline)
+confirmed direct/diffuse solar totals, seven distribution weights/surface powers and
+39 continuous states are readable. Six opaque solar powers can be derived from the
+source equation; a seventh glazing share must remain explicit. Combined surface
+powers include existing radiative gains and must not be injected as solar alone.
+
+Initialized opaque/glazing/air temperatures were 293.15 K, already matching the C2
+warm-up start. This supersedes the earlier provisional inaccessible-temperature gap;
+it does not establish that initialization explains the measured bias. Complete
+portable FMI restart is unsupported. See docs/C26_PREREQUISITES.md for exact variables,
+source links, mapping, capability limits and probe-report hash.
+
+Proposed future gates: observability-only export, opt-in solar-resolved packet,
+initialized-temperature assertions, complete energy exports, then controlled MATLAB
+comparison before deciding further physics scope. No physics, parameters, frozen
+registry, original outputs or replay schema were changed; no MATLAB execution or
+calibration occurred. C2.6 implementation remains pending.
+
+Checks: 139 Python tests passed with optional plotting dependencies; Ruff lint and
+format, mypy, archived-evidence integrity and 14 replay mappings passed. MISS_HIT
+static lint passed for 28 MATLAB files; git diff --check passed. These checks are
+not MATLAB execution or numerical validation of proposed C2.6 work.

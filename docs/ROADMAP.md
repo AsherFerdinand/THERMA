@@ -38,7 +38,10 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [x] Implement C2.5C read-only replay analysis, publication plots and original-reference sign audit.
 - [x] Import actual three MATLAB exports unchanged; validate CSV/reference provenance.
 - [x] Execute first actual exploratory comparison: MAE 2.34053 K, bias -2.33520 K; limitations recorded.
-- [ ] Review missing forcing/initialization and energy-export gaps before any C2.6 implementation.
+- [x] Investigate pinned-FMU solar/state access: source-derived opaque solar is available;
+  all 27 initialized opaque temperatures are readable and match current 293.15 K start.
+- [x] Publish results-only ZIP separately and document C2.6 prerequisites/implementation gates.
+- [ ] Review proposed solar export/packet, energy diagnostics and remaining window/exterior gaps before implementation.
 - [ ] C2.6: resolve absorbed forcing, initialization and prioritized reference-physics gaps.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [ ] Satisfy C3 readiness gates before hydronic implementation.

@@ -113,3 +113,9 @@ figures, metrics JSON and an engineering summary from actual exports. Original
 BOPTEST trajectories are available locally; matching uses air temperature, not
 operative temperature. Signed reverse radiator heat exists in the reference and
 is retained. C2.6 remains unimplemented pending first comparison review.
+
+
+[Download the actual C2.5C figures and reports](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_first_typical_actual_analysis.zip)
+from the separate transfer branch. Raw uploads/reference datasets/models are excluded.
+See [C2.6 prerequisites](docs/C26_PREREQUISITES.md) for newly confirmed solar/state
+access and the proposed plan. No C2.6 physics or parameter calibration is implemented.
