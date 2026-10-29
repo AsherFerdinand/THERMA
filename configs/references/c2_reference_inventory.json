@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "runs": [
+    {
+      "scenario": {
+        "name": "typical_heat_day",
+        "center_day": 341,
+        "evaluation_start_day": 334,
+        "evaluation_end_day": 348,
+        "warmup_days": 7,
+        "initialization_time_s": 28252800,
+        "evaluation_start_s": 28857600,
+        "evaluation_end_s": 30067200,
+        "reset_at_evaluation_start": false
+      },
+      "fmu": {
+        "sha256": "365b3085d97cc4620c06b6036156126a056d7f160fcc4f181d6b2fac4b05743b",
+        "members": [
+          {
+            "member": "modelDescription.xml",
+            "sha256": "f181acdca7167a092a993e68bf4fbbd4f3edfa90b629074d06abf39a90a96fd8"
+          },
+          {
+            "member": "resources/0/Brussels.mos",
+            "sha256": "809d9b66b5283202d3dcaf05c6bb3db448ca94e7d6017740cacd75da537ee12b"
+          },
+          {
+            "member": "resources/1/Uccle.TMY",
+            "sha256": "950f96820bbeadcc2b97e84a1f014be8d8ffbdbb01b28c93899358456bfb699e"
+          },
+          {
+            "member": "resources/weather.csv",
+            "sha256": "b5996aeb0b034e1dc5895b8f345e707d37bd33e23ffd23fe3a563f3778503f53"
+          },
+          {
+            "member": "resources/dataFromModel.csv",
+            "sha256": "7e0b12f0ddf6bd88f8eed909fd8ea847a526d88d73e268b2dec0595a73b1942b"
+          },
+          {
+            "member": "resources/config.json",
+            "sha256": "4a7bd1bd3d53b1608ef4992e4c7098c642c813a236ae19c257ebc4119bca9ba7"
+          },
+          {
+            "member": "resources/days.json",
+            "sha256": "38d9db80dc3f69228f827caa2d44d64f657e8b0699f02c8ff1812f1ae6373021"
+          },
+          {
+            "member": "resources/kpis.json",
+            "sha256": "00477c67556f1577e5bb673d19b115a4e080ccec5ee66ea4a4f8970a4dcbb33d"
+          }
+        ],
+        "fmi_mode": "CoSimulation",
+        "capabilities": {
+          "modelIdentifier": "wrapped",
+          "needsExecutionTool": "false",
+          "canHandleVariableCommunicationStepSize": "true",
+          "canInterpolateInputs": "true",
+          "maxOutputDerivativeOrder": "0",
+          "canRunAsynchronuously": "false",
+          "canBeInstantiatedOnlyOncePerProcess": "true",
+          "canNotUseMemoryManagementFunctions": "false",
+          "canSerializeFMUstate": "false",
+          "providesDirectionalDerivative": "false"
+        }
+      },
+      "boptest_commit": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "ideas_commit": "f1fdd8b22d39dc50297c47b6433e44381e40d0ff",
+      "manifest_sha256": "07f761b8cdf0e001b416419833b44bf62144698f6f24f17f1517616fc1f3f247",
+      "sample_count": 60481,
+      "start_s": 28252800.0,
+      "end_s": 30067200.0,
+      "sampling": {
+        "communication_step_s": 30,
+        "measurement_interval_s": 30,
+        "internal_integration_step": "Adaptive/embedded; not the communication or resource grid"
+      },
+      "signals": {
+        "ovePum_activate": "1",
+        "ovePum_u": "1",
+        "ovePum_y": "1",
+        "oveTSetCoo_activate": "1",
+        "oveTSetCoo_u": "K",
+        "oveTSetCoo_y": "K",
+        "oveTSetHea_activate": "1",
+        "oveTSetHea_u": "K",
+        "oveTSetHea_y": "K",
+        "oveTSetSup_activate": "1",
+        "oveTSetSup_u": "K",
+        "oveTSetSup_y": "K",
+        "reaCO2RooAir_y": "ppm",
+        "reaPPum_y": "W",
+        "reaQHea_y": "W",
+        "reaTRoo_y": "K",
+        "weaSta_reaWeaCeiHei_y": "m",
+        "weaSta_reaWeaCloTim_y": "s",
+        "weaSta_reaWeaHDifHor_y": "W/m2",
+        "weaSta_reaWeaHDirNor_y": "W/m2",
+        "weaSta_reaWeaHGloHor_y": "W/m2",
+        "weaSta_reaWeaHHorIR_y": "W/m2",
+        "weaSta_reaWeaLat_y": "rad",
+        "weaSta_reaWeaLon_y": "rad",
+        "weaSta_reaWeaNOpa_y": "1",
+        "weaSta_reaWeaNTot_y": "1",
+        "weaSta_reaWeaPAtm_y": "Pa",
+        "weaSta_reaWeaRelHum_y": "1",
+        "weaSta_reaWeaSolAlt_y": "rad",
+        "weaSta_reaWeaSolDec_y": "rad",
+        "weaSta_reaWeaSolHouAng_y": "rad",
+        "weaSta_reaWeaSolTim_y": "s",
+        "weaSta_reaWeaSolZen_y": "rad",
+        "weaSta_reaWeaTBlaSky_y": "K",
+        "weaSta_reaWeaTDewPoi_y": "K",
+        "weaSta_reaWeaTDryBul_y": "K",
+        "weaSta_reaWeaTWetBul_y": "K",
+        "weaSta_reaWeaWinDir_y": "rad",
+        "weaSta_reaWeaWinSpe_y": "m/s",
+        "mod.case900Template.TAir": "K",
+        "mod.case900Template.TRad": "K",
+        "mod.yOcc.y": "unspecified",
+        "mod.hea.Q_flow": "W",
+        "mod.rad.Q_flow": "W",
+        "mod.rad.QCon_flow": "W",
+        "mod.rad.QRad_flow": "W",
+        "mod.case900Template.intGaiOcc.portCon.Q_flow": "W",
+        "mod.case900Template.intGaiOcc.portRad.Q_flow": "W",
+        "mod.case900Template.airModel.preHeaFloLat.Q_flow": "W",
+        "mod.rad.m_flow": "kg/s",
+        "mod.eta": "1",
+        "mod.rad.UAEle": "W/K",
+        "mod.case900Template.n50_int": "1/h",
+        "mod.case900Template.interzonalAirFlow.rho_default": "kg/m3",
+        "mod.case900Template.interzonalAirFlow.m_flow_nominal_airLea": "kg/s",
+        "mod.rad.vol[1].T": "K",
+        "mod.rad.vol[2].T": "K",
+        "mod.rad.vol[3].T": "K",
+        "mod.rad.vol[4].T": "K",
+        "mod.rad.vol[5].T": "K"
+      },
+      "initial_snapshots": {
+        "mod.case900Template.TAir": 293.15,
+        "mod.case900Template.TRad": 293.15,
+        "mod.yOcc.y": 1.0,
+        "mod.hea.Q_flow": 0.00024999999999999995,
+        "mod.rad.Q_flow": 0.0,
+        "mod.rad.QCon_flow": 0.0,
+        "mod.rad.QRad_flow": 0.0,
+        "mod.case900Template.intGaiOcc.portCon.Q_flow": -29.200000000000003,
+        "mod.case900Template.intGaiOcc.portRad.Q_flow": -43.8,
+        "mod.case900Template.airModel.preHeaFloLat.Q_flow": 45.0,
+        "mod.rad.m_flow": 0.059751434034416816,
+        "mod.eta": 0.9449497325195315,
+        "mod.rad.UAEle": 11.325832677562174,
+        "mod.case900Template.n50_int": 10.0,
+        "mod.case900Template.interzonalAirFlow.rho_default": 1.2,
+        "mod.case900Template.interzonalAirFlow.m_flow_nominal_airLea": 0.0216,
+        "mod.rad.vol[1].T": 293.15,
+        "mod.rad.vol[2].T": 293.15,
+        "mod.rad.vol[3].T": 293.15,
+        "mod.rad.vol[4].T": 293.15,
+        "mod.rad.vol[5].T": 293.15
+      },
+      "missing": [
+        "six absorbed interior solar powers",
+        "complete consistent fabric/moist-air state"
+      ],
+      "readiness": "partial_forcing_available_not_reference_validation"
+    },
+    {
+      "scenario": {
+        "name": "peak_heat_day",
+        "center_day": 318,
+        "evaluation_start_day": 311,
+        "evaluation_end_day": 325,
+        "warmup_days": 7,
+        "initialization_time_s": 26265600,
+        "evaluation_start_s": 26870400,
+        "evaluation_end_s": 28080000,
+        "reset_at_evaluation_start": false
+      },
+      "fmu": {
+        "sha256": "365b3085d97cc4620c06b6036156126a056d7f160fcc4f181d6b2fac4b05743b",
+        "members": [
+          {
+            "member": "modelDescription.xml",
+            "sha256": "f181acdca7167a092a993e68bf4fbbd4f3edfa90b629074d06abf39a90a96fd8"
+          },
+          {
+            "member": "resources/0/Brussels.mos",
+            "sha256": "809d9b66b5283202d3dcaf05c6bb3db448ca94e7d6017740cacd75da537ee12b"
+          },
+          {
+            "member": "resources/1/Uccle.TMY",
+            "sha256": "950f96820bbeadcc2b97e84a1f014be8d8ffbdbb01b28c93899358456bfb699e"
+          },
+          {
+            "member": "resources/weather.csv",
+            "sha256": "b5996aeb0b034e1dc5895b8f345e707d37bd33e23ffd23fe3a563f3778503f53"
+          },
+          {
+            "member": "resources/dataFromModel.csv",
+            "sha256": "7e0b12f0ddf6bd88f8eed909fd8ea847a526d88d73e268b2dec0595a73b1942b"
+          },
+          {
+            "member": "resources/config.json",
+            "sha256": "4a7bd1bd3d53b1608ef4992e4c7098c642c813a236ae19c257ebc4119bca9ba7"
+          },
+          {
+            "member": "resources/days.json",
+            "sha256": "38d9db80dc3f69228f827caa2d44d64f657e8b0699f02c8ff1812f1ae6373021"
+          },
+          {
+            "member": "resources/kpis.json",
+            "sha256": "00477c67556f1577e5bb673d19b115a4e080ccec5ee66ea4a4f8970a4dcbb33d"
+          }
+        ],
+        "fmi_mode": "CoSimulation",
+        "capabilities": {
+          "modelIdentifier": "wrapped",
+          "needsExecutionTool": "false",
+          "canHandleVariableCommunicationStepSize": "true",
+          "canInterpolateInputs": "true",
+          "maxOutputDerivativeOrder": "0",
+          "canRunAsynchronuously": "false",
+          "canBeInstantiatedOnlyOncePerProcess": "true",
+          "canNotUseMemoryManagementFunctions": "false",
+          "canSerializeFMUstate": "false",
+          "providesDirectionalDerivative": "false"
+        }
+      },
+      "boptest_commit": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "ideas_commit": "f1fdd8b22d39dc50297c47b6433e44381e40d0ff",
+      "manifest_sha256": "9e4d23899d3e6f8942097223e48a45246b73e0e60569645c67dfdd013410f67e",
+      "sample_count": 60481,
+      "start_s": 26265600.0,
+      "end_s": 28080000.0,
+      "sampling": {
+        "communication_step_s": 30,
+        "measurement_interval_s": 30,
+        "internal_integration_step": "Adaptive/embedded; not the communication or resource grid"
+      },
+      "signals": {
+        "ovePum_activate": "1",
+        "ovePum_u": "1",
+        "ovePum_y": "1",
+        "oveTSetCoo_activate": "1",
+        "oveTSetCoo_u": "K",
+        "oveTSetCoo_y": "K",
+        "oveTSetHea_activate": "1",
+        "oveTSetHea_u": "K",
+        "oveTSetHea_y": "K",
+        "oveTSetSup_activate": "1",
+        "oveTSetSup_u": "K",
+        "oveTSetSup_y": "K",
+        "reaCO2RooAir_y": "ppm",
+        "reaPPum_y": "W",
+        "reaQHea_y": "W",
+        "reaTRoo_y": "K",
+        "weaSta_reaWeaCeiHei_y": "m",
+        "weaSta_reaWeaCloTim_y": "s",
+        "weaSta_reaWeaHDifHor_y": "W/m2",
+        "weaSta_reaWeaHDirNor_y": "W/m2",
+        "weaSta_reaWeaHGloHor_y": "W/m2",
+        "weaSta_reaWeaHHorIR_y": "W/m2",
+        "weaSta_reaWeaLat_y": "rad",
+        "weaSta_reaWeaLon_y": "rad",
+        "weaSta_reaWeaNOpa_y": "1",
+        "weaSta_reaWeaNTot_y": "1",
+        "weaSta_reaWeaPAtm_y": "Pa",
+        "weaSta_reaWeaRelHum_y": "1",
+        "weaSta_reaWeaSolAlt_y": "rad",
+        "weaSta_reaWeaSolDec_y": "rad",
+        "weaSta_reaWeaSolHouAng_y": "rad",
+        "weaSta_reaWeaSolTim_y": "s",
+        "weaSta_reaWeaSolZen_y": "rad",
+        "weaSta_reaWeaTBlaSky_y": "K",
+        "weaSta_reaWeaTDewPoi_y": "K",
+        "weaSta_reaWeaTDryBul_y": "K",
+        "weaSta_reaWeaTWetBul_y": "K",
+        "weaSta_reaWeaWinDir_y": "rad",
+        "weaSta_reaWeaWinSpe_y": "m/s",
+        "mod.case900Template.TAir": "K",
+        "mod.case900Template.TRad": "K",
+        "mod.yOcc.y": "unspecified",
+        "mod.hea.Q_flow": "W",
+        "mod.rad.Q_flow": "W",
+        "mod.rad.QCon_flow": "W",
+        "mod.rad.QRad_flow": "W",
+        "mod.case900Template.intGaiOcc.portCon.Q_flow": "W",
+        "mod.case900Template.intGaiOcc.portRad.Q_flow": "W",
+        "mod.case900Template.airModel.preHeaFloLat.Q_flow": "W",
+        "mod.rad.m_flow": "kg/s",
+        "mod.eta": "1",
+        "mod.rad.UAEle": "W/K",
+        "mod.case900Template.n50_int": "1/h",
+        "mod.case900Template.interzonalAirFlow.rho_default": "kg/m3",
+        "mod.case900Template.interzonalAirFlow.m_flow_nominal_airLea": "kg/s",
+        "mod.rad.vol[1].T": "K",
+        "mod.rad.vol[2].T": "K",
+        "mod.rad.vol[3].T": "K",
+        "mod.rad.vol[4].T": "K",
+        "mod.rad.vol[5].T": "K"
+      },
+      "initial_snapshots": {
+        "mod.case900Template.TAir": 293.15,
+        "mod.case900Template.TRad": 293.15,
+        "mod.yOcc.y": 1.0,
+        "mod.hea.Q_flow": 0.00024999999999999995,
+        "mod.rad.Q_flow": 0.0,
+        "mod.rad.QCon_flow": 0.0,
+        "mod.rad.QRad_flow": 0.0,
+        "mod.case900Template.intGaiOcc.portCon.Q_flow": -29.200000000000003,
+        "mod.case900Template.intGaiOcc.portRad.Q_flow": -43.8,
+        "mod.case900Template.airModel.preHeaFloLat.Q_flow": 45.0,
+        "mod.rad.m_flow": 0.059751434034416816,
+        "mod.eta": 0.9449497325195315,
+        "mod.rad.UAEle": 11.325832677562174,
+        "mod.case900Template.n50_int": 10.0,
+        "mod.case900Template.interzonalAirFlow.rho_default": 1.2,
+        "mod.case900Template.interzonalAirFlow.m_flow_nominal_airLea": 0.0216,
+        "mod.rad.vol[1].T": 293.15,
+        "mod.rad.vol[2].T": 293.15,
+        "mod.rad.vol[3].T": 293.15,
+        "mod.rad.vol[4].T": 293.15,
+        "mod.rad.vol[5].T": 293.15
+      },
+      "missing": [
+        "six absorbed interior solar powers",
+        "complete consistent fabric/moist-air state"
+      ],
+      "readiness": "partial_forcing_available_not_reference_validation"
+    }
+  ],
+  "status": "original_FMU_reference_inventory_not_THERMA_validation"
+}

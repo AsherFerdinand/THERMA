@@ -1,9 +1,11 @@
 # C2 reduced thermal zone — implementation and MATLAB handoff
 
-Status: **scripts prepared; MATLAB generation and execution pending**. This is a
-physically conservative reduced dry-air model, not an exact reconstruction of
-BESTEST Hydronic. C1 success on R2025a is user-reported; see the evidence boundary
-in [the audit](SPRINT_AUDIT.md). No local C2 outputs have been supplied or fabricated.
+Status update (2026-10-29): reduced C2 passed all ten university MATLAB R2025a
+verification scenarios. The [original report is now archived](../verification/c2/matlab-r2025a/b00092e4236789a4/verification.json)
+with [provenance](VERIFICATION_EVIDENCE.md). The user separately reports 7/7 MATLAB
+unit tests passed. Codex has not executed MATLAB. This verifies the reduced model,
+not exact BOPTEST physics. New [C2.5 replay scripts](C2_REFERENCE_REPLAY.md) remain
+pending university execution. Earlier step-failure history is documented separately.
 
 ## Reference identity and explicit parameter choices
 
@@ -246,4 +248,4 @@ The first user-reported R2025a run generated/executed C2 but passed only five of
 scenarios; the step scenarios failed. Root input interpolation is now explicitly
 disabled, actual input channels are logged and checked, and piecewise step/energy
 handling has dedicated regressions. See [the diagnosis and rerun guide](C2_STEP_DEBUGGING.md).
-The corrected suite still needs university execution; no C2 verification pass is claimed.
+The corrected suite has now passed locally; its original report is archived above.

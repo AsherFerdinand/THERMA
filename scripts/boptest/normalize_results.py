@@ -108,6 +108,19 @@ def normalize(run: Path, output: Path) -> dict:
                 "interpolation": policy,
             }
         )
+    parts = ["mod.rad.QCon_flow", "mod.rad.QRad_flow"]
+    if all(name not in missing for name in parts):
+        columns.append(-data[parts[0]] - data[parts[1]])
+        headers.append("delivered_heating_power")
+        metadata["signals"].append(
+            {
+                "quantity": "delivered_heating_power",
+                "unit": "W",
+                "interpolation": "previous",
+                "source_names": parts,
+                "transformation": "negative sum of source radiator port powers",
+            }
+        )
     output.mkdir(parents=True, exist_ok=False)
     np.savetxt(
         output / "normalized.csv",

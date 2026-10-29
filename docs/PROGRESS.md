@@ -493,3 +493,62 @@ Documented diagnosis and exact commands in docs/C2_STEP_DEBUGGING.md; updated C2
 handoff and roadmap. User authorized normal commit/push to work after checks, without
 force-push or main merge. Next: rebuild from updated scripts, run tests/matlab and
 verify_boptest_zone_c2, return JSON and raw input/trajectory CSVs if any failure persists.
+
+## 2026-10-29 — C2.5 actual evidence archive and reference readiness
+
+During this sprint the user uploaded the original successful R2025a C2 report.
+Archived its exact 75,326 bytes at verification/c2/matlab-r2025a/b00092e4236789a4/verification.json.
+Report SHA-256 is b00092e4236789a4fca959fc0a18d779b038d4b686064d8d876a402e22c8babe.
+Validated overall passed/matlab_verified=true, all ten unique scenarios, coarse and
+refined solver metrics, convergence, and reported numerical budgets. All 15 recorded
+MATLAB source hashes, registry and assumptions hashes match current recorded files
+and explicit compatible commit 071269ef6c1d558785b58b6e82ade540c2fc6d39. Separate metadata
+preserves import time, unknown execution date, source hashes and the limitation that
+the report does not record the actual Git checkout. No report bytes were altered.
+User separately reports 7/7 MATLAB unit tests passed at TH Ingolstadt in ~10.21 s;
+that unit-test log was not uploaded and is not represented as an archived artifact.
+C1's original full report remains awaiting import. No MATLAB execution occurred here.
+
+Implemented therma.validation.archive: strict JSON/report/schema/status/scenario/
+numerical metric/source validation, byte-preserving import, duplicate/overwrite
+refusal, optional source-root and explicit Git commit verification, and archive checks.
+Tests mutate temporary copies to detect missing/failed scenarios, false status,
+incorrect hashes, modified report/provenance and unsupported schemas. CI checks
+integrity with full Git history, explicitly not MATLAB re-execution. Added ignored
+local evidence inbox and disabled raw report line-ending conversion in Git attributes.
+
+Added 14-row machine/human signal compatibility matrix and actual typical/peak
+reference inventory from existing hash-checked original-FMU artifacts. Air is distinct
+from operative/radiative temperature, opaque area mean is only a proxy, fuel and pump
+power are not room-delivered heat, and full fabric/solar storage inputs are missing.
+
+Implemented hash-checked reference replay preparation with explicit --partial opt-in,
+unit/sign conversion, preserved full warm-up and absolute-time provenance, per-channel
+linear/hold policies, recorded omissions and a clearly provisional uniform declared
+start. Full replay refuses absent absorbed solar and full initialized state. Real
+typical/peak partial packets were prepared under ignored outputs/boptest/replay_inputs.
+New MATLAB loader/runner generate mixed-policy From Workspace drivers around unchanged
+C2 equations, validate packet integrity/ordering, request exact evaluation boundaries
+and export trajectory/evaluation CSV plus model/solver/provenance diagnostics. Partial
+execution is never labelled validation. New MATLAB packet tests are prepared but have
+NOT executed here. Existing verified C1/C2 source, equations and assumptions are intact.
+
+Extended comparison CLI with classified JSON/Markdown reports, explicit exploratory
+pairing of different scenario IDs, missing-input/assumption metadata and optional
+Matplotlib diagnostics. Added derived delivered heating total to normalization;
+commodity boundaries remain strict. Actually normalized original typical/repeat runs,
+compared 11 signals with zero difference and generated 11 diagnostic plots. This is
+reference processing/repeatability only; no C2-versus-FMU metrics were fabricated.
+Optional plotting cache paths are kept in generated output directories.
+
+Added evidence/replay/compatibility and qualitative physics-gap guides, updated README
+and roadmap to distinguish archived local verification from reference validation.
+Prioritize C2.6 missing absorbed forcing/full initialization, glazing/solar/exterior
+exchange and radiative feedback before C3. No hydronics, ML, frontend or 36-room work.
+
+Checks: 113 Python tests pass; Ruff lint/format, strict mypy, one archived-report
+integrity check, 14 signal mappings, MISS_HIT 0.9.44 across 24 MATLAB files, package
+wheel/sdist build and whitespace checks pass. Evidence/docs links resolve. Registry
+and original FMU hashes are unchanged. User authorized normal commit/push of sprint
+and actual evidence to work; no force-push or main merge. New replay execution remains
+pending on university MATLAB; the imported report verifies the existing C2 suite only.

@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -15,6 +17,9 @@ jobs:
           version: '0.12.23'
       - run: uv sync --frozen
       - run: uv run --frozen pytest
+      # Integrity of imported reports and mappings, not MATLAB re-execution.
+      - run: uv run --frozen python -m therma.validation.archive --check
+      - run: uv run --frozen python -m therma.validation.replay --check-matrix
       - run: uv run --frozen ruff check .
       - run: uv run --frozen ruff format --check .
       - run: uv run --frozen mypy

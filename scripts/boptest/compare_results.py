@@ -16,7 +16,13 @@ from pathlib import Path
 
 import numpy as np
 
-from therma.comparison import Series, compare_collection
+from therma.comparison import Series
+from therma.validation.reporting import (
+    CLASSIFICATIONS,
+    diagnostic_plots,
+    markdown_report,
+    study_report,
+)
 
 
 def load_series(csv_path: Path, metadata_path: Path) -> dict[str, Series]:
@@ -62,10 +68,22 @@ def main() -> None:
     parser.add_argument("candidate_csv", type=Path)
     parser.add_argument("candidate_metadata", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument(
+        "--classification", choices=CLASSIFICATIONS, default="exploratory_comparison"
+    )
+    parser.add_argument("--allow-scenario-difference", action="store_true")
+    parser.add_argument("--plots", type=Path)
     args = parser.parse_args()
     reference = load_series(args.reference_csv, args.reference_metadata)
     candidate = load_series(args.candidate_csv, args.candidate_metadata)
-    report = compare_collection(reference, candidate)
+    report = study_report(
+        reference,
+        candidate,
+        json.loads(args.reference_metadata.read_text()),
+        json.loads(args.candidate_metadata.read_text()),
+        args.classification,
+        args.allow_scenario_difference,
+    )
     report["input_metadata_sha256"] = [
         hashlib.sha256(path.read_bytes()).hexdigest()
         for path in (args.reference_metadata, args.candidate_metadata)
@@ -73,6 +91,9 @@ def main() -> None:
     report["self_comparison"] = args.reference_csv.read_bytes() == args.candidate_csv.read_bytes()
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
+    args.output.with_suffix(".md").write_text(markdown_report(report))
+    if args.plots:
+        diagnostic_plots(reference, candidate, args.plots)
     print(report["status"])
 
 

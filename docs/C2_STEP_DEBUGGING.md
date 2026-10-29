@@ -117,3 +117,11 @@ failure. Check `input_interpolation`, `input_diagnostics`, before/after temperat
 errors and solver refinement before attributing remaining errors to physics.
 MATLAB/Simulink are unavailable in Codex: the reported five failures are **not yet
 confirmed resolved**. No force-push, main merge or physical-reference change is needed.
+
+
+## Subsequent evidence
+
+The corrected ten-scenario suite subsequently passed on university R2025a. Its
+original report is now archived under verification/c2/matlab-r2025a/b00092e4236789a4/.
+See VERIFICATION_EVIDENCE.md for report hash and source provenance. This is supplied
+local MATLAB evidence, not execution reproduced in Codex.

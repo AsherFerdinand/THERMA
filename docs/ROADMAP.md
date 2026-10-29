@@ -25,15 +25,20 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [ ] Archive full C1 verification report and exact local source revision.
 - [x] Prepare reduced C2 28-state dry-air model, explicit provisional assumptions,
   analytical MATLAB verification scenarios and data comparison infrastructure.
-- [x] User reports C2 generation/execution on R2025a; 5/10 scenarios passed.
+- [x] C2 generated/executed on university R2025a; corrected suite passed 10/10 scenarios.
 - [x] Prepare explicit root-input hold policy, actual-input diagnostics and step regressions.
-- [ ] Rerun corrected C2 locally; review input equivalence, conservation and convergence.
+- [x] Archive actual successful C2 report unchanged; check recorded source/assumption hashes.
+- [x] C2.5: implement evidence importer, integrity checks, compatibility matrix,
+  explicitly partial replay preparation/runner and classified comparison reports/plots.
+- [ ] Execute partial replay locally; do not confuse missing-forcing comparisons with validation.
+- [ ] C2.6: resolve absorbed forcing, initialization and prioritized reference-physics gaps.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [ ] Satisfy C3 readiness gates before hydronic implementation.
 
 BOPTEST-A is static extraction; Phase B has executed the unchanged original FMU.
 C1 success is user-reported; its full local report is not in the repository.
-C2 implementation is a labelled reduced subset and has not executed in cloud MATLAB. No Python physics, ML or web work is included. The thesis diagnostic track below remains preserved and pending independently.
+C2 is MATLAB-verified locally with its actual report archived; Codex has not executed MATLAB.
+Reference validation remains pending because the reduced subset and replay inputs differ. No Python physics, ML or web work is included. The thesis diagnostic track below remains preserved and pending independently.
 See [BOPTEST_REFERENCE.md](BOPTEST_REFERENCE.md),
 [BOPTEST_BASELINE.md](BOPTEST_BASELINE.md) and
 [BOPTEST_SIMULINK_CONTRACT.md](BOPTEST_SIMULINK_CONTRACT.md) and

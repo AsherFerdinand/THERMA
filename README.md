@@ -6,7 +6,7 @@ building with 36 rooms, a central boiler, distribution pipes, radiators and cont
 The reference repository has been inspected statically; see [the inventory](docs/SIMULINK_INVENTORY.md).
 Reference assets are not vendored, and raw validation datasets are not yet available.
 
-Current scope: **C2 reduced thermal-zone implementation prepared for local MATLAB verification**. No Python physics solver, surrogate, API or web UI
+Current scope: **C2.5 — archived local verification evidence and reference-comparison infrastructure**. No Python physics solver, surrogate, API or web UI
 is implemented. Original-FMU reference outputs exist; no THERMA/Simulink equivalence
 or performance improvement is claimed.
 
@@ -64,7 +64,7 @@ The selected independent reconstruction reference is now BOPTEST `bestest_hydron
 and its [machine-readable parameters](configs/references/boptest_bestest_hydronic.json).
 The thesis model and local EN 12831 room-builder draft remain separate; neither has
 been validated as a BOPTEST reconstruction. The original BOPTEST FMU has now run via
-an isolated FMI runtime; MATLAB simulation is still pending.
+an isolated FMI runtime; C2 has since passed local MATLAB verification as recorded below.
 
 See [baseline results and reproduction commands](docs/BOPTEST_BASELINE.md) and the
 [envelope-first Simulink contract](docs/BOPTEST_SIMULINK_CONTRACT.md). Generated CSVs,
@@ -80,4 +80,22 @@ archived. See the [sprint audit](docs/SPRINT_AUDIT.md),
 [C2 equations and exact MATLAB commands](docs/BOPTEST_SIMULINK_C2.md),
 [comparison tools](docs/REFERENCE_COMPARISON.md) and [C3 gates](docs/C3_READINESS.md).
 C2 uses explicit provisional dry-air/surface assumptions and is not an exact
-BOPTEST reconstruction. No C2 MATLAB verification is claimed.
+BOPTEST reconstruction. Its successful local MATLAB report is now archived below.
+
+
+## Engineering verification evidence
+
+University MATLAB **R2025a** execution at Technische Hochschule Ingolstadt:
+**10/10 C2 scenarios passed**, with the [actual original report archived](verification/c2/matlab-r2025a/b00092e4236789a4/verification.json)
+and [separate hash/source provenance](verification/c2/matlab-r2025a/b00092e4236789a4/metadata.json).
+The user separately reports **7/7 MATLAB unit tests passed**; that test log is not
+part of the report. All recorded source hashes match commit `071269e`.
+Codex/CI check integrity and static code; they have not independently executed MATLAB.
+C1 also passed according to the user, but its original report is not archived.
+
+C2 remains a verified **reduced** model, not BOPTEST-validated. Phase C2.5 now provides
+[evidence import/integrity tools](docs/VERIFICATION_EVIDENCE.md), a
+[signal compatibility matrix](docs/C2_SIGNAL_COMPATIBILITY.md), and
+[partial reference-replay/comparison commands](docs/C2_REFERENCE_REPLAY.md).
+Missing absorbed solar/full initial states and simplified physics limit comparisons;
+[C2.6 refinement](docs/C2_PHYSICS_GAPS.md) is recommended before C3 hydronics.

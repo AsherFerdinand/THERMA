@@ -20,3 +20,8 @@ build/
 slprj/
 *.slxc
 *.asv
+
+# User-supplied evidence inbox; only validated selected reports are archived
+/evidence_import/*
+!/evidence_import/README.md
+/verification/**/.import-*

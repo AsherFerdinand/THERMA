@@ -1,0 +1,2 @@
+# Imported MATLAB evidence must retain its exact original byte representation.
+/verification/**/verification.json -text
