@@ -39,6 +39,9 @@ OPTIONAL = {
     "internal_convective_power": "W",
     "internal_radiative_power": "W",
     "net_external_power": "W",
+    "stored_energy_derivative": "W",
+    "absorbed_solar_power": "W",
+    "internal_gain_power": "W",
 }
 SOURCE_CONV = "mod.rad.QCon_flow"
 SOURCE_RAD = "mod.rad.QRad_flow"

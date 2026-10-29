@@ -1,0 +1,87 @@
+{
+  "status": "C26AB_prepared_C26C_MATLAB_pending",
+  "artifact": "THERMA_C26_solar_replay.zip",
+  "artifact_sha256": "117ce27286e078080fb6766c77b1e9ad0939d6ecb39ae2b86f1f354d666364aa",
+  "artifact_bytes": 36415347,
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C26_solar_replay.zip",
+  "reference_run": "typical_heat_day_u7x05kpz",
+  "reference_manifest_sha256": "9fadac5eb6c38f0e9710cd5e12c85398517aab57c6ca511f1618c6109ea5020c",
+  "baseline_manifest_sha256": "07f761b8cdf0e001b416419833b44bf62144698f6f24f17f1517616fc1f3f247",
+  "baseline_common_signal_max_difference": 0.0,
+  "reference_checks": {
+    "status": "passed",
+    "surface_order": [
+      "south",
+      "west",
+      "north",
+      "east",
+      "floor",
+      "roof",
+      "glazing"
+    ],
+    "max_distribution_residual_W": 2.255973186038318e-13,
+    "max_direct_sum_residual_W": 9.094947017729282e-13,
+    "max_diffuse_sum_residual_W": 2.2737367544323206e-13,
+    "max_solar_sum_residual_W": 1.3642420526593924e-12,
+    "direct_weights": [
+      0.030720000000000004,
+      0.05184000000000001,
+      0.06912,
+      0.05184000000000001,
+      0.6,
+      0.15360000000000001,
+      0.04288000000000001
+    ],
+    "diffuse_weights": [
+      0.05549132947976879,
+      0.09364161849710984,
+      0.12485549132947978,
+      0.09364161849710984,
+      0.2774566473988439,
+      0.2774566473988439,
+      0.07745664739884395
+    ],
+    "gain_weights": [
+      0.05594405594405596,
+      0.09440559440559443,
+      0.1258741258741259,
+      0.09440559440559443,
+      0.27972027972027974,
+      0.27972027972027974,
+      0.06993006993006994
+    ],
+    "evaluation_solar_hold_energy_J": {
+      "south": 10669178.975869458,
+      "west": 18004239.52177971,
+      "north": 24005652.695706278,
+      "east": 18004239.52177971,
+      "floor": 96621797.10566969,
+      "roof": 53345894.87934729,
+      "glazing": 14892395.653817788
+    },
+    "samples": 60481,
+    "interpretation": "30 s held reconstruction, not exact continuous FMU energy"
+  },
+  "payload_sha256": {
+    "README_TRANSFER.md": "8074e01e3f817d7b23e32ef03788fcab48471fe269ac3468ca32226c24c0712e",
+    "SHA256SUMS": "13544994a66d9e6b5aed040af9dd06d403442054d7f3d2f4a0e334a121b00b61",
+    "packet/inputs.csv": "74c807d1b8303dd7bc9aec83fc92ce5d2e6f4ff987bfbc98e466c154b143564b",
+    "packet/replay.json": "5f923d220e77bad415559572b155c5aaa776407352f0930ee0c2f9558fda33a3",
+    "packet/solar_seven.csv": "feefe48f07441fe4b95769a30f45fc085a7abe6fec853a681d4f75db60d2ba8c",
+    "packet/solar_sources.csv": "589e9479b8beb667b256a9393fb141d0e49c1cf09449f50d75d66ea536741a7d",
+    "reference/evaluation.csv": "a287380b723d40838cc73d75ba5fd2947678af6f3e87922dc566834ee60d2e62",
+    "reference/manifest.json": "9fadac5eb6c38f0e9710cd5e12c85398517aab57c6ca511f1618c6109ea5020c",
+    "reference/signals.json": "1b41b06fcd7be8376eb5756644dc8aa0f8b4a556c482b2c9095e583810b57adf",
+    "reports/engineering_summary.md": "f5f24dbf63032bb2edf3747b713a91d692b1b0d4f5268e33b13367f7cba5dcfb",
+    "reports/reference_checks.json": "ff7d57241f3420c736af9e143570a5854f720443855e1431d3afb8620b2e038e",
+    "reports/reference_solar_allocations.pdf": "fb92b005ff0f320889483978efc10386973532206567325958843e76f16c3658",
+    "reports/reference_solar_allocations.png": "bfd4b7dc8755a63d343291860dbdbb2bd4fb050cdeb29724bf7e814d9995823b",
+    "reports/reference_state_snapshots.pdf": "e1d8a4c0f05a99e472b875f4bcd9cea65a064e7f296df9527504081189f8f1e4",
+    "reports/reference_state_snapshots.png": "a68e70bca8edefac32f58ad2880376bc9cc988d6f04ba8dc264929f29b31d64b"
+  },
+  "source_FMU_sha256": "365b3085d97cc4620c06b6036156126a056d7f160fcc4f181d6b2fac4b05743b",
+  "matlab_execution_in_cloud": false,
+  "solar_resolved_THERMA_results": null,
+  "transfer_commit": "f52fc632167aeeed0be60bf173f036a3410190c0",
+  "uploaded_bytes_verified": true
+}

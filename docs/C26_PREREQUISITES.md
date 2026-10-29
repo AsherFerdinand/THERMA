@@ -1,5 +1,9 @@
 # C2.6 prerequisites — investigation only
 
+Historical prerequisite investigation. The subsequent implementation and actual full-period
+solar extraction are documented in [C26_SOLAR_BENCHMARK.md](C26_SOLAR_BENCHMARK.md).
+The original observations below remain preserved.
+
 No THERMA equations, parameters, replay packet or existing baseline dataset were
 changed. This document proposes future work; it does not implement C2.6 or promise
 an error reduction. The first actual comparison remains exploratory (MAE 2.34053 K,

@@ -5,9 +5,13 @@ arguments
     replayFile (1,1) string
     assumptionsFile (1,1) string
     options.AllowPartial (1,1) logical = false
+    options.MaxStepSeconds (1,1) double = NaN
 end
 assert(options.AllowPartial,'THERMA:PartialConsent', ...
-    'Replay lacks solar/full reference initial state. Explicit AllowPartial=true is required.');
+    'Replay is a reduced partial-reference experiment. Explicit AllowPartial=true is required.');
+assert(isnan(options.MaxStepSeconds) || ...
+    (isfinite(options.MaxStepSeconds) && options.MaxStepSeconds>0), ...
+    'THERMA:ReplayStep','MaxStepSeconds must be positive finite or NaN for original default.');
 [metadata,data] = load_boptest_replay(replayFile);
 root = fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));
 parent = fullfile(root,'outputs','boptest','replays');
@@ -47,6 +51,9 @@ try
         'Position',[300 20 310 400]);
     % Set the actual requested interval before the driver checks coverage.
     set_param(model,'StartTime','0','StopTime',num2str(metadata.duration_s,17));
+    if ~isnan(options.MaxStepSeconds)
+        set_param(model,'MaxStep',num2str(options.MaxStepSeconds,17));
+    end
     [simulationInput,report.drivers] = configure_boptest_replay_sources(model,metadata,data);
     destinations = {'Outdoor_K','Heating_conv_W','Heating_rad_W', ...
         'Internal_conv_W','Internal_rad_W','Solar_absorbed_W','Log_inputs_used'};
@@ -76,9 +83,11 @@ try
     report.matlab_execution_completed = true;
     report.stage = 'export'; write_boptest_json(reportFile,report);
     save(fullfile(folder,'simulation.mat'),'result');
-    names = {'T_air_K','q_heating_W','q_vent_W','E_J','residual_W','T_opaque_mean_K'};
+    names = {'T_air_K','q_heating_W','q_vent_W','E_J','residual_W','T_opaque_mean_K', ...
+        'q_net_W','dE_dt_W','q_solar_W','q_internal_W'};
     columns = {'air_temperature','delivered_heating_power','ventilation_sensible_power', ...
-        'stored_thermal_energy','power_balance_residual','opaque_mean_surface_temperature'};
+        'stored_thermal_energy','power_balance_residual','opaque_mean_surface_temperature', ...
+        'net_external_power','stored_energy_derivative','absorbed_solar_power','internal_gain_power'};
     firstSeries = result.get(names{1}); [time,index] = unique(firstSeries.Time(:),'last');
     values = zeros(numel(time),numel(names));
     for j = 1:numel(names)
@@ -104,8 +113,9 @@ try
         absolute(find(selected,1,'last'))==metadata.evaluation_end_s, ...
         'THERMA:ReplayCoverage','Exact evaluation samples missing; no silent trimming/extrapolation.');
     csvFile = fullfile(folder,'evaluation.csv'); writetable(output(selected,:),csvFile);
-    unit = {'K','W','W','J','W','K','K','W','W','W','W'};
+    unit = {'K','W','W','J','W','K','W','W','W','W','K','W','W','W','W'};
     policies = {'linear','previous','previous','linear','previous','linear', ...
+        'previous','previous','previous','previous', ...
         'linear','previous','previous','previous','previous'};
     signals = cell(1,numel(columns));
     for j = 1:numel(columns)

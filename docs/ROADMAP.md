@@ -41,8 +41,12 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [x] Investigate pinned-FMU solar/state access: source-derived opaque solar is available;
   all 27 initialized opaque temperatures are readable and match current 293.15 K start.
 - [x] Publish results-only ZIP separately and document C2.6 prerequisites/implementation gates.
-- [ ] Review proposed solar export/packet, energy diagnostics and remaining window/exterior gaps before implementation.
-- [ ] C2.6: resolve absorbed forcing, initialization and prioritized reference-physics gaps.
+- [x] C2.6A: extract actual solar observations/state snapshots; verify unchanged baseline and seven-surface conservation.
+- [x] C2.6B: prepare versioned solar-resolved packet, compatible MATLAB loader/batch entry and complete energy exports.
+- [x] Add independent contracts, future controlled comparison/day-wise metrics and actual-output solver sensitivity tools.
+- [x] Publish checked C2.6 packet/reference subset separately from development.
+- [ ] C2.6C: execute actual MATLAB solar replay/tests, compare with baseline and inspect solver/energy diagnostics.
+- [ ] Decide remaining glazing/exterior/moist-air physics scope from measured evidence; no calibration.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [ ] Satisfy C3 readiness gates before hydronic implementation.
 

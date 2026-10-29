@@ -292,6 +292,15 @@ def run(args: argparse.Namespace, directory: Path, manifest: dict) -> None:
     by_name = {v.name: v for v in model.modelVariables}
     selected = [v for v in model.modelVariables if v.causality in ["output", "input"]]
     selected += [by_name[name] for name in INTERNAL if name in by_name]
+    observation = None
+    if getattr(args, "solar", False):
+        from therma.validation.solar import catalog
+
+        observation = catalog(args.fmu)
+        observation["extractor_sha256"] = digest(ROOT / "src/therma/validation/solar.py")
+        selected += [by_name[row["name"]] for row in observation["variables"]]
+        observation["snapshots"] = []
+        manifest["solar_observability"] = observation
     selected = list({v.name: v for v in selected}.values())
     if any(v.type not in ["Real", "Boolean", "Integer", "Enumeration"] for v in selected):
         raise ValueError("Unsupported exported variable type")
@@ -302,6 +311,8 @@ def run(args: argparse.Namespace, directory: Path, manifest: dict) -> None:
         )
         for v in selected
     }
+    if observation is not None:
+        units.update({r["name"]: r["unit"] for r in observation["variables"]})
     registry = [
         {
             "name": v.name,
@@ -310,7 +321,10 @@ def run(args: argparse.Namespace, directory: Path, manifest: dict) -> None:
             "causality": v.causality,
             "value_reference": v.valueReference,
             "description": v.description,
-            "internal": v.name in INTERNAL,
+            "internal": v.name in INTERNAL
+            or (
+                observation is not None and v.name in {r["name"] for r in observation["variables"]}
+            ),
         }
         for v in selected
     ]
@@ -400,6 +414,17 @@ def run(args: argparse.Namespace, directory: Path, manifest: dict) -> None:
                         fmu.doStep(
                             currentCommunicationPoint=t - interval, communicationStepSize=interval
                         )
+                    if observation is not None and t in (warmup_start, start):
+                        observation["snapshots"].append(
+                            {
+                                "time_s": t,
+                                "label": "initialized" if t == warmup_start else "evaluation_start",
+                                "values": {
+                                    r["name"]: fmu.getReal([r["value_reference"]])[0]
+                                    for r in observation["variables"]
+                                },
+                            }
+                        )
                     data[row, 0] = t
                     for getter, variables in groups:
                         if variables:
@@ -450,6 +475,9 @@ def main() -> int:
     parser.add_argument("--scenario", choices=["typical_heat_day", "peak_heat_day"], required=True)
     parser.add_argument("--output-root", type=Path, default=ROOT / "outputs/boptest/runs")
     parser.add_argument("--repeat-of", type=Path)
+    parser.add_argument(
+        "--solar", action="store_true", help="Opt-in solar/state observation export"
+    )
     args = parser.parse_args()
     args.output_root.mkdir(parents=True, exist_ok=True)
     directory = Path(tempfile.mkdtemp(prefix=args.scenario + "_", dir=args.output_root))

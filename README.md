@@ -112,10 +112,19 @@ This exploratory partial-forcing comparison is not BOPTEST validation. The read-
 figures, metrics JSON and an engineering summary from actual exports. Original
 BOPTEST trajectories are available locally; matching uses air temperature, not
 operative temperature. Signed reverse radiator heat exists in the reference and
-is retained. C2.6 remains unimplemented pending first comparison review.
+is retained. C2.6A/B now adds solar-resolved reference extraction and replay preparation;
+C2.6C remains pending actual MATLAB execution.
 
 
 [Download the actual C2.5C figures and reports](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_first_typical_actual_analysis.zip)
 from the separate transfer branch. Raw uploads/reference datasets/models are excluded.
 See [C2.6 prerequisites](docs/C26_PREREQUISITES.md) for newly confirmed solar/state
-access and the proposed plan. No C2.6 physics or parameter calibration is implemented.
+access and the proposed plan. No C1/C2 physics or parameter calibration was changed.
+
+
+[C2.6A/B solar-resolved benchmarking](docs/C26_SOLAR_BENCHMARK.md) is implemented:
+actual pinned-FMU solar extraction, 39-state observations, checked opt-in v2 packets,
+MATLAB preparation and future paired diagnostics. The unchanged baseline channels
+reproduce exactly. [Download the prepared replay/reference packet](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C26_solar_replay.zip)
+from the separate transfer branch; [checksums and actual checks](docs/C26_ARTIFACTS.json).
+Solar-resolved THERMA execution and improvement metrics are **pending**, not validated.

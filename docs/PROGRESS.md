@@ -816,3 +816,66 @@ Checks: 139 Python tests passed with optional plotting dependencies; Ruff lint a
 format, mypy, archived-evidence integrity and 14 replay mappings passed. MISS_HIT
 static lint passed for 28 MATLAB files; git diff --check passed. These checks are
 not MATLAB execution or numerical validation of proposed C2.6 work.
+
+## 2026-10-29 — C2.6A/B solar-resolved benchmarking implemented in cloud
+
+Added opt-in --solar reference observation to the pinned original FMI driver. Final
+full-period run typical_heat_day_u7x05kpz succeeded on the unchanged original FMU,
+with 60,481 samples at 30 s, seven warm-up and fourteen evaluation days. Recorded
+original names/VRs/units, direct/diffuse/gain distribution and all 39 continuous states
+plus air temperature at initialization/evaluation start. Exporter/module hashes are
+recorded. All common original channels were bit-identical to the frozen typical run;
+a separate default-export regression also reproduced every original channel exactly.
+FMU and frozen registry hashes remained unchanged. No MATLAB execution occurred.
+
+Independent source-equation checks: combined residual <=2.256e-13 W, direct sum
+<=9.095e-13 W, diffuse sum <=2.274e-13 W, seven-surface total <=1.365e-12 W.
+Evaluation solar hold reconstruction: total 65.42872 kWh, six opaque 61.29195 kWh,
+separate glazing 4.13678 kWh. These are sampled reference energies, not measured
+THERMA improvements. Initialized opaque states are 293.15 K; evaluation-start range
+270.380878–294.714344 K. State snapshots are not portable restart evidence.
+
+Implemented solar.py verified opt-in schema v2 packet alongside untouched v1/no-solar
+preparation. Original five forcings remain unchanged; six source-derived solar ports
+use [1,3,4,2,6,5], seventh glazing allocation is preserved and never redistributed.
+New checks reject checksum, source-equation, identity, unit, sign, ordering, timestamp,
+state-dimension and initialization errors. Independent tests use small synthetic data
+explicitly labeled as tests, never physical evidence. Actual packet/report/PNG/PDF
+source figures generated under ignored outputs/boptest/c26/.
+
+MATLAB loader supports v1/v2, source hashes/units, observed uniform initial vector,
+solar routing and strict v2 grid. Driver hold policy and nested exception diagnostics
+remain intact. Added one solar batch entry and opt-in MaxStepSeconds for later actual
+solver sensitivity; defaults retain original settings. Extended export uses already
+existing net external power, stored-energy derivative, solar and internal-power logs.
+No thermal equations, physical parameters or frozen reference artifacts changed.
+
+Added actual-output paired analysis: native-reference temperature MAE/RMSE/max/bias,
+daily errors, signed heating/internal/solar energies, complete sampled energy closure,
+publication plots, JSON and optional actual-output solver comparison. Same solver
+settings are labeled repeatability only. Actual solar-resolved MATLAB results and
+metrics remain pending; original 2.34053 K MAE/-2.33520 K bias is not reinterpreted as
+validation or attributed solely to solar. Dynamic glazing/exterior/moist-air gaps remain.
+
+Updated README, roadmap, C26_SOLAR_BENCHMARK guide and machine-readable C26_ARTIFACTS
+receipt. Prepared separate transfer ZIP with checksummed packet, reference evaluation
+subset, reports and source-only figures, without FMU/runtime, MATLAB uploads or models.
+Next milestone is C2.6C actual MATLAB tests/replay and controlled comparison; no further
+physics/calibration/network implementation started.
+
+Resumed publication session: preserved all prepared changes and verified existing
+full-period outputs without rerunning the FMU. Full optional-plot suite: 162 tests
+passed (4.91 s). Ruff lint/format (66 files), mypy (10 modules), archive integrity,
+14 compatibility mappings, MISS_HIT (29 MATLAB files), package sdist/wheel build and
+git diff --check passed. Wheel contains both new analysis modules. Verified exact
+observed/declared initialization equality and unchanged C1/C2 builders/loaders,
+assumptions and frozen registry against the pre-task commit. No MATLAB execution.
+
+Reference/replay ZIP is 36,415,347 bytes, SHA-256
+117ce27286e078080fb6766c77b1e9ad0939d6ecb39ae2b86f1f354d666364aa.
+ZIP CRC and every payload hash were checked; the original packet independently
+passed its 60,481-sample schema/source conservation audit. Generated datasets remain
+ignored on work. Publication metadata and independent upload verification are recorded
+in docs/C26_ARTIFACTS.json; replay-transfer remains separate from work/main.
+Transfer publication succeeded at f52fc632167aeeed0be60bf173f036a3410190c0;
+a fresh isolated GitHub fetch verified identical uploaded ZIP bytes/SHA-256.
