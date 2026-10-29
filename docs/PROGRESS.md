@@ -642,3 +642,38 @@ verification report and original transfer ZIP remain untouched. Added exact targ
 and full-rerun instructions in docs/C25_REPLAY_DIAGNOSTICS.md and linked the first
 comparison guide. C2.6 stays blocked until the real replay works. User authorized
 normal commit/push to work; no force-push or merge into main/transfer branches.
+
+
+## 2026-10-29 — Confirmed R2025a From Workspace final-value policy fix
+
+User executed diagnostic tests on dac0c7e: 2 passed, 1 failed/incomplete, 18.6242 s.
+The actual nested error repeats for Replay_Source_02 through _11: unable to extrapolate
+beyond final workspace data because interpolation is not enabled; linear source 01
+did not have this error. This confirms an incompatible default after-final policy,
+not a thermal equation, matrix data format or workspace-resolution defect. Compilation
+requires a legal policy even though the normal simulation ends at the final datum.
+No raw test log was supplied or fabricated, and no MATLAB execution occurred here.
+
+Set OutputAfterFinalValue='Holding final value' explicitly on all eleven sources.
+In-range outdoor interpolation stays linear; heating/internal/solar remain block
+Interpolate=off and timeseries zoh. Record the policy in driver diagnostics. Added
+strict positive finite duration and actual model/packet/data interval coverage checks;
+the runner sets its requested start/stop before configuring drivers. Holding after
+final data is a defensive block setting, not permission to silently extend a replay
+whose input coverage is incomplete. Existing nested exception diagnostics unchanged.
+
+Extended MATLAB driver regression to check all settings, values between samples,
+right-limit values at the final sample and deliberate driver-only post-final holding
+for all eleven channels (nonzero terminal outdoor slope ensures extrapolation fails
+the test). Added missing/truncated/nonfinite/mismatched interval cases. The test-only
+post-final run intentionally changes the model stop after covered setup; production
+requests remain strictly bounded. Targeted MATLAB suite now has five test functions;
+none were executed in Codex. Reuse existing data ZIP; no dataset updates are needed.
+
+Checks executed: 118 Python tests pass; Ruff lint/format, strict mypy, archived evidence
+integrity, 14 signal mappings, MISS_HIT across 28 MATLAB files, package wheel/sdist
+builds and whitespace checks pass. Verified C1/C2 equations, assumptions, frozen
+registry, original reference data, archived report and transfer branch are unchanged.
+Updated diagnosis/roadmap. Fix awaits university R2025a regression/full replay rerun;
+no claim of MATLAB verification or replay success. User authorized normal commit/push
+to work, without force-push or merging main/transfer. C2.6 remains blocked.

@@ -45,3 +45,24 @@ def test_driver_uses_explicit_timeseries_and_model_workspace_bindings():
     assert "'SampleTime','0'" in source and "'ZeroCross','on'" in source
     assert "sprintf('Inputs/%d',channel)" in source
     assert "assignin(workspace,variable,[time values])" not in source
+
+
+def test_from_workspace_final_hold_and_coverage_are_explicit():
+    source = (ROOT / "configure_boptest_replay_sources.m").read_text()
+    assert "'OutputAfterFinalValue','Holding final value'" in source
+    assert "data(end,1)>=metadata.duration_s" in source
+    assert "isfinite(metadata.duration_s)" in source
+    assert source.index("'THERMA:ReplayDriverCoverage'") < source.index("add_block(")
+    assert "'output_after_final_value','Holding final value'" in source
+    assert "interpolate = 'off'; method = 'zoh'" in source
+    assert "interpolate = 'on'; method = 'linear'" in source
+
+
+def test_driver_coverage_uses_model_interval_before_binding():
+    helper = (ROOT / "configure_boptest_replay_sources.m").read_text()
+    assert "requestedStop==metadata.duration_s" in helper
+    assert "data(end,1)>=requestedStop" in helper
+    runner = (ROOT / "run_boptest_zone_replay.m").read_text()
+    assert runner.index("set_param(model,'StartTime','0','StopTime'") < runner.index(
+        "configure_boptest_replay_sources(model,metadata,data)"
+    )

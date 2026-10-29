@@ -45,6 +45,8 @@ try
     delete_block([model '/Inputs']);
     add_block('simulink/Signal Routing/Mux',[model '/Inputs'],'Inputs','11', ...
         'Position',[300 20 310 400]);
+    % Set the actual requested interval before the driver checks coverage.
+    set_param(model,'StartTime','0','StopTime',num2str(metadata.duration_s,17));
     [simulationInput,report.drivers] = configure_boptest_replay_sources(model,metadata,data);
     destinations = {'Outdoor_K','Heating_conv_W','Heating_rad_W', ...
         'Internal_conv_W','Internal_rad_W','Solar_absorbed_W','Log_inputs_used'};
@@ -52,8 +54,7 @@ try
         add_line(model,'Inputs/1',[destinations{j} '/1'],'autorouting','on');
     end
     evaluationRelative = metadata.evaluation_start_s-metadata.time_origin_s;
-    set_param(model,'StartTime','0','StopTime',num2str(metadata.duration_s,17), ...
-        'OutputOption','AdditionalOutputTimes', ...
+    set_param(model,'OutputOption','AdditionalOutputTimes', ...
         'OutputTimes',mat2str([0 evaluationRelative metadata.duration_s],17));
     Simulink.BlockDiagram.arrangeSystem(model);
     save_system(model,fullfile(folder,[model '.slx']));

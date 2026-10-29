@@ -1,5 +1,41 @@
 # C2.5 real replay failure diagnostics — MATLAB R2025a
 
+## Confirmed final-value configuration defect
+
+The user reran commit dac0c7e on R2025a: two diagnostic tests passed and the mixed
+source compile/simulation test failed/incompleted (18.6242 s). Sources 02–11 reported
+"Unable to extrapolate output values after final workspace data value because
+interpolation is not enabled." Source 01 did not. This now establishes the cause:
+From Workspace's default after-final extrapolation is incompatible with the ten
+sources whose interpolation is deliberately disabled. It is a configuration error
+even when the simulation ends at the final timestamp; complete data coverage alone
+does not make an invalid extrapolation setting legal.
+
+All eleven sources now explicitly set:
+
+```matlab
+'OutputAfterFinalValue','Holding final value'
+```
+
+This sets only post-final behavior. Outdoor samples still use linear interpolation
+and all ten powers still use block Interpolate=off plus timeseries zoh. No held
+signal is made linear. The helper records the after-final policy and checks finite
+positive packet duration, model StartTime=0/StopTime=duration agreement and complete
+data coverage before constructing sources. The runner establishes its requested
+interval before invoking those checks. Missing data is rejected, not silently padded.
+
+Regression fixtures now change all channel values at the final timestamp, check
+within-sample linear/ZOH values and final right-limit values, and deliberately extend
+a driver-only simulation past its data end to verify constant final values (including
+an outdoor channel whose last slope is nonzero). The latter intentionally bypasses
+the production coverage limit only in that policy test. Separate tests reject
+truncated coverage, nonfinite duration and model/packet interval mismatch. The nested
+exception serializers are unchanged. No source datasets or verified physics changed.
+
+This confirmed configuration defect is patched, **not yet MATLAB-verified**. The
+updated targeted suite has five test functions. Run the same commands below, then
+the real replay only after all five pass. C2.6 remains blocked until replay succeeds.
+
 ## What is known
 
 The user reports two unsuccessful long replays. The packet loaded as 60481-by-12,

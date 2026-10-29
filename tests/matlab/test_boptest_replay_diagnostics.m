@@ -61,18 +61,56 @@ for j = 1:11
     verifyEqual(testCase,get_param(sprintf('%s/Replay_Source_%02d',model,j),'SampleTime'),'0');
     if j==1, interpolate='on'; else, interpolate='off'; end
     verifyEqual(testCase,get_param(sprintf('%s/Replay_Source_%02d',model,j),'Interpolate'),interpolate);
+    verifyEqual(testCase,get_param(sprintf('%s/Replay_Source_%02d',model,j), ...
+        'OutputAfterFinalValue'),'Holding final value');
+    verifyEqual(testCase,info{j}.output_after_final_value,'Holding final value');
 end
 set_param(model,'SimulationCommand','update');
 output = sim(input); series = output.get('driver_samples');
 t = series.Time(:); values = squeeze(series.Data);
 if size(values,1)~=numel(t), values=values'; end
 verifyTrue(testCase,any(t>0 & t<1));
-expectedOutdoor = interp1([0;1;2],[293.15;283.15;283.15],t,'linear');
+expectedOutdoor = interp1([0;1;2],[293.15;283.15;278.15],t,'linear');
 verifyEqual(testCase,values(:,1),expectedOutdoor,'AbsTol',1e-10);
 verifyEqual(testCase,values(t<1,2),zeros(sum(t<1),1));
-verifyEqual(testCase,values(t>1,2),ones(sum(t>1),1)*650);
-verifyEqual(testCase,values(t>1,3),ones(sum(t>1),1)*350);
-verifyEqual(testCase,values(:,4:11),zeros(size(values,1),8));
+between = t>1 & t<2;
+verifyTrue(testCase,any(between));
+verifyEqual(testCase,values(between,2),ones(sum(between),1)*650);
+verifyEqual(testCase,values(between,3),ones(sum(between),1)*350);
+verifyEqual(testCase,values(t<2,4:11),zeros(sum(t<2),8));
+final = find(t==2,1,'last'); verifyNotEmpty(testCase,final);
+verifyEqual(testCase,values(final,:),[278.15 800 400 50 60 1 2 3 4 5 6],'AbsTol',1e-10);
+end
+
+function testFinalValueHoldBeyondDataEnd(testCase)
+[model,input] = driverModel(); cleanup = onCleanup(@() close_system(model,0));
+% Deliberate driver-only extension AFTER the normal covered setup. Production
+% packets are still required to cover their complete requested interval.
+input = input.setModelParameter('StopTime','2.5','OutputTimes','[0 0.5 1 1.5 2 2.25 2.5]');
+output = sim(input); series = output.get('driver_samples');
+t = series.Time(:); values = squeeze(series.Data);
+if size(values,1)~=numel(t), values=values'; end
+beyond = t>2;
+verifyTrue(testCase,any(beyond));
+verifyEqual(testCase,values(beyond,:), ...
+    repmat([278.15 800 400 50 60 1 2 3 4 5 6],sum(beyond),1),'AbsTol',1e-10);
+end
+
+function testIncompleteCoverageRejected(testCase)
+[model,~] = driverModel(); cleanup = onCleanup(@() close_system(model,0));
+% Coverage is validated before blocks are added, so these deliberately bad
+% requests fail with a coverage diagnostic rather than a duplicate-block error.
+metadata.duration_s = 3;
+data = [0 293.15 zeros(1,10);2 283.15 zeros(1,10)];
+verifyError(testCase,@() configure_boptest_replay_sources(model,metadata,data), ...
+    'THERMA:ReplayDriverCoverage');
+metadata.duration_s = 2;
+set_param(model,'StopTime','3');
+verifyError(testCase,@() configure_boptest_replay_sources(model,metadata,data), ...
+    'THERMA:ReplayDriverCoverage');
+metadata.duration_s = NaN;
+verifyError(testCase,@() configure_boptest_replay_sources(model,metadata,data), ...
+    'THERMA:ReplayDriverCoverage');
 end
 
 function testDriverFailureRetainsOriginalSourceDiagnostic(testCase)
@@ -106,12 +144,13 @@ try
     add_block('simulink/Continuous/Integrator',[model '/SignalIntegral']);
     add_block('simulink/Sinks/Terminator',[model '/Discard']);
     add_line(model,'Inputs/1','SignalIntegral/1'); add_line(model,'SignalIntegral/1','Discard/1');
+    metadata.duration_s = 2;
     metadata.channels = cell(1,11);
     for j = 1:11
         if j==1, policy='linear'; else, policy='previous'; end
         metadata.channels{j} = struct('interpolation',policy);
     end
-    data = [0 293.15 zeros(1,10);1 283.15 650 350 zeros(1,8);2 283.15 650 350 zeros(1,8)];
+    data = [0 293.15 zeros(1,10);1 283.15 650 350 zeros(1,8);2 278.15 800 400 50 60 1 2 3 4 5 6];
     [input,info] = configure_boptest_replay_sources(model,metadata,data);
 catch problem
     close_system(model,0); rethrow(problem);

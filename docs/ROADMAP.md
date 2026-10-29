@@ -32,7 +32,8 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
   explicitly partial replay preparation/runner and classified comparison reports/plots.
 - [x] User reports C2.5 MATLAB suite 8/8 passed, 23.5779 s; no raw test log supplied.
 - [x] Prepare hash-checked first typical replay/reference transfer ZIP; no Git needed at university.
-- [ ] Current blocker: two real replay attempts failed with an aggregate Simulink error.
+- [ ] Current blocker: R2025a confirms held From Workspace sources reject default after-final extrapolation.
+- [x] Explicitly set final-value holding and add interval/endpoint regressions; MATLAB rerun pending.
 - [x] Prepare recursive exception diagnostics and explicit replay-source binding regressions.
 - [ ] Run new driver tests, resolve nested errors, then execute/compare first partial replay before C2.6.
 - [ ] C2.6: resolve absorbed forcing, initialization and prioritized reference-physics gaps.
