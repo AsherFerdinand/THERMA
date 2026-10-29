@@ -6,6 +6,11 @@ They cannot infer missing solar absorption, a full reference initial state or
 reference-equivalent physics. See [compatibility](C2_SIGNAL_COMPATIBILITY.md),
 [verification evidence](VERIFICATION_EVIDENCE.md) and [physics gaps](C2_PHYSICS_GAPS.md).
 
+For the simplest no-Git university transfer, use the ready packet and exact commands
+in [First partial comparison](FIRST_PARTIAL_COMPARISON.md). The user now reports the
+expanded R2025a MATLAB suite passed 8/8 in 23.5779 s, including the packet test; no
+raw test log was supplied. Full reference replay execution remains pending.
+
 ## 1. Inventory and prepare the original reference
 
 Existing local original-FMU runs are documented in `configs/references/c2_reference_inventory.json`.

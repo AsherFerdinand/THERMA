@@ -552,3 +552,49 @@ wheel/sdist build and whitespace checks pass. Evidence/docs links resolve. Regis
 and original FMU hashes are unchanged. User authorized normal commit/push of sprint
 and actual evidence to work; no force-push or main merge. New replay execution remains
 pending on university MATLAB; the imported report verifies the existing C2 suite only.
+
+
+## 2026-10-29 — User-reported C2.5 tests and first replay transfer
+
+User reports latest work-branch MATLAB R2025a suite: 8 passed, 0 failed, 0 incomplete,
+23.5779 s. New test_boptest_replay passed alongside C1/C2 tests. No raw unit-test log
+was supplied, no test-log archive was created, and no MATLAB execution was performed
+in Codex. Existing original ten-scenario C2 report remains unchanged. This result
+covers the replay packet test, not execution of the full reference replay.
+
+Prepared the first typical-heating partial packet from the existing original-FMU
+run typical_heat_day_ailcox5y, rechecking trajectory/signals/evaluation artifact hashes.
+Generated inputs.csv/replay.json and normalized reference CSV/metadata under ignored
+outputs/boptest, plus original manifest/signals provenance and a per-file SHA manifest.
+Bundled eight files into outputs/boptest/handoff/THERMA_first_typical_replay.zip
+(4,676,884 bytes). ZIP integrity and every included data-file hash were checked.
+ZIP SHA-256: b8a9e791b26554781360a07454db63c38bc0ff9410a60bb4a90561d675c5787d.
+No source datasets, FMU or runtime binaries are needed on the university PC. Git and
+Python there are unnecessary: extract the bundle into the existing repository root
+and run MATLAB. Full reference regeneration remains a Linux x86-64 fallback.
+
+Added docs/FIRST_PARTIAL_COMPARISON.md with exact extraction/integrity/run commands,
+return-file list, local comparison command and reproduction route. Updated roadmap
+priority to the first partial comparison before C2.6. The packet retains all seven
+warm-up plus fourteen evaluation days (60,481 samples), explicit interpolation,
+omitted-solar and provisional initial-state limitations. No replay execution or
+C2-versus-BOPTEST numerical comparison is claimed. Next: university run, return
+actual evaluation.csv/comparison_metadata.json/replay_run.json, then compare here.
+No physical implementation, assumptions or frozen reference changes.
+
+
+## 2026-10-29 — Isolated replay transfer publication and documentation commit
+
+Workspace/sandbox links were not downloadable in the user's client. User explicitly
+authorized hosting the original ZIP on a separate replay-transfer branch and then
+committing pending documentation separately to work. Created an independent root
+commit d87531d91c6989fbf63c5522c65fa3f5a22d43a7 containing only the unchanged ZIP,
+SHA256SUMS and transfer instructions, without checking out or merging that branch.
+Pushed normally. A fresh isolated bare Git fetch downloaded the remote ZIP and
+confirmed all 4,676,884 bytes match SHA-256
+b8a9e791b26554781360a07454db63c38bc0ff9410a60bb4a90561d675c5787d.
+Work/main were unchanged by transfer creation; the following work commit contains
+only the four pending documentation files, not the ZIP or generated data. Updated
+the first-comparison guide with the direct GitHub download link. No force-push or
+merge into either development branch. The user-reported 8/8 MATLAB result remains
+explicitly separate from supplied archived evidence and Codex execution.

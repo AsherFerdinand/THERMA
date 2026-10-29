@@ -30,7 +30,9 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [x] Archive actual successful C2 report unchanged; check recorded source/assumption hashes.
 - [x] C2.5: implement evidence importer, integrity checks, compatibility matrix,
   explicitly partial replay preparation/runner and classified comparison reports/plots.
-- [ ] Execute partial replay locally; do not confuse missing-forcing comparisons with validation.
+- [x] User reports C2.5 MATLAB suite 8/8 passed, 23.5779 s; no raw test log supplied.
+- [x] Prepare hash-checked first typical replay/reference transfer ZIP; no Git needed at university.
+- [ ] Current priority: execute first partial replay locally and compare actual outputs before C2.6.
 - [ ] C2.6: resolve absorbed forcing, initialization and prioritized reference-physics gaps.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [ ] Satisfy C3 readiness gates before hydronic implementation.
