@@ -99,3 +99,15 @@ C2 remains a verified **reduced** model, not BOPTEST-validated. Phase C2.5 now p
 [partial reference-replay/comparison commands](docs/C2_REFERENCE_REPLAY.md).
 Missing absorbed solar/full initial states and simplified physics limit comparisons;
 [C2.6 refinement](docs/C2_PHYSICS_GAPS.md) is recommended before C3 hydronics.
+
+
+## C2.5C replay analysis
+
+The user reports the first 21-day partial replay completed on MATLAB R2025a. Its
+actual three export files are still awaiting upload here; no replay temperature
+metrics or validation claim have been made. The read-only
+[analysis pipeline and sign audit](docs/C25C_REPLAY_ANALYSIS.md) generate PNG/PDF
+figures, metrics JSON and an engineering summary from actual exports. Original
+BOPTEST trajectories are available locally; matching uses air temperature, not
+operative temperature. Signed reverse radiator heat exists in the reference and
+is retained. C2.6 remains unimplemented pending first comparison review.

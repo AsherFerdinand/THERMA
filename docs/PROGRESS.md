@@ -677,3 +677,66 @@ registry, original reference data, archived report and transfer branch are uncha
 Updated diagnosis/roadmap. Fix awaits university R2025a regression/full replay rerun;
 no claim of MATLAB verification or replay success. User authorized normal commit/push
 to work, without force-push or merging main/transfer. C2.6 remains blocked.
+
+## 2026-10-29 — C2.5C replay post-processing and reference sign analysis
+
+User reports successful first 21-day partial replay on MATLAB/Simulink R2025a:
+executed_partial_not_validated, matlab_execution_completed=true, simulation_returned=true,
+seven warm-up plus fourteen evaluation days, eleven drivers and 60,481 input samples.
+No evaluation.csv, comparison_metadata.json or replay_run.json from that run has yet
+been uploaded to this workspace. Recorded execution as user-reported; did not create
+or archive a substitute replay report, infer THERMA temperatures or claim independent
+MATLAB execution. Earlier archived engineering verification remains separate.
+
+Implemented therma.validation.analysis with analyze/reference-signs commands. The
+read-only pipeline validates the actual three export files, CSV hash, execution/model/
+scenario/revision consistency, units, finiteness, unique monotonic time, driver coverage
+and interpolation, exact evaluation boundaries and warm-up exclusion. It streams
+hashes and loads selected numeric columns only, without simulation.mat or an FMU
+runtime. Produces metrics.json, engineering_summary.md and five diagnostic plot pairs
+(300-dpi PNG/vector PDF), plus a reference air comparison when provenance checks pass.
+Temperature conversion is explicit; signed power and relative storage remain unchanged.
+Full-resolution calculations retain all negative samples; no calibration or clamping.
+
+The original typical/peak BOPTEST evaluation trajectories are available under ignored
+outputs/boptest/runs. Reference comparison checks original manifest/CSV/signal hashes,
+FMU/revision/scenario, period and physical quantity. Uses internal TAir, never operative
+temperature or TRad proxies. Continuous candidate air temperature aligns onto native
+30-second reference timestamps to avoid adaptive-solver sample-density bias; reports
+MAE/RMSE/sampled max/bias and alignment details without accuracy thresholds. Missing or
+incompatible reference data yields blocked status and no invented metrics. Actual
+C2-versus-BOPTEST comparison still awaits the three MATLAB files.
+
+Investigated actual original-source heat-port data with sign conversion -QCon_flow,
+-QRad_flow. Typical evaluation: zero negative convective samples, 580 negative radiative,
+392 negative total; minimum radiative -32.38455799 W and total -27.82465885 W. Peak:
+1456 negative convective, 4059 radiative, 2761 total; minimum total -59.19742692 W.
+These are genuine signed source samples, consistent with reverse exchange, not fuel
+consumption. Generated source-only sign-audit JSON/summary and PNG/PDF plots for both
+actual references under ignored outputs/boptest/analysis/c25c_*_source_signs. Did not
+represent these as THERMA results or infer an exact temperature cause without states.
+
+Energy diagnostics report storage change, instantaneous power residual, signed sampled
+residual integral and component accounting. Standard replay CSV lacks total external
+net power, so full DeltaE-integralQnet closure is explicitly blocked rather than
+summing an incomplete heating/ventilation boundary. Optional documented net power
+allows a sampled (quadrature-sensitive) closure diagnostic; no conservation pass is
+inferred. Recommendations remain missing absorbed solar/full initialization, then
+source glazing/exchange/radiative refinements; no C2.6 physics work began.
+
+Added synthetic-data regressions for known analytical metrics, blocked/mismatched
+reference data, no operative-to-air substitution, nonfinite/duplicate timestamps,
+warm-up leakage, source hashes/units/identities, interpolation, sign/negative-energy
+handling, optional energy closure, immutable inputs and PNG/PDF export. Synthetic
+results exist only in test temporary directories, not as archived MATLAB evidence.
+All 139 Python tests pass with optional Matplotlib installed. Ruff lint/format, strict
+mypy, evidence/mapping checks, static lint of 28 MATLAB files, wheel/sdist builds and
+whitespace checks pass. CI adds a synthetic plotting smoke test. New docs/README
+links resolve. No C1/C2 MATLAB implementation, parameters, reference data or archived
+reports changed; frozen registry/FMU hashes remain f91141d78668908525d484a4900dc69af1a163c4c5e07f5a5fbd0c43eae4451c
+and 365b3085d97cc4620c06b6036156126a056d7f160fcc4f181d6b2fac4b05743b.
+
+Added docs/C25C_REPLAY_ANALYSIS.md and updated README/roadmap with truthful execution
+and pending-data status. User authorized commit/push to work; generated outputs remain
+ignored. Next: upload actual evaluation.csv/comparison_metadata.json/replay_run.json,
+run the reproducible analysis, inspect the first exploratory comparison before C2.6.

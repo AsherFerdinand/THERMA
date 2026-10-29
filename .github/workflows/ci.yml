@@ -17,6 +17,8 @@ jobs:
           version: '0.12.23'
       - run: uv sync --frozen
       - run: uv run --frozen pytest
+      # Optional plotting smoke test uses synthetic export data, not MATLAB evidence.
+      - run: uv run --frozen --with matplotlib==3.10.8 pytest tests/test_replay_analysis.py -k publication_plot_exports
       # Integrity of imported reports and mappings, not MATLAB re-execution.
       - run: uv run --frozen python -m therma.validation.archive --check
       - run: uv run --frozen python -m therma.validation.replay --check-matrix

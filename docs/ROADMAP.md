@@ -32,10 +32,12 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
   explicitly partial replay preparation/runner and classified comparison reports/plots.
 - [x] User reports C2.5 MATLAB suite 8/8 passed, 23.5779 s; no raw test log supplied.
 - [x] Prepare hash-checked first typical replay/reference transfer ZIP; no Git needed at university.
-- [ ] Current blocker: R2025a confirms held From Workspace sources reject default after-final extrapolation.
+- [x] User reports final-value policy fix allowed the first 21-day partial R2025a replay to complete.
 - [x] Explicitly set final-value holding and add interval/endpoint regressions; MATLAB rerun pending.
 - [x] Prepare recursive exception diagnostics and explicit replay-source binding regressions.
-- [ ] Run new driver tests, resolve nested errors, then execute/compare first partial replay before C2.6.
+- [x] Implement C2.5C read-only replay analysis, publication plots and original-reference sign audit.
+- [ ] Import actual evaluation.csv, comparison_metadata.json and replay_run.json from successful replay.
+- [ ] Run first exploratory THERMA-versus-BOPTEST comparison and review limits before C2.6.
 - [ ] C2.6: resolve absorbed forcing, initialization and prioritized reference-physics gaps.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [ ] Satisfy C3 readiness gates before hydronic implementation.
