@@ -45,3 +45,13 @@ Download [THERMA_C26_solar_replay.zip](THERMA_C26_solar_replay.zip). SHA-256: `1
 Use updated work-branch source and docs/C26_SOLAR_BENCHMARK.md. This archive contains
 actual original-FMU reference data, not a completed solar-resolved MATLAB replay.
 No transfer-branch merge into development is intended.
+
+
+## Standalone Windows MATLAB R2025a package (2026-11-02)
+
+Download [THERMA_C26C_MATLAB_R2025a_e6c7d41_2026-11-02.zip](THERMA_C26C_MATLAB_R2025a_e6c7d41_2026-11-02.zip), extract and read START_HERE.md.
+Includes pinned work source, tests/configuration, verified solar packet in place,
+and run_verification.m. No Git/Python/Docker needed on the MATLAB computer.
+The unchanged model builders generate SLX in MATLAB; no pre-generated SLX is claimed.
+SHA-256: `bf872ff3700b2c14e7ab02e48470de105f5817c4f482b9280fb00072dad2fb63`. Source commit: `e6c7d41848701fa678b974ef7e343e40d0f8e3dd`.
+No source-branch changes or artifact overwrites. MATLAB execution remains pending.
