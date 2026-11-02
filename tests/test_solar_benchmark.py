@@ -99,12 +99,18 @@ def test_controlled_pair_energy_and_sensitivity(runs, tmp_path, plots):
     )
     assert result["baseline"]["MAE_K"] == 2
     assert result["solar"]["bias_K"] == -1
+    assert result["metric_changes"]["MAE_K"]["error_magnitude_reduction_percent"] == 50
+    assert "solar" in result["execution_environments"]
     assert result["solar_minus_baseline"]["bias_K"] == 1
     assert result["solver_step_sensitivity"]["temperature_difference"]["MAE_K"] == 0
     analysis = json.loads((tmp_path / "out/solar/metrics.json").read_text())
     assert analysis["physical_checks"]["integrated_energy_balance"]["final_residual_J"] == 0
+    assert not any("Solar forcing is omitted" in v for v in analysis["known_limitations"])
+    assert any("quadrature" in v for v in analysis["recommended_next_work"])
     if plots:
         assert (tmp_path / "out/controlled_comparison.pdf").is_file()
+        assert (tmp_path / "out/daily_errors.pdf").is_file()
+        assert (tmp_path / "out/temperature_errors.png").is_file()
 
 
 def test_daily_boundaries_and_invalid_metrics():
@@ -115,3 +121,35 @@ def test_daily_boundaries_and_invalid_metrics():
         metrics(np.array([np.nan]))
     with pytest.raises(ValueError):
         day_metrics(np.array([1.0, 1.0]), np.array([1.0, 1.0]))
+
+
+def test_metric_changes_bias_direction_deterioration_and_zero_baseline():
+    from therma.validation.benchmark import metric_changes
+
+    changes = metric_changes(
+        {"bias_K": -2.0, "MAE_K": 1.0, "zero": 0.0}, {"bias_K": 0.5, "MAE_K": 2.0, "zero": 1.0}
+    )
+    assert changes["bias_K"]["signed_change_K"] == 2.5
+    assert changes["bias_K"]["error_magnitude_reduction_percent"] == 75
+    assert changes["MAE_K"]["error_magnitude_reduction_percent"] == -100
+    assert changes["zero"]["error_magnitude_reduction_percent"] is None
+    with pytest.raises(ValueError):
+        metric_changes({"bias_K": np.nan}, {"bias_K": 0.0})
+
+
+def test_matlab_metadata_view_preserves_names_and_rejects_collisions():
+    from therma.validation.benchmark import matlab_json_metadata
+
+    original = {
+        "values": {"mod.rad.vol[1].T": 293.15},
+        "source_name": "mod.rad.vol[1].T",
+        "state_index": None,
+    }
+    converted = matlab_json_metadata(original)
+    assert converted["values"] == {"mod_rad_vol_1__T": 293.15}
+    assert converted["source_name"] == "mod.rad.vol[1].T"
+    assert converted["state_index"] == [] and original["state_index"] is None
+    with pytest.raises(ValueError, match="collision"):
+        matlab_json_metadata({"a.b": 1, "a_b": 2})
+    with pytest.raises(ValueError, match="Unsupported"):
+        matlab_json_metadata({"white space": 1})

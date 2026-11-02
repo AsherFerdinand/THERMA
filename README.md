@@ -113,7 +113,7 @@ figures, metrics JSON and an engineering summary from actual exports. Original
 BOPTEST trajectories are available locally; matching uses air temperature, not
 operative temperature. Signed reverse radiator heat exists in the reference and
 is retained. C2.6A/B now adds solar-resolved reference extraction and replay preparation;
-C2.6C remains pending actual MATLAB execution.
+C2.6C has now executed on university MATLAB R2021a; see the results below.
 
 
 [Download the actual C2.5C figures and reports](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_first_typical_actual_analysis.zip)
@@ -127,4 +127,9 @@ actual pinned-FMU solar extraction, 39-state observations, checked opt-in v2 pac
 MATLAB preparation and future paired diagnostics. The unchanged baseline channels
 reproduce exactly. [Download the prepared replay/reference packet](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C26_solar_replay.zip)
 from the separate transfer branch; [checksums and actual checks](docs/C26_ARTIFACTS.json).
-Solar-resolved THERMA execution and improvement metrics are **pending**, not validated.
+Actual C2.6C exports confirm successful execution on **MATLAB/Simulink R2021a**.
+[The engineering report and figures](docs/C26C_ENGINEERING_REPORT.md) show MAE
+**0.793 K** (66.14% lower), RMSE **0.924 K** and bias **−0.451 K** against BOPTEST.
+Daily MAE improves on all 14 evaluation days. The user reports 14/14 MATLAB tests
+passed; no raw test log was supplied. This remains a partial benchmark, not real-world
+validation. Common-release controls and solver sensitivity remain pending.

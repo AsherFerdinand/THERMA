@@ -45,7 +45,9 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [x] C2.6B: prepare versioned solar-resolved packet, compatible MATLAB loader/batch entry and complete energy exports.
 - [x] Add independent contracts, future controlled comparison/day-wise metrics and actual-output solver sensitivity tools.
 - [x] Publish checked C2.6 packet/reference subset separately from development.
-- [ ] C2.6C: execute actual MATLAB solar replay/tests, compare with baseline and inspect solver/energy diagnostics.
+- [x] C2.6C: analyze actual R2021a solar replay; user reports 14/14 MATLAB tests passed.
+- [x] Compare preserved no-solar/reference trajectories: MAE 0.79253 K (66.14% lower), daily error/energy audits and figures.
+- [ ] Close common-release baseline control, solver-step sensitivity and sampled/event energy diagnostics.
 - [ ] Decide remaining glazing/exterior/moist-air physics scope from measured evidence; no calibration.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [ ] Satisfy C3 readiness gates before hydronic implementation.

@@ -1,0 +1,51 @@
+{
+  "classification": "actual MATLAB exports analyzed; exploratory benchmark, not real-world validation",
+  "MATLAB_execution_environment": "MATLAB 9.10.0.1602886 R2021a / Simulink 10.3 R2021a",
+  "MATLAB_unit_tests": {
+    "passed": 14,
+    "evidence_category": "user_reported",
+    "raw_test_log_supplied": false
+  },
+  "matlab_executed_in_cloud": false,
+  "raw_uploads_modified": false,
+  "optional_simulation_mat_accessed": false,
+  "optional_simulation_mat_limit": "Attachment transfer tool refuses files above 32 MiB",
+  "attachments": {
+    "evaluation.csv": {
+      "sha256": "b1c340ae56d42877ff000104f921dc42f43faa41f040f7e5c1a9230e6255cb0d",
+      "bytes": 13537973
+    },
+    "comparison_metadata.json": {
+      "sha256": "d45f35a876d5de0c1b566616b19072f89d4ae0a5c6e743fa30153ca774e012d2",
+      "bytes": 2695
+    },
+    "replay_run.json": {
+      "sha256": "7b667c10124021c156f0a69f603acec2b8b4a016746d070d32b13261588d61d9",
+      "bytes": 61677
+    }
+  },
+  "original_baseline": {
+    "evaluation.csv": {
+      "sha256": "2f23cbda2c8c1c49e347004a2429ff2a1e9764798cbda33e2a6bd9d05539a424",
+      "bytes": 10688915
+    },
+    "comparison_metadata.json": {
+      "sha256": "e74f565fc3caf6517813b5ebe54395465686ef77208ee7b45ad9072f18cab669",
+      "bytes": 2207
+    },
+    "replay_run.json": {
+      "sha256": "e2e85ecc486a7fe805a0e5754d9be9cec9b8c5a80b0386679f8e2668bbdf4d0c",
+      "bytes": 16384
+    }
+  },
+  "source_packet_sha256": "5f923d220e77bad415559572b155c5aaa776407352f0930ee0c2f9558fda33a3",
+  "source_manifest_sha256": "9fadac5eb6c38f0e9710cd5e12c85398517aab57c6ca511f1618c6109ea5020c",
+  "analysis_source_sha256": {
+    "src/therma/validation/benchmark.py": "bebb194c13703560eb6c38f07d4b2042e87fb7632d1f24219197e6282ab3852e",
+    "src/therma/validation/analysis.py": "cab088f4b120464f85778eed35db214a0d87e38e77964449d80b07b8d7776804",
+    "scripts/boptest/audit_c26c_results.py": "363565a4464deb5e08ef264737e06dc8be7573fb8e1ec5fdf736d2887f4ce51a"
+  },
+  "driver_source_hash_matches_repository": true,
+  "registry_and_assumptions_match_baseline": true,
+  "preservation_policy": "Original uploads/baseline/reference remain in ignored outputs; only reports/figures are committed."
+}

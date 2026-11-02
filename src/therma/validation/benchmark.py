@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -15,6 +16,34 @@ from therma.validation.analysis import _find_reference, analyze_run, file_hash, 
 from therma.validation.replay import reference_run
 
 
+def matlab_json_metadata(value: Any) -> Any:
+    """Known jsondecode/jsonencode effects on pinned metadata, not data rewriting.
+
+    Require the original packet file hash separately. Do not merge colliding names.
+    This packet uses ASCII field names without whitespace; other naming rules fail.
+    """
+    if value is None:
+        return []
+    if isinstance(value, list):
+        return [matlab_json_metadata(v) for v in value]
+    if isinstance(value, dict):
+        out = {}
+        for key, item in value.items():
+            if (
+                not key
+                or not key[0].isascii()
+                or not key[0].isalpha()
+                or any(c.isspace() for c in key)
+            ):
+                raise ValueError("Unsupported MATLAB metadata field name")
+            name = re.sub(r"[^a-zA-Z0-9_]", "_", key)[:63]
+            if name in out:
+                raise ValueError("MATLAB metadata field-name collision")
+            out[name] = matlab_json_metadata(item)
+        return out
+    return value
+
+
 def metrics(error: NDArray[np.float64]) -> dict[str, float]:
     if error.ndim != 1 or not len(error) or not np.isfinite(error).all():
         raise ValueError("Expected finite aligned temperature errors")
@@ -24,6 +53,24 @@ def metrics(error: NDArray[np.float64]) -> dict[str, float]:
         "maximum_absolute_error_K": float(np.max(abs(error))),
         "bias_K": float(np.mean(error)),
     }
+
+
+def metric_changes(baseline: dict[str, float], solar: dict[str, float]) -> dict[str, Any]:
+    """Signed changes plus reduction in error magnitude; zero baseline has no percent."""
+    changes = {}
+    for key, old in baseline.items():
+        new = solar[key]
+        if not np.isfinite([old, new]).all():
+            raise ValueError("Metrics must be finite")
+        reduction = abs(old) - abs(new)
+        changes[key] = {
+            "baseline_K": old,
+            "solar_K": new,
+            "signed_change_K": new - old,
+            "error_magnitude_reduction_K": reduction,
+            "error_magnitude_reduction_percent": 100 * reduction / abs(old) if old else None,
+        }
+    return changes
 
 
 def day_metrics(time: NDArray[np.float64], error: NDArray[np.float64]) -> list[dict[str, Any]]:
@@ -105,6 +152,19 @@ def paired(
             "Reduced glazing/exterior/air physics remain different; no calibration.",
         ],
     }
+    result["metric_changes"] = metric_changes(result["baseline"], result["solar"])
+    result["execution_environments"] = {
+        label: {
+            "matlab_version": report.get("matlab_version"),
+            "simulink": report.get("simulink"),
+            "driver_source_sha256": report.get("driver_source_sha256"),
+        }
+        for label, report in [("baseline", br), ("solar", sr)]
+    }
+    if br.get("matlab_version") != sr.get("matlab_version"):
+        result["limitations"].append(
+            "MATLAB releases differ; this pair cannot isolate release/solver effects from solar."
+        )
     for label, collection in [("baseline", b), ("solar", s)]:
         result["energy_J_reconstructed"][label] = {
             q: integrate(v.time_s, v.values, v.interpolation)
@@ -160,6 +220,44 @@ def paired(
         fig.tight_layout()
         for suffix in ["png", "pdf"]:
             fig.savefig(output / f"controlled_comparison.{suffix}", dpi=300)
+        plt.close(fig)
+        days = np.arange(1, len(result["daily_baseline"]) + 1)
+        fig, axes = plt.subplots(2, 1, figsize=(10, 6), sharex=True)
+        for daily, label, offset, color in [
+            (result["daily_baseline"], "No solar", -0.18, "#ff7f0e"),
+            (result["daily_solar"], "Opaque solar", 0.18, "#2ca02c"),
+        ]:
+            axes[0].bar(
+                days + offset, [v["MAE_K"] for v in daily], width=0.36, label=label, color=color
+            )
+            axes[1].plot(days, [v["bias_K"] for v in daily], marker=".", label=label, color=color)
+        axes[0].set(ylabel="Daily MAE (K)")
+        axes[1].set(ylabel="Daily bias (K)", xlabel="Evaluation day")
+        for ax in axes:
+            ax.grid(alpha=0.25)
+            ax.legend()
+        fig.tight_layout()
+        for suffix in ["png", "pdf"]:
+            fig.savefig(output / f"daily_errors.{suffix}", dpi=300)
+        plt.close(fig)
+        fig, ax = plt.subplots(figsize=(10, 4))
+        ax.plot(
+            (t - t[0]) / 86400, bt - ref, lw=0.8, color="#ff7f0e", label="No solar minus BOPTEST"
+        )
+        ax.plot(
+            (t - t[0]) / 86400,
+            st - ref,
+            lw=0.8,
+            color="#2ca02c",
+            label="Opaque solar minus BOPTEST",
+        )
+        ax.axhline(0, color="black", lw=0.6)
+        ax.set(xlabel="Evaluation day", ylabel="Indoor air error (K)")
+        ax.grid(alpha=0.25)
+        ax.legend()
+        fig.tight_layout()
+        for suffix in ["png", "pdf"]:
+            fig.savefig(output / f"temperature_errors.{suffix}", dpi=300)
         plt.close(fig)
     (output / "comparison.json").write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
     (output / "engineering_summary.md").write_text(

@@ -740,6 +740,9 @@ def analyze_run(
         reference_run_dir = _find_reference(packet)
     comparison, reference = reference_comparison(series, packet, reference_run_dir)
     checks = engineering_checks(series, execution)
+    solar_resolved = (
+        packet.get("schema_version") == 2 and packet.get("replay_mode") == "solar_resolved_partial"
+    )
     report = {
         "schema_version": 1,
         "status": "analyzed_exploratory_not_validated",
@@ -786,7 +789,9 @@ def analyze_run(
             *metadata.get("missing_inputs", []),
             *metadata.get("limitations", []),
             (
-                "Solar forcing is omitted and initial states are provisional; "
+                "Opaque solar is replayed; glazing, exterior and air physics remain reduced."
+                if solar_resolved
+                else "Solar forcing is omitted and initial states are provisional; "
                 "do not attribute all temperature errors to solver accuracy."
             ),
             (
@@ -801,13 +806,25 @@ def analyze_run(
             "No values clamped, calibrated, smoothed or overwritten.",
         ],
         "recommended_next_work": [
-            "Inspect matched input/sign diagnostics and first exploratory comparison before C2.6.",
-            "Obtain absorbed solar and consistent full initial-state/warm-up policy.",
+            (
+                "Compare on a common MATLAB release and check solver-step sensitivity."
+                if solar_resolved
+                else "Inspect matched inputs/signs and first comparison before C2.6."
+            ),
+            (
+                "Preserve observed initialization and warm-up; no portable restart."
+                if solar_resolved
+                else "Obtain absorbed solar and consistent full initial-state/warm-up policy."
+            ),
             (
                 "Then prioritize glazing/solar, exterior exchange and radiative"
                 " environment; preserve independent verification."
             ),
-            "Export total external net power to permit a full sampled integral energy check.",
+            (
+                "Inspect sampled energy closure and event/quadrature sensitivity."
+                if "net_external_power" in series
+                else "Export net external power for sampled integral energy closure."
+            ),
         ],
         "plots": {"status": "not_requested", "files": []},
     }

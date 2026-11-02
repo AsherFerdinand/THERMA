@@ -1,7 +1,11 @@
 # C2.6A/B — Solar-resolved partial thermal benchmarking
 
 C2.6A/B implements reference observation, checked packet preparation and MATLAB
-replay support. **C2.6C is pending actual MATLAB execution.** No verified thermal
+replay support. **Update: actual C2.6C executed on university MATLAB R2021a**;
+[the engineering report](C26C_ENGINEERING_REPORT.md) records measured improvement,
+provenance and limitations. The instructions below preserve the original preparation
+workflow; their then-pending execution is now supplied, while common-release and
+solver-sensitivity controls remain pending. No verified thermal
 ODE, physical parameter, baseline dataset, weather/control input or FMU was changed.
 This is benchmark preparation and numerical verification, not real-world validation.
 

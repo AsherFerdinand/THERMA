@@ -1,0 +1,178 @@
+{
+  "scope": "actual uploaded CSV/JSON; no MATLAB run, no synthetic simulation",
+  "source_packet_sha256": "5f923d220e77bad415559572b155c5aaa776407352f0930ee0c2f9558fda33a3",
+  "packet_checks": {
+    "status": "passed",
+    "surface_order": [
+      "south",
+      "west",
+      "north",
+      "east",
+      "floor",
+      "roof",
+      "glazing"
+    ],
+    "max_distribution_residual_W": 2.255973186038318e-13,
+    "max_direct_sum_residual_W": 9.094947017729282e-13,
+    "max_diffuse_sum_residual_W": 2.2737367544323206e-13,
+    "max_solar_sum_residual_W": 1.3642420526593924e-12,
+    "direct_weights": [
+      0.030720000000000004,
+      0.05184000000000001,
+      0.06912,
+      0.05184000000000001,
+      0.6,
+      0.15360000000000001,
+      0.04288000000000001
+    ],
+    "diffuse_weights": [
+      0.05549132947976879,
+      0.09364161849710984,
+      0.12485549132947978,
+      0.09364161849710984,
+      0.2774566473988439,
+      0.2774566473988439,
+      0.07745664739884395
+    ],
+    "gain_weights": [
+      0.05594405594405596,
+      0.09440559440559443,
+      0.1258741258741259,
+      0.09440559440559443,
+      0.27972027972027974,
+      0.27972027972027974,
+      0.06993006993006994
+    ],
+    "evaluation_solar_hold_energy_J": {
+      "south": 10669178.975869458,
+      "west": 18004239.52177971,
+      "north": 24005652.695706278,
+      "east": 18004239.52177971,
+      "floor": 96621797.10566969,
+      "roof": 53345894.87934729,
+      "glazing": 14892395.653817788
+    },
+    "samples": 60481,
+    "interpretation": "30 s held reconstruction, not exact continuous FMU energy"
+  },
+  "actual_input_checks": {
+    "baseline": {
+      "outdoor_temperature": {
+        "max_absolute_discrepancy": 3.609557097661309e-11,
+        "unit": "K",
+        "policy": "linear"
+      },
+      "delivered_heating_convective_power": {
+        "max_absolute_discrepancy": 5.002220859751105e-12,
+        "unit": "W",
+        "policy": "previous"
+      },
+      "delivered_heating_radiative_power": {
+        "max_absolute_discrepancy": 5.002220859751105e-12,
+        "unit": "W",
+        "policy": "previous"
+      },
+      "internal_convective_power": {
+        "max_absolute_discrepancy": 3.552713678800501e-15,
+        "unit": "W",
+        "policy": "previous"
+      },
+      "internal_radiative_power": {
+        "max_absolute_discrepancy": 0.0,
+        "unit": "W",
+        "policy": "previous"
+      }
+    },
+    "solar": {
+      "outdoor_temperature": {
+        "max_absolute_discrepancy": 4.7634785005357116e-11,
+        "unit": "K",
+        "policy": "linear"
+      },
+      "delivered_heating_convective_power": {
+        "max_absolute_discrepancy": 5.002220859751105e-12,
+        "unit": "W",
+        "policy": "previous"
+      },
+      "delivered_heating_radiative_power": {
+        "max_absolute_discrepancy": 5.002220859751105e-12,
+        "unit": "W",
+        "policy": "previous"
+      },
+      "internal_convective_power": {
+        "max_absolute_discrepancy": 3.552713678800501e-15,
+        "unit": "W",
+        "policy": "previous"
+      },
+      "internal_radiative_power": {
+        "max_absolute_discrepancy": 0.0,
+        "unit": "W",
+        "policy": "previous"
+      },
+      "metadata_serialization": "Original packet file SHA256 matches. Embedded MATLAB JSON fields use makeValidName underscores/truncation; JSON null becomes empty array.",
+      "opaque_solar_total": {
+        "max_absolute_discrepancy_W": 5.002220859751105e-12
+      },
+      "internal_component_max_discrepancy_W": 0.0,
+      "derivative_minus_net_minus_residual_max_W": 9.77706804405902e-12
+    }
+  },
+  "source_hold_energy_kWh": {
+    "delivered_heating_convective_power": 323.13718838100846,
+    "delivered_heating_radiative_power": 206.24900578221502,
+    "internal_convective_power": 6.015200000000002,
+    "internal_radiative_power": 9.0228,
+    "absorbed_solar_south_power": 2.963660826630405,
+    "absorbed_solar_north_power": 6.6682368599184105,
+    "absorbed_solar_east_power": 5.001177644938808,
+    "absorbed_solar_west_power": 5.001177644938808,
+    "absorbed_solar_roof_power": 14.818304133152024,
+    "absorbed_solar_floor_power": 26.839388084908247,
+    "opaque_solar_total": 61.2919451944867,
+    "glazing_separate": 4.136776570504941
+  },
+  "attachment_integrity": {
+    "baseline": {
+      "evaluation.csv": {
+        "sha256": "2f23cbda2c8c1c49e347004a2429ff2a1e9764798cbda33e2a6bd9d05539a424",
+        "bytes": 10688915
+      },
+      "comparison_metadata.json": {
+        "sha256": "e74f565fc3caf6517813b5ebe54395465686ef77208ee7b45ad9072f18cab669",
+        "bytes": 2207
+      },
+      "replay_run.json": {
+        "sha256": "e2e85ecc486a7fe805a0e5754d9be9cec9b8c5a80b0386679f8e2668bbdf4d0c",
+        "bytes": 16384
+      }
+    },
+    "solar": {
+      "evaluation.csv": {
+        "sha256": "b1c340ae56d42877ff000104f921dc42f43faa41f040f7e5c1a9230e6255cb0d",
+        "bytes": 13537973
+      },
+      "comparison_metadata.json": {
+        "sha256": "d45f35a876d5de0c1b566616b19072f89d4ae0a5c6e743fa30153ca774e012d2",
+        "bytes": 2695
+      },
+      "replay_run.json": {
+        "sha256": "7b667c10124021c156f0a69f603acec2b8b4a016746d070d32b13261588d61d9",
+        "bytes": 61677
+      }
+    }
+  },
+  "simulation_mat": {
+    "accessed": false,
+    "reason": "Attachment exceeds tool 32 MiB download limit"
+  },
+  "energy_balance": {
+    "stored_energy_change_J": 15258403.86074105,
+    "previous_hold_net_energy_J": 15367467.234463006,
+    "previous_hold_final_residual_J": -109063.37372195534,
+    "previous_hold_max_residual_J": 110247.19482428953,
+    "trapezoid_final_residual_J": -6909.564837027341,
+    "trapezoid_max_residual_J": 7227.189980048686,
+    "interpretation": "Sampled quadrature diagnostics, not exact conservation proof; no second solver run and no original duplicate-event logs available."
+  },
+  "interpretation": "Baseline and solar radiator/internal forcings match the same source pointwise. Adaptive-log energy differences are not evidence of heating/control savings. Negative source radiator exchange is preserved, not clamped."
+}

@@ -879,3 +879,50 @@ ignored on work. Publication metadata and independent upload verification are re
 in docs/C26_ARTIFACTS.json; replay-transfer remains separate from work/main.
 Transfer publication succeeded at f52fc632167aeeed0be60bf173f036a3410190c0;
 a fresh isolated GitHub fetch verified identical uploaded ZIP bytes/SHA-256.
+
+## 2026-11-02 — Actual C2.6C R2021a benchmark comparison
+
+Downloaded the actual evaluation.csv (13,537,973 bytes), comparison_metadata.json
+(2,695 bytes) and replay_run.json (61,677 bytes); preserved original bytes in ignored
+outputs/boptest/replays/c26_solar_actual/. CSV SHA-256
+b1c340ae56d42877ff000104f921dc42f43faa41f040f7e5c1a9230e6255cb0d matches
+metadata. The optional simulation.mat exceeds the attachment tool 32 MiB transfer
+limit and was not accessed. No MAT contents, missing logs or MATLAB execution were
+fabricated. The user reports 14/14 MATLAB tests passed; no separate test log supplied.
+Actual replay confirms MATLAB 9.10 R2021a / Simulink 10.3 R2021a, completed execution
+and export. Preserve matlab_verified:false and executed_partial_not_validated flags.
+
+Used the existing paired/individual comparison pipeline on 40,321 native reference
+30-second timestamps, excluding seven-day warm-up. New 59,292 adaptive samples span
+exact 14-day endpoints. MAE=0.7925341950338989 K, RMSE=0.9239755340437169 K,
+maximum absolute error=2.3971545332768756 K, bias=-0.4506132799970814 K. Against
+preserved C2.5, error reductions are 66.13872%, 67.06557%, 67.75463%, and 80.70341%
+in absolute bias. All 14 daily MAEs improve. No accuracy threshold or validation
+pass was invented. R2025a baseline versus R2021a solar remains a causal confound;
+no quantified release/solver sensitivity exists yet.
+
+Verified original packet/file hashes, pins, units, reference identity, driver hash,
+initial vector, all 11 driver policies and input coverage. Supplementary audit checks
+actual outdoor/heating/internal inputs in both runs against the same source at every
+export timestamp; max heating discrepancy 5.01e-12 W, solar 5.01e-12 W. Explicitly
+handled known MATLAB embedded-JSON field-name/null round-trip effects after checking
+the exact original packet hash; originals remain untouched. Source energies are
+529.38619 kWh radiator, 15.038 kWh internal, 61.29195 kWh opaque solar, with seventh
+4.13678 kWh glazing share preserved separately. Adaptive-log energy differences do
+not indicate heating savings or changed forcing. Signed reverse heat is retained.
+
+Instantaneous residual max 2.70575e-11 W. Storage changes +15.258404 MJ; sampled
+hold integral final residual -109.063 kJ (max 110.247 kJ); trapezoid sensitivity gives
+-6.910 kJ (max 7.227 kJ). These are quadrature diagnostics, not exact conservation
+or solver convergence proof. Baseline integrated closure remains blocked by absent
+net power. No equations/parameters/source reference artifacts were altered.
+
+Added reusable metric-change/environment reporting, daily/error plots, metadata
+round-trip guards, solar-aware limitations and an actual-input/energy audit command.
+Published professional docs/C26C_ENGINEERING_REPORT.md, small JSON/CSV provenance and
+results, and five PNG/PDF pairs. Original raw uploads/baseline/reference remain ignored
+and byte-preserved; only derived reports/figures are versioned. README/roadmap updated.
+Checks: 164 Python tests passed; Ruff lint/format, mypy, archived evidence, 14 replay
+mappings, 29 MATLAB files static lint and wheel/sdist build passed. No MATLAB in cloud.
+Next: common-R2021a baseline control and solar step refinement/full logs, then source-
+derived glazing/exterior-boundary diagnostics before deciding further physics scope.

@@ -1,0 +1,341 @@
+{
+  "status": "exploratory_comparison_not_validation",
+  "baseline": {
+    "MAE_K": 2.3405322638114505,
+    "RMSE_K": 2.8055004126523566,
+    "maximum_absolute_error_K": 7.43410485371686,
+    "bias_K": -2.3351963931473314
+  },
+  "solar": {
+    "MAE_K": 0.7925341950338989,
+    "RMSE_K": 0.9239755340437169,
+    "maximum_absolute_error_K": 2.3971545332768756,
+    "bias_K": -0.4506132799970814
+  },
+  "solar_minus_baseline": {
+    "MAE_K": 1.8845831131502495,
+    "RMSE_K": 2.2248579963593165,
+    "maximum_absolute_error_K": 7.153831908628035,
+    "bias_K": 1.8845831131502495
+  },
+  "daily_baseline": [
+    {
+      "evaluation_day": 1,
+      "samples": 2880,
+      "MAE_K": 3.367569687965622,
+      "RMSE_K": 3.371795199076852,
+      "maximum_absolute_error_K": 3.696904528997436,
+      "bias_K": -3.367569687965622
+    },
+    {
+      "evaluation_day": 2,
+      "samples": 2880,
+      "MAE_K": 2.3387261582939947,
+      "RMSE_K": 2.472307720882187,
+      "maximum_absolute_error_K": 3.891305257562749,
+      "bias_K": -2.3387261582939947
+    },
+    {
+      "evaluation_day": 3,
+      "samples": 2880,
+      "MAE_K": 2.1113688350669806,
+      "RMSE_K": 2.3200805955629558,
+      "maximum_absolute_error_K": 3.535737550762235,
+      "bias_K": -2.1113688350669806
+    },
+    {
+      "evaluation_day": 4,
+      "samples": 2880,
+      "MAE_K": 2.405867912012485,
+      "RMSE_K": 2.6963379410649115,
+      "maximum_absolute_error_K": 4.580161690998466,
+      "bias_K": -2.405867912012485
+    },
+    {
+      "evaluation_day": 5,
+      "samples": 2880,
+      "MAE_K": 2.6185750654160254,
+      "RMSE_K": 2.7737211437060765,
+      "maximum_absolute_error_K": 4.008183559049371,
+      "bias_K": -2.6185750654160254
+    },
+    {
+      "evaluation_day": 6,
+      "samples": 2880,
+      "MAE_K": 4.252042693145244,
+      "RMSE_K": 4.763467495980414,
+      "maximum_absolute_error_K": 7.43410485371686,
+      "bias_K": -4.252042693145244
+    },
+    {
+      "evaluation_day": 7,
+      "samples": 2880,
+      "MAE_K": 4.980504014494339,
+      "RMSE_K": 5.00101484950993,
+      "maximum_absolute_error_K": 6.083644009847944,
+      "bias_K": -4.980504014494339
+    },
+    {
+      "evaluation_day": 8,
+      "samples": 2880,
+      "MAE_K": 3.4271350065205257,
+      "RMSE_K": 3.4545990200508405,
+      "maximum_absolute_error_K": 4.255824124754042,
+      "bias_K": -3.4271350065205257
+    },
+    {
+      "evaluation_day": 9,
+      "samples": 2880,
+      "MAE_K": 1.7168096500921572,
+      "RMSE_K": 1.9064177678386829,
+      "maximum_absolute_error_K": 3.2641273265409154,
+      "bias_K": -1.7168096500921572
+    },
+    {
+      "evaluation_day": 10,
+      "samples": 2880,
+      "MAE_K": 1.39506774329277,
+      "RMSE_K": 1.6780818814566416,
+      "maximum_absolute_error_K": 2.902826360793483,
+      "bias_K": -1.39506774329277
+    },
+    {
+      "evaluation_day": 11,
+      "samples": 2880,
+      "MAE_K": 1.131733365344689,
+      "RMSE_K": 1.426453011575005,
+      "maximum_absolute_error_K": 2.7092748506215116,
+      "bias_K": -1.131733365344689
+    },
+    {
+      "evaluation_day": 12,
+      "samples": 2880,
+      "MAE_K": 0.8321081023744477,
+      "RMSE_K": 1.1410344200596954,
+      "maximum_absolute_error_K": 2.1546363629983603,
+      "bias_K": -0.8202844164000712
+    },
+    {
+      "evaluation_day": 13,
+      "samples": 2880,
+      "MAE_K": 0.9440714337773513,
+      "RMSE_K": 1.1491176951796154,
+      "maximum_absolute_error_K": 2.649968996111909,
+      "bias_K": -0.8811910777211865
+    },
+    {
+      "evaluation_day": 14,
+      "samples": 2881,
+      "MAE_K": 1.2462519839941681,
+      "RMSE_K": 1.274112386708079,
+      "maximum_absolute_error_K": 1.9148129821592192,
+      "bias_K": -1.2462519839941681
+    }
+  ],
+  "daily_solar": [
+    {
+      "evaluation_day": 1,
+      "samples": 2880,
+      "MAE_K": 0.9944526256007398,
+      "RMSE_K": 0.9960480992639748,
+      "maximum_absolute_error_K": 1.098954441562853,
+      "bias_K": -0.9944526256007398
+    },
+    {
+      "evaluation_day": 2,
+      "samples": 2880,
+      "MAE_K": 0.7388511350889928,
+      "RMSE_K": 0.9959958893131725,
+      "maximum_absolute_error_K": 2.241197103474292,
+      "bias_K": -0.561157099736101
+    },
+    {
+      "evaluation_day": 3,
+      "samples": 2880,
+      "MAE_K": 0.9273452738153888,
+      "RMSE_K": 1.2304051023837013,
+      "maximum_absolute_error_K": 2.3971545332768756,
+      "bias_K": -0.7780169971675812
+    },
+    {
+      "evaluation_day": 4,
+      "samples": 2880,
+      "MAE_K": 0.9054857774424581,
+      "RMSE_K": 1.1433721524838065,
+      "maximum_absolute_error_K": 2.0858610895813285,
+      "bias_K": -0.6164680108978425
+    },
+    {
+      "evaluation_day": 5,
+      "samples": 2880,
+      "MAE_K": 0.8507135117419734,
+      "RMSE_K": 1.059953170445817,
+      "maximum_absolute_error_K": 2.130277548763786,
+      "bias_K": -0.5386007207165205
+    },
+    {
+      "evaluation_day": 6,
+      "samples": 2880,
+      "MAE_K": 0.7569087084678797,
+      "RMSE_K": 0.9094001713405225,
+      "maximum_absolute_error_K": 1.7359232263120816,
+      "bias_K": -0.5246898813677805
+    },
+    {
+      "evaluation_day": 7,
+      "samples": 2880,
+      "MAE_K": 0.9194189848986771,
+      "RMSE_K": 0.9254567502323393,
+      "maximum_absolute_error_K": 1.1117841739786058,
+      "bias_K": -0.9194189848986771
+    },
+    {
+      "evaluation_day": 8,
+      "samples": 2880,
+      "MAE_K": 0.7872388104052876,
+      "RMSE_K": 0.7955552211552352,
+      "maximum_absolute_error_K": 0.9635062795051681,
+      "bias_K": -0.7872388104052876
+    },
+    {
+      "evaluation_day": 9,
+      "samples": 2880,
+      "MAE_K": 0.7497684442316026,
+      "RMSE_K": 0.8288437973978454,
+      "maximum_absolute_error_K": 1.84391437815151,
+      "bias_K": -0.040614476928124
+    },
+    {
+      "evaluation_day": 10,
+      "samples": 2880,
+      "MAE_K": 0.8751607742391049,
+      "RMSE_K": 0.9607428455277547,
+      "maximum_absolute_error_K": 1.9000668448778129,
+      "bias_K": -0.2591347492782713
+    },
+    {
+      "evaluation_day": 11,
+      "samples": 2880,
+      "MAE_K": 0.8636185745166494,
+      "RMSE_K": 0.9121192417317984,
+      "maximum_absolute_error_K": 1.6743692540653115,
+      "bias_K": -0.156087500416518
+    },
+    {
+      "evaluation_day": 12,
+      "samples": 2880,
+      "MAE_K": 0.7727343839004959,
+      "RMSE_K": 0.7927086533311899,
+      "maximum_absolute_error_K": 1.375663212403765,
+      "bias_K": 0.0229241884671072
+    },
+    {
+      "evaluation_day": 13,
+      "samples": 2880,
+      "MAE_K": 0.6888805339011348,
+      "RMSE_K": 0.7226316103365826,
+      "maximum_absolute_error_K": 1.4019013327233552,
+      "bias_K": 0.10938966375134042
+    },
+    {
+      "evaluation_day": 14,
+      "samples": 2881,
+      "MAE_K": 0.26508433453687313,
+      "RMSE_K": 0.3387179922363526,
+      "maximum_absolute_error_K": 0.7616266320750924,
+      "bias_K": -0.26508433453687313
+    }
+  ],
+  "energy_J_reconstructed": {
+    "baseline": {
+      "delivered_heating_power": 1905929239.6630194,
+      "internal_convective_power": 21654696.012243632,
+      "internal_radiative_power": 32482044.018365443
+    },
+    "solar": {
+      "delivered_heating_power": 1906020428.2847962,
+      "internal_convective_power": 21654797.840565637,
+      "internal_radiative_power": 32482196.760848448,
+      "absorbed_solar_power": 220702274.168829
+    }
+  },
+  "solver_step_sensitivity": {
+    "status": "pending"
+  },
+  "sources": {
+    "baseline_evaluation": "2f23cbda2c8c1c49e347004a2429ff2a1e9764798cbda33e2a6bd9d05539a424",
+    "solar_evaluation": "b1c340ae56d42877ff000104f921dc42f43faa41f040f7e5c1a9230e6255cb0d",
+    "reference_manifest": "9fadac5eb6c38f0e9710cd5e12c85398517aab57c6ca511f1618c6109ea5020c"
+  },
+  "solver_settings": {
+    "baseline": {
+      "name": "ode15s",
+      "RelTol": "1e-7",
+      "AbsTol": "1e-9",
+      "MaxStep_s": "30"
+    },
+    "solar": {
+      "name": "ode15s",
+      "RelTol": "1e-7",
+      "AbsTol": "1e-9",
+      "MaxStep_s": "30"
+    }
+  },
+  "limitations": [
+    "Sampled/held power quadrature is not exact continuous energy.",
+    "Reduced glazing/exterior/air physics remain different; no calibration.",
+    "MATLAB releases differ; this pair cannot isolate release/solver effects from solar."
+  ],
+  "metric_changes": {
+    "MAE_K": {
+      "baseline_K": 2.3405322638114505,
+      "solar_K": 0.7925341950338989,
+      "signed_change_K": -1.5479980687775516,
+      "error_magnitude_reduction_K": 1.5479980687775516,
+      "error_magnitude_reduction_percent": 66.13871950035447
+    },
+    "RMSE_K": {
+      "baseline_K": 2.8055004126523566,
+      "solar_K": 0.9239755340437169,
+      "signed_change_K": -1.8815248786086398,
+      "error_magnitude_reduction_K": 1.8815248786086398,
+      "error_magnitude_reduction_percent": 67.06557126576294
+    },
+    "maximum_absolute_error_K": {
+      "baseline_K": 7.43410485371686,
+      "solar_K": 2.3971545332768756,
+      "signed_change_K": -5.036950320439985,
+      "error_magnitude_reduction_K": 5.036950320439985,
+      "error_magnitude_reduction_percent": 67.75463111636958
+    },
+    "bias_K": {
+      "baseline_K": -2.3351963931473314,
+      "solar_K": -0.4506132799970814,
+      "signed_change_K": 1.88458311315025,
+      "error_magnitude_reduction_K": 1.88458311315025,
+      "error_magnitude_reduction_percent": 80.70340972950228
+    }
+  },
+  "execution_environments": {
+    "baseline": {
+      "matlab_version": "25.1.0.2943329 (R2025a)",
+      "simulink": {
+        "Name": "Simulink",
+        "Version": "25.1",
+        "Release": "(R2025a)",
+        "Date": "21-Nov-2024"
+      },
+      "driver_source_sha256": "6f087f423f1e76426fbf40920d6acd1d150f4d64b1e29ed789231d5fc1b0735e"
+    },
+    "solar": {
+      "matlab_version": "9.10.0.1602886 (R2021a)",
+      "simulink": {
+        "Name": "Simulink",
+        "Version": "10.3",
+        "Release": "(R2021a)",
+        "Date": "14-Nov-2020"
+      },
+      "driver_source_sha256": "36b42bc9d3600e17c37195f18491c80c630f44c061cdd400ef8272520f2efbce"
+    }
+  }
+}
