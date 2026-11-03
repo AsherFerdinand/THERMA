@@ -6,6 +6,11 @@ arguments
     assumptionsFile (1,1) string
     options.AllowPartial (1,1) logical = false
     options.MaxStepSeconds (1,1) double = NaN
+    options.OutputParent (1,1) string = ""
+    options.SmokeSeconds (1,1) double = NaN
+    options.SaveSimulation (1,1) logical = true
+    options.SaveTrajectory (1,1) logical = true
+    options.ExportEvents (1,1) logical = false
 end
 assert(options.AllowPartial,'THERMA:PartialConsent', ...
     'Replay is a reduced partial-reference experiment. Explicit AllowPartial=true is required.');
@@ -15,6 +20,15 @@ assert(isnan(options.MaxStepSeconds) || ...
 [metadata,data] = load_boptest_replay(replayFile);
 root = fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));
 parent = fullfile(root,'outputs','boptest','replays');
+if strlength(options.OutputParent)>0, parent = char(options.OutputParent); end
+smoke = ~isnan(options.SmokeSeconds);
+requestedStop = metadata.duration_s;
+if smoke
+    assert(isfinite(options.SmokeSeconds) && options.SmokeSeconds>0 && ...
+        options.SmokeSeconds<metadata.duration_s,'THERMA:ReplaySmoke', ...
+        'SmokeSeconds must be positive and shorter than the full replay.');
+    requestedStop = options.SmokeSeconds;
+end
 if ~isfolder(parent), mkdir(parent); end
 folder = tempname(parent); mkdir(folder); reportFile = fullfile(folder,'replay_run.json');
 report = struct('status','running','matlab_verified',false, ...
@@ -50,19 +64,22 @@ try
     add_block('simulink/Signal Routing/Mux',[model '/Inputs'],'Inputs','11', ...
         'Position',[300 20 310 400]);
     % Set the actual requested interval before the driver checks coverage.
-    set_param(model,'StartTime','0','StopTime',num2str(metadata.duration_s,17));
+    set_param(model,'StartTime','0','StopTime',num2str(requestedStop,17));
     if ~isnan(options.MaxStepSeconds)
         set_param(model,'MaxStep',num2str(options.MaxStepSeconds,17));
     end
-    [simulationInput,report.drivers] = configure_boptest_replay_sources(model,metadata,data);
+    driverMetadata = metadata; driverMetadata.duration_s = requestedStop;
+    [simulationInput,report.drivers] = configure_boptest_replay_sources(model,driverMetadata,data);
     destinations = {'Outdoor_K','Heating_conv_W','Heating_rad_W', ...
         'Internal_conv_W','Internal_rad_W','Solar_absorbed_W','Log_inputs_used'};
     for j = 1:numel(destinations)
         add_line(model,'Inputs/1',[destinations{j} '/1'],'autorouting','on');
     end
     evaluationRelative = metadata.evaluation_start_s-metadata.time_origin_s;
+    requestedTimes = unique([0 evaluationRelative requestedStop]);
+    requestedTimes = requestedTimes(requestedTimes<=requestedStop);
     set_param(model,'OutputOption','AdditionalOutputTimes', ...
-        'OutputTimes',mat2str([0 evaluationRelative metadata.duration_s],17));
+        'OutputTimes',mat2str(requestedTimes,17));
     Simulink.BlockDiagram.arrangeSystem(model);
     save_system(model,fullfile(folder,[model '.slx']));
     report.registry_sha256 = Z.envelope.registry_sha256;
@@ -78,11 +95,14 @@ try
     report.stage = 'compile'; write_boptest_json(reportFile,report);
     set_param(model,'SimulationCommand','update');
     report.stage = 'simulate'; write_boptest_json(reportFile,report);
+    simulationClock = tic;
     result = sim(simulationInput);
+    report.elapsed_simulation_s = toc(simulationClock);
     report.simulation_returned = true;
     report.matlab_execution_completed = true;
     report.stage = 'export'; write_boptest_json(reportFile,report);
-    save(fullfile(folder,'simulation.mat'),'result');
+    if options.SaveSimulation, save(fullfile(folder,'simulation.mat'),'result'); end
+    report.simulation_mat_saved = options.SaveSimulation;
     names = {'T_air_K','q_heating_W','q_vent_W','E_J','residual_W','T_opaque_mean_K', ...
         'q_net_W','dE_dt_W','q_solar_W','q_internal_W'};
     columns = {'air_temperature','delivered_heating_power','ventilation_sensible_power', ...
@@ -107,7 +127,26 @@ try
     assert(all(isfinite(values),'all'),'THERMA:ReplayFinite','Nonfinite replay output.');
     absolute = time+metadata.time_origin_s;
     output = array2table([absolute values],'VariableNames',[{'time_s'},columns]);
-    writetable(output,fullfile(folder,'trajectory.csv'));
+    if options.SaveTrajectory, writetable(output,fullfile(folder,'trajectory.csv')); end
+    if smoke
+        report.status = 'executed_smoke_not_benchmark'; report.stage = 'completed';
+        write_boptest_json(reportFile,report);
+        boptest_solver_metadata(folder,report);
+        fprintf('Smoke report (not a benchmark): %s\n',reportFile);
+        return;
+    end
+    if options.ExportEvents
+        rawTime = firstSeries.Time(:)+metadata.time_origin_s;
+        rawE = result.get('E_J'); rawNet = result.get('q_net_W');
+        rawRate = result.get('dE_dt_W'); rawResidual = result.get('residual_W');
+        raw = [rawTime rawE.Data(:) rawNet.Data(:) rawRate.Data(:) ...
+            sum(usedData(:,2:11),2) rawResidual.Data(:)];
+        raw = raw(rawTime>=metadata.evaluation_start_s & rawTime<=metadata.evaluation_end_s,:);
+        writetable(array2table(raw,'VariableNames',{'time_s','stored_thermal_energy', ...
+            'net_external_power','stored_energy_derivative','prescribed_power','power_balance_residual'}), ...
+            fullfile(folder,'energy_events.csv'));
+        report.energy_events_policy = 'Original ordered log; duplicate event times retained, not averaged.';
+    end
     selected = absolute>=metadata.evaluation_start_s & absolute<=metadata.evaluation_end_s;
     assert(any(selected) && absolute(find(selected,1))==metadata.evaluation_start_s && ...
         absolute(find(selected,1,'last'))==metadata.evaluation_end_s, ...
@@ -130,14 +169,22 @@ try
     report.status = 'executed_partial_not_validated'; report.stage = 'completed';
 catch problem
     report.status = 'failed';
+    if exist('simulationClock','var'), report.elapsed_simulation_s = toc(simulationClock); end
     report.error = boptest_exception_diagnostic(problem);
     % Persist the original exception before printing/rethrowing anything else.
     write_boptest_json(reportFile,report);
+    try
+        boptest_solver_metadata(folder,report);
+    catch metadataProblem
+        fprintf(2,'Secondary solver-metadata export failed: %s\n',metadataProblem.message);
+    end
     print_boptest_exception(problem,reportFile);
     failure = MException('THERMA:ReplayFailed', ...
         'Replay failed during %s. Full diagnostic report: %s',report.stage,reportFile);
     failure = addCause(failure,problem);
     throw(failure);
 end
-write_boptest_json(reportFile,report); fprintf('Replay report: %s\n',reportFile);
+write_boptest_json(reportFile,report);
+boptest_solver_metadata(folder,report);
+fprintf('Replay report: %s\n',reportFile);
 end

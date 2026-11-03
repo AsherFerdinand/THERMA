@@ -47,7 +47,10 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [x] Publish checked C2.6 packet/reference subset separately from development.
 - [x] C2.6C: analyze actual R2021a solar replay; user reports 14/14 MATLAB tests passed.
 - [x] Compare preserved no-solar/reference trajectories: MAE 0.79253 K (66.14% lower), daily error/energy audits and figures.
-- [ ] Close common-release baseline control, solver-step sensitivity and sampled/event energy diagnostics.
+- [x] C2.7 infrastructure: same-release control, 30/15/5 s refinements, hash-checked resume and event exports.
+- [x] Prepare offline R2021a quick/full package, actual-only study analyzer and six PNG/PDF outputs.
+- [x] Document C3 hydronic architecture options; design only, no implementation.
+- [ ] Execute C2.7 university quick/full runs and analyze actual controlled/convergence/energy results.
 - [ ] Decide remaining glazing/exterior/moist-air physics scope from measured evidence; no calibration.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [ ] Satisfy C3 readiness gates before hydronic implementation.

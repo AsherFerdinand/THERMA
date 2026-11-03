@@ -133,3 +133,15 @@ Actual C2.6C exports confirm successful execution on **MATLAB/Simulink R2021a**.
 Daily MAE improves on all 14 evaluation days. The user reports 14/14 MATLAB tests
 passed; no raw test log was supplied. This remains a partial benchmark, not real-world
 validation. Common-release controls and solver sensitivity remain pending.
+
+
+## C2.7 controlled numerical verification — prepared, execution pending
+
+[Download the offline R2021a C2.7 package](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C27_MATLAB_R2021a_2026-11-03.zip),
+extract, and run `run_verification("quick")` then `run_verification("full")` in MATLAB.
+Full mode runs the preserved no-solar control at 30 s and solar at 30/15/5 s sequentially,
+with hash-checked resume, lean exports, measured runtime and original event logs.
+No new C2.7 MATLAB runs or convergence results are claimed. See
+[the experiment/report guide](docs/C27_NUMERICAL_VERIFICATION_REPORT.md),
+[START_HERE.md](START_HERE.md), and the [C3 design-only plan](docs/C3_HYDRONIC_ARCHITECTURE_PLAN.md).
+C3 implementation remains pending actual controlled-study results.

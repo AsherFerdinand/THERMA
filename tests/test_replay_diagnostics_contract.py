@@ -64,5 +64,12 @@ def test_driver_coverage_uses_model_interval_before_binding():
     assert "data(end,1)>=requestedStop" in helper
     runner = (ROOT / "run_boptest_zone_replay.m").read_text()
     assert runner.index("set_param(model,'StartTime','0','StopTime'") < runner.index(
-        "configure_boptest_replay_sources(model,metadata,data)"
+        "configure_boptest_replay_sources(model,driverMetadata,data)"
     )
+
+
+def test_smoke_driver_duration_is_explicit_and_full_period_metadata_is_preserved():
+    runner = (ROOT / "run_boptest_zone_replay.m").read_text()
+    assert "driverMetadata = metadata; driverMetadata.duration_s = requestedStop" in runner
+    assert "requestedTimes(requestedTimes<=requestedStop)" in runner
+    assert "report.status = 'executed_smoke_not_benchmark'" in runner

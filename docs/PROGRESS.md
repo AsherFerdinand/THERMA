@@ -926,3 +926,50 @@ Checks: 164 Python tests passed; Ruff lint/format, mypy, archived evidence, 14 r
 mappings, 29 MATLAB files static lint and wheel/sdist build passed. No MATLAB in cloud.
 Next: common-R2021a baseline control and solar step refinement/full logs, then source-
 derived glazing/exterior-boundary diagnostics before deciding further physics scope.
+
+## 2026-11-03 — C2.7 controlled verification infrastructure (execution pending)
+
+Inspected existing C2.6C evidence, both original transfer packets, model builders,
+solver/drivers, tests and analysis. Preserved C2.6C actual R2021a results and the
+R2025a no-solar baseline. Directly checked 60,481 full-period timestamps: original
+packets' first five channels/time are exactly equal; original six no-solar columns
+are zero. Frozen C1/C2 builders/loaders, material registry and assumptions remain
+byte-identical. No FMU rerun, MATLAB execution, recalibration or new physics.
+
+Added C27 study plan and sequential MATLAB quick/full workflows. Quick runs all
+MATLAB tests and 600 s smoke after checksums; its distinct status cannot be accepted
+as a benchmark. Full schedules original no-solar/30 s and identical solar/30/15/5 s,
+with unchanged tolerances/family/start/warm-up/evaluation. Each attempt has fresh
+outputs. Hash-checked completion receipts and code/input/release/retention contracts
+permit resume only for matching intact full runs; corrupt/incomplete attempts are
+preserved and rerun separately. New resume regression is a synthetic unit fixture,
+not evidence of MATLAB execution.
+
+Extended existing replay orchestration only: measured sim() wall time, actual solver
+metadata, optional MAT/trajectory retention, short stop and ordered original energy
+logs before unique-time export. Original full-run defaults remain available; C27 lean
+mode omits large MAT/full trajectory files. Driver interpolation/final-value holding
+and nested exception causes remain preserved. Separate driver duration enables smoke
+coverage without changing original packet metadata or physical equations.
+
+Added actual-only four-run study analyzer: validates every receipt/artifact/contract,
+requires one MATLAB/Simulink version and unchanged family/tolerances/parameters,
+compares all temperature errors on native reference grid, quantifies pairwise step
+sensitivity/runtime, and integrates ordered event logs without deleting duplicate
+sides. No convergence threshold/order assumed. Six figure pairs are generated only
+from actual exports; plotting/contracts tested with explicitly synthetic fixtures.
+
+Added root offline entry and START_HERE, package assembler, C27 engineering report
+with pending result table/reproduction and design-only C3 hydronic architecture plan
+comparing Simscape and equation-based/hybrid options. C3 implementation remains gated
+on actual C27 study results. All new datasets are drawn unchanged from original
+packets; no new benchmark output was invented. Preparing an immutable transfer ZIP
+from the committed work source, with per-file SHA256 integrity and input provenance.
+
+Quality gates: 174 Python tests passed (17.69 s), including corruption, mixed-release,
+receipt, ordered-event quadrature, all-six-figure export and driver smoke-coverage
+regressions. Ruff lint/format (74 files), mypy (11 modules), archived-report integrity,
+14 replay mappings, MISS_HIT static lint (34 MATLAB files including root entry) and
+wheel/sdist build passed. CI now includes root-entry static lint. Original C26C
+report/figure checksums and physical-code/configuration bytes were verified unchanged.
+No actual C27 MATLAB tests, simulations, runtimes or convergence measurements exist yet.

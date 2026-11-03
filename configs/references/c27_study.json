@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "classification": "planned_controlled_study_not_executed",
+  "no_solar_packet": "outputs/boptest/replay_inputs/first_typical/replay.json",
+  "no_solar_packet_sha256": "c4b3fd86502908779eb5d8fbcdafabe9b6e8f8e71b7a305cfa5621e718d1517c",
+  "solar_packet": "outputs/boptest/THERMA_C26_solar_replay/packet/replay.json",
+  "solar_packet_sha256": "5f923d220e77bad415559572b155c5aaa776407352f0930ee0c2f9558fda33a3",
+  "smoke_duration_s": 600,
+  "experiments": [
+    {
+      "id": "no_solar_30",
+      "packet": "no_solar",
+      "max_step_s": 30
+    },
+    {
+      "id": "solar_30",
+      "packet": "solar",
+      "max_step_s": 30
+    },
+    {
+      "id": "solar_15",
+      "packet": "solar",
+      "max_step_s": 15
+    },
+    {
+      "id": "solar_5",
+      "packet": "solar",
+      "max_step_s": 5
+    }
+  ]
+}
