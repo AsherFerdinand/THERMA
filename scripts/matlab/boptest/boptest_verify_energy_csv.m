@@ -47,6 +47,8 @@ while position<fileBytes
     commas=cumsum(text==',');
     assert(all(diff([0 commas(endings)])==5),'THERMA:EventCSVColumns', ...
         'Each event record must contain exactly six columns.');
+    % Normalize only CRLF terminators for textscan, after hashing/counting raw bytes.
+    text=strrep(text,[char(13) char(10)],char(10));
     parsed=textscan(text,'%f%f%f%f%f%f','Delimiter',',','CollectOutput',true, ...
         'ReturnOnError',false,'EndOfLine',char(10));
     block=parsed{1};
