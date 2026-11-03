@@ -973,3 +973,14 @@ regressions. Ruff lint/format (74 files), mypy (11 modules), archived-report int
 wheel/sdist build passed. CI now includes root-entry static lint. Original C26C
 report/figure checksums and physical-code/configuration bytes were verified unchanged.
 No actual C27 MATLAB tests, simulations, runtimes or convergence measurements exist yet.
+
+C27 delivery completed: 12,853,763-byte ZIP, 152 files, pinned implementation source
+7516fd073fdf590162812048eaf3a844dc7e26f5. Packaging now resolves symbolic refs to
+immutable commit hashes. Extracted package manifest/source hashes, required Windows
+paths, original packet byte preservation and full 60,481-sample solar contract passed.
+SHA-256: 01b093ce8c684d62a1e90912af2d837672251faab8cc74158e590e061d575db6.
+Published separately at replay-transfer 9dd5a89380d160ab4db213213b1b3e7492a4e231;
+a fresh isolated GitHub fetch verified the uploaded ZIP bytes. Previous transfer
+artifacts and main are unchanged. docs/C27_DELIVERY.json records provenance/checks.
+University commands are run_verification("quick") then run_verification("full").
+C27 actual MATLAB tests/runs, solver metrics and convergence conclusions remain pending.
