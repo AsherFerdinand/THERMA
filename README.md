@@ -82,3 +82,12 @@ Run run_verification("quick"), then run_verification("full") in MATLAB.
 Confirmed EOF distinguished from read failures; independent cleanup owner prevents destroyed fid access. CSV checks/physics unchanged.
 No MATLAB C2.7 execution or convergence results are claimed. C3 is design only.
 SHA-256: `b680eb85123d1bcc5a648ca74b8d8c9c43d81e0d0cccbe2bb21721c6a359e4a9`. Source: `28965ed1c83068b7d92d6a1e325584122b24a0b1`.
+
+
+## C2.7 R2024a byte-bounded reader revision (MATLAB confirmation pending)
+
+Download [THERMA_C27_R2024A_READER_FIX_2026-11-03.zip](THERMA_C27_R2024A_READER_FIX_2026-11-03.zip), extract and read START_HERE.md.
+Run run_verification("quick"), then run_verification("full") in MATLAB.
+Confirmed EOF distinguished from read failures; independent cleanup owner prevents destroyed fid access. CSV checks/physics unchanged.
+No MATLAB C2.7 execution or convergence results are claimed. C3 is design only.
+SHA-256: `6147bc270ff95be5c94637c236b123ce6bc0ca25c09e925840156b4e12827d86`. Source: `945acca7cbd8c43bd8050b7a768811ac5f1902b9`.

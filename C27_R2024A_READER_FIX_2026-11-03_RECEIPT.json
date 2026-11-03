@@ -1,0 +1,9 @@
+{
+  "filename": "THERMA_C27_R2024A_READER_FIX_2026-11-03.zip",
+  "sha256": "6147bc270ff95be5c94637c236b123ce6bc0ca25c09e925840156b4e12827d86",
+  "bytes": 12886495,
+  "source_commit": "945acca7cbd8c43bd8050b7a768811ac5f1902b9",
+  "files": 165,
+  "matlab_execution": "pending",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C27_R2024A_READER_FIX_2026-11-03.zip"
+}
