@@ -1028,3 +1028,16 @@ lint/format (76 files), mypy (11 modules), archive integrity, 14 replay mappings
 wheel/sdist build passed. Static MATLAB lint passed for 38 files. Physical builders,
 loaders, material/assumption registries, solver study plan and C26C result hashes were
 verified unchanged. MATLAB IO regressions and UNC success still require university execution.
+
+Updated package published: THERMA_C27_EVENT_EXPORT_FIX_R2024a_2026-11-03.zip,
+12,869,505 bytes / 159 files, source 202df140773bc74a4fda3342cc543e580863a730.
+SHA-256 fd6a09d46981df83dfb68b3167c600107580465c841053b040572a1ac1587a96.
+Fresh extraction verified all manifest/source/dataset hashes, required helpers/tests
+and the original 60,481-sample solar packet. Static MATLAB lint passed after ensuring
+synthetic UNC classification does not probe an unreachable fake server; real UNC IO
+is tested conditionally only on an actual Windows UNC installation. Relevant Python
+export guards reran 3/3 passed. Published on replay-transfer at
+995bdf68b190c5067502b6c804eb3dc0cc74dcb6, independently fetched and hash-verified.
+Previous ZIPs, main, physical models, solver plan and original results remain unchanged.
+New delivery receipt is docs/C27_EVENT_EXPORT_FIX_DELIVERY.json. University quick/full
+execution of this fix remains pending; no claim of resolved UNC root cause is made.
