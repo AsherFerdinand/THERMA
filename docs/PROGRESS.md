@@ -1075,3 +1075,14 @@ Available checks passed: 179 Python tests (20.54 s), Ruff lint/format (76 files)
 MATLAB static lint (39 files). Targeted EOF/cleanup static guards reran 5/5 passed.
 Physical code/configuration, solver study plan and C26C artifact checksums unchanged.
 No MATLAB test result or successful university verification is claimed for this patch.
+
+New delivery: THERMA_C27_EOF_CLEANUP_FIX_R2024a_2026-11-03.zip, 12,876,800 bytes,
+162 files, source 28965ed1c83068b7d92d6a1e325584122b24a0b1. ZIP CRC, every extracted
+manifest/source hash, new resource-owner class/EOF guard and original 60,481-sample
+solar packet passed cloud integrity checks. SHA-256:
+b680eb85123d1bcc5a648ca74b8d8c9c43d81e0d0cccbe2bb21721c6a359e4a9.
+Published on replay-transfer at 1a7b668cbbc62b88340596e7fd71390750a16feb and independently
+fetched from GitHub to verify identical uploaded bytes. Old artifacts/main unchanged.
+Delivery receipt: docs/C27_EOF_CLEANUP_FIX_DELIVERY.json. Commands remain
+run_verification("quick") then, only after successful quick tests, run_verification("full").
+University MATLAB execution of the new EOF/cleanup regressions remains pending.
