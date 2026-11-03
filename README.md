@@ -73,3 +73,12 @@ Run run_verification("quick"), then run_verification("full") in MATLAB.
 Chunked %.17g staging, streaming verification, SHA256 publication and export diagnostics. Physics/solver inputs unchanged.
 No MATLAB C2.7 execution or convergence results are claimed. C3 is design only.
 SHA-256: `fd6a09d46981df83dfb68b3167c600107580465c841053b040572a1ac1587a96`. Source: `202df140773bc74a4fda3342cc543e580863a730`.
+
+
+## C2.7 R2024a CSV EOF and cleanup correction (execution pending)
+
+Download [THERMA_C27_EOF_CLEANUP_FIX_R2024a_2026-11-03.zip](THERMA_C27_EOF_CLEANUP_FIX_R2024a_2026-11-03.zip), extract and read START_HERE.md.
+Run run_verification("quick"), then run_verification("full") in MATLAB.
+Confirmed EOF distinguished from read failures; independent cleanup owner prevents destroyed fid access. CSV checks/physics unchanged.
+No MATLAB C2.7 execution or convergence results are claimed. C3 is design only.
+SHA-256: `b680eb85123d1bcc5a648ca74b8d8c9c43d81e0d0cccbe2bb21721c6a359e4a9`. Source: `28965ed1c83068b7d92d6a1e325584122b24a0b1`.
