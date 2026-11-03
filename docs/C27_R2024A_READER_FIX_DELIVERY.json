@@ -1,0 +1,15 @@
+{
+  "filename": "THERMA_C27_R2024A_READER_FIX_2026-11-03.zip",
+  "sha256": "6147bc270ff95be5c94637c236b123ce6bc0ca25c09e925840156b4e12827d86",
+  "bytes": 12886495,
+  "source_commit": "945acca7cbd8c43bd8050b7a768811ac5f1902b9",
+  "files": 165,
+  "matlab_execution": "pending",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C27_R2024A_READER_FIX_2026-11-03.zip",
+  "transfer_commit": "30f48534f4cb67e17e01199ecd55d69b822c3f87",
+  "uploaded_zip_sha256_verified": true,
+  "input_preservation_verified": true,
+  "python_tests_passed": 180,
+  "static_MATLAB_files_checked": 40,
+  "limitations": "MATLAB API probe and R2024a tests unexecuted in cloud; university confirmation pending. No numeric EOF classification or physics changes."
+}

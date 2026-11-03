@@ -1127,3 +1127,16 @@ lint (40 files) passed. Added CRLF header handling to preserve fgetl line-termin
 semantics while hashing original bytes; CRLF and chunk-boundary MATLAB cases prepared.
 Physical builders/loaders, solver plan, parameter registries, independent cleanup owner
 and previous C26C result hashes verified unchanged. No MATLAB test was executed here.
+
+R2024a reader delivery: THERMA_C27_R2024A_READER_FIX_2026-11-03.zip, 12,886,495 bytes,
+165 files, pinned source 945acca7cbd8c43bd8050b7a768811ac5f1902b9. CRLF record
+terminators are normalized for numeric parsing only after raw bytes are hashed;
+the original bytes/values/order remain the verified payload. Fresh extraction passed
+manifest/source/dataset hashes, required probe/reader presence and original solar
+packet validation. SHA-256:
+6147bc270ff95be5c94637c236b123ce6bc0ca25c09e925840156b4e12827d86.
+Published on replay-transfer at 30f48534f4cb67e17e01199ecd55d69b822c3f87; an independent
+GitHub fetch verified identical uploaded bytes. Prior artifacts/main unchanged.
+Delivery metadata: docs/C27_R2024A_READER_FIX_DELIVERY.json. Targeted reader/diagnostic
+Python guards 6/6 and final MATLAB static lint passed. All actual MATLAB API-probe,
+regression, quick/full and university-success claims remain pending execution.
