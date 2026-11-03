@@ -55,3 +55,12 @@ and run_verification.m. No Git/Python/Docker needed on the MATLAB computer.
 The unchanged model builders generate SLX in MATLAB; no pre-generated SLX is claimed.
 SHA-256: `bf872ff3700b2c14e7ab02e48470de105f5817c4f482b9280fb00072dad2fb63`. Source commit: `e6c7d41848701fa678b974ef7e343e40d0f8e3dd`.
 No source-branch changes or artifact overwrites. MATLAB execution remains pending.
+
+
+## C2.7 offline R2021a controlled numerical study (prepared)
+
+Download [THERMA_C27_MATLAB_R2021a_2026-11-03.zip](THERMA_C27_MATLAB_R2021a_2026-11-03.zip), extract and read START_HERE.md.
+Run run_verification("quick"), then run_verification("full") in MATLAB.
+Full mode: no-solar/30 s and solar/30/15/5 s sequentially; hash-checked resume.
+No MATLAB C2.7 execution or convergence results are claimed. C3 is design only.
+SHA-256: `01b093ce8c684d62a1e90912af2d837672251faab8cc74158e590e061d575db6`. Source: `7516fd073fdf590162812048eaf3a844dc7e26f5`.
