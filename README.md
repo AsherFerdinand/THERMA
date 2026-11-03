@@ -152,3 +152,10 @@ staged publication, streaming row/header/order checks and SHA-256 verification r
 the large event table writer. The network-path root cause is unconfirmed; university
 verification remains pending. [Download the updated offline ZIP](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C27_EVENT_EXPORT_FIX_R2024a_2026-11-03.zip).
 Thermal physics, solver settings and reference inputs remain unchanged.
+
+
+[C2.7 CSV EOF/cleanup correction](docs/C27_EOF_CLEANUP_FIX.md): accepts confirmed
+normal EOF without disabling CSV checks, and replaces shared-workspace cleanup with
+an independent, idempotent file-handle owner. [Updated offline ZIP](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C27_EOF_CLEANUP_FIX_R2024a_2026-11-03.zip).
+The new MATLAB regressions and university execution remain pending; thermal physics,
+solver settings and reference datasets are unchanged.

@@ -1,5 +1,8 @@
 # C2.7 event export failure — scoped fix, university verification pending
 
+This package is superseded by the [CSV EOF/cleanup correction](C27_EOF_CLEANUP_FIX.md)
+following the university regression failures. Its original archive remains preserved.
+
 ## Evidence and investigation
 
 The user reports that C2.7 quick verification (all MATLAB tests and smoke simulation)

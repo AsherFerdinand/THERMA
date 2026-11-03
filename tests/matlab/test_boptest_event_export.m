@@ -92,3 +92,56 @@ if ispc && startsWith(root,'\\')
     verifyEqual(testCase,exported.verification.row_count,5000);
 end
 end
+function testNormalEOFAndAdditionalRows(testCase)
+% Write independently of the exporter so normal EOF verification is isolated.
+folder=tempname; mkdir(folder); cleanup=onCleanup(@() rmdir(folder,'s'));
+file=fullfile(folder,'valid.csv');
+header='time_s,stored_thermal_energy,net_external_power,stored_energy_derivative,prescribed_power,power_balance_residual';
+fid=fopen(file,'wb'); fprintf(fid,'%s\n0,1,2,3,4,0\n0,2,3,4,5,0\n',header); fclose(fid);
+info=boptest_verify_energy_csv(file,2);
+verifyEqual(testCase,info.row_count,2); verifyEqual(testCase,info.first_time_s,0);
+verifyEqual(testCase,info.last_time_s,0);
+fid=fopen(file,'ab'); fprintf(fid,'1,2,3,4,5,0\n'); fclose(fid);
+verifyError(testCase,@() boptest_verify_energy_csv(file,2),'THERMA:EventCSVRows');
+end
+function testMissingColumnsAndNonfiniteValuesRejected(testCase)
+folder=tempname; mkdir(folder); cleanup=onCleanup(@() rmdir(folder,'s'));
+file=fullfile(folder,'bad.csv');
+header='time_s,stored_thermal_energy,net_external_power,stored_energy_derivative,prescribed_power,power_balance_residual';
+fid=fopen(file,'wb'); fprintf(fid,'%s\n0,1,2,3,4\n',header); fclose(fid);
+verifyError(testCase,@() boptest_verify_energy_csv(file,1),'THERMA:EventCSVColumns');
+fid=fopen(file,'wb'); fprintf(fid,'%s\n0,1,NaN,3,4,0\n',header); fclose(fid);
+verifyError(testCase,@() boptest_verify_energy_csv(file,1),'THERMA:EventCSVValues');
+end
+function testCleanupIsIdempotentAndCannotCloseReusedHandle(testCase)
+folder=tempname; mkdir(folder); cleanup=onCleanup(@() rmdir(folder,'s'));
+resources=BoptestEventExportResources();
+resources.FileId=fopen(fullfile(folder,'first.tmp'),'wb');
+resources.StagingFile=fullfile(folder,'first.tmp');
+guard=onCleanup(@() resources.cleanup());
+verifyEqual(testCase,resources.closeFile(),0);
+% A new fopen can reuse the numeric ID. Cleanup must not close that new file.
+fid=fopen(fullfile(folder,'second.tmp'),'wb');
+otherCleanup=onCleanup(@() fclose(fid));
+clear guard;
+verifyEqual(testCase,fwrite(fid,uint8('still open'),'uint8'),10);
+resources.cleanup(); resources.cleanup();
+verifyTrue(testCase,isfile(resources.StagingFile)); % Failed-stage retention is unchanged.
+clear otherCleanup; % Close the independent file before the folder cleanup can run.
+end
+function testFailureCleanupPreservesOriginalCauseAndClosesHandles(testCase)
+folder=tempname; mkdir(folder); cleanup=onCleanup(@() rmdir(folder,'s'));
+before=sort(fopen('all')); lastwarn('');
+try
+    boptest_export_energy_events(fullfile(folder,'missing','events.csv'),fixture(8), ...
+        'StagingDirectory',folder);
+    verifyFail(testCase,'Expected invalid-directory failure.');
+catch problem
+    verifyEqual(testCase,problem.identifier,'THERMA:EventExport');
+    verifyEqual(testCase,problem.cause{1}.identifier,'THERMA:EventDirectory');
+end
+drawnow;
+[message,~]=lastwarn;
+verifyEmpty(testCase,message);
+verifyEqual(testCase,sort(fopen('all')),before);
+end

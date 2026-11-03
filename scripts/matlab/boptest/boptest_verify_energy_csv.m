@@ -9,7 +9,15 @@ assert(ischar(actual) && strcmp(actual,header),'THERMA:EventCSVHeader','Event CS
 rows=0; previous=-Inf; first=[]; last=[]; pending='';
 while true
     bytes=fread(fid,1024*1024,'*uint8')';
-    if isempty(bytes), break; end
+    % MATLAB may record normal EOF as ferror=-1. Never accept other read errors,
+    % even if an EOF flag is also set; an empty read without EOF is not progress.
+    [message,number]=ferror(fid); atEnd=feof(fid);
+    assert(number==0 || (number==-1 && atEnd),'THERMA:EventCSVRead', ...
+        'CSV verification read error (%d): %s',number,message);
+    if isempty(bytes)
+        assert(atEnd,'THERMA:EventCSVRead','Empty read before end-of-file.');
+        break;
+    end
     pending=[pending char(bytes)]; %#ok<AGROW>
     endings=find(pending==char(10));
     if isempty(endings)
@@ -30,8 +38,6 @@ while true
     if isempty(first), first=block(1,1); end
     last=block(end,1); previous=last; rows=rows+size(block,1);
 end
-[message,number]=ferror(fid);
-assert(number==0,'THERMA:EventCSVRead','CSV verification read error: %s',message);
 assert(isempty(pending),'THERMA:EventCSVTruncated','Final event record is truncated/missing newline.');
 assert(rows==expectedRows,'THERMA:EventCSVRows','Expected %d event rows, read %d.',expectedRows,rows);
 listing=dir(file);

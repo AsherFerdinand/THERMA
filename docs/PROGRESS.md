@@ -1041,3 +1041,37 @@ export guards reran 3/3 passed. Published on replay-transfer at
 Previous ZIPs, main, physical models, solver plan and original results remain unchanged.
 New delivery receipt is docs/C27_EVENT_EXPORT_FIX_DELIVERY.json. University quick/full
 execution of this fix remains pending; no claim of resolved UNC root cause is made.
+
+## 2026-11-03 — C2.7 EOF classification and cleanup lifetime correction
+
+User reports R2024a package integrity passes (158 manifest payloads), thermal tests
+complete, but six event-export regressions fail: expected fread EOF is rejected as
+THERMA:EventCSVRead, followed by already-destroyed shared fid in nested cleanup.
+Inspected both paths. No new MATLAB report/log was supplied or fabricated.
+
+Verifier now checks ferror after each read: status 0 is accepted; status -1 only with
+feof true is treated as expected EOF; every other read error remains fatal, and an
+empty read before EOF fails. Pending partial record, exact header/six columns,
+finite values, exact row count, event order/duplicates and final SHA checks remain
+unchanged. Extra records and malformed/truncated input still fail verification.
+
+Replaced nested cleanup functions with independent BoptestEventExportResources handle
+state captured by value in an anonymous callback. File ID is disarmed before close;
+cleanup is idempotent and cannot close a reused ID or access destroyed parent locals.
+Owned partial copies are removed best-effort, failed staging retained and successful
+staging removed; verified final output is never a cleanup target. Cleanup probe/delete
+failures cannot replace primary exceptions. Original invalid-directory cause preserved.
+
+Original six MATLAB export tests retained; added independent normal-EOF/extra-row,
+missing-column/nonfinite, reused-ID/idempotent cleanup and warning/leak/error-cause
+regressions. These remain unexecuted MATLAB software tests; user university rerun
+is required. Python/static guards cover EOF predicate and cleanup structure. Current
+Python suite: 179 passed; static MATLAB lint 39 files. No thermal physics, solver,
+BOPTEST inputs, C26C results or C3 implementation changed. New scoped guide documents
+the corrections and fresh offline quick/full delivery, with successful MATLAB execution
+explicitly pending. Original university UNC file-creation root cause remains unconfirmed.
+Available checks passed: 179 Python tests (20.54 s), Ruff lint/format (76 files), mypy
+(11 modules), archived evidence/14 replay mapping checks, wheel/sdist build and final
+MATLAB static lint (39 files). Targeted EOF/cleanup static guards reran 5/5 passed.
+Physical code/configuration, solver study plan and C26C artifact checksums unchanged.
+No MATLAB test result or successful university verification is claimed for this patch.

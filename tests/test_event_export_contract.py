@@ -12,7 +12,7 @@ def test_event_export_is_bounded_precision_checked_and_not_a_large_table():
     assert "options.ChunkRows" in writer
     assert "sum(logs.prescribed_inputs(indices,2:11),2)" in writer
     assert writer.index("boptest_verify_energy_csv(staging,expected)") < writer.index(
-        "copyfile(staging,temporary)"
+        "copyfile(staging,resources.TemporaryFile)"
     )
     assert "fwrite(fid,uint8(text),'uint8')" in writer
     assert "count==numel(text)" in writer and "writtenRows==expected" in writer
@@ -53,3 +53,23 @@ def test_export_failure_cannot_mark_run_completed_and_retains_diagnostics():
     resume = (ROOT / "boptest_c27_completed.m").read_text()
     assert "isfield(report,'export_completed') && ~report.export_completed" in resume
     assert "exported.status,'verified'" in resume
+
+
+def test_normal_eof_is_not_a_read_error_but_other_errors_still_fail():
+    source = (ROOT / "boptest_verify_energy_csv.m").read_text()
+    assert "number==0 || (number==-1 && atEnd)" in source
+    assert "atEnd=feof(fid)" in source
+    assert source.index("[message,number]=ferror(fid)") < source.index("if isempty(bytes)")
+    assert "Empty read before end-of-file" in source
+    assert "rows==expectedRows" in source and "isempty(pending)" in source
+
+
+def test_cleanup_owns_state_without_capturing_destroyed_parent_variables():
+    source = (ROOT / "boptest_export_energy_events.m").read_text()
+    owner = (ROOT / "BoptestEventExportResources.m").read_text()
+    assert "onCleanup(@() resources.cleanup())" in source
+    assert "function cleanupOwned" not in source
+    assert "function removeTemporary" not in source
+    assert "onCleanup(@cleanupOwned)" not in source
+    assert owner.index("obj.FileId=-1") < owner.index("fclose(fileId)")
+    assert "verified final file" in owner

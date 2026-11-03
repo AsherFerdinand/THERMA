@@ -10,8 +10,10 @@ arguments
     options.ChunkRows (1,1) double = 4096
     options.StagingDirectory (1,:) char = tempdir
 end
-fid=-1; staging=''; temporary=''; success=false;
-cleanup=onCleanup(@cleanupOwned);
+fid=-1; staging='';
+resources=BoptestEventExportResources();
+% Anonymous capture holds this independent handle by value, not a nested workspace.
+cleanup=onCleanup(@() resources.cleanup());
 inputRows=numel(logs.time_s); expected=0;
 context=boptest_event_export_context(file,expected,inputRows); context.stage='validate_input';
 try
@@ -47,8 +49,9 @@ try
     assert(isfolder(options.StagingDirectory),'THERMA:EventStaging','Staging directory does not exist.');
     context.stage='create_staging';
     staging=[tempname(options.StagingDirectory) '.events.csv'];
-    context.staging_file=staging;
+    context.staging_file=staging; resources.StagingFile=staging;
     [fid,message]=fopen(staging,'wb');
+    resources.FileId=fid;
     assert(fid>=0,'THERMA:EventOpen','Cannot create staging file: %s',message);
     header=sprintf('time_s,stored_thermal_energy,net_external_power,stored_energy_derivative,prescribed_power,power_balance_residual\n');
     assert(fwrite(fid,uint8(header),'uint8')==numel(header),'THERMA:EventWrite','Short header write.');
@@ -72,7 +75,7 @@ try
         assert(number==0,'THERMA:EventWrite','Event write failed: %s',message);
         writtenRows=writtenRows+size(block,1);
     end
-    result=fclose(fid); fid=-1;
+    result=resources.closeFile(); fid=-1;
     assert(result==0,'THERMA:EventClose','Could not flush/close event staging file.');
     assert(writtenRows==expected,'THERMA:EventRows','Not all selected events were written.');
     context.stage='verify_staging';
@@ -81,14 +84,14 @@ try
     context.stage='copy_to_destination';
     copyErrors={};
     for attempt=1:3
-        temporary=[tempname(context.output_directory) '.events.partial'];
+        resources.TemporaryFile=[tempname(context.output_directory) '.events.partial'];
         try
-            [copied,message,identifier]=copyfile(staging,temporary);
+            [copied,message,identifier]=copyfile(staging,resources.TemporaryFile);
             assert(copied,'THERMA:EventCopy','Copy failed (%s): %s',identifier,message);
             break;
         catch problem
             copyErrors{end+1}=boptest_exception_diagnostic(problem); %#ok<AGROW>
-            removeTemporary();
+            resources.removeTemporary();
             if attempt==3, rethrow(problem); end
             pause(0.2);
         end
@@ -96,9 +99,9 @@ try
     assert(~isfile(file) && ~isfolder(file),'THERMA:EventDestinationExists', ...
         'Destination appeared during export; refusing to replace it.');
     context.stage='promote_destination';
-    [moved,message,identifier]=movefile(temporary,file);
+    [moved,message,identifier]=movefile(resources.TemporaryFile,file);
     assert(moved,'THERMA:EventPromote','Cannot publish event file (%s): %s',identifier,message);
-    temporary='';
+    resources.TemporaryFile='';
     assert(isfile(file),'THERMA:EventMissing','Published event file is missing.');
     listing=dir(file);
     assert(listing.bytes==verified.file_bytes && listing.bytes>0,'THERMA:EventSize','Final byte count mismatch.');
@@ -108,10 +111,11 @@ try
     info.sha256=checksum; info.copy_attempts=attempt; info.copy_errors=copyErrors;
     info.precision='%.17g, binary64 round trip';
     info.verification_method='Bounded staging CSV scan; final byte count and SHA256 identity';
-    info.staging_file=[]; success=true;
+    info.staging_file=[]; resources.RemoveStaging=true;
 catch problem
     % Close before diagnosis, preserving the original exception even if cleanup fails.
-    if fid>=0, try, fclose(fid); catch, end; fid=-1; end
+    try, resources.closeFile(); catch, end
+    fid=-1;
     if exist('copyErrors','var'), context.copy_errors=copyErrors; end
     context.status='failed'; context.original_exception=boptest_exception_diagnostic(problem);
     context.staging_file=staging;
@@ -131,17 +135,4 @@ catch problem
         'Event export failed. Context: %s. Diagnostic: %s',jsonencode(context),diagnostic);
     failure=addCause(failure,problem); throw(failure);
 end
-    function removeTemporary()
-        if ~isempty(temporary) && isfile(temporary)
-            try, delete(temporary); catch, end
-        end
-        temporary='';
-    end
-    function cleanupOwned()
-        if fid>=0, try, fclose(fid); catch, end; end
-        removeTemporary();
-        if success && ~isempty(staging) && isfile(staging)
-            try, delete(staging); catch, end
-        end
-    end
 end
