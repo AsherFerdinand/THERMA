@@ -64,3 +64,12 @@ Run run_verification("quick"), then run_verification("full") in MATLAB.
 Full mode: no-solar/30 s and solar/30/15/5 s sequentially; hash-checked resume.
 No MATLAB C2.7 execution or convergence results are claimed. C3 is design only.
 SHA-256: `01b093ce8c684d62a1e90912af2d837672251faab8cc74158e590e061d575db6`. Source: `7516fd073fdf590162812048eaf3a844dc7e26f5`.
+
+
+## C2.7 R2024a event export fix (university verification pending)
+
+Download [THERMA_C27_EVENT_EXPORT_FIX_R2024a_2026-11-03.zip](THERMA_C27_EVENT_EXPORT_FIX_R2024a_2026-11-03.zip), extract and read START_HERE.md.
+Run run_verification("quick"), then run_verification("full") in MATLAB.
+Chunked %.17g staging, streaming verification, SHA256 publication and export diagnostics. Physics/solver inputs unchanged.
+No MATLAB C2.7 execution or convergence results are claimed. C3 is design only.
+SHA-256: `fd6a09d46981df83dfb68b3167c600107580465c841053b040572a1ac1587a96`. Source: `202df140773bc74a4fda3342cc543e580863a730`.
