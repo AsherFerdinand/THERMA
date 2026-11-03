@@ -23,7 +23,7 @@ while position<fileBytes
             requested,count,position));
     end
     position=nextPosition;
-    digest.update(typecast(bytes(:),'int8'));
+    boptest_sha256_update(digest,bytes);
     pending=[pending char(bytes(:)')]; %#ok<AGROW>
     if ~headerSeen
         ending=find(pending==char(10),1);

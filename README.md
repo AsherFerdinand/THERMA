@@ -168,3 +168,5 @@ Windows diagnostic paths are checked both in plain text and structured JSON.
 [New offline ZIP](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C27_R2024A_READER_FIX_2026-11-03.zip).
 The minimal MATLAB API probe/regressions remain unexecuted in cloud; university
 confirmation is required. Thermal physics, solver settings and inputs are unchanged.
+
+Latest offline revision: [C2.7 R2024a SHA-256 compatibility](docs/C27_SHA256_COMPATIBILITY_FIX.md). University quick verification is required before the full benchmark.

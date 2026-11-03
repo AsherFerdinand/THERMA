@@ -2,6 +2,7 @@
 
 import copy
 import json
+import subprocess
 
 import pytest
 
@@ -18,6 +19,23 @@ EVIDENCE = ROOT / "verification/c2/matlab-r2025a/b00092e4236789a4"
 
 
 @pytest.fixture
+def historical_source_root(tmp_path):
+    # Historical evidence describes its pinned source, not today's hash utility.
+    # Reconstruct before calling the importer; importer itself still needs no Git.
+    metadata = read_json((EVIDENCE / "metadata.json").read_bytes())
+    snapshot = tmp_path / "historical-source"
+    for name, expected in metadata["source_files"].items():
+        raw = subprocess.check_output(
+            ["git", "show", metadata["source_git_commit"] + ":" + name], cwd=ROOT
+        )
+        assert sha256(raw) == expected
+        target = snapshot / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(raw)
+    return snapshot
+
+
+@pytest.fixture
 def report():
     return read_json((EVIDENCE / "verification.json").read_bytes())
 
@@ -28,15 +46,17 @@ def test_actual_archived_report_bytes_and_integrity():
     assert validate_archive(ROOT / "verification") == 1
 
 
-def test_import_original_bytes_no_git_requirement_and_no_overwrite(tmp_path):
+def test_import_original_bytes_no_git_requirement_and_no_overwrite(
+    tmp_path, historical_source_root
+):
     original = EVIDENCE / "verification.json"
-    target = archive_report(original, "C2", "R2025a", tmp_path)
+    target = archive_report(original, "C2", "R2025a", tmp_path, source_root=historical_source_root)
     assert (target / "verification.json").read_bytes() == original.read_bytes()
     meta = read_json((target / "metadata.json").read_bytes())
     assert meta["source_git_commit"] is None
     assert meta["independently_reproduced_by_ci"] is False
     with pytest.raises(FileExistsError):
-        archive_report(original, "C2", "R2025a", tmp_path)
+        archive_report(original, "C2", "R2025a", tmp_path, source_root=historical_source_root)
 
 
 @pytest.mark.parametrize(
@@ -98,8 +118,10 @@ def test_refuse_invalid_incomplete_reports(tmp_path, report, change):
 
 
 @pytest.mark.parametrize("change", ["report", "source_metadata", "count", "schema", "release"])
-def test_detect_modified_archive(tmp_path, change):
-    target = archive_report(EVIDENCE / "verification.json", "C2", "R2025a", tmp_path)
+def test_detect_modified_archive(tmp_path, change, historical_source_root):
+    target = archive_report(
+        EVIDENCE / "verification.json", "C2", "R2025a", tmp_path, source_root=historical_source_root
+    )
     if change == "report":
         path = target / "verification.json"
         value = read_json(path.read_bytes())
@@ -135,7 +157,10 @@ def test_no_duplicate_json_keys_or_nonfinite_evidence():
             read_json(raw)
 
 
-def test_actual_source_snapshot_matches_report(report):
+def test_actual_source_snapshot_matches_report(report, historical_source_root):
     files = validate_report(report, "C2")
     assert len(files) == 17
-    assert all(sha256((ROOT / name).read_bytes()) == digest for name, digest in files.items())
+    assert all(
+        sha256((historical_source_root / name).read_bytes()) == digest
+        for name, digest in files.items()
+    )

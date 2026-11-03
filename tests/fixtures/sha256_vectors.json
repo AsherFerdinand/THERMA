@@ -1,0 +1,44 @@
+[
+  {
+    "name": "empty",
+    "length": 0,
+    "pattern": "ramp",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "abc",
+    "length": 3,
+    "pattern": "abc",
+    "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  {
+    "name": "one_zero",
+    "length": 1,
+    "pattern": "ramp",
+    "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+  },
+  {
+    "name": "one_ff",
+    "length": 1,
+    "pattern": "ff",
+    "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89"
+  },
+  {
+    "name": "exact_1MiB",
+    "length": 1048576,
+    "pattern": "ramp",
+    "sha256": "fbbab289f7f94b25736c58be46a994c441fd02552cc6022352e3d86d2fab7c83"
+  },
+  {
+    "name": "1MiB_plus_one",
+    "length": 1048577,
+    "pattern": "ramp",
+    "sha256": "607deb6eccbc844880b9d7b523751a4cdba0452727b885c74264bfe1fb7843e2"
+  },
+  {
+    "name": "multiple_chunks",
+    "length": 2097169,
+    "pattern": "ramp",
+    "sha256": "6f8b1421035dcde6d517143914932e7996c17ae9a6c30042b1142b1b8b5f0557"
+  }
+]

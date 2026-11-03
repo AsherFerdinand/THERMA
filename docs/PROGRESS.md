@@ -1140,3 +1140,14 @@ GitHub fetch verified identical uploaded bytes. Prior artifacts/main unchanged.
 Delivery metadata: docs/C27_R2024A_READER_FIX_DELIVERY.json. Targeted reader/diagnostic
 Python guards 6/6 and final MATLAB static lint passed. All actual MATLAB API-probe,
 regression, quick/full and university-success claims remain pending execution.
+
+## C2.7 SHA-256 compatibility revision — 2026-11-03
+
+User reports successful CSV probe and only one remaining Java NonScalarArg test failure. Shared explicit byte-array update handles empty/singleton reads; file hashing is snapshot-bound. Seven fixed hashlib/OpenSSL vectors and MATLAB regressions added. Physics, reference data, CSV integrity and resume unchanged. MATLAB execution remains pending.
+
+Checks: 182 Python tests passed (20.64 s); Ruff lint/format, mypy (11 modules),
+archive integrity, 14 replay mappings, wheel/sdist build and MATLAB static lint
+(42 files) passed. Prior C2.6C report/figure/data checksums match. Historical evidence
+import tests now reconstruct the report's pinned source snapshot rather than
+assuming its old hash utility matches current code; evidence bytes are unchanged.
+No MATLAB tests were executed in cloud.

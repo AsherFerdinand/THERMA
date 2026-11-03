@@ -63,7 +63,7 @@ def test_reader_is_count_and_position_bounded_not_numeric_eof_classification():
     assert "ftell(fid)~=fileBytes" in source
     assert "number==-1" not in source and "number==-4" not in source
     assert "fgetl(" not in source
-    assert "digest.update(typecast(bytes(:),'int8'))" in source
+    assert "boptest_sha256_update(digest,bytes)" in source
     assert "rows==expectedRows" in source and "isempty(pending)" in source
     writer = (ROOT / "boptest_export_energy_events.m").read_text()
     assert "strcmp(checksum,verified.sha256)" in writer
