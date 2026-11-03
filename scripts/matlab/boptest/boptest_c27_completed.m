@@ -24,6 +24,13 @@ try
         ~strcmp(report.replay_packet_sha256,expected.packet_sha256) || ...
         str2double(report.solver.MaxStep_s)~=expected.max_step_s || ...
         str2double(report.stop_time_s)~=report.replay_metadata.duration_s, return; end
+    if isfield(report,'export_completed') && ~report.export_completed, return; end
+    if isfield(report,'energy_event_export')
+        exported=report.energy_event_export;
+        if ~strcmp(exported.status,'verified') || ...
+            ~strcmp(exported.sha256,boptest_file_sha256(fullfile(folder,'energy_events.csv'))) || ...
+            exported.verification.row_count<=0, return; end
+    end
     valid = true;
 catch
     % Corrupt/incomplete output never qualifies for resume. Preserve it for diagnosis.

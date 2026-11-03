@@ -36,7 +36,7 @@ report = struct('status','running','matlab_verified',false, ...
     'simulink',ver('Simulink'),'replay_metadata',metadata, ...
     'replay_packet_sha256',boptest_file_sha256(replayFile), ...
     'stage','load_model','matlab_execution_completed',false, ...
-    'simulation_returned',false);
+    'simulation_returned',false,'export_completed',false);
 write_boptest_json(reportFile,report);
 try
     [model,~,Z] = build_boptest_zone_c2(assumptionsFile,'ShowModel',false);
@@ -130,21 +130,27 @@ try
     if options.SaveTrajectory, writetable(output,fullfile(folder,'trajectory.csv')); end
     if smoke
         report.status = 'executed_smoke_not_benchmark'; report.stage = 'completed';
+        report.export_completed = true;
         write_boptest_json(reportFile,report);
         boptest_solver_metadata(folder,report);
         fprintf('Smoke report (not a benchmark): %s\n',reportFile);
         return;
     end
     if options.ExportEvents
-        rawTime = firstSeries.Time(:)+metadata.time_origin_s;
+        report.stage = 'export_energy_events';
+        report.energy_event_export = struct('status','writing');
+        write_boptest_json(reportFile,report);
         rawE = result.get('E_J'); rawNet = result.get('q_net_W');
         rawRate = result.get('dE_dt_W'); rawResidual = result.get('residual_W');
-        raw = [rawTime rawE.Data(:) rawNet.Data(:) rawRate.Data(:) ...
-            sum(usedData(:,2:11),2) rawResidual.Data(:)];
-        raw = raw(rawTime>=metadata.evaluation_start_s & rawTime<=metadata.evaluation_end_s,:);
-        writetable(array2table(raw,'VariableNames',{'time_s','stored_thermal_energy', ...
-            'net_external_power','stored_energy_derivative','prescribed_power','power_balance_residual'}), ...
-            fullfile(folder,'energy_events.csv'));
+        logs = struct('time_s',firstSeries.Time(:),'stored_thermal_energy',rawE.Data(:), ...
+            'net_external_power',rawNet.Data(:),'stored_energy_derivative',rawRate.Data(:), ...
+            'prescribed_inputs',usedData,'power_balance_residual',rawResidual.Data(:));
+        report.energy_event_export = boptest_export_energy_events( ...
+            fullfile(folder,'energy_events.csv'),logs, ...
+            'TimeOriginSeconds',metadata.time_origin_s, ...
+            'StartSeconds',metadata.evaluation_start_s,'EndSeconds',metadata.evaluation_end_s);
+        clear logs;
+        report.stage = 'export';
         report.energy_events_policy = 'Original ordered log; duplicate event times retained, not averaged.';
     end
     selected = absolute>=metadata.evaluation_start_s & absolute<=metadata.evaluation_end_s;
@@ -166,10 +172,16 @@ try
         'classification','exploratory_comparison','missing_inputs',{metadata.missing_inputs}, ...
         'assumptions',{metadata.assumptions},'limitations',{metadata.limitations});
     write_boptest_json(fullfile(folder,'comparison_metadata.json'),comparison);
+    report.export_completed = true;
     report.status = 'executed_partial_not_validated'; report.stage = 'completed';
 catch problem
-    report.status = 'failed';
-    if exist('simulationClock','var'), report.elapsed_simulation_s = toc(simulationClock); end
+    report.status = 'failed'; report.export_completed = false;
+    if isfield(report,'energy_event_export') && strcmp(report.energy_event_export.status,'writing')
+        report.energy_event_export.status='failed';
+    end
+    if exist('simulationClock','var') && ~report.simulation_returned
+        report.elapsed_simulation_s = toc(simulationClock);
+    end
     report.error = boptest_exception_diagnostic(problem);
     % Persist the original exception before printing/rethrowing anything else.
     write_boptest_json(reportFile,report);

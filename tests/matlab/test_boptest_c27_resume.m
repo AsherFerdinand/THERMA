@@ -26,6 +26,33 @@ end
 write_boptest_json(fullfile(folder,'completion.json'), ...
     struct('status','completed','expected',expected,'artifacts',{artifacts}));
 verifyTrue(testCase,boptest_c27_completed(folder,expected));
+% A failed export is ineligible even if someone produced a complete-looking receipt.
+report.export_completed=false;
+write_boptest_json(fullfile(folder,'replay_run.json'),report);
+artifacts{end}.sha256=boptest_file_sha256(fullfile(folder,'replay_run.json'));
+write_boptest_json(fullfile(folder,'completion.json'), ...
+    struct('status','completed','expected',expected,'artifacts',{artifacts}));
+verifyFalse(testCase,boptest_c27_completed(folder,expected));
+report.export_completed=true;
+write_boptest_json(fullfile(folder,'replay_run.json'),report);
+artifacts{end}.sha256=boptest_file_sha256(fullfile(folder,'replay_run.json'));
+write_boptest_json(fullfile(folder,'completion.json'), ...
+    struct('status','completed','expected',expected,'artifacts',{artifacts}));
+verifyTrue(testCase,boptest_c27_completed(folder,expected));
+% New exporter success is reusable; failed/changed exporter metadata is not.
+report.energy_event_export=struct('status','verified','sha256', ...
+    boptest_file_sha256(fullfile(folder,'energy_events.csv')),'verification',struct('row_count',1));
+write_boptest_json(fullfile(folder,'replay_run.json'),report);
+artifacts{end}.sha256=boptest_file_sha256(fullfile(folder,'replay_run.json'));
+write_boptest_json(fullfile(folder,'completion.json'), ...
+    struct('status','completed','expected',expected,'artifacts',{artifacts}));
+verifyTrue(testCase,boptest_c27_completed(folder,expected));
+report.energy_event_export.status='failed';
+write_boptest_json(fullfile(folder,'replay_run.json'),report);
+artifacts{end}.sha256=boptest_file_sha256(fullfile(folder,'replay_run.json'));
+write_boptest_json(fullfile(folder,'completion.json'), ...
+    struct('status','completed','expected',expected,'artifacts',{artifacts}));
+verifyFalse(testCase,boptest_c27_completed(folder,expected));
 other=expected; other.max_step_s=15;
 verifyFalse(testCase,boptest_c27_completed(folder,other));
 fid=fopen(fullfile(folder,'evaluation.csv'),'a'); fprintf(fid,'corrupt'); fclose(fid);

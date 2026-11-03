@@ -1,9 +1,9 @@
-# THERMA C2.7 — offline MATLAB R2021a study
+# THERMA C2.7 — event-export fix / MATLAB R2024a
 
 1. Download the **C2.7 MATLAB ZIP** from replay-transfer (link in
-   docs/C27_NUMERICAL_VERIFICATION_REPORT.md), then use **Extract All**.
+   docs/C27_EVENT_EXPORT_FIX.md), then use **Extract All**.
 2. Choose a short, writable local path, for example `C:\THERMA_C27`.
-   Open MATLAB R2021a with Simulink and Java enabled. R2025a is also supported
+   Open MATLAB R2024a with Simulink and Java enabled. R2021a/R2025a interfaces are retained
    by the prepared interface; do not mix releases within one study.
 3. Set Current Folder to the extracted **THERMA_C27_MATLAB** folder containing
    this file and run_verification.m. Do not move any files or run inside the ZIP.
@@ -79,3 +79,9 @@ retaining their folder names/relative layout rather than sending a huge MAT file
 Existing C2.6C results and original reference packets are preserved. C2.7 has not
 changed physical equations or fitted parameters. No convergence/real-world validation
 claim follows merely from completing a run. See the C2.7 report and C3 design-only plan.
+
+
+This updated package replaces only the event-export path, not the thermal model or
+solver settings. Use a fresh extraction and keep previous results. Read
+[the event-export fix and diagnostics](docs/C27_EVENT_EXPORT_FIX.md). New MATLAB IO
+regressions and university UNC resolution remain pending actual execution.

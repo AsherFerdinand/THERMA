@@ -11,8 +11,8 @@ root=fileparts(mfilename('fullpath'));
 assert(usejava('jvm'),'THERMA:C27Java','Use normal MATLAB with Java enabled.');
 assert(~isempty(ver('Simulink')) && license('test','Simulink'), ...
     'THERMA:C27Simulink','An installed and licensed Simulink is required.');
-if ~ismember(string(version('-release')),["2021a","2025a"])
-    warning('THERMA:C27Release','Target is R2021a; R2025a compatibility retained. Actual version will be recorded.');
+if ~ismember(string(version('-release')),["2021a","2024a","2025a"])
+    warning('THERMA:C27Release','Target is R2024a; R2021a/R2025a interfaces retained. Actual version will be recorded.');
 end
 oldPath=path; cleanup=onCleanup(@() path(oldPath));
 addpath(fullfile(root,'scripts','matlab','boptest'));

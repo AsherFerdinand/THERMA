@@ -984,3 +984,47 @@ a fresh isolated GitHub fetch verified the uploaded ZIP bytes. Previous transfer
 artifacts and main are unchanged. docs/C27_DELIVERY.json records provenance/checks.
 University commands are run_verification("quick") then run_verification("full").
 C27 actual MATLAB tests/runs, solver metrics and convergence conclusions remain pending.
+
+## 2026-11-03 — C2.7 R2024a event-export failure: scoped implementation
+
+User reports quick verification/tests/smoke pass on R2024a, while first full
+no_solar_30 fails at event writetable with MATLAB:fopen:InvalidFileLocation on UNC.
+Directory exists, reported path length 128, small and 1000-row/six-column CSVs succeed,
+final file absent. These observations do not establish file size, RAM, quota, locking
+or filesystem transience as the cause. University root cause remains unconfirmed.
+
+Inspected old event pipeline: full raw matrix, copied evaluation subset, full table
+conversion and writetable. Replaced event path only with 4096-row binary64 %.17g
+chunk writing to unique system-temp staging; no full event matrix/table. Evaluation
+bounds, six columns, original event order, duplicate times and prescribed-power sum
+are preserved. Stream validation checks exact header/column counts, finite values,
+row count, complete records and nondecreasing time. Closed staging is copied through
+unique sibling partial files with bounded attempts; final size/SHA256 identity proves
+it matches the stream-verified file. Existing final files are never intentionally
+replaced. Staging locality/UNC atomicity/free quota are not assumed.
+
+Added context diagnostics: MATLAB version, target/directory/UNC classification,
+directory existence, input/selected row counts, size estimates, usable-space observation
+only when obtainable, stage, staging path and original recursive exception. Failed
+staging retained for diagnosis; partial copies cleaned best effort. Context is printed,
+written to a unique failure JSON if possible and embedded in the chained exception.
+Runner records verified export metadata/hash on success, explicit export_completed
+only after all exports, and failed overall/export state on error. Solver-return flags
+remain truthful. Resume rejects explicit failed export or changed export hashes;
+intact matching-contract successes remain reusable. Cross-code-contract migration is
+not silently enabled. No C1/C2 equations, parameters, solver settings, reference inputs,
+C26C results or C3 implementation changed.
+
+Prepared six MATLAB IO tests for small/full precision, 50000-row synthetic chunking,
+duplicates/bounds, invalid destinations, overwrite refusal, truncated/interrupted CSV,
+ordering and UNC classification/conditional actual UNC IO. Resume regression covers
+failed-export rejection and verified success. These are unexecuted MATLAB software
+tests, not benchmark evidence. Added Python static guards; all 177 Python tests passed.
+New code statically linted with MISS_HIT (38 MATLAB files); actual university execution
+of the fix remains pending. R2024a explicitly recognized; R2021a interface retained.
+New scoped diagnostic guide and fresh offline package will preserve the old artifacts.
+Final checks after the scoped changes: 177 Python tests passed (20.13 s), Ruff
+lint/format (76 files), mypy (11 modules), archive integrity, 14 replay mappings and
+wheel/sdist build passed. Static MATLAB lint passed for 38 files. Physical builders,
+loaders, material/assumption registries, solver study plan and C26C result hashes were
+verified unchanged. MATLAB IO regressions and UNC success still require university execution.

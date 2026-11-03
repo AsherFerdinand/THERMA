@@ -167,7 +167,7 @@ def test_matlab_study_workflow_keeps_physics_separate():
     root = Path(__file__).resolve().parents[1]
     runner = (root / "scripts/matlab/boptest/run_boptest_zone_replay.m").read_text()
     assert "executed_smoke_not_benchmark" in runner
-    assert "rawTime = firstSeries.Time(:)" in runner
+    assert "'time_s',firstSeries.Time(:)" in runner
     assert (
         "'elapsed_simulation_s'" not in runner
     )  # Runtime is measured with tic/toc, not an invented literal.

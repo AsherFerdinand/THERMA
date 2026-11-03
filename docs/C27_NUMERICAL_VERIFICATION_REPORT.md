@@ -1,5 +1,9 @@
 # C2.7 — Controlled benchmark verification and numerical convergence
 
+R2024a export update: [scoped event-export fix/package](C27_EVENT_EXPORT_FIX.md).
+The original package below remains archived; use the updated package for the reported
+UNC event-writer failure. Original full C2.7 execution remains pending.
+
 ## Executive summary and current evidence
 
 C2.7 prepares a same-release no-solar/solar control and maximum-step refinement

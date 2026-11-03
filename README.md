@@ -145,3 +145,10 @@ No new C2.7 MATLAB runs or convergence results are claimed. See
 [the experiment/report guide](docs/C27_NUMERICAL_VERIFICATION_REPORT.md),
 [START_HERE.md](START_HERE.md), and the [C3 design-only plan](docs/C3_HYDRONIC_ARCHITECTURE_PLAN.md).
 C3 implementation remains pending actual controlled-study results.
+
+
+[C2.7 R2024a event-export fix](docs/C27_EVENT_EXPORT_FIX.md): bounded chunk writing,
+staged publication, streaming row/header/order checks and SHA-256 verification replace
+the large event table writer. The network-path root cause is unconfirmed; university
+verification remains pending. [Download the updated offline ZIP](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C27_EVENT_EXPORT_FIX_R2024a_2026-11-03.zip).
+Thermal physics, solver settings and reference inputs remain unchanged.
