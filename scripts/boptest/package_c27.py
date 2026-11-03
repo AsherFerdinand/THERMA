@@ -17,6 +17,7 @@ def digest(raw: bytes) -> str:
 
 
 def package(source: str, no_solar: Path, solar: Path, output: Path) -> dict[str, object]:
+    source = subprocess.check_output(["git", "rev-parse", source + "^{commit}"]).decode().strip()
     archive = subprocess.check_output(["git", "archive", "--format=tar", source])
     payload = {}
     with tarfile.open(fileobj=io.BytesIO(archive)) as tar:
