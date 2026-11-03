@@ -1151,3 +1151,12 @@ archive integrity, 14 replay mappings, wheel/sdist build and MATLAB static lint
 import tests now reconstruct the report's pinned source snapshot rather than
 assuming its old hash utility matches current code; evidence bytes are unchanged.
 No MATLAB tests were executed in cloud.
+
+Delivery: THERMA_C27_SHA256_FIX_R2024a_2026-11-03.zip (171 files, 170 manifest
+entries), pinned source d63b98320c69d72043dd23ecd51dca7b49c2c84d. Fresh extraction
+verified all source/dataset hashes. SHA-256:
+77e70085bbb45256a734195b7ea9e0adbbbdabdb43d330423a5562e565fc1fd6.
+Published on replay-transfer at 02473b7cb0a52a84e00f5611eb348e759192ce55;
+an independent GitHub fetch confirmed uploaded ZIP byte identity. Old transfer
+artifacts and main preserved. Delivery receipt: docs/C27_SHA256_FIX_DELIVERY.json.
+University run_verification("quick") acceptance remains pending.

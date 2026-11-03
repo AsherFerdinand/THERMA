@@ -1,0 +1,15 @@
+{
+  "filename": "THERMA_C27_SHA256_FIX_R2024a_2026-11-03.zip",
+  "sha256": "77e70085bbb45256a734195b7ea9e0adbbbdabdb43d330423a5562e565fc1fd6",
+  "bytes": 12893239,
+  "source_commit": "d63b98320c69d72043dd23ecd51dca7b49c2c84d",
+  "files": 171,
+  "matlab_execution": "pending",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C27_SHA256_FIX_R2024a_2026-11-03.zip",
+  "transfer_commit": "02473b7cb0a52a84e00f5611eb348e759192ce55",
+  "uploaded_zip_sha256_verified": true,
+  "input_preservation_verified": true,
+  "python_tests_passed": 182,
+  "static_MATLAB_files_checked": 42,
+  "limitations": "MATLAB regressions unexecuted in cloud; university confirmation pending. No physics changes."
+}
