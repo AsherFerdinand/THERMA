@@ -1,7 +1,7 @@
-# THERMA C2.7 — CSV EOF / cleanup fix (MATLAB R2024a)
+# THERMA C2.7 — R2024a byte-bounded CSV reader
 
 1. Download the **C2.7 MATLAB ZIP** from replay-transfer (link in
-   docs/C27_EOF_CLEANUP_FIX.md), then use **Extract All**.
+   docs/C27_R2024A_READER_FIX.md), then use **Extract All**.
 2. Choose a short, writable local path, for example `C:\THERMA_C27`.
    Open MATLAB R2024a with Simulink and Java enabled. R2021a/R2025a interfaces are retained
    by the prepared interface; do not mix releases within one study.
@@ -83,9 +83,15 @@ claim follows merely from completing a run. See the C2.7 report and C3 design-on
 
 This updated package replaces only the event-export path, not the thermal model or
 solver settings. Use a fresh extraction and keep previous results. Read
-[the event-export fix and diagnostics](docs/C27_EOF_CLEANUP_FIX.md). New MATLAB IO
+[the event-export fix and diagnostics](docs/C27_R2024A_READER_FIX.md). New MATLAB IO
 regressions and university UNC resolution remain pending actual execution.
 
 This revision corrects expected-EOF classification and removes the shared-workspace
 cleanup callback. The original six event-export tests plus new EOF/cleanup regressions
 must pass in quick mode before full mode. MATLAB success is not yet confirmed.
+
+
+This revision removes numeric EOF-code assumptions entirely. It uses exact byte counts,
+file positions, record validation and SHA-256. Run reproduce_boptest_csv_reader() after
+adding scripts/matlab/boptest to record actual R2024a API observations if needed.
+New MATLAB verification remains pending university execution.

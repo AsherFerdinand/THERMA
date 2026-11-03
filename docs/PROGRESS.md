@@ -1086,3 +1086,44 @@ fetched from GitHub to verify identical uploaded bytes. Old artifacts/main uncha
 Delivery receipt: docs/C27_EOF_CLEANUP_FIX_DELIVERY.json. Commands remain
 run_verification("quick") then, only after successful quick tests, run_verification("full").
 University MATLAB execution of the new EOF/cleanup regressions remains pending.
+
+## 2026-11-03 — R2024a reader state-machine revision (execution pending)
+
+User reports integrity passes (161 payloads) but eight export tests fail on R2024a:
+normal EOF is reported by ferror as -4. The previous -1-based classification was an
+incorrect portability assumption. No new MATLAB output logs were supplied beyond
+the reported failure; no actual R2024a reproduction can be run in this environment.
+Vendor/mirror document retrieval attempted once in parallel and blocked by proxy 403.
+
+Replaced the complete production read loop, not an EOF-number allowlist. The verifier
+opens once, checks seek statuses, captures byte length with ftell, rewinds and requests
+only min(1 MiB, remaining bytes). Exact returned counts and byte positions are required;
+short/no-progress reads and final length changes fail. No terminal read past EOF and
+no fgetl/ferror numeric classification on the success path. ferror/feof are failure
+diagnostics only. Header/body parsed from the same bounded byte stream; incomplete
+records, header/column errors, nonfinite values, extra/missing rows and decreasing
+timestamps remain errors. Duplicate timestamps/order preserved. Incremental SHA256
+binds the verified bytes; writer checks fresh staging hash equals that scan digest
+before unchanged copy/final-hash publication. Thermal physics and inputs unchanged.
+
+Found a Windows diagnostic representation mismatch: the invalid-directory test
+searched for a plain path inside JSON-escaped exception context. Primary message now
+also includes the plain target path; all original identifier/cause assertions remain.
+Test additionally verifies exact target/directory/existence/original identifier in
+actual failure JSON. No failed assertion was simply removed. Independent cleanup
+owner remains unchanged and safely disarms IDs; resume/completion gates preserved.
+
+Added minimal MATLAB-compatible reproduce_boptest_csv_reader: writes two synthetic
+records, records actual fgetl/fread counts/positions/feof/ferror diagnostics without
+assuming their numbers, and verifies those same bytes using the new reader. Probe
+JSON is saved even if snapshot verification fails, retaining actual observations.
+Added exact-one-MiB and split-final-record tests, probe test and invalid-record classes;
+retained all previous export/cleanup tests. These MATLAB regressions are unexecuted
+here and not benchmark evidence. New guide documents API semantics, blocked live-doc
+retrieval, the full state machine and university validation limits. No C3 changes.
+Checks: 180 Python tests passed (19.89 s), Ruff lint/format (78 files), mypy (11
+modules), archive integrity/14 replay mappings, wheel/sdist build and MATLAB static
+lint (40 files) passed. Added CRLF header handling to preserve fgetl line-terminator
+semantics while hashing original bytes; CRLF and chunk-boundary MATLAB cases prepared.
+Physical builders/loaders, solver plan, parameter registries, independent cleanup owner
+and previous C26C result hashes verified unchanged. No MATLAB test was executed here.

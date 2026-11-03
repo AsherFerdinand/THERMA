@@ -81,6 +81,8 @@ try
     context.stage='verify_staging';
     verified=boptest_verify_energy_csv(staging,expected);
     checksum=boptest_file_sha256(staging);
+    assert(strcmp(checksum,verified.sha256),'THERMA:EventStagingChanged', ...
+        'Staging bytes changed after the CSV verification scan.');
     context.stage='copy_to_destination';
     copyErrors={};
     for attempt=1:3
@@ -132,7 +134,7 @@ catch problem
         context.matlab_version,file,context.directory_exists,expected,context.estimated_numeric_bytes, ...
         context.disk_space_status,problem.identifier,problem.message,diagnostic);
     failure=MException('THERMA:EventExport', ...
-        'Event export failed. Context: %s. Diagnostic: %s',jsonencode(context),diagnostic);
+        'Event export failed for %s. Context: %s. Diagnostic: %s',file,jsonencode(context),diagnostic);
     failure=addCause(failure,problem); throw(failure);
 end
 end

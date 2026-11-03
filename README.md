@@ -159,3 +159,12 @@ normal EOF without disabling CSV checks, and replaces shared-workspace cleanup w
 an independent, idempotent file-handle owner. [Updated offline ZIP](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C27_EOF_CLEANUP_FIX_R2024a_2026-11-03.zip).
 The new MATLAB regressions and university execution remain pending; thermal physics,
 solver settings and reference datasets are unchanged.
+
+
+[C2.7 R2024a reader revision](docs/C27_R2024A_READER_FIX.md) removes the incorrect
+numeric EOF-code assumption. The verifier reads an exact byte snapshot, validates
+read counts/positions and all CSV records, then binds scanned bytes to SHA-256.
+Windows diagnostic paths are checked both in plain text and structured JSON.
+[New offline ZIP](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C27_R2024A_READER_FIX_2026-11-03.zip).
+The minimal MATLAB API probe/regressions remain unexecuted in cloud; university
+confirmation is required. Thermal physics, solver settings and inputs are unchanged.

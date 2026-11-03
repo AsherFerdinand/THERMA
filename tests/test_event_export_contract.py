@@ -21,7 +21,8 @@ def test_event_export_is_bounded_precision_checked_and_not_a_large_table():
 
 def test_streaming_verifier_keeps_duplicate_order_and_counts_columns():
     source = (ROOT / "boptest_verify_energy_csv.m").read_text()
-    assert "fread(fid,1024*1024,'*uint8')" in source
+    assert "fread(fid,requested,'*uint8')" in source
+    assert "requested=min(1024*1024,fileBytes-position)" in source
     assert "rows==expectedRows" in source
     assert "all(diff(block(:,1))>=0)" in source
     assert "unique(" not in source
@@ -55,13 +56,25 @@ def test_export_failure_cannot_mark_run_completed_and_retains_diagnostics():
     assert "exported.status,'verified'" in resume
 
 
-def test_normal_eof_is_not_a_read_error_but_other_errors_still_fail():
+def test_reader_is_count_and_position_bounded_not_numeric_eof_classification():
     source = (ROOT / "boptest_verify_energy_csv.m").read_text()
-    assert "number==0 || (number==-1 && atEnd)" in source
-    assert "atEnd=feof(fid)" in source
-    assert source.index("[message,number]=ferror(fid)") < source.index("if isempty(bytes)")
-    assert "Empty read before end-of-file" in source
+    assert "while position<fileBytes" in source
+    assert "count~=requested || nextPosition~=position+requested" in source
+    assert "ftell(fid)~=fileBytes" in source
+    assert "number==-1" not in source and "number==-4" not in source
+    assert "fgetl(" not in source
+    assert "digest.update(typecast(bytes(:),'int8'))" in source
     assert "rows==expectedRows" in source and "isempty(pending)" in source
+    writer = (ROOT / "boptest_export_energy_events.m").read_text()
+    assert "strcmp(checksum,verified.sha256)" in writer
+
+
+def test_plain_diagnostic_path_and_structured_metadata_both_preserve_original():
+    writer = (ROOT / "boptest_export_energy_events.m").read_text()
+    tests = (ROOT.parents[2] / "tests/matlab/test_boptest_event_export.m").read_text()
+    assert "Event export failed for %s. Context: %s" in writer
+    assert "diagnostic.target_file,file" in tests
+    assert "diagnostic.original_exception.identifier,'THERMA:EventDirectory'" in tests
 
 
 def test_cleanup_owns_state_without_capturing_destroyed_parent_variables():

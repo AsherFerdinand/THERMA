@@ -1,5 +1,9 @@
 # C2.7 CSV EOF and cleanup correction — MATLAB execution pending
 
+Superseded by [the R2024a byte-bounded reader](C27_R2024A_READER_FIX.md) after the
+user observed EOF diagnostic −4. The −1-based classification below is historical
+and is not the current reader implementation. Original archive preserved.
+
 ## Reported failure and scope
 
 The user reports R2024a package integrity succeeds (158 manifest payloads), existing

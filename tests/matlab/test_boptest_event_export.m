@@ -52,6 +52,13 @@ catch problem
     verifyEqual(testCase,problem.cause{1}.identifier,'THERMA:EventDirectory');
     verifyTrue(testCase,contains(problem.message,file));
     verifyTrue(testCase,contains(problem.message,'estimated_numeric_bytes'));
+    failures=dir(fullfile(folder,'*.event_export_failure.json'));
+    verifyNumElements(testCase,failures,1);
+    diagnostic=jsondecode(fileread(fullfile(folder,failures(1).name)));
+    verifyEqual(testCase,diagnostic.target_file,file);
+    verifyEqual(testCase,diagnostic.output_directory,fileparts(file));
+    verifyFalse(testCase,diagnostic.directory_exists);
+    verifyEqual(testCase,diagnostic.original_exception.identifier,'THERMA:EventDirectory');
 end
 verifyFalse(testCase,isfile(file));
 end
@@ -101,6 +108,7 @@ fid=fopen(file,'wb'); fprintf(fid,'%s\n0,1,2,3,4,0\n0,2,3,4,5,0\n',header); fclo
 info=boptest_verify_energy_csv(file,2);
 verifyEqual(testCase,info.row_count,2); verifyEqual(testCase,info.first_time_s,0);
 verifyEqual(testCase,info.last_time_s,0);
+verifyEqual(testCase,info.sha256,boptest_file_sha256(file));
 fid=fopen(file,'ab'); fprintf(fid,'1,2,3,4,5,0\n'); fclose(fid);
 verifyError(testCase,@() boptest_verify_energy_csv(file,2),'THERMA:EventCSVRows');
 end
@@ -144,4 +152,56 @@ drawnow;
 [message,~]=lastwarn;
 verifyEmpty(testCase,message);
 verifyEqual(testCase,sort(fopen('all')),before);
+end
+function testExactChunkBoundaryAndSplitFinalRecord(testCase)
+folder=tempname; mkdir(folder); cleanup=onCleanup(@() rmdir(folder,'s'));
+header=sprintf('time_s,stored_thermal_energy,net_external_power,stored_energy_derivative,prescribed_power,power_balance_residual\n');
+line=sprintf('0,1,2,3,4,0\n'); boundary=1024*1024;
+padding=mod(boundary-numel(header),numel(line));
+first=[repmat('0',1,padding) line];
+tailRows=(boundary-numel(header)-numel(first))/numel(line);
+text=[header first repmat(line,1,tailRows)];
+verifyEqual(testCase,numel(text),boundary);
+file=fullfile(folder,'exact_chunk.csv');
+fid=fopen(file,'wb'); fwrite(fid,uint8(text),'uint8'); fclose(fid);
+info=boptest_verify_energy_csv(file,tailRows+1);
+verifyEqual(testCase,info.file_bytes,boundary);
+verifyEqual(testCase,info.sha256,boptest_file_sha256(file));
+% One leading zero shifts the final LF into the next chunk without changing values.
+text=[header '0' first repmat(line,1,tailRows)];
+fid=fopen(file,'wb'); fwrite(fid,uint8(text),'uint8'); fclose(fid);
+info=boptest_verify_energy_csv(file,tailRows+1);
+verifyEqual(testCase,info.file_bytes,boundary+1);
+verifyEqual(testCase,info.row_count,tailRows+1);
+end
+function testMinimalReaderProbeUsesObservedStatuses(testCase)
+folder=tempname; mkdir(folder); cleanup=onCleanup(@() rmdir(folder,'s'));
+file=reproduce_boptest_csv_reader(folder); observed=jsondecode(fileread(file));
+verifyEqual(testCase,observed.snapshot_verification.row_count,2);
+verifyEqual(testCase,observed.snapshot_verification.sha256,observed.csv_sha256);
+verifyNotEmpty(testCase,observed.fgetl); verifyNotEmpty(testCase,observed.fread);
+% No assertion about whether this MATLAB/OS reports -4, -1, zero or another diagnostic.
+end
+function testAllMalformedRecordClassesStayRejected(testCase)
+folder=tempname; mkdir(folder); cleanup=onCleanup(@() rmdir(folder,'s'));
+file=fullfile(folder,'invalid.csv');
+header=sprintf('time_s,stored_thermal_energy,net_external_power,stored_energy_derivative,prescribed_power,power_balance_residual\n');
+records={sprintf('0,1,2,3,4,0,7\n'),sprintf('0,1,Inf,3,4,0\n'), ...
+    sprintf('1,1,2,3,4,0\n0,1,2,3,4,0\n'),sprintf('0,1,2,3,4,0')};
+expected={'THERMA:EventCSVColumns','THERMA:EventCSVValues','THERMA:EventCSVOrder','THERMA:EventCSVTruncated'};
+counts=[1 1 2 1];
+for j=1:numel(records)
+    fid=fopen(file,'wb'); fwrite(fid,uint8([header records{j}]),'uint8'); fclose(fid);
+    verifyError(testCase,@() boptest_verify_energy_csv(file,counts(j)),expected{j});
+end
+end
+function testWindowsCRLFHeaderSemanticsAndDigest(testCase)
+folder=tempname; mkdir(folder); cleanup=onCleanup(@() rmdir(folder,'s'));
+file=fullfile(folder,'crlf.csv');
+header='time_s,stored_thermal_energy,net_external_power,stored_energy_derivative,prescribed_power,power_balance_residual';
+fid=fopen(file,'wb');
+fprintf(fid,'%s\r\n0,1,2,3,4,0\r\n0,2,3,4,5,0\r\n',header); fclose(fid);
+info=boptest_verify_energy_csv(file,2);
+verifyEqual(testCase,info.row_count,2); verifyEqual(testCase,info.first_time_s,0);
+verifyEqual(testCase,info.sha256,boptest_file_sha256(file));
 end
