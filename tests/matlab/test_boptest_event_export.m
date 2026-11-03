@@ -77,7 +77,7 @@ verifyFalse(testCase,isfile(fullfile(folder,'bad.csv')));
 end
 function testUNCContextWithoutAssumingNetworkAvailability(testCase)
 % Path classification is testable offline; this does not claim actual UNC IO success.
-info=boptest_event_export_context('\\server\share\Eigene Dateien\energy.csv',100,120);
+info=boptest_event_export_context('\\server\share\Eigene Dateien\energy.csv',100,120,false);
 verifyTrue(testCase,info.is_unc_path);
 verifyEqual(testCase,info.estimated_numeric_bytes,100*6*8);
 verifyTrue(testCase,isfield(info,'available_disk_space_bytes'));
