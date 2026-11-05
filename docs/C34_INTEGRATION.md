@@ -169,3 +169,20 @@ Run [START_C34.md](../START_C34.md) on university MATLAB. Review actual diagnost
 and returned traces before C3.5/C3.6. Existing C2.8 MAE and unresolved solar-payload
 lineage remain unchanged and cannot be reused as C3 accuracy evidence. C4 remains
 gated. No calibration or unrelated physics has been introduced.
+
+## Standalone offline delivery
+
+[Download THERMA_C34_CLOSED_LOOP_R2024a_2026-11-05.zip](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C34_CLOSED_LOOP_R2024a_2026-11-05.zip).
+The archive has 222 files and pinned source commit
+`cd95158c28ee125dfb2a92ea74fb7365761f2ebb`.
+
+SHA-256:
+`690da942c3311cc1d803ba830d949500edf00fe4f919224ae5f0a8a8ecda3cf2`.
+Fresh extraction verified its complete manifest, original C2/component source
+identities, source/config/helper availability, 13+4 MATLAB test definitions and
+static MATLAB syntax without any old project/output folder. Uploaded bytes were
+independently fetched from GitHub and verified. This is package/static
+verification, **not MATLAB integration execution**. The source repository marks
+the original short component test log byte-stable (-text/-diff) to retain its
+original final blank line rather than normalize evidence bytes. See
+C34_INTEGRATION_DELIVERY.json for the receipt.

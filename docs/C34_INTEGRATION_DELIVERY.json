@@ -1,0 +1,22 @@
+{
+  "filename": "THERMA_C34_CLOSED_LOOP_R2024a_2026-11-05.zip",
+  "sha256": "690da942c3311cc1d803ba830d949500edf00fe4f919224ae5f0a8a8ecda3cf2",
+  "source_commit": "cd95158c28ee125dfb2a92ea74fb7365761f2ebb",
+  "files": 222,
+  "scope": "C3.4 closed-loop integration",
+  "matlab_execution": "pending",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C34_CLOSED_LOOP_R2024a_2026-11-05.zip",
+  "transfer_commit": "da19923436cb7c8ec69fbcd43169a836427dc38b",
+  "uploaded_zip_sha256_verified": true,
+  "input_preservation_verified": true,
+  "python_tests_passed": 206,
+  "static_MATLAB_files_checked": 63,
+  "limitations": "Actual incoming component evidence confirms 13 passes in R2025a. C3.4 integration/17 MATLAB regressions unexecuted in cloud; R2024a target compatibility awaits execution. C3.5/C3.6 not started; C2.8 preserved.",
+  "empty_directory_extraction_verified": true,
+  "full_manifest_and_source_hashes_verified": true,
+  "component_gate": "13 passed; R2025a; source/config/provenance hashes reviewed",
+  "MATLAB_integration_execution_in_cloud": false,
+  "prepared_MATLAB_regression_count": 17,
+  "raw_private_component_report_published": false,
+  "C35_C36_started": false
+}

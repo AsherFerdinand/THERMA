@@ -1329,3 +1329,18 @@ Actual source/configuration gate hashes match the preserved component evidence.
 These are cloud software/static checks, not execution of the 17 MATLAB regressions
 or C3.4 cold-start simulation. MATLAB R2024a compatibility remains an intended
 supported interface awaiting execution on the university PC.
+
+C3.4 delivery: THERMA_C34_CLOSED_LOOP_R2024a_2026-11-05.zip (222 files), pinned
+source cd95158c28ee125dfb2a92ea74fb7365761f2ebb. Fresh extraction into an otherwise
+empty directory passed CRC, all manifest/source hashes, source/config/helper
+availability, frozen C2/current component gate identities and 13+4 MATLAB test
+definitions/static syntax. No old project directories, FMU or replay data are
+required. This does not establish MATLAB model compilation or simulation.
+SHA256 690da942c3311cc1d803ba830d949500edf00fe4f919224ae5f0a8a8ecda3cf2.
+Published on replay-transfer at da19923436cb7c8ec69fbcd43169a836427dc38b;
+an independent GitHub fetch verified identical uploaded bytes. Source pushed to
+the C3 development branch. Old artifacts, source physics, work/main and numerical
+results preserved. Delivery receipt: docs/C34_INTEGRATION_DELIVERY.json.
+Original component log bytes (including final blank line) retained; .gitattributes
+prevents text normalization/diff whitespace rewriting of that evidence file.
+C3.4 MATLAB execution remains pending. C3.5/C3.6 and C4 not implemented.
