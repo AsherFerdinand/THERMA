@@ -100,3 +100,12 @@ Run run_verification("quick"), then run_verification("full") in MATLAB.
 Explicit primitive byte-array update handles empty/singleton chunks. CSV checks, cleanup and physics unchanged.
 No MATLAB C2.7 execution or convergence results are claimed. C3 is design only.
 SHA-256: `77e70085bbb45256a734195b7ea9e0adbbbdabdb43d330423a5562e565fc1fd6`. Source: `d63b98320c69d72043dd23ecd51dca7b49c2c84d`.
+
+
+## C2.8 reference-temperature comparison (MATLAB confirmation pending)
+
+Download [THERMA_C28_REFERENCE_MATLAB_2026-11-05.zip](THERMA_C28_REFERENCE_MATLAB_2026-11-05.zip), extract and read START_C28.md.
+Follow START_C28.md to compare existing C2.7 results; do not rerun simulations.
+Includes genuine BOPTEST reference temperatures, derived C2.8 metrics/figures and comparison code. Physics unchanged.
+Python comparison is complete; MATLAB reproduction and duplicate prior solar-CSV execution lineage remain pending. No convergence certification is claimed.
+SHA-256: `c27596e46cc6d89a081d5515f023311cd04331141032962acb8782d1c286f6a3`. Source: `a2a7f1be518f4a8f1b09e8b7b4cc961daf2610c7`.
