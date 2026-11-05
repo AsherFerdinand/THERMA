@@ -1,0 +1,20 @@
+{
+  "filename": "THERMA_C3_COMPONENT_VERIFICATION_R2024a_2026-11-05.zip",
+  "sha256": "c56dd84a80e10f3214379a75f320ef11fc45144004adb0ec04999b20751f9355",
+  "source_commit": "b5fd807d2e329d82d468e429655dafa9630d7f8e",
+  "files": 206,
+  "scope": "C3.1-C3.3 isolated illustrative components",
+  "matlab_execution": "pending",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C3_COMPONENT_VERIFICATION_R2024a_2026-11-05.zip",
+  "transfer_commit": "bf1f1f4fdb8005f0ea3ab51fe379908b1aed5138",
+  "uploaded_zip_sha256_verified": true,
+  "input_preservation_verified": true,
+  "python_tests_passed": 201,
+  "static_MATLAB_files_checked": 55,
+  "limitations": "C3.1-C3.3 prepared only; 13 MATLAB tests unexecuted in cloud. C3.4-C3.6 blocked pending actual component verification. Illustrative parameters, not BOPTEST calibration. C1/C2 results preserved.",
+  "empty_directory_extraction_verified": true,
+  "package_manifest_and_source_hashes_verified": true,
+  "MATLAB_tests_prepared": 13,
+  "MATLAB_tests_executed_in_cloud": false,
+  "prebuilt_SLX": false
+}

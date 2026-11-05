@@ -190,3 +190,17 @@ compatible states, boundary conditions, controls and observable definitions.
 
 C4 remains gated on independent C3 verification. The current deliverable is the
 component-verification package, not completion of all requested C3 capabilities.
+
+## Offline component delivery
+
+[Download the C3 component verification ZIP](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C3_COMPONENT_VERIFICATION_R2024a_2026-11-05.zip).
+Read START_HERE.md/START_C3.md. Source commit:
+`b5fd807d2e329d82d468e429655dafa9630d7f8e`.
+
+ZIP SHA-256:
+`c56dd84a80e10f3214379a75f320ef11fc45144004adb0ec04999b20751f9355`.
+Fresh extraction into an empty directory verified the full package manifest,
+source hashes (with the declared C3 entry-guide override), required helpers/config
+and 13 test definitions. Uploaded bytes were independently fetched and verified.
+This establishes package completeness/static checks, not successful MATLAB
+execution or C3.4–C3.6 completion. See C3_COMPONENT_DELIVERY.json.

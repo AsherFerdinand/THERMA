@@ -1279,3 +1279,16 @@ mappings and wheel/sdist builds passed. All C2.8 and C2.6C result checksums matc
 The 13 new MATLAB tests are unexecuted; static checks and packaging tests do not
 establish numerical Simulink correctness. Runner writes actual test console text,
 per-source/config hashes, release and solver settings on university execution.
+
+C3 component delivery: THERMA_C3_COMPONENT_VERIFICATION_R2024a_2026-11-05.zip,
+206 files, pinned source b5fd807d2e329d82d468e429655dafa9630d7f8e on dedicated
+feat/c3-component-verification. Fresh empty-directory extraction passed CRC,
+all manifest/source hashes, declared C3 entry-guide override, required helper/config
+presence, 13 MATLAB test definitions and extracted-source MATLAB static lint.
+No raw reference/replay data or external project directory is required.
+SHA256 c56dd84a80e10f3214379a75f320ef11fc45144004adb0ec04999b20751f9355.
+Published separately to replay-transfer at bf1f1f4fdb8005f0ea3ab51fe379908b1aed5138;
+an independent GitHub fetch verified identical uploaded bytes. Prior transfer
+artifacts and main preserved. Receipt: docs/C3_COMPONENT_DELIVERY.json.
+C3.4–C3.6 remain blocked pending actual component verification in university MATLAB;
+no C3 simulation result or figure was fabricated, and C4 has not begun.
