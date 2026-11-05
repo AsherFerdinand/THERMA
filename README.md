@@ -136,3 +136,12 @@ Run run_c34_verification() in MATLAB R2024a: 13 component plus 4 integration/CSV
 Includes copied-C2 integration builder, unchanged verified C3 components, explicit boundary conditions, source-only public R2025a component evidence summary, energy diagnostics and plotting code. C2/C2.8 results preserved.
 Component evidence: 13 passed, R2025a. C3.4 MATLAB execution remains pending; no actual integration result or plot is claimed. C3.5/C3.6 remain gated.
 SHA-256: `690da942c3311cc1d803ba830d949500edf00fe4f919224ae5f0a8a8ecda3cf2`. Source: `cd95158c28ee125dfb2a92ea74fb7365761f2ebb`.
+
+
+## C3.5 heating-system engineering investigation (MATLAB confirmation pending)
+
+Download [THERMA_C35_ENGINEERING_INVESTIGATION_2026-11-05.zip](THERMA_C35_ENGINEERING_INVESTIGATION_2026-11-05.zip), extract and read START_C35.md.
+Run run_c35_investigation("quick"), then "capacity", then "all" in university MATLAB. Runs sequentially and reuses only source/contract/hash-verified cases. No old project/data folder is needed.
+Includes UA/supply/outdoor/solar studies, conditional controller selection, native-energy/steady-load diagnostics and max-step comparisons. Original C3.4 baseline and sources preserved.
+C3.4 actual evidence: 17 passed, R2025a, energy checks passed. New C3.5 MATLAB cases/results remain pending; no regulation, solar-saving or convergence claim is made. No C4.
+SHA-256: `0cb342a0a75d11319c20c690d8a8bbfe0476fb33971a4888c76e26a095a66472`. Source: `b044bf082dbd5f337e0f17267435deb95eed71e8`.
