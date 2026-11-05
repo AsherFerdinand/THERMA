@@ -1,0 +1,13 @@
+{
+  "filename": "THERMA_C28_REFERENCE_MATLAB_2026-11-05.zip",
+  "source_commit": "a2a7f1be518f4a8f1b09e8b7b4cc961daf2610c7",
+  "files": 195,
+  "sha256": "c27596e46cc6d89a081d5515f023311cd04331141032962acb8782d1c286f6a3",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C28_REFERENCE_MATLAB_2026-11-05.zip",
+  "transfer_commit": "68da48666048aa2a4634849c628bcc88bac2db45",
+  "uploaded_zip_sha256_verified": true,
+  "input_preservation_verified": true,
+  "python_tests_passed": 196,
+  "static_MATLAB_files_checked": 45,
+  "limitations": "MATLAB comparison unexecuted in cloud. Uploaded solar CSV matches prior R2021a payload; new metadata states R2024a. Execution lineage needs review. No physics changes."
+}

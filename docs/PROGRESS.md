@@ -1205,3 +1205,15 @@ strict mypy (13 modules), MATLAB static lint (45 files), archived evidence check
 14 replay mappings and wheel/sdist builds passed. Prior C2.6C checksums match.
 MATLAB tests remain unexecuted here. Ordinary GitHub access currently fails at the
 network proxy; publication will be attempted with the available authorized route.
+
+Publication: source/results commit a2a7f1be518f4a8f1b09e8b7b4cc961daf2610c7 on
+feat/c28-reference-temperature-validation. Offline package
+THERMA_C28_REFERENCE_MATLAB_2026-11-05.zip contains 195 files, genuine reference
+CSV/provenance and all source/derived reports, excluding raw MATLAB uploads.
+Fresh extraction passed CRC, all manifest hashes and expected reference-path checks.
+SHA256 c27596e46cc6d89a081d5515f023311cd04331141032962acb8782d1c286f6a3.
+Published to replay-transfer at 68da48666048aa2a4634849c628bcc88bac2db45;
+an independent GitHub fetch verified ZIP byte identity. The authorized network
+route succeeded after ordinary proxy access failed. Existing artifacts, work/main,
+reference data and prior results preserved. Delivery metadata:
+docs/C28_REFERENCE_DELIVERY.json. MATLAB reproduction and lineage review pending.

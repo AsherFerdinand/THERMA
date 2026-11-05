@@ -148,3 +148,14 @@ the supplied pair and consumed artifacts; it does not certify missing refinement
 event energy logs or generated models. Development source includes only derived
 analysis reports/figures and hashes; raw uploads/reference CSV stay under ignored
 outputs and the separate offline transfer package.
+
+## Offline delivery
+
+[Download the C2.8 MATLAB reference/comparison ZIP](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C28_REFERENCE_MATLAB_2026-11-05.zip).
+Read START_C28.md after extraction. This package deliberately reads the existing
+C2.7 output tree on the university PC; it does not ship raw MATLAB uploads.
+
+SHA-256: `c27596e46cc6d89a081d5515f023311cd04331141032962acb8782d1c286f6a3`.
+Pinned source: `a2a7f1be518f4a8f1b09e8b7b4cc961daf2610c7`.
+Uploaded bytes were verified by an independent GitHub fetch. Work/main and all
+previous transfer artifacts were preserved. See C28_REFERENCE_DELIVERY.json.
