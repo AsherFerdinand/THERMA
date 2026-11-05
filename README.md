@@ -181,3 +181,9 @@ C3 component verification is prepared for MATLAB R2024a: [instructions](START_C3
 and [equations, assumptions and staged gates](docs/C3_COMPONENTS.md). This increment
 covers C3.1–C3.3 only. It does not yet implement a closed-loop C2 zone or claim
 successful MATLAB execution, comfort performance or C3 reference accuracy.
+
+C3 component evidence is now reviewed: **13/13 passed in university R2025a**.
+The separate C3.4 closed-loop integration generator and standalone verification
+workflow are prepared for R2024a: [instructions](START_C34.md),
+[engineering design/evidence limits](docs/C34_INTEGRATION.md). Integration execution
+is pending; C3.5/C3.6 remain gated. No C3.4 performance result is claimed.

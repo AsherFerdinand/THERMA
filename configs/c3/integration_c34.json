@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "classification": "illustrative_C34_integration_not_BOPTEST_benchmark",
+  "parameters": {
+    "initial_zone_K": {"value": 288.15, "unit": "K", "source": "User cold-start air at 15 degC; all fabric states also 15 degC is an explicit integration assumption"},
+    "initial_radiator_K": {"value": 288.15, "unit": "K", "source": "Illustrative radiator initially equilibrated with the 15 degC zone"},
+    "setpoint_K": {"value": 294.15, "unit": "K", "source": "User setpoint 21 degC"},
+    "supply_K": {"value": 328.15, "unit": "K", "source": "User imposed water supply 55 degC"},
+    "outdoor_K": {"value": 278.15, "unit": "K", "source": "Illustrative held outdoor 5 degC, not BOPTEST weather"},
+    "internal_convective_W": {"value": 0, "unit": "W", "source": "Explicit zero-gain integration fixture"},
+    "internal_radiative_W": {"value": 0, "unit": "W", "source": "Explicit zero-gain integration fixture"},
+    "solar_W": {"value": [0,0,0,0,0,0], "unit": "W", "source": "Explicit zero absorbed solar on the six opaque C2 surfaces; existing solar physics/ports retained"},
+    "duration_s": {"value": 86400, "unit": "s", "source": "Illustrative 24-hour integration observation; no sizing or comfort-success assumption"},
+    "max_step_s": {"value": 10, "unit": "s", "source": "Integration numerical setting, at most the default controller sample period; not a convergence result"}
+  },
+  "heating_enabled": true,
+  "disable_at_s": [],
+  "solver": {"name": "ode15s", "RelTol": "1e-8", "AbsTol": "1e-10"},
+  "checks": {
+    "instantaneous_balance_W": 0.00001,
+    "energy_absolute_J": 1.0,
+    "energy_relative": 0.000001,
+    "temperature_envelope_margin_K": 0.001,
+    "basis": "Provisional numerical software checks for this passive, zero/nonnegative-gain integration fixture, not physical accuracy acceptance criteria"
+  }
+}

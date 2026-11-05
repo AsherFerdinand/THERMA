@@ -1,0 +1,5 @@
+Running test_therma_c3_components
+.......... ...
+Done test_therma_c3_components
+__________
+

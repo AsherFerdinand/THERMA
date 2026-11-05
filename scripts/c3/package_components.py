@@ -31,7 +31,29 @@ REQUIRED = {
 }
 
 
-def package(source: str, output: Path) -> dict[str, object]:
+C34_REQUIRED = REQUIRED | {
+    "START_C34.md",
+    "run_c34_verification.m",
+    "configs/c3/integration_c34.json",
+    "scripts/matlab/c3/load_c34_experiment.m",
+    "scripts/matlab/c3/build_c34_model.m",
+    "scripts/matlab/c3/assess_c34.m",
+    "scripts/matlab/c3/simulate_c34_model.m",
+    "scripts/matlab/c3/export_c34_results.m",
+    "scripts/matlab/c3/write_c34_csv.m",
+    "tests/matlab/test_therma_c34_integration.m",
+    "verification/c3/component_gate/summary.json",
+    "verification/c3/component_gate/matlab_component_test_log.txt",
+    "configs/references/boptest_bestest_hydronic.json",
+    "configs/references/c2_reduced_assumptions.json",
+    "scripts/matlab/boptest/build_boptest_zone_c2.m",
+    "scripts/matlab/boptest/load_boptest_zone_parameters.m",
+    "scripts/matlab/boptest/load_boptest_envelope_parameters.m",
+    "scripts/matlab/boptest/add_boptest_construction.m",
+}
+
+
+def package(source: str, output: Path, stage: str = "components") -> dict[str, object]:
     commit = subprocess.check_output(["git", "rev-parse", source + "^{commit}"]).decode().strip()
     raw = subprocess.check_output(["git", "archive", "--format=tar", commit])
     payload = {}
@@ -51,20 +73,32 @@ def package(source: str, output: Path) -> dict[str, object]:
         )
     source_hashes = {name: hashlib.sha256(raw).hexdigest() for name, raw in payload.items()}
     # Offline entrypoint must describe C3, not the historical C2.7 root guide.
-    payload["START_HERE.md"] = payload["START_C3.md"]
+    guide = "START_C34.md" if stage == "integration" else "START_C3.md"
+    prefix = "C34" if stage == "integration" else "C3"
+    payload["START_HERE.md"] = payload[guide]
     provenance = {
         "source_commit": commit,
-        "scope": "C3.1-C3.3 isolated illustrative components",
+        "scope": (
+            "C3.4 closed-loop integration"
+            if stage == "integration"
+            else "C3.1-C3.3 isolated illustrative components"
+        ),
         "matlab_execution_in_cloud": False,
-        "C3_4_integration": "blocked_pending_component_execution",
+        "C3_4_integration": (
+            "prepared_MATLAB_execution_pending"
+            if stage == "integration"
+            else "blocked_pending_component_execution"
+        ),
         "prebuilt_SLX": False,
         "SLX_delivery": "Native builders save models on university MATLAB",
         "source_payload_sha256": source_hashes,
-        "documentation_override": {"START_HERE.md": "START_C3.md"},
+        "documentation_override": {"START_HERE.md": guide},
         "raw_datasets_required": False,
     }
-    payload["C3_PACKAGE_PROVENANCE.json"] = (json.dumps(provenance, indent=2) + "\n").encode()
-    payload["C3_PACKAGE_SHA256SUMS"] = "".join(
+    payload[prefix + "_PACKAGE_PROVENANCE.json"] = (
+        json.dumps(provenance, indent=2) + "\n"
+    ).encode()
+    payload[prefix + "_PACKAGE_SHA256SUMS"] = "".join(
         hashlib.sha256(value).hexdigest() + "  " + name + "\n"
         for name, value in sorted(payload.items())
     ).encode()
@@ -73,11 +107,11 @@ def package(source: str, output: Path) -> dict[str, object]:
         for name, value in sorted(payload.items()):
             if Path(name).is_absolute() or ".." in Path(name).parts:
                 raise ValueError("Unsafe ZIP member")
-            archive.writestr("THERMA_C3_MATLAB/" + name, value)
+            archive.writestr("THERMA_" + prefix + "_MATLAB/" + name, value)
     with ZipFile(output) as archive:
         assert archive.testzip() is None
         for name, value in payload.items():
-            assert archive.read("THERMA_C3_MATLAB/" + name) == value
+            assert archive.read("THERMA_" + prefix + "_MATLAB/" + name) == value
     receipt = {
         "filename": output.name,
         "sha256": hashlib.sha256(output.read_bytes()).hexdigest(),
@@ -94,5 +128,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--stage", choices=["components", "integration"], default="components")
     args = parser.parse_args()
-    print(json.dumps(package(args.source, args.output), indent=2))
+    print(json.dumps(package(args.source, args.output, args.stage), indent=2))

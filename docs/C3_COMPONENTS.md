@@ -204,3 +204,11 @@ source hashes (with the declared C3 entry-guide override), required helpers/conf
 and 13 test definitions. Uploaded bytes were independently fetched and verified.
 This establishes package completeness/static checks, not successful MATLAB
 execution or C3.4–C3.6 completion. See C3_COMPONENT_DELIVERY.json.
+
+
+Current follow-up: actual university evidence confirms 13/13 component tests passed
+in R2025a, not R2024a. Source/configuration hashes match. See
+verification/c3/component_gate/summary.json and [C34_INTEGRATION.md](C34_INTEGRATION.md).
+C3.4 is now prepared as a new copied-zone model and standalone test runner; its
+MATLAB integration execution remains pending. Earlier text describes the component
+preparation increment, not a claim that integration has run.

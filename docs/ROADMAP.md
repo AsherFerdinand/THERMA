@@ -51,7 +51,8 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [x] Prepare offline R2021a quick/full package, actual-only study analyzer and six PNG/PDF outputs.
 - [x] Document C3 hydronic architecture options; design only, no implementation.
 - [ ] Execute C2.7 university quick/full runs and analyze actual controlled/convergence/energy results.
-  User reports execution completed; actual study outputs are not available here for review.
+  User reports all four runs completed; the original controlled pair is reviewed,
+  while refinement/event evidence remains pending.
 - [x] C2.8: recover genuine pinned air/operative reference; prepare standalone offline MATLAB comparison.
 - [x] C2.8: inspect supplied controlled pair and generate reference-aligned numerical metrics/plots.
 - [ ] C2.8: reproduce MATLAB FIG outputs and resolve duplicate prior solar CSV execution lineage.
@@ -59,8 +60,9 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [x] C3.1–C3.3: prepare isolated native thermostat, asymmetric valve and mixed radiator
   builders with explicitly illustrative assumptions and analytical MATLAB tests.
-- [ ] Execute C3 component verification in university MATLAB R2024a; review actual results.
-- [ ] C3.4: integrate a separate closed-loop C3 zone variant after the component gate.
+- [x] Review actual C3 component report/log: 13 passed, 0 failed/incomplete, university R2025a; source/config/package hashes match.
+- [x] C3.4: prepare a separate native closed-loop C2-copy variant, integration tests, energy diagnostics and standalone runner.
+- [ ] Execute C3.4 verification in university MATLAB (R2024a target); review actual traces/energy checks before C3.5/C3.6.
 - [ ] C3.5/C3.6: implement six experiments, plots and comfort/energy metrics after integration checks.
 - [ ] Satisfy full reference readiness gates before C3 BOPTEST/system-accuracy claims; no C4.
 

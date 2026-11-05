@@ -25,13 +25,22 @@ def test_illustrative_parameters_are_explicit_and_dimensioned():
     assert value("opening_tau_s") > 0 and value("closing_tau_s") > 0
     # Every Simulink parameter expression resolves against explicit config/derived C.
     for path in (ROOT / "scripts/matlab/c3").glob("*.m"):
-        fields = set(re.findall(r"C3\.(\w+)", path.read_text()))
+        fields = set(re.findall(r"\bC3\.([A-Za-z_]\w*)", path.read_text()))
         assert fields <= set(parameters) | {"capacitance_J_K"}
 
 
 def test_native_component_interface_does_not_depend_on_replay_heating():
     directory = ROOT / "scripts/matlab/c3"
-    sources = "\n".join(path.read_text() for path in directory.glob("*.m"))
+    component_files = {
+        "load_c3_parameters.m",
+        "c3_block.m",
+        "add_c3_thermostat.m",
+        "add_c3_valve.m",
+        "add_c3_radiator.m",
+        "build_c3_component.m",
+        "simulate_c3_component.m",
+    }
+    sources = "\n".join((directory / name).read_text() for name in sorted(component_files))
     for forbidden in [
         "reaQHea_y",
         "mod.rad",

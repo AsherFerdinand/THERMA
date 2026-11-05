@@ -1292,3 +1292,40 @@ an independent GitHub fetch verified identical uploaded bytes. Prior transfer
 artifacts and main preserved. Receipt: docs/C3_COMPONENT_DELIVERY.json.
 C3.4–C3.6 remain blocked pending actual component verification in university MATLAB;
 no C3 simulation result or figure was fabricated, and C4 has not begun.
+
+
+## C3.4 closed-loop integration preparation — 2026-11-05
+
+Reviewed actual component_verification.json and original test log: 13 passed,
+0 failed, 0 incomplete, duration 34.1251171 s, MATLAB/Simulink R2025a. Verified all
+nine reported source hashes, explicit assumptions and original package-provenance
+hash. Original report/log preserved byte-for-byte under ignored outputs/c3/evidence/
+82f4706b453a256c/. Committed selected public summary and exact short test log; raw
+report contains private network paths and is not published. No raw numerical max
+errors were supplied and generated model files were not supplied for rehashing.
+The component gate passes for the recorded source, not C3.4 or R2024a execution.
+
+Reused unchanged thermostat/valve/radiator sources and original C2 building graph.
+New C3.4 builder copies that graph into a separate model, assigns explicit 15 °C
+initial conditions in its copied workspace, and replaces only heating vector
+inputs 2/3 with independent radiator powers. Outdoors/solar/internal/envelope
+physics and frozen materials/solvers in original C2 remain untouched. Air remains
+the documented radiator radiant-sink proxy, not exact mean radiant temperature.
+Added native combined external-energy integrator, radiator/zone/global diagnostics,
+finite/physical screening, topology/double-heating checks and three short actual-
+Simulink integration fixtures plus CSV-precision test. A standalone runner repeats
+13 component regressions and four new tests, then runs only the requested cold
+start after passing tests. Default 24 h conditions: room/fabric/radiator 15 °C,
+setpoint 21 °C, supply 55 °C, held outdoor 5 °C, zero internal/solar gains. No sizing
+or setpoint attainment is assumed. Output plotting and engineering report code
+use actual MATLAB data only; no cloud integration result or plot was fabricated.
+C3.5/C3.6 and C4 remain gated. Reused/extended packaging supports a self-contained
+C3.4 profile with all frozen source/configuration and public component evidence.
+
+Checks: full Python suite 206 passed (21.97 s); Ruff lint/format (96 files), strict
+mypy (13 modules), MATLAB static lint (63 files), archive evidence integrity and
+14 replay mappings passed. Prior C2.8/C2.6C report, figure and metric checksums match.
+Actual source/configuration gate hashes match the preserved component evidence.
+These are cloud software/static checks, not execution of the 17 MATLAB regressions
+or C3.4 cold-start simulation. MATLAB R2024a compatibility remains an intended
+supported interface awaiting execution on the university PC.

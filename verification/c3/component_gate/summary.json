@@ -1,0 +1,73 @@
+{
+  "status": "component_tests_passed_in_MATLAB_integration_review_pending",
+  "scope": "C3.1-C3.3_components_only",
+  "matlab_version": "25.1.0.2943329 (R2025a)",
+  "simulink": {
+    "Name": "Simulink",
+    "Version": "25.1",
+    "Release": "(R2025a)",
+    "Date": "21-Nov-2024"
+  },
+  "illustrative_not_BOPTEST": true,
+  "component_solver": {
+    "name": "ode15s",
+    "RelTol": 1e-08,
+    "AbsTol": 1e-10,
+    "MaxStep_s": 1
+  },
+  "source_commit": "b5fd807d2e329d82d468e429655dafa9630d7f8e",
+  "package_provenance_sha256": "4c4fd573916d1b92d627cd3de9ff18aaf2505dadefd2880198cfe27c4b3fd3f6",
+  "source_files": [
+    {
+      "name": "scripts/matlab/c3/add_c3_radiator.m",
+      "sha256": "18121ff2dd966278e4c604af26db26179b5482afc167fcb120db366b84431100"
+    },
+    {
+      "name": "scripts/matlab/c3/add_c3_thermostat.m",
+      "sha256": "f825b5ca732d18c2b37b5d149ee521dee0788594bade0aa1b6d7b36eacb57e80"
+    },
+    {
+      "name": "scripts/matlab/c3/add_c3_valve.m",
+      "sha256": "ddd9bdc43cde641bac3ec2b6db6b59e7cb18cc95f0676a257d10b44d00f333ce"
+    },
+    {
+      "name": "scripts/matlab/c3/build_c3_component.m",
+      "sha256": "713cd1c27d642055d1f3520824e4e1ac9313a57d4af0532d9b0e4a944038da35"
+    },
+    {
+      "name": "scripts/matlab/c3/c3_block.m",
+      "sha256": "3f6ef5782430a8bd25080a3662f5a549bc117e42774766b588f02736b41b41c4"
+    },
+    {
+      "name": "scripts/matlab/c3/load_c3_parameters.m",
+      "sha256": "9d70f9aa14ca8239c7220857aea8650a3cf05bd391b1bd6d6e09c3f3aa9a84c0"
+    },
+    {
+      "name": "scripts/matlab/c3/simulate_c3_component.m",
+      "sha256": "c4c9e71bac8e5f27fa4667e72ec8df66c727c75d8517dae3f31b24250213806d"
+    },
+    {
+      "name": "run_c3_verification.m",
+      "sha256": "607bb52a45ef13d7cc63cf7fd0e5f924cc87d9e309397d3ac20d972a9e964c35"
+    },
+    {
+      "name": "tests/matlab/test_therma_c3_components.m",
+      "sha256": "36306b5306ecfed712a96e838545ba4ac8485a27ca1a4bcf0f64bff29489e3e6"
+    }
+  ],
+  "assumptions_sha256": "91d52c84d06c7d2d49187ef80dd1c90f40d83f52f79e729fad51e93bb7c4d243",
+  "test_duration_s": 34.12511710000001,
+  "tests_passed": 13,
+  "tests_failed": 0,
+  "tests_incomplete": 0,
+  "original_report_sha256": "82f4706b453a256c4cbd47f8869b1e2026701ee75537b9ed899c711288cce86a",
+  "original_test_log_sha256": "284af533b87a94d33a0db90c8b381895ee65827cf598f61aeea370cd5349530c",
+  "source_and_assumptions_hashes_verified": true,
+  "package_provenance_hash_verified": true,
+  "independently_executed_in_cloud": false,
+  "source_of_execution": "User-supplied actual university report",
+  "numerical_diagnostics": "13 component tests passed, including analytical and energy assertions; raw maximum-error/residual values are not present in the supplied report/log.",
+  "generated_model_hashes_verified": false,
+  "raw_report_location": "Ignored outputs/c3/evidence/82f4706b453a256c/component_verification.json",
+  "public_summary_excludes_machine_paths": true
+}
