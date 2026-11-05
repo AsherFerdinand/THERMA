@@ -12,9 +12,36 @@ from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile
 
 from therma.validation.temperature import read_reference
+from therma.validation.temperature_study import FILES, IDS, load_pair
 
 
-def package(source: str, reference: Path, output: Path) -> dict[str, object]:
+def study_payload(index_file: Path) -> tuple[dict[str, bytes], dict[str, object]]:
+    """Keep original index-relative layout and every consumed receipt/export byte."""
+    _, checked = load_pair(index_file)
+    index = json.loads(index_file.read_text())
+    session = index_file.parent.name
+    payload = {}
+    base = "outputs/boptest/c27/"
+    for name in ["study_index.json", "contract.json"]:
+        payload[base + session + "/" + name] = (index_file.parent / name).read_bytes()
+    for experiment in IDS:
+        relative = index["experiments"][experiment]["folder"]
+        folder = index_file.parent.parent / relative
+        for name in ["completion.json", *FILES]:
+            payload[base + relative + "/" + name] = (folder / name).read_bytes()
+    return payload, {
+        "study_index": base + session + "/study_index.json",
+        "study_artifacts": [
+            {"path": name, "sha256": hashlib.sha256(raw).hexdigest()}
+            for name, raw in sorted(payload.items())
+        ],
+        "study_verification": checked,
+        "study_scope": "Original supplied no_solar_30/solar_30; refinements/events not bundled",
+    }
+
+
+def package(source: str, reference: Path, study: Path, output: Path) -> dict[str, object]:
+    study_files, study_provenance = study_payload(study)
     read_reference(reference)
     metadata = json.loads((reference / "reference_metadata.json").read_text())
     for name, expected in [
@@ -46,14 +73,16 @@ def package(source: str, reference: Path, output: Path) -> dict[str, object]:
         "equivalent_signals.json",
     ]:
         payload["outputs/boptest/c28/reference/" + name] = (reference / name).read_bytes()
+    payload.update(study_files)
     payload["C28_PACKAGE_PROVENANCE.json"] = (
         json.dumps(
             {
                 "source_commit": commit,
-                "status": "reference_ready_C27_results_required",
+                "status": "self_contained_controlled_pair_ready_MATLAB_execution_pending",
+                **study_provenance,
                 "matlab_execution_in_cloud": False,
                 "reference_csv_sha256": metadata["csv_sha256"],
-                "contains_C27_simulation_outputs": False,
+                "contains_C27_simulation_outputs": True,
             },
             indent=2,
         )
@@ -85,6 +114,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", required=True)
     parser.add_argument("--reference", type=Path, required=True)
+    parser.add_argument("--study", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    print(json.dumps(package(args.source, args.reference, args.output), indent=2))
+    print(json.dumps(package(args.source, args.reference, args.study, args.output), indent=2))

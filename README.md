@@ -173,3 +173,6 @@ Latest offline revision: [C2.7 R2024a SHA-256 compatibility](docs/C27_SHA256_COM
 
 C2.8 reference-temperature comparison is prepared: [guide](docs/C28_REFERENCE_VALIDATION.md)
 and [offline MATLAB instructions](START_C28.md). The supplied controlled pair has been compared against genuine BOPTEST air temperature: MAE improves by 66.14% and RMSE by 67.07% with solar. See the [engineering report](docs/C28_ENGINEERING_REPORT.md), including the unresolved execution-lineage qualification.
+
+The corrected C2.8 standalone package bundles the original two C2.7 trajectories;
+no external C2.7 directory is required. Follow [START_C28.md](START_C28.md).

@@ -73,3 +73,45 @@ def test_selective_pair_rejects_tampering(pair, change):
         pair.write_text(json.dumps(index))
     with pytest.raises(ValueError):
         load_pair(pair)
+
+
+def test_packaged_pair_preserves_original_bytes_and_runs_after_source_removed(pair, tmp_path):
+    import importlib.util
+    import shutil
+    from pathlib import Path
+
+    script = Path(__file__).resolve().parents[1] / "scripts/boptest/package_c28.py"
+    spec = importlib.util.spec_from_file_location("package_c28", script)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    payload, metadata = module.study_payload(pair)
+    assert len(payload) == 10
+    assert len(metadata["study_artifacts"]) == 10
+    empty = tmp_path / "empty-extraction"
+    for name, raw in payload.items():
+        path = empty / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(raw)
+    # Original study no longer exists; only the extracted tree can satisfy reads.
+    shutil.rmtree(pair.parent.parent)
+    extracted_index = empty / metadata["study_index"]
+    loaded, _ = load_pair(extracted_index)
+    assert set(loaded) == set(IDS)
+    for artifact in metadata["study_artifacts"]:
+        assert file_hash(empty / artifact["path"]) == artifact["sha256"]
+
+
+def test_packaging_rejects_missing_original_trajectory(pair):
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "package_c28", Path(__file__).resolve().parents[1] / "scripts/boptest/package_c28.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    index = json.loads(pair.read_text())
+    folder = pair.parent.parent / index["experiments"]["solar_30"]["folder"]
+    (folder / "evaluation.csv").unlink()
+    with pytest.raises(FileNotFoundError):
+        module.study_payload(pair)

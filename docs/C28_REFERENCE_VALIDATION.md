@@ -149,7 +149,7 @@ event energy logs or generated models. Development source includes only derived
 analysis reports/figures and hashes; raw uploads/reference CSV stay under ignored
 outputs and the separate offline transfer package.
 
-## Offline delivery
+## Previous incomplete delivery (superseded)
 
 [Download the C2.8 MATLAB reference/comparison ZIP](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C28_REFERENCE_MATLAB_2026-11-05.zip).
 Read START_C28.md after extraction. This package deliberately reads the existing
@@ -159,3 +159,25 @@ SHA-256: `c27596e46cc6d89a081d5515f023311cd04331141032962acb8782d1c286f6a3`.
 Pinned source: `a2a7f1be518f4a8f1b09e8b7b4cc961daf2610c7`.
 Uploaded bytes were verified by an independent GitHub fetch. Work/main and all
 previous transfer artifacts were preserved. See C28_REFERENCE_DELIVERY.json.
+
+## Standalone-package correction
+
+The earlier THERMA_C28_REFERENCE_MATLAB_2026-11-05.zip omitted the original C2.7
+study and required an external project directory. It does not meet standalone
+execution requirements. Use the newer [THERMA_C28_STANDALONE_MATLAB_2026-11-05.zip](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C28_STANDALONE_MATLAB_2026-11-05.zip).
+
+The preserved original uploads were recovered from ignored outputs/boptest/c27.
+The corrected packager requires --study, validates it using the existing selective
+controlled-pair receipt checks, and bundles ten original files: study_index.json,
+contract.json and completion.json/evaluation.csv/comparison_metadata.json/
+replay_run.json for each of no_solar_30 and solar_30. All original bytes/hashes and
+index-relative paths are preserved. The unmodified index also lists refinements;
+these are not supplied, included or independently certified by this comparison.
+
+C28_PACKAGE_PROVENANCE.json records the bundled relative study_index and all ten
+original file hashes. The no-argument MATLAB function resolves and verifies this
+local bundle before comparing. It never requires a sibling C2.7 project folder.
+START_C28.md contains the complete three-command offline workflow. Numerical
+results, scientific qualifications, source/reference inputs and physics are
+unchanged. Raw trajectories are kept out of development commits and shipped only
+in the separate transfer ZIP.

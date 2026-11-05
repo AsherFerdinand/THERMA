@@ -1217,3 +1217,21 @@ an independent GitHub fetch verified ZIP byte identity. The authorized network
 route succeeded after ordinary proxy access failed. Existing artifacts, work/main,
 reference data and prior results preserved. Delivery metadata:
 docs/C28_REFERENCE_DELIVERY.json. MATLAB reproduction and lineage review pending.
+
+## C2.8 standalone packaging correction — 2026-11-05
+
+User found that the earlier offline package omitted the C2.7 trajectories and
+failed after their external C2.7 directory was deleted. Recovered the ten original
+supplied study files from preserved local outputs, without regeneration or any
+synthetic replacement. Updated packager to require and validate the original study,
+include the two comparison cases with unchanged bytes/relative layout, and record
+all file hashes. Updated MATLAB default discovery to use and verify the bundle's
+explicit local index. Replaced external-directory instructions with the standalone
+three-command workflow. Existing numerical results/qualifications and physics are
+preserved. MATLAB R2024a execution remains pending university confirmation.
+
+Checks before packaging: 198 Python tests passed (22.15 s), Ruff lint/format,
+strict mypy (13 modules), MATLAB static lint (46 files), archive integrity and
+14 replay mappings passed. All existing C2.8 report/figure/metric checksums match.
+Added a MATLAB packaged-data integration test invoking compare_boptest_c28() and
+checking PNG/FIG generation plus original MAE/RMSE; it remains unexecuted here.

@@ -2,10 +2,24 @@ function output = compare_boptest_c28(indexFile,referenceFolder)
 %COMPARE_BOPTEST_C28 Read-only C2.7 air-temperature comparison; no simulations.
 root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));
 if nargin<1 || strlength(string(indexFile))==0
-    candidates=dir(fullfile(root,'outputs','boptest','c27','*','study_index.json'));
-    assert(numel(candidates)==1,'THERMA:C28Study', ...
-        'Expected one C2.7 study; pass its study_index.json path explicitly. Found %d.',numel(candidates));
-    indexFile=fullfile(candidates(1).folder,candidates(1).name);
+    packageFile=fullfile(root,'C28_PACKAGE_PROVENANCE.json');
+    if isfile(packageFile)
+        package=jsondecode(fileread(packageFile));
+        assert(isfield(package,'study_index') && isfield(package,'study_artifacts'), ...
+            'THERMA:C28Package','Old incomplete package: download the standalone C2.8 ZIP.');
+        for k=1:numel(package.study_artifacts)
+            item=package.study_artifacts(k); file=bundledPath(root,item.path);
+            assert(isfile(file) && strcmp(boptest_file_sha256(file),item.sha256), ...
+                'THERMA:C28Package','Missing/changed bundled original artifact: %s',item.path);
+        end
+        indexFile=bundledPath(root,package.study_index);
+    else
+        candidates=dir(fullfile(root,'outputs','boptest','c27','*','study_index.json'));
+        assert(numel(candidates)==1,'THERMA:C28Study', ...
+            ['No unique local study index (found %d). Extract the standalone C2.8 ZIP ' ...
+             'including its outputs folder; no external C2.7 folder is needed.'],numel(candidates));
+        indexFile=fullfile(candidates(1).folder,candidates(1).name);
+    end
 end
 if nargin<2, referenceFolder=fullfile(root,'outputs','boptest','c28','reference'); end
 assert(isfile(indexFile),'THERMA:C28Missing','Missing C2.7 study index: %s',indexFile);
@@ -168,4 +182,12 @@ assert(ischar(header),'THERMA:C28Header','Missing CSV header.');
 columns=strsplit(header,',');
 assert(numel(unique(columns))==numel(columns),'THERMA:C28Header','Duplicate CSV columns.');
 data=readtable(file,'VariableNamingRule','preserve');
+end
+
+function file=bundledPath(root,relative)
+relative=char(relative); parts=strsplit(relative,'/');
+assert(~startsWith(relative,'/') && ~contains(relative,':') && ...
+    ~contains(relative,'\') && ~any(strcmp(parts,'..')) && ~any(cellfun(@isempty,parts)), ...
+    'THERMA:C28Path','Unsafe bundled artifact path.');
+file=fullfile(root,parts{:});
 end
