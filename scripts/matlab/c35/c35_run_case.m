@@ -52,6 +52,7 @@ try
     % C3.4 exporter accepts the extended trace; all earlier fields retain their meanings.
     info.matlab_version=version; info.simulink=ver('Simulink');
     export_c34_results(folder,time,y,info,D);
+    appendCaseNote(fullfile(folder,'engineering_report.md'),c,plan);
     result=struct('status','executed_checks_pending','case_definition',c,'metrics',M, ...
         'diagnostics',D,'steady_diagnostics',steady,'elapsed_simulation_s',elapsed, ...
         'matlab_version',version,'simulink',ver('Simulink'),'signals',{info.signals}, ...
@@ -70,5 +71,15 @@ catch problem
     write_boptest_json(fullfile(folder,'failure.json'),struct('status','failed','case_definition',c, ...
         'matlab_version',version,'error',boptest_exception_diagnostic(problem)));
     rethrow(problem);
+end
+end
+
+function appendCaseNote(file,c,plan)
+fid=fopen(file,'a','n','UTF-8'); assert(fid>=0,'THERMA:C35Report','Cannot append case provenance.');
+cleanup=onCleanup(@() fclose(fid));
+fprintf(fid,'\n## C3.5 case identity\n\nCase %s, UA %.9g W/K. This report uses the unchanged C3.4 export template for a new C3.5 case, not the preserved baseline result.\n',c.id,c.UA_W_K);
+if c.solar
+    fprintf(fid,['The six solar values printed above are the PEAK ENVELOPE, not held forcing. ' ...
+        'Actual forcing is the saved piecewise-linear profile: %s Native solar_J records the measured absorbed energy.\n'],plan.solar.source);
 end
 end
