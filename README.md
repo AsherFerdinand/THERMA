@@ -109,3 +109,12 @@ Follow START_C28.md to compare existing C2.7 results; do not rerun simulations.
 Includes genuine BOPTEST reference temperatures, derived C2.8 metrics/figures and comparison code. Physics unchanged.
 Python comparison is complete; MATLAB reproduction and duplicate prior solar-CSV execution lineage remain pending. No convergence certification is claimed.
 SHA-256: `c27596e46cc6d89a081d5515f023311cd04331141032962acb8782d1c286f6a3`. Source: `a2a7f1be518f4a8f1b09e8b7b4cc961daf2610c7`.
+
+
+## C2.8 standalone reference-temperature comparison (MATLAB confirmation pending)
+
+Download [THERMA_C28_STANDALONE_MATLAB_2026-11-05.zip](THERMA_C28_STANDALONE_MATLAB_2026-11-05.zip), extract and read START_C28.md.
+Follow START_C28.md: compare_boptest_c28() uses the bundled original study inputs; no external C2.7 folder or simulation is required.
+Includes the ten original C2.7 study files, genuine BOPTEST reference temperatures and C2.8 comparison code/results. Original hashes and physics unchanged.
+Python comparison is complete; MATLAB reproduction and duplicate prior solar-CSV execution lineage remain pending. No convergence certification is claimed.
+SHA-256: `026801895c81ba6442f79530172bf7b6b359606e612c013a90dd0be19e369714`. Source: `58d97674a697f4ccbeb34563b40b5ce734d7aec2`.
