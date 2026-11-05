@@ -1,0 +1,9 @@
+{
+  "filename": "THERMA_C3_COMPONENT_VERIFICATION_R2024a_2026-11-05.zip",
+  "sha256": "c56dd84a80e10f3214379a75f320ef11fc45144004adb0ec04999b20751f9355",
+  "source_commit": "b5fd807d2e329d82d468e429655dafa9630d7f8e",
+  "files": 206,
+  "scope": "C3.1-C3.3 isolated illustrative components",
+  "matlab_execution": "pending",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C3_COMPONENT_VERIFICATION_R2024a_2026-11-05.zip"
+}

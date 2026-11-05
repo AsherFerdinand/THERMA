@@ -118,3 +118,12 @@ Follow START_C28.md: compare_boptest_c28() uses the bundled original study input
 Includes the ten original C2.7 study files, genuine BOPTEST reference temperatures and C2.8 comparison code/results. Original hashes and physics unchanged.
 Python comparison is complete; MATLAB reproduction and duplicate prior solar-CSV execution lineage remain pending. No convergence certification is claimed.
 SHA-256: `026801895c81ba6442f79530172bf7b6b359606e612c013a90dd0be19e369714`. Source: `58d97674a697f4ccbeb34563b40b5ce734d7aec2`.
+
+
+## C3.1-C3.3 isolated component verification (MATLAB confirmation pending)
+
+Download [THERMA_C3_COMPONENT_VERIFICATION_R2024a_2026-11-05.zip](THERMA_C3_COMPONENT_VERIFICATION_R2024a_2026-11-05.zip), extract and read START_C3.md.
+Run run_c3_verification() in MATLAB R2024a to execute the 13 native Simulink component tests. No reference datasets or external project folder is needed.
+Includes thermostat, asymmetric valve and mixed radiator builders, illustrative parameters and analytical tests. C1/C2 physics and prior results preserved.
+MATLAB execution remains pending. C3.4 integration and C3.5/C3.6 experiments are blocked at the requested component verification gate; no closed-loop C3 result is claimed.
+SHA-256: `c56dd84a80e10f3214379a75f320ef11fc45144004adb0ec04999b20751f9355`. Source: `b5fd807d2e329d82d468e429655dafa9630d7f8e`.
