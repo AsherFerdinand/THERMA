@@ -1235,3 +1235,18 @@ strict mypy (13 modules), MATLAB static lint (46 files), archive integrity and
 14 replay mappings passed. All existing C2.8 report/figure/metric checksums match.
 Added a MATLAB packaged-data integration test invoking compare_boptest_c28() and
 checking PNG/FIG generation plus original MAE/RMSE; it remains unexecuted here.
+
+Standalone delivery: THERMA_C28_STANDALONE_MATLAB_2026-11-05.zip (207 files),
+pinned source 58d97674a697f4ccbeb34563b40b5ce734d7aec2. Fresh extraction into an
+otherwise empty temporary directory passed CRC, all package manifest hashes and
+the ten original study-file hashes. A fresh-source Python analysis using only
+bundled inputs reproduced the complete preserved metrics JSON exactly and all
+three PNG/PDF figure pairs. This is not MATLAB execution or FIG verification.
+
+ZIP SHA256 026801895c81ba6442f79530172bf7b6b359606e612c013a90dd0be19e369714.
+Published to replay-transfer at fd823664688d6c07fa58b5296bd96b6f900af1b0;
+an independent GitHub fetch confirmed uploaded ZIP identity. Prior artifacts,
+work/main, physical model and numerical results preserved. Receipt:
+docs/C28_STANDALONE_DELIVERY.json. University R2024a no-argument comparison and
+its PNG/FIG generation still require confirmation; no external C2.7 folder is
+included in the corrected workflow.

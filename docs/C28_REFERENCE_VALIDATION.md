@@ -181,3 +181,13 @@ START_C28.md contains the complete three-command offline workflow. Numerical
 results, scientific qualifications, source/reference inputs and physics are
 unchanged. Raw trajectories are kept out of development commits and shipped only
 in the separate transfer ZIP.
+
+Corrected ZIP SHA-256:
+`026801895c81ba6442f79530172bf7b6b359606e612c013a90dd0be19e369714`.
+Pinned source: `58d97674a697f4ccbeb34563b40b5ce734d7aec2`.
+Fresh empty-directory extraction verified all manifest/original study hashes and
+reproduced the preserved full metrics JSON with the extracted Python analysis.
+Uploaded ZIP bytes were independently fetched and verified. MATLAB R2024a
+execution/FIG output remains pending, with a packaged-data integration test
+provided in tests/matlab/test_boptest_c28_standalone.m.
+See C28_STANDALONE_DELIVERY.json for the delivery receipt.
