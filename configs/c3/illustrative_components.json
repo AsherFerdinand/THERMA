@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "classification": "illustrative_assumptions_not_calibrated_not_BOPTEST",
+  "description": "Isolated C3.1-C3.3 engineering example, not a rated product or hydraulic network.",
+  "parameters": {
+    "setpoint_K": {"value": 294.15, "unit": "K", "source": "User example: 21 degC"},
+    "deadband_K": {"value": 1.0, "unit": "K", "source": "User example: 20.5/21.5 degC thresholds"},
+    "controller_period_s": {"value": 10, "unit": "s", "source": "Illustrative sampled controller; not a BOPTEST value"},
+    "controller_initial": {"value": 0, "unit": "1", "source": "Illustrative initially off controller"},
+    "opening_tau_s": {"value": 60, "unit": "s", "source": "Illustrative actuator e-folding time, not full stroke time"},
+    "closing_tau_s": {"value": 90, "unit": "s", "source": "Illustrative actuator e-folding time, not full stroke time"},
+    "valve_initial": {"value": 0, "unit": "1", "source": "Illustrative initially closed actuator"},
+    "water_mass_kg": {"value": 3, "unit": "kg", "source": "Illustrative lumped radiator water inventory"},
+    "water_cp_J_kgK": {"value": 4180, "unit": "J/(kg.K)", "source": "Constant-property water approximation for this illustrative temperature range"},
+    "metal_mass_kg": {"value": 20, "unit": "kg", "source": "Illustrative lumped radiator metal mass"},
+    "metal_cp_J_kgK": {"value": 500, "unit": "J/(kg.K)", "source": "Illustrative constant metal heat capacity; no specific product material claim"},
+    "nominal_flow_kg_s": {"value": 0.03, "unit": "kg/s", "source": "Illustrative imposed maximum forward water mass flow; not a pressure-network solution"},
+    "UA_W_K": {"value": 60, "unit": "W/K", "source": "Illustrative linear emitter conductance; not an EN 442 rating or calibration"},
+    "radiative_fraction": {"value": 0.35, "unit": "1", "source": "Illustrative fixed heat partition; not adopted as a calibrated BOPTEST parameter"},
+    "radiator_initial_K": {"value": 293.15, "unit": "K", "source": "Illustrative uniform water/metal initial temperature, 20 degC"},
+    "room_example_K": {"value": 293.15, "unit": "K", "source": "Illustrative isolated-component ambient boundary, 20 degC"},
+    "supply_example_K": {"value": 328.15, "unit": "K", "source": "Illustrative externally imposed supply boundary, 55 degC"}
+  }
+}

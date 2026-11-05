@@ -176,3 +176,8 @@ and [offline MATLAB instructions](START_C28.md). The supplied controlled pair ha
 
 The corrected C2.8 standalone package bundles the original two C2.7 trajectories;
 no external C2.7 directory is required. Follow [START_C28.md](START_C28.md).
+
+C3 component verification is prepared for MATLAB R2024a: [instructions](START_C3.md)
+and [equations, assumptions and staged gates](docs/C3_COMPONENTS.md). This increment
+covers C3.1–C3.3 only. It does not yet implement a closed-loop C2 zone or claim
+successful MATLAB execution, comfort performance or C3 reference accuracy.

@@ -57,7 +57,12 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [ ] C2.8: reproduce MATLAB FIG outputs and resolve duplicate prior solar CSV execution lineage.
 - [ ] Decide remaining glazing/exterior/moist-air physics scope from measured evidence; no calibration.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
-- [ ] Satisfy C3 readiness gates before hydronic implementation.
+- [x] C3.1–C3.3: prepare isolated native thermostat, asymmetric valve and mixed radiator
+  builders with explicitly illustrative assumptions and analytical MATLAB tests.
+- [ ] Execute C3 component verification in university MATLAB R2024a; review actual results.
+- [ ] C3.4: integrate a separate closed-loop C3 zone variant after the component gate.
+- [ ] C3.5/C3.6: implement six experiments, plots and comfort/energy metrics after integration checks.
+- [ ] Satisfy full reference readiness gates before C3 BOPTEST/system-accuracy claims; no C4.
 
 BOPTEST-A is static extraction; Phase B has executed the unchanged original FMU.
 C1 success is user-reported; its full local report is not in the repository.

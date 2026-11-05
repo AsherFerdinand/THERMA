@@ -1,5 +1,13 @@
 # C3 hydronic architecture — design only
 
+Current update: the user has authorized isolated illustrative C3.1–C3.3 component
+preparation. See [C3_COMPONENTS.md](C3_COMPONENTS.md). Native builders/tests are now
+prepared, but MATLAB execution and C3.4 integration are pending. The broader plan
+below is retained as historical reference scope, not a completed implementation.
+The current user explicitly permits labeled illustrative parameters for this
+isolated stage; no missing BOPTEST/product values are claimed sourced or calibrated.
+
+
 No C3 component is implemented. Start only after actual C2.7 same-release control,
 step refinement, input integrity and energy diagnostics have been reviewed. The
 36-room thesis network remains a separate preserved reference; begin with one

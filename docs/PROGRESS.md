@@ -1250,3 +1250,32 @@ work/main, physical model and numerical results preserved. Receipt:
 docs/C28_STANDALONE_DELIVERY.json. University R2024a no-argument comparison and
 its PNG/FIG generation still require confirmation; no external C2.7 folder is
 included in the corrected workflow.
+
+
+## C3.1–C3.3 component preparation — 2026-11-05
+
+Read the new C3 request and existing architecture/readiness/zone interfaces. The
+user explicitly permits labeled illustrative defaults for an independent emitter
+track. Preserved unresolved C2.8 solar execution lineage and all prior numerical
+results. Implemented separate native Simulink thermostat, asymmetric bounded valve
+and mixed water/metal radiator builders, explicit assumptions/units, actual MATLAB
+component driver, 13 analytical/limit tests and a staged offline verification runner.
+No BOPTEST radiator forcing is consumed and no Python physics solver was introduced.
+Thermostat state retention/sample timing, valve limits and signed radiator energy
+storage/flow interfaces are documented. Constant-property/linear-UA/air-as-radiant-
+sink and imposed-flow assumptions are explicit, not calibration or hydraulic closure.
+
+The user requires component verification before C3.4 and basic checks before
+C3.5/C3.6. MATLAB is unavailable here; therefore integration, the six engineering
+experiments and closed-loop comfort/energy plots are not implemented or claimed
+complete. Their coupling/scenario plan is documented, with C2 inputs 2/3 identified
+for future replacement without double counting. Three SLX component models will be
+generated/saved on university MATLAB; no prebuilt SLX or invented simulation outputs
+are supplied. New native model solver settings do not alter frozen C2 settings.
+
+Cloud checks: full Python suite 201 passed (21.59 s), Ruff lint/format (92 files),
+strict mypy (13 modules), MATLAB static lint (55 files), evidence archive/14 replay
+mappings and wheel/sdist builds passed. All C2.8 and C2.6C result checksums match.
+The 13 new MATLAB tests are unexecuted; static checks and packaging tests do not
+establish numerical Simulink correctness. Runner writes actual test console text,
+per-source/config hashes, release and solver settings on university execution.

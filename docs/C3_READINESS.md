@@ -1,5 +1,13 @@
 # C3 hydronic integration contract and gates
 
+Current update: the user has authorized isolated illustrative C3.1–C3.3 component
+preparation. See [C3_COMPONENTS.md](C3_COMPONENTS.md). Native builders/tests are now
+prepared, but MATLAB execution and C3.4 integration are pending. The broader plan
+below is retained as historical reference scope, not a completed implementation.
+The current user explicitly permits labeled illustrative parameters for this
+isolated stage; no missing BOPTEST/product values are claimed sourced or calibrated.
+
+
 No hydronic network is implemented in this sprint. The reduced C2 thermal zone is
 prepared for local verification; it is not yet reference-exact or MATLAB-verified.
 
