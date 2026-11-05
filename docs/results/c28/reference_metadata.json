@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "compatible_reference_sources": [
+    {
+      "manifest_sha256": "07f761b8cdf0e001b416419833b44bf62144698f6f24f17f1517616fc1f3f247",
+      "trajectory_sha256": "36a8db48d0283868a04310ed6447b358ee854846fdbd9c03250bca0c06336093",
+      "signals_sha256": "e1556e0707446866792aae7e3ba145a73ebe7860b5d8c473ebce6783c86c3b92",
+      "basis": "Original replay source"
+    },
+    {
+      "manifest_sha256": "9fadac5eb6c38f0e9710cd5e12c85398517aab57c6ca511f1618c6109ea5020c",
+      "trajectory_sha256": "dda1d1c29a704bcbf96846c936cd1b621651bd29c59403c69f449a8a72ceecdd",
+      "signals_sha256": "1b41b06fcd7be8376eb5756644dc8aa0f8b4a556c482b2c9095e583810b57adf",
+      "basis": "Exact numerical equality of all 61 original columns over full 21 days"
+    }
+  ],
+  "status": "genuine_reference_extracted_not_C28_validation",
+  "scenario": {
+    "name": "typical_heat_day",
+    "center_day": 341,
+    "evaluation_start_day": 334,
+    "evaluation_end_day": 348,
+    "warmup_days": 7,
+    "initialization_time_s": 28252800,
+    "evaluation_start_s": 28857600,
+    "evaluation_end_s": 30067200,
+    "reset_at_evaluation_start": false
+  },
+  "boptest_commit": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+  "ideas_commit": "f1fdd8b22d39dc50297c47b6433e44381e40d0ff",
+  "fmu_sha256": "365b3085d97cc4620c06b6036156126a056d7f160fcc4f181d6b2fac4b05743b",
+  "source_manifest_sha256": "07f761b8cdf0e001b416419833b44bf62144698f6f24f17f1517616fc1f3f247",
+  "source_trajectory_sha256": "36a8db48d0283868a04310ed6447b358ee854846fdbd9c03250bca0c06336093",
+  "source_signals_sha256": "e1556e0707446866792aae7e3ba145a73ebe7860b5d8c473ebce6783c86c3b92",
+  "replay_packet_sha256": "c4b3fd86502908779eb5d8fbcdafabe9b6e8f8e71b7a305cfa5621e718d1517c",
+  "csv_sha256": "b2c01b8fa7eace3a6d68e6e6c67b02f44574522c9ceb38319f1faa6803ec2f4e",
+  "time_unit": "s",
+  "time_basis": "absolute_simulation_seconds",
+  "sample_count": 40321,
+  "sampling_s": 30,
+  "signals": [
+    {
+      "column": "air_temperature_K",
+      "source": "mod.case900Template.TAir",
+      "quantity": "air_temperature",
+      "unit": "K"
+    },
+    {
+      "column": "operative_temperature_K",
+      "source": "reaTRoo_y",
+      "quantity": "operative_temperature",
+      "unit": "K"
+    }
+  ],
+  "method": "Select original 30 s samples, exclude warm-up; no resampling or FMU rerun",
+  "MATLAB_execution_in_cloud": false
+}

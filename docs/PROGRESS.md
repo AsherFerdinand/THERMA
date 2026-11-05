@@ -1160,3 +1160,48 @@ Published on replay-transfer at 02473b7cb0a52a84e00f5611eb348e759192ce55;
 an independent GitHub fetch confirmed uploaded ZIP byte identity. Old transfer
 artifacts and main preserved. Delivery receipt: docs/C27_SHA256_FIX_DELIVERY.json.
 University run_verification("quick") acceptance remains pending.
+
+## C2.8 reference-temperature workflow — 2026-11-05
+
+User reports completed four C2.7 university runs and approximately 7.154 °C maximum
+solar/no-solar difference. No corresponding study_index or outputs are present in
+this workspace, so completion and this difference remain user-reported; no C2.8
+metrics or three-curve results can be produced here yet. Existing C2.6C evidence is
+preserved and is not relabeled as same-release C2.7 validation.
+
+Recovered the exact original replay reference from existing verified FMU artifacts;
+no FMU or MATLAB simulation rerun. Exported 40,321 native 30 s evaluation samples
+with genuine air and operative temperatures, complete provenance and original
+source manifests/signals. Confirmed all 61 original columns numerically identical
+in the later solar extraction over 21 days, allowing its distinct source hashes
+explicitly. Extracted CSV SHA256 b2c01b8fa7eace3a6d68e6e6c67b02f44574522c9ceb38319f1faa6803ec2f4e.
+
+Added reproducible extraction, strict standalone MATLAB comparison, metrics and
+figure/report generation, software tests, offline packaging and execution guide.
+No physics, solvers, reference inputs or prior benchmark results changed. C2.8 is
+incomplete pending actual C2.7 data comparison and university MATLAB execution.
+
+
+C2.8 evidence update: all ten actual attachments received. Index-to-contract,
+index-to-receipt and all six consumed export hashes pass. Both supplied reports
+state MATLAB/Simulink R2024a; source/solver/parameter identities match the study.
+Parsed 58,008 no-solar and 59,292 solar evaluation samples; aligned to 40,321 native
+reference timestamps, no extrapolation or warm-up. MAE 2.340532264→0.792534195 K
+(66.1387% reduction); RMSE 2.805500413→0.923975534 K (67.0656% reduction).
+All 14 daily MAEs improve; maximum trajectory separation is 7.153831909 K.
+Generated three actual PNG/PDF pairs, metrics JSON/CSV, daily errors, provenance and
+engineering report. Raw attachments and prior C2.6C baseline remain unchanged.
+
+Execution-lineage qualification: solar evaluation.csv is byte-identical to prior
+C2.6C evidence whose report recorded R2021a, while the new contract/report state
+R2024a. This numerical comparison is valid for the supplied trajectories but does
+not establish an independent fresh same-release run. Original university logs,
+solver metadata and event files should resolve lineage. Refinement data/event logs
+were not supplied or rehashed. MATLAB regressions/FIG reproduction remain pending;
+no new simulations, recalibration, physics or C2.9 work performed.
+
+Final checks: 196 Python tests passed (23.59 s); Ruff lint/format (88 files),
+strict mypy (13 modules), MATLAB static lint (45 files), archived evidence check,
+14 replay mappings and wheel/sdist builds passed. Prior C2.6C checksums match.
+MATLAB tests remain unexecuted here. Ordinary GitHub access currently fails at the
+network proxy; publication will be attempted with the available authorized route.

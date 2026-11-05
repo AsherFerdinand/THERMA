@@ -1,0 +1,81 @@
+{
+  "status": "completed_controlled_reduced_zone_reference_comparison",
+  "real_world_validation": false,
+  "sample_count": 40321,
+  "evaluation_start_s": 28857600.0,
+  "evaluation_end_s": 30067200.0,
+  "reference_quantity": "air_temperature",
+  "reference_source": "mod.case900Template.TAir",
+  "bias_convention": "THERMA minus BOPTEST",
+  "metrics": {
+    "no_solar_30": {
+      "MAE_K": 2.3405322638114505,
+      "RMSE_K": 2.8055004126523566,
+      "maximum_absolute_error_K": 7.43410485371686,
+      "bias_K": -2.3351963931473314
+    },
+    "solar_30": {
+      "MAE_K": 0.7925341950338989,
+      "RMSE_K": 0.9239755340437169,
+      "maximum_absolute_error_K": 2.3971545332768756,
+      "bias_K": -0.4506132799970814
+    }
+  },
+  "solar_changes": {
+    "MAE_K": {
+      "baseline_K": 2.3405322638114505,
+      "solar_K": 0.7925341950338989,
+      "signed_change_K": -1.5479980687775516,
+      "error_magnitude_reduction_K": 1.5479980687775516,
+      "error_magnitude_reduction_percent": 66.13871950035447
+    },
+    "RMSE_K": {
+      "baseline_K": 2.8055004126523566,
+      "solar_K": 0.9239755340437169,
+      "signed_change_K": -1.8815248786086398,
+      "error_magnitude_reduction_K": 1.8815248786086398,
+      "error_magnitude_reduction_percent": 67.06557126576294
+    },
+    "maximum_absolute_error_K": {
+      "baseline_K": 7.43410485371686,
+      "solar_K": 2.3971545332768756,
+      "signed_change_K": -5.036950320439985,
+      "error_magnitude_reduction_K": 5.036950320439985,
+      "error_magnitude_reduction_percent": 67.75463111636958
+    },
+    "bias_K": {
+      "baseline_K": -2.3351963931473314,
+      "solar_K": -0.4506132799970814,
+      "signed_change_K": 1.88458311315025,
+      "error_magnitude_reduction_K": 1.88458311315025,
+      "error_magnitude_reduction_percent": 80.70340972950228
+    }
+  },
+  "worst_errors": {
+    "no_solar_30": {
+      "time_s": 29349510.0,
+      "evaluation_day": 5.693402777777778,
+      "signed_error_K": -7.43410485371686,
+      "THERMA_degC": 13.280689270673918,
+      "BOPTEST_degC": 20.714794124390778
+    },
+    "solar_30": {
+      "time_s": 29111610.0,
+      "evaluation_day": 2.9399305555555557,
+      "signed_error_K": -2.3971545332768756,
+      "THERMA_degC": 22.373660399374614,
+      "BOPTEST_degC": 24.77081493265149
+    }
+  },
+  "maximum_solar_minus_no_solar_temperature_difference_K": 7.153831908628035,
+  "maximum_absolute_solar_no_solar_temperature_difference_K": 7.153831908628035,
+  "limitations": [
+    "Prescribed reference radiator heat, not independent hydronic prediction",
+    "Reduced initial-state/envelope/window/airflow representation",
+    "Full C2.7 convergence and event energy evidence not supplied",
+    "MATLAB comparison script unexecuted in cloud; metrics/plots generated in Python",
+    "Maximum errors are sampled, not bounds between timestamps",
+    "Uploaded solar CSV matches C2.6C solar evidence previously reported R2021a; new report/contract state R2024a. Independent fresh-run lineage is not established."
+  ],
+  "execution_lineage_status": "review_required_duplicate_prior_solar_payload"
+}

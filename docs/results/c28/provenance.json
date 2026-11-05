@@ -1,0 +1,42 @@
+{
+  "study_index_sha256": "a71f5519bd0341b12a5bb87a9e9e24726679ef85bcafa343ec1e76d8e7da2ab2",
+  "contract_sha256": "964ead36905b6275ef65bf922dcc78245d813a9fa0add516ba31cac47ffd5d0a",
+  "matlab_version": "24.1.0.2537033 (R2024a)",
+  "independent_MATLAB_execution": false,
+  "verification_scope": "Supplied controlled-pair artifacts only; not all C2.7 outputs",
+  "no_solar_30": {
+    "completion_sha256": "0f8200d16228427977c85603b893f471a7afafcd7a3fad4281bb4e13d57e914d",
+    "supplied_artifacts": {
+      "evaluation.csv": "b32f1aebcf8382c2dabd4c90dc3dbe66466b3891f02ebcc3ecacabf16754796c",
+      "comparison_metadata.json": "aad5023ac0dfae40b5c257557f055de96b52c0f3d5e8a98c4600c76dfe3d3b58",
+      "replay_run.json": "1b1de5f644e19b15b3953e0d59f9eb9ad595c3a076e9250d7a0ca8b45acdc316"
+    },
+    "unverified_unsupplied_artifacts": [
+      "THERMA_BOPTEST_ThermalZone_C2.slx",
+      "energy_events.csv",
+      "solver_metadata.json"
+    ],
+    "samples": 58008,
+    "maximum_sample_gap_s": 30.0,
+    "packet_sha256": "c4b3fd86502908779eb5d8fbcdafabe9b6e8f8e71b7a305cfa5621e718d1517c"
+  },
+  "solar_30": {
+    "completion_sha256": "6bd2d51938e90bd420a1cb00e6cc53ec18b54012c9d2250daaa6fcee26fa2590",
+    "supplied_artifacts": {
+      "evaluation.csv": "b1c340ae56d42877ff000104f921dc42f43faa41f040f7e5c1a9230e6255cb0d",
+      "comparison_metadata.json": "d45f35a876d5de0c1b566616b19072f89d4ae0a5c6e743fa30153ca774e012d2",
+      "replay_run.json": "ede4a7753bd5918535b96d3815705a3b6eac4867e037bb232a3355ea6a916d07"
+    },
+    "unverified_unsupplied_artifacts": [
+      "THERMA_BOPTEST_ThermalZone_C2.slx",
+      "energy_events.csv",
+      "solver_metadata.json"
+    ],
+    "samples": 59292,
+    "maximum_sample_gap_s": 30.0,
+    "packet_sha256": "5f923d220e77bad415559572b155c5aaa776407352f0930ee0c2f9558fda33a3"
+  },
+  "solar_csv_already_present_in_C26C_evidence": true,
+  "reference_metadata_sha256": "77c0589e5c38fca34a0e1ec915f97fe5d443b454510d25c2b2f45c9632929d2d",
+  "reference_csv_sha256": "b2c01b8fa7eace3a6d68e6e6c67b02f44574522c9ceb38319f1faa6803ec2f4e"
+}

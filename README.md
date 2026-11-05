@@ -170,3 +170,6 @@ The minimal MATLAB API probe/regressions remain unexecuted in cloud; university
 confirmation is required. Thermal physics, solver settings and inputs are unchanged.
 
 Latest offline revision: [C2.7 R2024a SHA-256 compatibility](docs/C27_SHA256_COMPATIBILITY_FIX.md). University quick verification is required before the full benchmark.
+
+C2.8 reference-temperature comparison is prepared: [guide](docs/C28_REFERENCE_VALIDATION.md)
+and [offline MATLAB instructions](START_C28.md). The supplied controlled pair has been compared against genuine BOPTEST air temperature: MAE improves by 66.14% and RMSE by 67.07% with solar. See the [engineering report](docs/C28_ENGINEERING_REPORT.md), including the unresolved execution-lineage qualification.

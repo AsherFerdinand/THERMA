@@ -51,6 +51,10 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
 - [x] Prepare offline R2021a quick/full package, actual-only study analyzer and six PNG/PDF outputs.
 - [x] Document C3 hydronic architecture options; design only, no implementation.
 - [ ] Execute C2.7 university quick/full runs and analyze actual controlled/convergence/energy results.
+  User reports execution completed; actual study outputs are not available here for review.
+- [x] C2.8: recover genuine pinned air/operative reference; prepare standalone offline MATLAB comparison.
+- [x] C2.8: inspect supplied controlled pair and generate reference-aligned numerical metrics/plots.
+- [ ] C2.8: reproduce MATLAB FIG outputs and resolve duplicate prior solar CSV execution lineage.
 - [ ] Decide remaining glazing/exterior/moist-air physics scope from measured evidence; no calibration.
 - [ ] Resolve exact-reference physics and replay initialization before BOPTEST accuracy claims.
 - [ ] Satisfy C3 readiness gates before hydronic implementation.
