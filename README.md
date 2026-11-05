@@ -127,3 +127,12 @@ Run run_c3_verification() in MATLAB R2024a to execute the 13 native Simulink com
 Includes thermostat, asymmetric valve and mixed radiator builders, illustrative parameters and analytical tests. C1/C2 physics and prior results preserved.
 MATLAB execution remains pending. C3.4 integration and C3.5/C3.6 experiments are blocked at the requested component verification gate; no closed-loop C3 result is claimed.
 SHA-256: `c56dd84a80e10f3214379a75f320ef11fc45144004adb0ec04999b20751f9355`. Source: `b5fd807d2e329d82d468e429655dafa9630d7f8e`.
+
+
+## C3.4 independent closed-loop integration (MATLAB confirmation pending)
+
+Download [THERMA_C34_CLOSED_LOOP_R2024a_2026-11-05.zip](THERMA_C34_CLOSED_LOOP_R2024a_2026-11-05.zip), extract and read START_C34.md.
+Run run_c34_verification() in MATLAB R2024a: 13 component plus 4 integration/CSV tests, followed by one illustrative cold-start run. No external dataset/project folder is needed.
+Includes copied-C2 integration builder, unchanged verified C3 components, explicit boundary conditions, source-only public R2025a component evidence summary, energy diagnostics and plotting code. C2/C2.8 results preserved.
+Component evidence: 13 passed, R2025a. C3.4 MATLAB execution remains pending; no actual integration result or plot is claimed. C3.5/C3.6 remain gated.
+SHA-256: `690da942c3311cc1d803ba830d949500edf00fe4f919224ae5f0a8a8ecda3cf2`. Source: `cd95158c28ee125dfb2a92ea74fb7365761f2ebb`.

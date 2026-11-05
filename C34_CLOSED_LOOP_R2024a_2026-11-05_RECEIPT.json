@@ -1,0 +1,9 @@
+{
+  "filename": "THERMA_C34_CLOSED_LOOP_R2024a_2026-11-05.zip",
+  "sha256": "690da942c3311cc1d803ba830d949500edf00fe4f919224ae5f0a8a8ecda3cf2",
+  "source_commit": "cd95158c28ee125dfb2a92ea74fb7365761f2ebb",
+  "files": 222,
+  "scope": "C3.4 closed-loop integration",
+  "matlab_execution": "pending",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C34_CLOSED_LOOP_R2024a_2026-11-05.zip"
+}
