@@ -1344,3 +1344,44 @@ results preserved. Delivery receipt: docs/C34_INTEGRATION_DELIVERY.json.
 Original component log bytes (including final blank line) retained; .gitattributes
 prevents text normalization/diff whitespace rewriting of that evidence file.
 C3.4 MATLAB execution remains pending. C3.5/C3.6 and C4 not implemented.
+
+
+## C3.5 engineering investigation preparation — 2026-11-05
+
+New branch feat/c35-heating-investigation. Actual supplied C3.4 report/log reviewed:
+17 passed, 0 failed/incomplete, R2025a, tests 57.9763809 s, nominal 86400 s simulation
+completed (reported simulation duration 2.0866746 s). All 15 recorded integration
+source hashes, baseline configuration and prior component-summary hashes match.
+Maximum native integrated errors: radiator 2.21701339e-6 J, combined 9.26294597e-5 J;
+heating/partition mismatches zero. Baseline reported max air 17.70689053 °C,
+max absolute heat 1586.915949 W, delivered 36.86579156 kWh, water 37.04066826 kWh,
+zero observed demand transitions. Full trajectory/final air not supplied; no
+tracking/inertia/heat-loss history is invented. Raw report/log preserved unchanged
+under ignored outputs/c3/evidence/b92885c8e4b36c37; public selected/path-redacted
+copies and original hashes archived in verification/c3/c34_gate.
+
+Attached request ends at “Maximum integrated” midway through the metric table.
+Implemented all complete A–F requirements as a standalone MATLAB investigation:
+priority four-case UA run; one-factor supply/outdoor cases; paired explicit 3.6 kWh
+absorbed-solar profile; conditional observed-controller selection/fallback; baseline
+and switched-case 10/5/1 s comparisons. Cases use new generated workspaces only;
+C3.4 baseline and verified builders/components remain unchanged. Native additional
+loss/solar integrators, continuous-time temperature metrics, hysteresis/valve audit,
+steady-load/all-on eigenvalue diagnostic and measured reporting distinguish capacity,
+inertia and loss. Resuming requires identical source/config/release contract plus
+complete case artifact hashes. No case is altered to manufacture target attainment.
+
+MATLAB is unavailable here, so new cases/figures/metrics/convergence remain pending
+university execution. Only the incoming baseline evidence is an actual result.
+No C2.8 accuracy reuse, physical recalibration, Python physics solver, ML or C4.
+
+
+Checks: 209 Python tests passed (21.06 s), targeted source/evidence/package tests
+11/11 passed, Ruff lint/format (101 files), mypy (13 modules), MATLAB static lint
+(73 files), evidence archive/14 replay mappings and wheel/sdist builds passed.
+All C2.8/C2.6C result hashes match; all reported C3.4 source/config hashes remain
+unchanged. Fixed packaging profile validation so integration/investigation modes
+reject missing stage-specific entrypoints/dependencies, with a regression test.
+The new 16-test MATLAB gate (13 existing plus 3 new) is unexecuted here; a passed
+actual gate is reused only with matching source/release contract and log hash.
+No new study simulation result or convergence claim is made.

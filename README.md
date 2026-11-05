@@ -187,3 +187,9 @@ The separate C3.4 closed-loop integration generator and standalone verification
 workflow are prepared for R2024a: [instructions](START_C34.md),
 [engineering design/evidence limits](docs/C34_INTEGRATION.md). Integration execution
 is pending; C3.5/C3.6 remain gated. No C3.4 performance result is claimed.
+
+C3.5 investigation is prepared on its own branch: [instructions](START_C35.md),
+[study/metric definitions](docs/C35_INVESTIGATION.md), and
+[actual incoming C3.4 baseline review](docs/C35_BASELINE_REVIEW.md). The supplied
+C3.4 R2025a report confirms 17/17 tests and energy closure; new C3.5 sweeps have
+not been executed in cloud. Start with the four-case UA study before all cases.

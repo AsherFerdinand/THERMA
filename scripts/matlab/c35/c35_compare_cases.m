@@ -1,0 +1,26 @@
+function R=c35_compare_cases(first,second,step)
+%C35_COMPARE_CASES Shared-grid sensitivity only; no automatic convergence claim.
+a=jsondecode(fileread(fullfile(first,'case_result.json')));
+b=jsondecode(fileread(fullfile(second,'case_result.json')));
+x=readmatrix(fullfile(first,'integration_trajectory.csv'),'NumHeaderLines',1);
+y=readmatrix(fullfile(second,'integration_trajectory.csv'),'NumHeaderLines',1);
+[ta,ia]=unique(x(:,1),'last'); [tb,ib]=unique(y(:,1),'last');
+assert(ta(1)==tb(1) && ta(end)==tb(end),'THERMA:C35Alignment','Comparison coverage differs.');
+grid=(ta(1):step:ta(end))'; if grid(end)~=ta(end), grid(end+1)=ta(end); end
+airA=interp1(ta,x(ia,1+find(strcmp(a.signals,'air_K'))),grid,'linear');
+airB=interp1(tb,y(ib,1+find(strcmp(b.signals,'air_K'))),grid,'linear');
+error=airB-airA;
+eventA=x([false;diff(x(:,1+find(strcmp(a.signals,'demand'))))~=0],1);
+eventB=y([false;diff(y(:,1+find(strcmp(b.signals,'demand'))))~=0],1);
+eventDifference=[];
+if numel(eventA)==numel(eventB), eventDifference=eventB-eventA; end
+R=struct('first_case',a.case_definition.id,'second_case',b.case_definition.id, ...
+    'temperature_max_abs_difference_K',max(abs(error)), ...
+    'temperature_RMSE_difference_K',sqrt(mean(error.^2)), ...
+    'final_air_difference_K',b.metrics.final_air_degC-a.metrics.final_air_degC, ...
+    'delivered_energy_difference_kWh',b.metrics.delivered_kWh-a.metrics.delivered_kWh, ...
+    'switching_count_difference',b.metrics.thermostat_transitions-a.metrics.thermostat_transitions, ...
+    'first_switch_times_s',eventA,'second_switch_times_s',eventB,'paired_event_time_differences_s',eventDifference, ...
+    'event_pairing_valid',numel(eventA)==numel(eventB),'common_samples',numel(grid), ...
+    'common_grid_step_s',step,'convergence_claim','not_automatically_established');
+end

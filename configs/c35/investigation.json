@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "classification": "illustrative_C35_one_factor_study_not_reference_validation",
+  "UA_W_K": [60,90,120,180],
+  "supply_degC": [40,45,55,65],
+  "outdoor_degC": [-5,0,5,10],
+  "max_steps_s": [10,5,1],
+  "solar": {
+    "time_fraction": [0,0.25,0.5,0.75,1],
+    "relative_power": [0,0,1,0,0],
+    "peak_total_W": 600,
+    "surface_weights": [0.1,0.1,0.1,0.1,0.1,0.5],
+    "source": "Illustrative absorbed indoor solar: 06:00-18:00 triangle, 600 W noon peak, 3.6 kWh/day; half to floor, remaining half equally to walls/roof. No irradiance/optics/weather validation."
+  },
+  "controller_fallback": {
+    "UA_W_K": 180,
+    "supply_degC": 65,
+    "outdoor_degC": 20,
+    "initial_zone_degC": 20,
+    "initial_radiator_degC": 20,
+    "source": "Only if no A/B case reaches 21 degC: separate illustrative controller probe, not a successful baseline or one-factor comparison. If this still fails to switch, report blocked without automatic escalation."
+  },
+  "valve_reconstruction_tolerance": 0.00001,
+  "near_closed_opening": 0.001,
+  "sampling_for_comparisons_s": 60,
+  "missing_threshold_time_s": -1,
+  "notes": [
+    "All cases preserve the frozen C3.4 baseline file and use new generated workspaces.",
+    "UA changes do not change water/metal mass or nominal mass flow.",
+    "Native cumulative energy states remain the energy source; trace interpolation is only for time/temperature metrics.",
+    "Maximum-step sensitivity is reported as measured differences, not automatically declared converged."
+  ]
+}

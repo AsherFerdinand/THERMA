@@ -1,0 +1,13 @@
+Running test_therma_c3_components
+.......... ...
+Done test_therma_c3_components
+__________
+
+Running test_therma_c34_integration
+Reduced C2 model: <redacted_local_path>/outputs/boptest\simulink_c2\tpd578cfeb_ff25_467f_b6be_612e83deca6f\THERMA_BOPTEST_ThermalZone_C2.slx
+.Reduced C2 model: <redacted_local_path>/outputs/boptest\simulink_c2\tp9de4dfe7_53e5_4ba8_af23_85a5265313f7\THERMA_BOPTEST_ThermalZone_C2.slx
+.Reduced C2 model: <redacted_local_path>/outputs/boptest\simulink_c2\tpb740fd9b_d907_49e2_8b43_05d586af0b5b\THERMA_BOPTEST_ThermalZone_C2.slx
+..
+Done test_therma_c34_integration
+__________
+

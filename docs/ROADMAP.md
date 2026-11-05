@@ -62,8 +62,10 @@ Keep its parameters separate from the thesis and the unvalidated EN 12831 builde
   builders with explicitly illustrative assumptions and analytical MATLAB tests.
 - [x] Review actual C3 component report/log: 13 passed, 0 failed/incomplete, university R2025a; source/config/package hashes match.
 - [x] C3.4: prepare a separate native closed-loop C2-copy variant, integration tests, energy diagnostics and standalone runner.
-- [ ] Execute C3.4 verification in university MATLAB (R2024a target); review actual traces/energy checks before C3.5/C3.6.
-- [ ] C3.5/C3.6: implement six experiments, plots and comfort/energy metrics after integration checks.
+- [x] Review actual C3.4 R2025a report: 17/17 tests and 24 h simulation passed with native energy diagnostics; full trajectory not supplied.
+- [x] Prepare C3.5 one-factor UA/supply/outdoor/solar investigation, conditional controller selection, native-energy metrics and max-step comparisons.
+- [ ] Execute C3.5 new cases in university MATLAB and review actual capacity/inertia/loss, controller and sensitivity evidence.
+- [ ] Complete engineering conclusions from measured results; no convergence/regulation/solar-savings claim before those results.
 - [ ] Satisfy full reference readiness gates before C3 BOPTEST/system-accuracy claims; no C4.
 
 BOPTEST-A is static extraction; Phase B has executed the unchanged original FMU.

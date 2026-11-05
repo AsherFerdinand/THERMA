@@ -53,6 +53,25 @@ C34_REQUIRED = REQUIRED | {
 }
 
 
+C35_REQUIRED = C34_REQUIRED | {
+    "START_C35.md",
+    "run_c35_investigation.m",
+    "configs/c35/investigation.json",
+    "scripts/matlab/c35/c35_plan.m",
+    "scripts/matlab/c35/c35_build_case.m",
+    "scripts/matlab/c35/c35_run_case.m",
+    "scripts/matlab/c35/c35_metrics.m",
+    "scripts/matlab/c35/c35_time_metrics.m",
+    "scripts/matlab/c35/c35_steady_diagnostics.m",
+    "scripts/matlab/c35/c35_compare_cases.m",
+    "scripts/matlab/c35/c35_render.m",
+    "tests/matlab/test_therma_c35.m",
+    "verification/c3/c34_gate/summary.json",
+    "verification/c3/c34_gate/matlab_integration_test_log.redacted.txt",
+    "scripts/matlab/boptest/boptest_zone_analytical_network.m",
+}
+
+
 def package(source: str, output: Path, stage: str = "components") -> dict[str, object]:
     commit = subprocess.check_output(["git", "rev-parse", source + "^{commit}"]).decode().strip()
     raw = subprocess.check_output(["git", "archive", "--format=tar", commit])
@@ -63,9 +82,17 @@ def package(source: str, output: Path, stage: str = "components") -> dict[str, o
                 stream = archive.extractfile(member)
                 assert stream is not None
                 payload[member.name] = stream.read()
-    if not REQUIRED <= payload.keys():
+    profiles = {
+        "components": (REQUIRED, "START_C3.md", "C3"),
+        "integration": (C34_REQUIRED, "START_C34.md", "C34"),
+        "investigation": (C35_REQUIRED, "START_C35.md", "C35"),
+    }
+    if stage not in profiles:
+        raise ValueError("Unknown C3 package stage")
+    required, guide, prefix = profiles[stage]
+    if not required <= payload.keys():
         raise ValueError(
-            "Missing required component package files: " + str(REQUIRED - payload.keys())
+            "Missing required component package files: " + str(required - payload.keys())
         )
     if any(name.startswith("outputs/") for name in payload):
         raise ValueError(
@@ -73,19 +100,21 @@ def package(source: str, output: Path, stage: str = "components") -> dict[str, o
         )
     source_hashes = {name: hashlib.sha256(raw).hexdigest() for name, raw in payload.items()}
     # Offline entrypoint must describe C3, not the historical C2.7 root guide.
-    guide = "START_C34.md" if stage == "integration" else "START_C3.md"
-    prefix = "C34" if stage == "integration" else "C3"
     payload["START_HERE.md"] = payload[guide]
     provenance = {
         "source_commit": commit,
         "scope": (
-            "C3.4 closed-loop integration"
+            "C3.5 engineering investigation"
+            if stage == "investigation"
+            else "C3.4 closed-loop integration"
             if stage == "integration"
             else "C3.1-C3.3 isolated illustrative components"
         ),
         "matlab_execution_in_cloud": False,
         "C3_4_integration": (
-            "prepared_MATLAB_execution_pending"
+            "user_verified_R2025a_gate"
+            if stage == "investigation"
+            else "prepared_MATLAB_execution_pending"
             if stage == "integration"
             else "blocked_pending_component_execution"
         ),
@@ -128,6 +157,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--stage", choices=["components", "integration"], default="components")
+    parser.add_argument(
+        "--stage", choices=["components", "integration", "investigation"], default="components"
+    )
     args = parser.parse_args()
     print(json.dumps(package(args.source, args.output, args.stage), indent=2))

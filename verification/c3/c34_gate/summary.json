@@ -1,0 +1,426 @@
+{
+  "status": "C34_integration_checks_passed_not_reference_validated",
+  "stage": "completed",
+  "matlab_version": "25.1.0.2943329 (R2025a)",
+  "simulink": {
+    "Name": "Simulink",
+    "Version": "25.1",
+    "Release": "(R2025a)",
+    "Date": "21-Nov-2024"
+  },
+  "nominal_simulation_completed": true,
+  "reference_validation": false,
+  "source_commit": "cd95158c28ee125dfb2a92ea74fb7365761f2ebb",
+  "integration_sources": [
+    {
+      "name": "scripts/matlab/c3/add_c3_radiator.m",
+      "sha256": "18121ff2dd966278e4c604af26db26179b5482afc167fcb120db366b84431100"
+    },
+    {
+      "name": "scripts/matlab/c3/add_c3_thermostat.m",
+      "sha256": "f825b5ca732d18c2b37b5d149ee521dee0788594bade0aa1b6d7b36eacb57e80"
+    },
+    {
+      "name": "scripts/matlab/c3/add_c3_valve.m",
+      "sha256": "ddd9bdc43cde641bac3ec2b6db6b59e7cb18cc95f0676a257d10b44d00f333ce"
+    },
+    {
+      "name": "scripts/matlab/c3/assess_c34.m",
+      "sha256": "4b74c6c734d9530fa83ee66b361e8d8720efc2f8ed7055b04c809fc40d57e57e"
+    },
+    {
+      "name": "scripts/matlab/c3/build_c34_model.m",
+      "sha256": "ef34889f6e0a4d3afea2b093e49bd4d7ac41f0d6c89fc9c42b84ad69220fa041"
+    },
+    {
+      "name": "scripts/matlab/c3/build_c3_component.m",
+      "sha256": "713cd1c27d642055d1f3520824e4e1ac9313a57d4af0532d9b0e4a944038da35"
+    },
+    {
+      "name": "scripts/matlab/c3/c3_block.m",
+      "sha256": "3f6ef5782430a8bd25080a3662f5a549bc117e42774766b588f02736b41b41c4"
+    },
+    {
+      "name": "scripts/matlab/c3/export_c34_results.m",
+      "sha256": "ecb6d36af976c343dc262b624b3927cf2de1d424b45377c6ee9a5610f6d9cbce"
+    },
+    {
+      "name": "scripts/matlab/c3/load_c34_experiment.m",
+      "sha256": "772887ccfff4714175b1877e80fcb5f8c7d526c6b3a9744e466abcb22c16949f"
+    },
+    {
+      "name": "scripts/matlab/c3/load_c3_parameters.m",
+      "sha256": "9d70f9aa14ca8239c7220857aea8650a3cf05bd391b1bd6d6e09c3f3aa9a84c0"
+    },
+    {
+      "name": "scripts/matlab/c3/simulate_c34_model.m",
+      "sha256": "bdd1e35f77801a0a43e6c92e17c26bd96f1c8389b46fc7bedbba5ae48357c031"
+    },
+    {
+      "name": "scripts/matlab/c3/simulate_c3_component.m",
+      "sha256": "c4c9e71bac8e5f27fa4667e72ec8df66c727c75d8517dae3f31b24250213806d"
+    },
+    {
+      "name": "scripts/matlab/c3/write_c34_csv.m",
+      "sha256": "1935d7900427defefda4bf82cc733d5c628f75ac7b5044a92d268c335e975769"
+    },
+    {
+      "name": "run_c34_verification.m",
+      "sha256": "79c0d58783bd6175a681d66e8f17db71c9e194d416c0ab6cbd1d1cee6fe77e08"
+    },
+    {
+      "name": "tests/matlab/test_therma_c34_integration.m",
+      "sha256": "a7fd1a2d07330c3b4c6ec2f342e48c3fe774c7f128066e1680a9217b40053ad2"
+    }
+  ],
+  "component_gate_summary_sha256": "dbf678c6fc80c1d90135641ea3fd5f8b567ea725ce45fc0b94664b7ffe9fe979",
+  "tests_passed": 17,
+  "tests_failed": 0,
+  "tests_incomplete": 0,
+  "test_duration_s": 57.97638090000001,
+  "integration_config_sha256": "c3b0da5ddc0c168f0011035ceefc367fb51340f2dd7eb843000f9a8c14a793e2",
+  "diagnostics": {
+    "status": "integration_numerical_checks_passed",
+    "samples": 17667,
+    "duplicate_event_times": 0,
+    "radiator_integrated_error_max_J": 2.2170133888721466e-06,
+    "combined_integrated_error_max_J": 9.262945968657732e-05,
+    "combined_integrated_error_final_J": -1.814228016883135e-05,
+    "energy_budget_J": 134.34640573530018,
+    "radiator_residual_max_W": 4.547473508864641e-13,
+    "zone_residual_max_W": 2.3533175408374518e-11,
+    "combined_residual_max_W": 2.3533175408374518e-11,
+    "heating_port_mismatch_max_W": 0,
+    "heat_partition_mismatch_max_W": 0,
+    "air_min_K": 287.9175327386367,
+    "air_max_K": 290.85689053220517,
+    "radiator_min_K": 288.15,
+    "radiator_max_K": 316.0806169482371,
+    "opening_min": 0,
+    "opening_max": 0.9999999999999994,
+    "demand_transitions": 0,
+    "delivered_final_J": 132716849.62928897,
+    "water_final_J": 133346405.7353002,
+    "maximum_abs_delivered_W": 1586.915949369195,
+    "checks": {
+      "energy": true,
+      "instantaneous": true,
+      "no_double_heating": true,
+      "actuator": true,
+      "controller_timing": true,
+      "positive_temperatures": true,
+      "passive_envelope": true,
+      "power_bounds": true,
+      "forward_mass_flow": true,
+      "all_zone_states_finite_positive": true,
+      "all_zone_states_passive": true
+    },
+    "passive_zero_gain_envelope_checked": true,
+    "energy_method": "Native continuous energy integrators; initial storage offsets removed; no sparse-log quadrature",
+    "interpretation": "Numerical consistency only; no BOPTEST, radiator sizing, comfort or real-world validation claim"
+  },
+  "test_cases": [
+    {
+      "name": "test_therma_c3_components/testThermostatThresholdsRetentionAndDisable",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 27.6721801
+    },
+    {
+      "name": "test_therma_c3_components/testThermostatInitialOnInsideBand",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 1.2072795
+    },
+    {
+      "name": "test_therma_c3_components/testValveOpeningAnalytic",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 1.1521262999999997
+    },
+    {
+      "name": "test_therma_c3_components/testValveClosingAnalytic",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 0.7145598
+    },
+    {
+      "name": "test_therma_c3_components/testValveDemandSaturation",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 1.5041008
+    },
+    {
+      "name": "test_therma_c3_components/testRadiatorHeatingAnalyticAndEnergy",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 0.8984182
+    },
+    {
+      "name": "test_therma_c3_components/testNoHeatAtClosedEquilibrium",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 0.646819
+    },
+    {
+      "name": "test_therma_c3_components/testStoredHeatReleaseAfterValveClosure",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 0.5544676000000001
+    },
+    {
+      "name": "test_therma_c3_components/testAdiabaticWaterEnergy",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 0.48524399999999995
+    },
+    {
+      "name": "test_therma_c3_components/testSignedRoomToRadiatorExchange",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 0.4664294
+    },
+    {
+      "name": "test_therma_c3_components/testConfigurationProvenanceAndCapacity",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 0.0143847
+    },
+    {
+      "name": "test_therma_c3_components/testRuntimeSetpointChange",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 0.5026793
+    },
+    {
+      "name": "test_therma_c3_components/testValveSwitchesOpeningAndClosingTau",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 0.5078632000000001
+    },
+    {
+      "name": "test_therma_c34_integration/testColdStartTopologyAndBalances",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 6.594431
+    },
+    {
+      "name": "test_therma_c34_integration/testDisableAndActuatorClosure",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 5.555195599999999
+    },
+    {
+      "name": "test_therma_c34_integration/testDisabledWarmRadiatorReleasesStorage",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 5.8838318
+    },
+    {
+      "name": "test_therma_c34_integration/testTracePrecisionAndDuplicateEvents",
+      "passed": true,
+      "failed": false,
+      "incomplete": false,
+      "duration_s": 3.6163705999999998
+    }
+  ],
+  "model_sha256": "5b2e5fc8886a586d6158f4f39a238fc59e409fe67c55f66bf2de1ff2598e85a7",
+  "integration": {
+    "signals": [
+      "air_K",
+      "setpoint_K",
+      "demand",
+      "opening",
+      "radiator_K",
+      "convective_W",
+      "radiative_W",
+      "delivered_W",
+      "mass_flow_kg_s",
+      "water_W",
+      "delivered_J",
+      "water_J",
+      "radiator_stored_J",
+      "radiator_residual_W",
+      "zone_stored_J",
+      "zone_storage_rate_W",
+      "zone_net_W",
+      "zone_residual_W",
+      "zone_heating_W",
+      "environment_W",
+      "combined_external_W",
+      "external_J",
+      "combined_storage_rate_W",
+      "combined_residual_W",
+      "opaque_mean_K"
+    ],
+    "effective_components": {
+      "setpoint_K": 294.15,
+      "deadband_K": 1,
+      "controller_period_s": 10,
+      "controller_initial": 0,
+      "opening_tau_s": 60,
+      "closing_tau_s": 90,
+      "valve_initial": 0,
+      "water_mass_kg": 3,
+      "water_cp_J_kgK": 4180,
+      "metal_mass_kg": 20,
+      "metal_cp_J_kgK": 500,
+      "nominal_flow_kg_s": 0.03,
+      "UA_W_K": 60,
+      "radiative_fraction": 0.35,
+      "radiator_initial_K": 288.15,
+      "room_example_K": 293.15,
+      "supply_example_K": 328.15,
+      "capacitance_J_K": 22540
+    },
+    "experiment": {
+      "initial_zone_K": 288.15,
+      "initial_radiator_K": 288.15,
+      "setpoint_K": 294.15,
+      "supply_K": 328.15,
+      "outdoor_K": 278.15,
+      "internal_convective_W": 0,
+      "internal_radiative_W": 0,
+      "solar_W": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration_s": 86400,
+      "max_step_s": 10,
+      "heating_enabled": true,
+      "disable_at_s": [],
+      "solver": {
+        "name": "ode15s",
+        "RelTol": "1e-8",
+        "AbsTol": "1e-10"
+      },
+      "checks": {
+        "instantaneous_balance_W": 1e-05,
+        "energy_absolute_J": 1,
+        "energy_relative": 1e-06,
+        "temperature_envelope_margin_K": 0.001,
+        "basis": "Provisional numerical software checks for this passive, zero/nonnegative-gain integration fixture, not physical accuracy acceptance criteria"
+      },
+      "configuration": {
+        "schema_version": 1,
+        "classification": "illustrative_C34_integration_not_BOPTEST_benchmark",
+        "parameters": {
+          "initial_zone_K": {
+            "value": 288.15,
+            "unit": "K",
+            "source": "User cold-start air at 15 degC; all fabric states also 15 degC is an explicit integration assumption"
+          },
+          "initial_radiator_K": {
+            "value": 288.15,
+            "unit": "K",
+            "source": "Illustrative radiator initially equilibrated with the 15 degC zone"
+          },
+          "setpoint_K": {
+            "value": 294.15,
+            "unit": "K",
+            "source": "User setpoint 21 degC"
+          },
+          "supply_K": {
+            "value": 328.15,
+            "unit": "K",
+            "source": "User imposed water supply 55 degC"
+          },
+          "outdoor_K": {
+            "value": 278.15,
+            "unit": "K",
+            "source": "Illustrative held outdoor 5 degC, not BOPTEST weather"
+          },
+          "internal_convective_W": {
+            "value": 0,
+            "unit": "W",
+            "source": "Explicit zero-gain integration fixture"
+          },
+          "internal_radiative_W": {
+            "value": 0,
+            "unit": "W",
+            "source": "Explicit zero-gain integration fixture"
+          },
+          "solar_W": {
+            "value": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "unit": "W",
+            "source": "Explicit zero absorbed solar on the six opaque C2 surfaces; existing solar physics/ports retained"
+          },
+          "duration_s": {
+            "value": 86400,
+            "unit": "s",
+            "source": "Illustrative 24-hour integration observation; no sizing or comfort-success assumption"
+          },
+          "max_step_s": {
+            "value": 10,
+            "unit": "s",
+            "source": "Integration numerical setting, at most the default controller sample period; not a convergence result"
+          }
+        },
+        "heating_enabled": true,
+        "disable_at_s": [],
+        "solver": {
+          "name": "ode15s",
+          "RelTol": "1e-8",
+          "AbsTol": "1e-10"
+        },
+        "checks": {
+          "instantaneous_balance_W": 1e-05,
+          "energy_absolute_J": 1,
+          "energy_relative": 1e-06,
+          "temperature_envelope_margin_K": 0.001,
+          "basis": "Provisional numerical software checks for this passive, zero/nonnegative-gain integration fixture, not physical accuracy acceptance criteria"
+        }
+      }
+    },
+    "frozen_registry_sha256": "f91141d78668908525d484a4900dc69af1a163c4c5e07f5a5fbd0c43eae4451c",
+    "zone_assumptions_sha256": "de81bc5fe282ff6f91c95a167d4db797cce66f0deeb4806bc6a0db3cfc1ffc61",
+    "generated_C2_source_slx_sha256": "4e3765bd16ac24f74328d563a8bc457812a5b1d2d52579a8256c78fc146741b0",
+    "C2_source_file_preserved": true,
+    "status": "executed_in_MATLAB_integration_checks_recorded",
+    "radiative_sink": "air_temperature_proxy",
+    "elapsed_simulation_s": 2.0866746,
+    "MATLAB_execution_completed": true,
+    "matlab_version": "25.1.0.2943329 (R2025a)",
+    "simulink": {
+      "Name": "Simulink",
+      "Version": "25.1",
+      "Release": "(R2025a)",
+      "Date": "21-Nov-2024"
+    }
+  },
+  "original_report_sha256": "b92885c8e4b36c37f1679aa48cfdc58a6cb87cedbc3322b04106a6898418af86",
+  "original_log_sha256": "cd62237cb3790b66e9f06df05635ce9fa37548e2dca4644665af526641cfc2ef",
+  "redacted_log_sha256": "396242943838eaf85381a4aba18cb16c2dae04c7fc312bd2f3a5f9210218988a",
+  "raw_evidence_directory": "outputs/c3/evidence/b92885c8e4b36c37",
+  "source_hashes_verified": true,
+  "independent_cloud_MATLAB_execution": false,
+  "model_and_trajectory_blobs_supplied": false,
+  "redaction": "Public selected summary omits model path; public console copy replaces private path prefixes. Original attachments preserved unchanged locally."
+}
