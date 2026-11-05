@@ -135,3 +135,18 @@ results were fabricated, and no Python thermal solver was introduced. The origin
 report lacks a full trajectory/final air value; existing baseline review uses only
 its reported diagnostics. The new native runs will provide the requested histories.
 No real-world/BOPTEST validation, calibration, fuel savings, ML or C4 is claimed.
+
+## Offline delivery
+
+[Download THERMA_C35_ENGINEERING_INVESTIGATION_2026-11-05.zip](https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C35_ENGINEERING_INVESTIGATION_2026-11-05.zip).
+The package has 241 files, pinned source
+`b044bf082dbd5f337e0f17267435deb95eed71e8`.
+
+SHA-256:
+`0cb342a0a75d11319c20c690d8a8bbfe0476fb33971a4888c76e26a095a66472`.
+Fresh empty-directory extraction verified all manifest/source hashes, incoming
+C3.4 gate/source/config identities, required helpers/configuration, 13+3 MATLAB
+test definitions and static syntax. No old project/output/data folder is required.
+Uploaded bytes were independently fetched and checked. MATLAB tests/cases still
+require university execution; package completeness is not numerical study
+verification. See C35_INVESTIGATION_DELIVERY.json.

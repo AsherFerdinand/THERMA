@@ -1385,3 +1385,18 @@ reject missing stage-specific entrypoints/dependencies, with a regression test.
 The new 16-test MATLAB gate (13 existing plus 3 new) is unexecuted here; a passed
 actual gate is reused only with matching source/release contract and log hash.
 No new study simulation result or convergence claim is made.
+
+C3.5 source and standalone workflow published on feat/c35-heating-investigation.
+ZIP THERMA_C35_ENGINEERING_INVESTIGATION_2026-11-05.zip (241 files) pins
+b044bf082dbd5f337e0f17267435deb95eed71e8. Fresh extraction passed CRC, full manifest/
+source and incoming C3.4 gate/source/config hashes, required dependencies and
+13+3 MATLAB test definitions/static syntax. No old folders or raw datasets needed.
+SHA256 0cb342a0a75d11319c20c690d8a8bbfe0476fb33971a4888c76e26a095a66472.
+Published separately to replay-transfer at d39eaec284d003af95dd1692a3327600312ae285;
+an independent GitHub fetch verified identical bytes. Original C3 branch/baselines,
+C2.8 results, private raw incoming evidence, existing transfer files and main
+preserved. Case-specific provenance clearly separates new one-factor cases from
+baseline reproduction; solar reports identify peak envelope versus actual profile.
+Delivery receipt: docs/C35_INVESTIGATION_DELIVERY.json. New C3.5 case execution,
+results table/figures, regulation, savings and convergence conclusions remain pending
+university MATLAB. No C4 work performed.

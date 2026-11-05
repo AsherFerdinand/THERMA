@@ -1,0 +1,26 @@
+{
+  "filename": "THERMA_C35_ENGINEERING_INVESTIGATION_2026-11-05.zip",
+  "sha256": "0cb342a0a75d11319c20c690d8a8bbfe0476fb33971a4888c76e26a095a66472",
+  "source_commit": "b044bf082dbd5f337e0f17267435deb95eed71e8",
+  "files": 241,
+  "scope": "C3.5 engineering investigation",
+  "matlab_execution": "pending",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C35_ENGINEERING_INVESTIGATION_2026-11-05.zip",
+  "transfer_commit": "d39eaec284d003af95dd1692a3327600312ae285",
+  "uploaded_zip_sha256_verified": true,
+  "input_preservation_verified": true,
+  "python_tests_passed": 209,
+  "static_MATLAB_files_checked": 73,
+  "limitations": "Incoming C3.4 evidence confirms 17 passes and a completed R2025a baseline. New C3.5 case matrix and 16-test MATLAB gate unexecuted in cloud; no convergence/regulation/savings claim. Request attachment ends midway through metrics table. Original baseline preserved.",
+  "empty_directory_extraction_verified": true,
+  "full_manifest_source_and_gate_hashes_verified": true,
+  "prepared_MATLAB_gate_test_count": 16,
+  "actual_C35_simulations_executed_in_cloud": false,
+  "incoming_C34_gate": {
+    "passed": 17,
+    "failed": 0,
+    "incomplete": 0,
+    "release": "R2025a"
+  },
+  "raw_private_original_evidence_published": false
+}
