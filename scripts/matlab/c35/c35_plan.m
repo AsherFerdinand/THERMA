@@ -18,14 +18,14 @@ base=struct('id','baseline','group','A','UA_W_K',60,'supply_K',328.15,'outdoor_K
     'purpose','C3.4 baseline reproduction; no sizing guarantee');
 cases=base;
 for ua=[90 120 180]
-    c=base; c.id=sprintf('A_UA_%d',ua); c.UA_W_K=ua; cases(end+1)=c; %#ok<AGROW>
+    c=base; c.purpose='UA-only sensitivity; all other physical inputs fixed'; c.id=sprintf('A_UA_%d',ua); c.UA_W_K=ua; cases(end+1)=c; %#ok<AGROW>
 end
 for supply=[40 45 65]
-    c=base; c.id=sprintf('B_supply_%d',supply); c.group='B'; c.supply_K=supply+273.15; cases(end+1)=c; %#ok<AGROW>
+    c=base; c.purpose='Supply-temperature-only sensitivity'; c.id=sprintf('B_supply_%d',supply); c.group='B'; c.supply_K=supply+273.15; cases(end+1)=c; %#ok<AGROW>
 end
 for outdoor=[-5 0 10]
-    c=base; c.id=sprintf('D_outdoor_%+d',outdoor); c.id=strrep(strrep(c.id,'-','minus'),'+','plus');
+    c=base; c.purpose='Outdoor-temperature-only sensitivity'; c.id=sprintf('D_outdoor_%+d',outdoor); c.id=strrep(strrep(c.id,'-','minus'),'+','plus');
     c.group='D'; c.outdoor_K=outdoor+273.15; cases(end+1)=c; %#ok<AGROW>
 end
-c=base; c.id='E_solar'; c.group='E'; c.solar=true; cases(end+1)=c;
+c=base; c.purpose='Absorbed-solar-only paired sensitivity'; c.id='E_solar'; c.group='E'; c.solar=true; cases(end+1)=c;
 end
