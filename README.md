@@ -159,3 +159,10 @@ SHA256: `c1b36c656e44ef3afbb17310dd068892cf273c45542c874d71103c32f29c05e9`. Sour
 Download [THERMA_C37_RESIDENTIAL_PREPARATION_2026-11-06.zip](THERMA_C37_RESIDENTIAL_PREPARATION_2026-11-06.zip). Extract INTO the existing THERMA_C35_MATLAB folder. Read C37_PREPARATION_README.txt. This is a preparation overlay, NOT READY for the heating run: manufacturer rating missing and MATLAB execution pending. Room-only static test may be run. No fabricated rating, UA, flow or results; the entry point intentionally stops until a reviewed manufacturer document is supplied. Existing components/benchmark untouched.
 
 SHA256: `c94bcb81da726b01eac550f558f4cd5b38eb65dc3feddd00597796cc8cde7774`. Source `afaa57b8604f3af6e30a228cebe33bd2e86010d0`.
+
+
+## C3.7 Purmo residential update - native MATLAB execution pending
+
+Download [THERMA_C37_PURMO_RESIDENTIAL_UPDATE_2026-11-06.zip](THERMA_C37_PURMO_RESIDENTIAL_UPDATE_2026-11-06.zip). Extract directly INTO the existing THERMA_C35_MATLAB folder, replacing old C3.7 preparation files only. Read START_C37.txt. This supersedes the earlier preparation-only package. Run the two C3.7 static tests, then run_c37_residential_heating for one24h simulation and exactly two plots. Purmo864W at55/45/20C is user supplied; matches UA34.56W/K,flow0.02066985646kg/s. Listed weight water inclusion remains unresolved: wet-mass interpretation is explicitly assumed. MATLAB execution remains pending; no dynamic manufacturer or real-world validation. Existing BESTEST/components unchanged.
+
+SHA256: `f68326e515e68c5381b9a98b5b7fed6df1dd8e822a65623bfc15b4c342901cdb`. Source `224eec64e6696a467d187c334763ad1801a922f0`.
