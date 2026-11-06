@@ -1400,3 +1400,28 @@ baseline reproduction; solar reports identify peak envelope versus actual profil
 Delivery receipt: docs/C35_INVESTIGATION_DELIVERY.json. New C3.5 case execution,
 results table/figures, regulation, savings and convergence conclusions remain pending
 university MATLAB. No C4 work performed.
+
+
+## C3.6 physical reality check — 2026-11-06
+
+Inspected original C2/C3 parameters without changing physics. The simulated
+building is one 48 m² / 129.6 m³ heavy benchmark cell. Approximate H=100.81 W/K;
+existing split-consistent steady demand at 21/5 °C is 1.685 kW. At supply55 °C,
+UA60 provides1.380 kW (undersized); UA180 provides2.513 kW (capacity headroom).
+
+Actual user-uploaded R2025a baseline/A_UA_180 reports and trajectories matched
+completion-receipt SHA256s. First21 °C=12.5077 h for UA180; baseline ends17.707 °C.
+By the crossing,32.582 kWh delivered=20.122 outgoing+12.460 building storage.
+Heavy fabric15.485 MJ/K plus continuing losses explains slow warmup; losses use
+61.8% of delivered energy. No new simulations or counterfactual experiments.
+Two actual-data plots, compact metrics/provenance and original small JSON evidence
+archived; large original CSVs unchanged locally. Original study contract/index
+not supplied; shared contract digest recorded without claiming full contract review.
+16 passed C3.5 MATLAB tests are user-reported; new MATLAB entry/test unexecuted here.
+See docs/C36_PHYSICAL_CHECK.md. C3.7 not started.
+
+Checks: 212 Python tests passed (19.29 s), Ruff lint/format (103 files), mypy
+(13 modules), archive integrity and14 replay mappings, wheel/sdist builds passed.
+MATLAB static lint: existing workflow73 files and3 C3.6 targets passed. Byte
+comparison confirmed72 existing C2/C3/C3.5/reference/result files unchanged.
+New MATLAB test/entry point remain unexecuted here; no MATLAB installation.

@@ -135,3 +135,12 @@ See [BOPTEST_REFERENCE.md](BOPTEST_REFERENCE.md),
 Phase 0 is locally validated. Phase 1A static analysis is complete; MATLAB runtime
 verification remains pending. Phase 1B.1 diagnostic implementation is prepared;
 Phase 1B.2 and later implementation await university diagnostic results.
+
+
+### C3.6 reality check
+
+- [x] Extract existing building/radiator specifications and steady capacity.
+- [x] Inspect actual C3.5 UA60/180 traces; quantify storage/loss and create two plots.
+- [x] Prepare read-only MATLAB entry point reusing the existing C3.5 study.
+- [ ] University execution of the new C3.6 entry point/static test (no new simulations).
+- [ ] C3.7: agree intended building and manufacturer emitter specification; not started.

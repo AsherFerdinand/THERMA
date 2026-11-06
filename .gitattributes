@@ -3,3 +3,6 @@
 # Preserve original MATLAB evidence bytes, including its final blank line.
 verification/c3/component_gate/matlab_component_test_log.txt -text -diff
 verification/c3/c34_gate/matlab_integration_test_log.redacted.txt -text -diff
+
+# Preserve original C3.6 uploaded JSON evidence byte hashes.
+verification/c3/c36/**/*.json -text

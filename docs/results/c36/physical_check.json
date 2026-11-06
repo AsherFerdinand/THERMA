@@ -1,0 +1,53 @@
+{
+  "classification": "postprocessing_of_user_supplied_MATLAB_results_not_cloud_MATLAB_execution",
+  "study_contract_sha256": "833cfeafc990423391a61832966977789a6ccd9f5b10dbfe10994d5aecd4ab27",
+  "limitations": [
+    "Original study index and contract not supplied: shared contract digest is recorded, but source/release contract cannot be independently inspected.",
+    "16 MATLAB tests passed is user-reported; test log not supplied.",
+    "Only supplied case_result and CSV artifacts verified against receipts; other listed artifacts not supplied."
+  ],
+  "cases": [
+    {
+      "case_id": "baseline",
+      "UA_W_K": 60,
+      "rows": 17667,
+      "matlab_version": "25.1.0.2943329 (R2025a)",
+      "first_21C_h": null,
+      "checkpoint_h": 24.0,
+      "final_air_C": 17.706890532205193,
+      "delivered_kWh": 36.865791563691374,
+      "water_kWh": 37.040668259805614,
+      "loss_kWh": 31.99912373335554,
+      "zone_storage_kWh": 4.866667830340326,
+      "radiator_storage_kWh": 0.17487669611479573,
+      "max_energy_residual_J": 9.163853246718645e-05,
+      "slowest_all_on_time_constant_h": 31.82003138600857,
+      "sha256": {
+        "case_result.json": "2b55f524b0a14eaa1d70425ba99013a01fb0905fe35b4a478ebf118ff8355286",
+        "integration_trajectory.csv": "5ade36ba7e6a08883328c2b58ae5d15696026ca69bad93820cd8c7e1163cc527",
+        "completion.json": "b04f3f3f6bd44b9c61254450d12b33df43827883c65524a10deafd765053da0a"
+      }
+    },
+    {
+      "case_id": "A_UA_180",
+      "UA_W_K": 180,
+      "rows": 26271,
+      "matlab_version": "25.1.0.2943329 (R2025a)",
+      "first_21C_h": 12.507742492092872,
+      "checkpoint_h": 12.508333333333333,
+      "final_air_C": 21.06907490401261,
+      "delivered_kWh": 32.581892988571376,
+      "water_kWh": 32.7068565462958,
+      "loss_kWh": 20.121809716836214,
+      "zone_storage_kWh": 12.460083271730795,
+      "radiator_storage_kWh": 0.12496355772438736,
+      "max_energy_residual_J": 0.0001169473398476839,
+      "slowest_all_on_time_constant_h": 27.311451537956664,
+      "sha256": {
+        "case_result.json": "7d73c2f47a5a6efb9b2025bcfedc90416478c625ce6388a563448ebd1f7f5488",
+        "integration_trajectory.csv": "f2c566459aaf1627c5a9b5c4fa72edd0d2fcaed5b659fc0f68dc16a2eb9c168c",
+        "completion.json": "c7f8b0ec2773c3e0c9ef7f7ba7addb9004e88764e300e02112ad1e167aca25c3"
+      }
+    }
+  ]
+}

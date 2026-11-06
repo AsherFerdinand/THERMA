@@ -1,0 +1,53 @@
+{
+  "status": "completed",
+  "expected": {
+    "case_definition": {
+      "id": "A_UA_180",
+      "group": "A",
+      "UA_W_K": 180,
+      "supply_K": 328.15,
+      "outdoor_K": 278.15,
+      "initial_zone_K": 288.15,
+      "initial_radiator_K": 288.15,
+      "max_step_s": 10,
+      "solar": false,
+      "purpose": "UA-only sensitivity; all other physical inputs fixed"
+    },
+    "study_contract_sha256": "833cfeafc990423391a61832966977789a6ccd9f5b10dbfe10994d5aecd4ab27",
+    "matlab_version": "25.1.0.2943329 (R2025a)"
+  },
+  "artifacts": [
+    {
+      "name": "case_result.json",
+      "sha256": "7d73c2f47a5a6efb9b2025bcfedc90416478c625ce6388a563448ebd1f7f5488"
+    },
+    {
+      "name": "integration_trajectory.csv",
+      "sha256": "f2c566459aaf1627c5a9b5c4fa72edd0d2fcaed5b659fc0f68dc16a2eb9c168c"
+    },
+    {
+      "name": "trajectory_metadata.json",
+      "sha256": "83f8fbbffec947b3da72ccf9c1310c71db2a235b3cb2bbeb2f5705c588389421"
+    },
+    {
+      "name": "engineering_report.md",
+      "sha256": "1b2e8e97fb7d928c0a7d63dc0eb8c9434e1251708367c6c79594ddffc9e86312"
+    },
+    {
+      "name": "closed_loop_traces.png",
+      "sha256": "95dbf2cbf2ce5d9f69f623f4f74524bccaf4f962b2c017c309e25e469e9a0659"
+    },
+    {
+      "name": "closed_loop_traces.fig",
+      "sha256": "9680f84f1943d87a7ea0dc4e65d0fcf5b85e1d51d31aff80b83f4168ce72d70a"
+    },
+    {
+      "name": "energy_balances.png",
+      "sha256": "5a90568fdca978b122869199c860d7dc2004c9aa5d4f5fe26cdc4a7b2bdbcd22"
+    },
+    {
+      "name": "energy_balances.fig",
+      "sha256": "8654341b4dc58aa9f91f0b907798ae36c24f1e5e9a5a26f7c64ade22c684624f"
+    }
+  ]
+}
