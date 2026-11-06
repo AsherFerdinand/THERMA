@@ -1,0 +1,14 @@
+{
+  "filename": "THERMA_C37_RESIDENTIAL_PREPARATION_2026-11-06.zip",
+  "source_commit": "afaa57b8604f3af6e30a228cebe33bd2e86010d0",
+  "sha256": "c94bcb81da726b01eac550f558f4cd5b38eb65dc3feddd00597796cc8cde7774",
+  "bytes": 13457,
+  "files": 9,
+  "status": "preparation_blocked_missing_manufacturer_rating_and_MATLAB_execution",
+  "kind": "new_files_only_overlay_requires_existing_C35_project",
+  "original_C35_files_unchanged": 241,
+  "crc_and_manifest_verified": true,
+  "python_tests_passed": 214,
+  "matlab_executed": false,
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C37_RESIDENTIAL_PREPARATION_2026-11-06.zip"
+}

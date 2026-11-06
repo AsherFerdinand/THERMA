@@ -152,3 +152,10 @@ SHA-256: `0cb342a0a75d11319c20c690d8a8bbfe0476fb33971a4888c76e26a095a66472`. Sou
 Download [THERMA_C36_PHYSICAL_CHECK_UPDATE_2026-11-06.zip](THERMA_C36_PHYSICAL_CHECK_UPDATE_2026-11-06.zip). Extract directly INTO your existing THERMA_C35_MATLAB folder, retaining completed C3.5 outputs. Read C36_UPDATE_INSTRUCTIONS.txt; run run_c36_physical_check. This is a small overlay, not a standalone replacement project. Reuses original baseline/UA180 results; zero new simulations. Includes concise report, exactly two actual-data plots and provenance metrics. New MATLAB entry/test unexecuted in cloud.
 
 SHA256: `c1b36c656e44ef3afbb17310dd068892cf273c45542c874d71103c32f29c05e9`. Source `ddd7b11add29bd298d2ce76a1aa7fca8ae0be5dc`.
+
+
+## C3.7 residential PREPARATION - manufacturer evidence missing
+
+Download [THERMA_C37_RESIDENTIAL_PREPARATION_2026-11-06.zip](THERMA_C37_RESIDENTIAL_PREPARATION_2026-11-06.zip). Extract INTO the existing THERMA_C35_MATLAB folder. Read C37_PREPARATION_README.txt. This is a preparation overlay, NOT READY for the heating run: manufacturer rating missing and MATLAB execution pending. Room-only static test may be run. No fabricated rating, UA, flow or results; the entry point intentionally stops until a reviewed manufacturer document is supplied. Existing components/benchmark untouched.
+
+SHA256: `c94bcb81da726b01eac550f558f4cd5b38eb65dc3feddd00597796cc8cde7774`. Source `afaa57b8604f3af6e30a228cebe33bd2e86010d0`.
