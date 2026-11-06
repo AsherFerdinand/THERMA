@@ -145,3 +145,10 @@ Run run_c35_investigation("quick"), then "capacity", then "all" in university MA
 Includes UA/supply/outdoor/solar studies, conditional controller selection, native-energy/steady-load diagnostics and max-step comparisons. Original C3.4 baseline and sources preserved.
 C3.4 actual evidence: 17 passed, R2025a, energy checks passed. New C3.5 MATLAB cases/results remain pending; no regulation, solar-saving or convergence claim is made. No C4.
 SHA-256: `0cb342a0a75d11319c20c690d8a8bbfe0476fb33971a4888c76e26a095a66472`. Source: `b044bf082dbd5f337e0f17267435deb95eed71e8`.
+
+
+## C3.6 physical check update
+
+Download [THERMA_C36_PHYSICAL_CHECK_UPDATE_2026-11-06.zip](THERMA_C36_PHYSICAL_CHECK_UPDATE_2026-11-06.zip). Extract directly INTO your existing THERMA_C35_MATLAB folder, retaining completed C3.5 outputs. Read C36_UPDATE_INSTRUCTIONS.txt; run run_c36_physical_check. This is a small overlay, not a standalone replacement project. Reuses original baseline/UA180 results; zero new simulations. Includes concise report, exactly two actual-data plots and provenance metrics. New MATLAB entry/test unexecuted in cloud.
+
+SHA256: `c1b36c656e44ef3afbb17310dd068892cf273c45542c874d71103c32f29c05e9`. Source `ddd7b11add29bd298d2ce76a1aa7fca8ae0be5dc`.

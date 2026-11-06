@@ -1,0 +1,13 @@
+{
+  "filename": "THERMA_C36_PHYSICAL_CHECK_UPDATE_2026-11-06.zip",
+  "source_commit": "ddd7b11add29bd298d2ce76a1aa7fca8ae0be5dc",
+  "sha256": "c1b36c656e44ef3afbb17310dd068892cf273c45542c874d71103c32f29c05e9",
+  "bytes": 454928,
+  "files": 9,
+  "kind": "overlay_update_requires_existing_C35_project_and_completed_study",
+  "original_C35_package_files_unchanged": 241,
+  "crc_and_manifest_verified": true,
+  "matlab_executed_in_cloud": false,
+  "python_tests_passed": 212,
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C36_PHYSICAL_CHECK_UPDATE_2026-11-06.zip"
+}
