@@ -144,3 +144,12 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [x] Prepare read-only MATLAB entry point reusing the existing C3.5 study.
 - [ ] University execution of the new C3.6 entry point/static test (no new simulations).
 - [ ] C3.7: agree intended building and manufacturer emitter specification; not started.
+
+
+### C3.7 residential scenario (preparation; not complete)
+
+- [x] Separate20m² corner-room data and one-run integration entry point prepared.
+- [ ] Obtain and review a manufacturer radiator rating/source (external sites blocked).
+- [ ] Configure rating-derived UA/flow, then execute the24h run in university MATLAB.
+- [ ] Review actual heating time, energy, two plots and physical checks.
+- [ ] C3.8 not started.

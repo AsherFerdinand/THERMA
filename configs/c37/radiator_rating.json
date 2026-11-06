@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "blocked_missing_verified_manufacturer_rating",
+  "manufacturer": "",
+  "model_and_dimensions": "",
+  "rated_output_W": null,
+  "supply_C": null,
+  "return_C": null,
+  "room_C": null,
+  "source_url": "",
+  "source_location": "",
+  "source_file": "",
+  "source_sha256": "",
+  "note": "No rating has been invented. Supply an archived manufacturer datasheet with its SHA256 and exact table location. Source file path is relative to the THERMA project root. The entry point refuses to simulate until this evidence is supplied and reviewed."
+}

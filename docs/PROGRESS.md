@@ -1434,3 +1434,34 @@ overlay preserves all241 original C3.5 package files. Requires the existing C3.5
 project and completed study; does not duplicate components or trajectories.
 main,work,C3.5 branch and existing transfer artifacts preserved. Source ddd7b11;
 delivery receipt docs/C36_DELIVERY.json. New MATLAB entry execution still pending.
+
+## C3.7 residential preparation — 2026-11-06
+
+Created separate20m²/50m³ corner-room assumptions and parameter loader. New
+construction is rebuilt algebraically on the existing multilayer node topology,
+not BESTEST area scaling. Two outdoor walls, two conditioned-adjacent partitions,
+and explicit slab symmetry boundaries;15°C air/radiator,20°C fabric,0°C outdoor,
+21°C setpoint,55°C supply,24h. Approximate outdoor H15.61W/K (328W at21K), not
+a full design load. Unchanged C3.4/C3.5 builders and heating components are reused.
+One-run entry point reuses native-energy/hysteresis/valve checks and emits only two
+plots. No simulation executed in cloud; no heating time/energy result exists yet.
+
+Manufacturer/search sites are inaccessible (HTTP403), including after network
+permission was granted. Asked for an actual manufacturer datasheet/operating
+point; no reply/source available at preparation. Radiator config remains explicitly
+blocked and empty. No catalogue output, UA or flow has been invented. The entry
+point refuses model construction/simulation until a reviewed55°C source, model,
+output/return/room temperatures, archived document and its SHA256 are supplied.
+The matching algebra is prepared; no generic radiator is presented as a selected
+commercial product. C3.7 remains incomplete pending that evidence and university
+MATLAB execution. BESTEST, previous results and verified component code unchanged.
+C3.8 not started. See docs/C37_RESIDENTIAL_HEATING.md.
+
+Preparation checks:214 Python tests passed(17.58s); Ruff lint/format(105 files),
+mypy(13 modules), MATLAB static lint77 files plus4 targeted C3.7 files passed;
+archive integrity/14 replay mappings and wheel/sdist builds passed. First test
+run caught a material-label JSON key mismatch; corrected before the full passing
+run.81 existing source/reference/evidence/result files compared byte-for-byte
+unchanged. New MATLAB test and entry point remain unexecuted. No real or synthetic
+C3.7 simulation output produced. Any transfer archive is labeled PREPARATION,
+not a runnable verified residential benchmark while radiator evidence is missing.

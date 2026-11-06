@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "classification": "illustrative_residential_corner_room_not_measured_or_standard_validated",
+  "geometry": {
+    "length_m": 5,
+    "width_m": 4,
+    "height_m": 2.5,
+    "window_m2": 2
+  },
+  "conditions": {
+    "air_initial_C": 15,
+    "fabric_initial_C": 20,
+    "radiator_initial_C": 15,
+    "outdoor_C": 0,
+    "adjacent_C": 21,
+    "setpoint_C": 21,
+    "supply_C": 55,
+    "duration_s": 86400
+  },
+  "boundaries": [
+    "outdoors",
+    "adjacent_conditioned",
+    "outdoors",
+    "adjacent_conditioned",
+    "adiabatic",
+    "adiabatic"
+  ],
+  "boundary_explanation": "Corner room on an intermediate apartment floor: south/east face outdoors; north/west exchange with rooms held at21 C. Ceiling/floor are zero-flux symmetry approximations to similarly operated rooms above/below, NOT ground or outdoor boundaries. These symmetry assumptions omit inter-storey exchange during unequal warm-up. Floor/ceiling each include80mm of a160mm shared concrete slab, with symmetry at its mid-plane; ceiling concrete is split into two equal layers solely to retain the existing three-layer network topology.",
+  "window_U_W_m2K": 1.2,
+  "ventilation_ACH": 0.5,
+  "properties_source": "All room construction, window U and ACH below are declared illustrative engineering assumptions, not measured construction or normative design values. Layer R=d/k; heat capacity=rho*cp*d*A. Air/film/radiant coefficients retain explicit C2 assumptions. No BESTEST material is scaled by floor area.",
+  "layer_columns": [
+    "thickness_m",
+    "conductivity_W_mK",
+    "density_kg_m3",
+    "specific_heat_J_kgK"
+  ],
+  "external_wall": [
+    [
+      0.015,
+      0.7,
+      1600,
+      840
+    ],
+    [
+      0.1,
+      0.035,
+      40,
+      840
+    ],
+    [
+      0.175,
+      0.18,
+      600,
+      840
+    ]
+  ],
+  "external_wall_materials": [
+    "Exterior mineral render",
+    "Mineral wool insulation",
+    "Lightweight masonry (interior plaster omitted)"
+  ],
+  "partition": [
+    [
+      0.0125,
+      0.25,
+      900,
+      1000
+    ],
+    [
+      0.1,
+      0.35,
+      800,
+      840
+    ],
+    [
+      0.0125,
+      0.25,
+      900,
+      1000
+    ]
+  ],
+  "partition_materials": [
+    "Adjacent-side plaster",
+    "Lightweight masonry partition",
+    "Room-side plaster"
+  ],
+  "ceiling": [
+    [
+      0.04,
+      1.7,
+      2300,
+      880
+    ],
+    [
+      0.04,
+      1.7,
+      2300,
+      880
+    ],
+    [
+      0.0125,
+      0.25,
+      900,
+      1000
+    ]
+  ],
+  "ceiling_materials": [
+    "Concrete half-slab part1",
+    "Concrete half-slab part2",
+    "Room-side plaster"
+  ],
+  "floor": [
+    [
+      0.08,
+      1.7,
+      2300,
+      880
+    ],
+    [
+      0.02,
+      0.7,
+      1600,
+      840
+    ]
+  ],
+  "floor_materials": [
+    "Concrete half-slab",
+    "Room-side finish"
+  ],
+  "initialization": "Only air/radiator cooled to15 C; all fabric starts20 C. This is an idealized air-cooled room with warm walls, NOT the C3.6 full cold soak. No claim of a preceding simulated cooling history.",
+  "gains": "Zero solar and zero internal gains; no window solar model or occupancy assumption added."
+}
