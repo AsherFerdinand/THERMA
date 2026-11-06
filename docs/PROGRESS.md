@@ -1425,3 +1425,12 @@ Checks: 212 Python tests passed (19.29 s), Ruff lint/format (103 files), mypy
 MATLAB static lint: existing workflow73 files and3 C3.6 targets passed. Byte
 comparison confirmed72 existing C2/C3/C3.5/reference/result files unchanged.
 New MATLAB test/entry point remain unexecuted here; no MATLAB installation.
+
+Minimal transfer update published separately to replay-transfer (0a99655):
+THERMA_C36_PHYSICAL_CHECK_UPDATE_2026-11-06.zip,9 files,454928 bytes.
+SHA256 c1b36c656e44ef3afbb17310dd068892cf273c45542c874d71103c32f29c05e9.
+An independent GitHub fetch confirmed identical bytes. Tested extraction as an
+overlay preserves all241 original C3.5 package files. Requires the existing C3.5
+project and completed study; does not duplicate components or trajectories.
+main,work,C3.5 branch and existing transfer artifacts preserved. Source ddd7b11;
+delivery receipt docs/C36_DELIVERY.json. New MATLAB entry execution still pending.
