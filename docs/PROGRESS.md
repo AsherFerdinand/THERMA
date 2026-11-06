@@ -1465,3 +1465,12 @@ run.81 existing source/reference/evidence/result files compared byte-for-byte
 unchanged. New MATLAB test and entry point remain unexecuted. No real or synthetic
 C3.7 simulation output produced. Any transfer archive is labeled PREPARATION,
 not a runnable verified residential benchmark while radiator evidence is missing.
+
+Preparation-only overlay published on replay-transfer(f8b0522):
+THERMA_C37_RESIDENTIAL_PREPARATION_2026-11-06.zip,9 new files,13457bytes;
+source afaa57b. SHA256 c94bcb81da726b01eac550f558f4cd5b38eb65dc3feddd00597796cc8cde7774.
+CRC/manifest/fresh overlay checks passed; all241 original C3.5 package files
+unchanged. Independent GitHub fetch verified uploaded ZIP bytes. This is NOT a
+ready heating-run package: manufacturer rating and university MATLAB execution
+remain required. Source and delivery stored on feat/c37-residential-heating;
+main/work and existing transfer artifacts preserved. docs/C37_PREPARATION_DELIVERY.json.
