@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "user_supplied_transcription_of_manufacturer_product_page",
+  "received_date": "2026-11-06",
+  "manufacturer": "Purmo",
+  "product": "Compact Type 22",
+  "product_code": "F062206010010P00",
+  "dimensions_height_length_depth_mm": [600, 1000, 102],
+  "water_content_L": 6.6,
+  "manufacturer_listed_mass_kg": 31.356,
+  "listed_mass_includes_water": null,
+  "rated_output_W": 864,
+  "supply_C": 55,
+  "return_C": 45,
+  "room_C": 20,
+  "source_url": "https://www.purmo.com/de-de/produkte/14357/compact/?itempage=28",
+  "source_location": "User-identified product F062206010010P00, 600 x 1000 x 102 mm, 55/45/20 C operating point",
+  "independently_retrieved_in_cloud": false,
+  "retrieval_note": "Supplied product URL returned HTTP403 in cloud. This is the supplied specification transcription, not downloaded manufacturer HTML or a datasheet. User described the specifications as verified. Water inclusion in listed mass remains unconfirmed."
+}

@@ -1474,3 +1474,39 @@ unchanged. Independent GitHub fetch verified uploaded ZIP bytes. This is NOT a
 ready heating-run package: manufacturer rating and university MATLAB execution
 remain required. Source and delivery stored on feat/c37-residential-heating;
 main/work and existing transfer artifacts preserved. docs/C37_PREPARATION_DELIVERY.json.
+
+## C3.7 Purmo completion — 2026-11-06
+
+User supplied Purmo Compact Type22 F062206010010P00,600x1000x102mm,864W at
+55/45/20°C,6.6L water and listed31.356kg weight, with manufacturer URL. Archived
+an accurately labeled user transcription and SHA256; supplied URL still HTTP403,
+so no independent page retrieval or downloaded manufacturer datasheet is claimed.
+Replaced the prior missing-rating gate with a checked local source transcription.
+
+Existing mixed radiator gives UA34.56W/K,flow0.02066985646kg/s (74.411kg/h),
+exact864W at the rated point and839.314W at21°C room,55°C supply. Reused C2 static
+network with adjacent-room source correction:339.267W demand,500.047W margin.
+Sufficient steady capacity under this room's explicit boundaries, not a measured
+rating or a guarantee of transient21°C crossing. No capacity tuning or sweep.
+
+Weight inclusion remains unresolved. For this illustrative run explicitly assume
+listed mass includes6.6kg water (density1kg/L), giving24.756kg effective metal,
+cp500J/(kgK) and total39,966J/K. If listed weight is dry,43,266J/K instead.
+Neither interpretation is claimed as a manufacturer dry-mass fact; fittings and
+metal composition remain approximate. No extra simulations to explore this choice.
+Actual capacitance is recomputed and assigned to the existing radiator workspace.
+
+Entry point performs one24h native run, existing energy/hysteresis/valve checks,
+state and radiator equation checks, previous source/config preservation check,
+two PNGs, CSV and structured report. Static demand included in metadata/report;
+no accepted result file is written until plots/report complete. Two MATLAB static
+C3.7 tests are provided. MATLAB unavailable here: no plots, heat-up time, delivered
+energy or successful native test/run fabricated. Native gate pending; C3.8 not begun.
+
+Checks:215 Python tests passed(17.79s), Ruff lint/format(105 files), mypy(13
+modules), MATLAB static lint78 files plus5 targeted C3.7 files, archive check,
+14 replay mappings and wheel/sdist builds passed.81 previous source/config/
+reference/evidence/result files unchanged byte-for-byte. Added one focused MATLAB
+static test for the matched rating, mass interpretation and adjacent-boundary
+steady demand, alongside the existing room/layer test. Both remain unexecuted
+here. No full repository/component duplication or new physics implementation.

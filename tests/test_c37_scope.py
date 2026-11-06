@@ -1,4 +1,4 @@
-"""Check declared room arithmetic and retain the one-run/no-invented-rating gate."""
+"""Declared room arithmetic, supplied rating provenance and one-run scope."""
 
 import json
 from pathlib import Path
@@ -34,6 +34,39 @@ def test_one_run_and_verified_manufacturer_source_required():
     assert entry.index("c37_radiator_parameters()") < entry.index("c35_build_case(")
     assert "assess_c34(" in entry and "c35_metrics(" in entry
     rating = (ROOT / "scripts/matlab/c37/c37_radiator_parameters.m").read_text()
-    assert "verified_manufacturer_source" in rating
+    assert "user_supplied_manufacturer_specifications" in rating
     assert "boptest_file_sha256" in rating
     assert "rated_output_W/(rating.return_C-rating.room_C)" in rating
+
+
+def test_purmo_rating_and_mass_assumptions_match_supplied_evidence():
+    import hashlib
+
+    c = json.loads((ROOT / "configs/c37/radiator_rating.json").read_text())
+    raw = (ROOT / c["source_file"]).read_bytes()
+    evidence = json.loads(raw)
+    assert hashlib.sha256(raw).hexdigest() == c["source_sha256"]
+    assert evidence["evidence_kind"] == "user_supplied_transcription_of_manufacturer_product_page"
+    assert not evidence["independently_retrieved_in_cloud"]
+    for key in [
+        "product_code",
+        "rated_output_W",
+        "supply_C",
+        "return_C",
+        "room_C",
+        "water_content_L",
+        "manufacturer_listed_mass_kg",
+    ]:
+        assert c[key] == evidence[key]
+    assert c["product_code"] == "F062206010010P00"
+    assert c["listed_mass_includes_water"] is None
+    flow = c["rated_output_W"] / (4180 * (c["supply_C"] - c["return_C"]))
+    ua = c["rated_output_W"] / (c["return_C"] - c["room_C"])
+    water_h = flow * 4180
+    assert abs(flow * 3600 - 74.4114832536) < 1e-9
+    assert abs(ua - 34.56) < 1e-12
+    assert abs(water_h * ua / (water_h + ua) * 35 - 864) < 1e-9
+    water_mass = c["water_content_L"] * c["water_density_kg_L"]
+    effective_metal = c["manufacturer_listed_mass_kg"] - water_mass
+    assert abs(water_mass * 4180 + effective_metal * 500 - 39966) < 1e-9
+    assert abs(water_mass * 4180 + c["manufacturer_listed_mass_kg"] * 500 - 43266) < 1e-9

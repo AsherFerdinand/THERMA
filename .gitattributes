@@ -6,3 +6,6 @@ verification/c3/c34_gate/matlab_integration_test_log.redacted.txt -text -diff
 
 # Preserve original C3.6 uploaded JSON evidence byte hashes.
 verification/c3/c36/**/*.json -text
+
+# Preserve supplied C3.7 specification transcription byte identity.
+verification/c3/c37/*.json -text

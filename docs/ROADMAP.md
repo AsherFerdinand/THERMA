@@ -146,10 +146,11 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [ ] C3.7: agree intended building and manufacturer emitter specification; not started.
 
 
-### C3.7 residential scenario (preparation; not complete)
+### C3.7 residential scenario (implementation ready; native verification pending)
 
 - [x] Separate20m² corner-room data and one-run integration entry point prepared.
-- [ ] Obtain and review a manufacturer radiator rating/source (external sites blocked).
-- [ ] Configure rating-derived UA/flow, then execute the24h run in university MATLAB.
+- [x] Record user-supplied Purmo864W at55/45/20°C with URL and transcription provenance.
+- [x] Match existing model UA/flow; document unresolved weight interpretation and capacitance.
+- [ ] Execute the two static C3.7 tests and one24h run in university MATLAB.
 - [ ] Review actual heating time, energy, two plots and physical checks.
 - [ ] C3.8 not started.

@@ -1,9 +1,8 @@
 # C3.7 — Illustrative residential room
 
-**Prepared, not executed. Radiator selection is blocked pending a verified
-manufacturer datasheet.** No room temperature/heating-energy result or successful
-MATLAB verification is claimed. Manufacturer/search websites returned HTTP403
-from this environment; no catalogue rating was substituted from memory.
+**Implementation ready for university MATLAB R2025a; native execution pending.**
+The supplied Purmo operating point is now configured. No heating time, energy
+or successful native verification is claimed before that run.
 
 ## Room and boundaries
 
@@ -48,32 +47,59 @@ with warm walls, not a fully cold-soaked room or a simulated preceding cooling
 history. Setpoint21°C, supply55°C, duration24h; zero solar/internal gains.
 The construction uses the existing multilayer C2 nodes and linear exchanges.
 
-## Radiator: evidence still needed
+## Selected radiator and single-point match
 
-No manufacturer/product/output has been verified. The empty
-[rating file](../configs/c37/radiator_rating.json) deliberately blocks execution
-before model construction. Please supply one manufacturer table at55°C supply
-(e.g.55/45/20°C), identifying model, size, output, return/room temperatures and
-source/table location. An archived document is hashed, and its relative path,
-SHA256 and citation are recorded in that file after review. A merely illustrative
-number or a retailer's unsupported conversion is insufficient.
+**Purmo Compact Type 22, F062206010010P00**,600×1000×102mm. The user supplied
+**864W at55/45/20°C**,6.6L water and listed mass31.356kg from the
+[manufacturer page](https://www.purmo.com/de-de/produkte/14357/compact/?itempage=28).
+The [archived specification](../verification/c3/c37/purmo_user_supplied_specification.json)
+is explicitly a **user-supplied transcription**, hashed in the
+[rating config](../configs/c37/radiator_rating.json). The page still returned
+HTTP403 here; no manufacturer HTML or independently checked datasheet is claimed.
 
-For a documented operating point Qrated, Ts, Tr, Ta, the **existing** mixed-radiator
-model is matched using `flow=Qrated/[cp*(Ts−Tr)]` and `UA=Qrated/(Tr−Ta)`.
-Its lump temperature equals its outlet/return at steady state. This matches
-one catalogue point; it does not reproduce a real panel's distributed water
-profile or nonlinear rating curve. The model's output at21°C air is calculated
-separately; it is not labeled a manufacturer's21°C rating.
+The existing model uses `Qwater=flow*cp*(Ts−Tr)` and `Qroom=UA*(Tr−Ta)` at
+steady state, where the mixed radiator temperature equals its outlet/return.
+Thus, at the one rated point:
 
-Thermostat hysteresis, valve dynamics,3kg water/20kg metal storage and35% radiant
-fraction are retained as existing illustrative assumptions, not product facts.
-Radiation still uses air as a sink proxy. No pressure-network, boiler, heat pump,
-new controller or nonlinear emitter model is introduced.
+| Quantity | Value and basis |
+|---|---|
+| Water flow |`864/[4180*(55−45)]`=**0.020670kg/s**,74.411kg/h|
+| Effective linear UA |`864/(45−20)`=**34.56W/K**|
+| Manufacturer rating at20°C room |**864W**, supplied catalogue point|
+| Model prediction at21°C room /55°C supply |**839.31W**, full opening, same flow|
+| Room steady demand at21°C /0°C |**339.27W**, existing network with21°C adjacent rooms and65/35 heat split|
+| Static capacity margin |**500.05W**; sufficient to maintain21°C under these assumptions|
+
+The339.27W calculation reuses the existing C2 static nodal diagnostic, correcting
+the two partition boundaries to21°C; the simpler outdoor-only estimate is328W.
+This is static algebra, not a simulation or a design-standard calculation.
+The emitter is sufficient at steady state; this does not establish the first
+21°C crossing time or guarantee identical real-room behavior.
+
+**Water/metal storage uncertainty:** the supplied listing does not state whether
+31.356kg includes water, and the inaccessible page prevents resolving that here.
+For this one illustrative run, assume the listed mass includes the6.6L water:
+water density1kg/L gives6.6kg water and **24.756kg effective metal**. Retain
+existing metal cp500J/(kgK), an effective steel approximation including uncertain
+fittings, and water cp4180J/(kgK). Total capacitance is **39,966J/K**. This is
+an explicitly chosen interpretation, **not a manufacturer dry-mass statement**.
+If31.356kg is instead dry mass, the corresponding capacitance is43,266J/K.
+These are two interpretations, not certified bounds on every possible accessory
+or packaging convention. Their full-open fixed-room radiator time constants are
+5.51/5.96min; no extra dynamic experiment or sensitivity sweep was run.
+
+Only this rated steady operating point is matched. Linear UA, uniform water/metal
+temperature, imposed flow/supply,35% radiant fraction and air-as-radiant-sink remain
+approximations. No manufacturer validation of dynamics, other temperatures or
+thermostat behavior is implied. Existing1K thermostat hysteresis and60/90s valve
+opening/closing time constants are unchanged. No pressure network, boiler, heat
+pump, nonlinear emitter, thermal bridges or humidity model is added.
 
 ## Execution and interpretation
 
-After a manufacturer source is supplied and the rating config reviewed, extract
-the small update into the existing `THERMA_C35_MATLAB` folder. MATLAB R2025a:
+Extract the update directly into the existing `THERMA_C35_MATLAB` folder,
+replacing the C3.7 preparation files if present. No internet is needed.
+MATLAB R2025a, from that folder:
 
 ```matlab
 results = runtests(fullfile('tests','matlab','test_therma_c37.m'));
@@ -97,5 +123,7 @@ C3.8 has not started.
 
 <!-- C37_RESULTS -->
 
-No actual C3.7 simulation result is available. Awaiting manufacturer evidence,
-then university MATLAB execution. This phase is not complete.
+No actual C3.7 simulation result is available. Run the entry point on the
+university PC, then supply `residential_result.json` and `residential_trajectory.csv`
+from its printed output directory. The two static MATLAB tests and full24h run
+remain unexecuted here. C3.7 native verification is pending; C3.8 has not started.
