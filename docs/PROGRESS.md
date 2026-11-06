@@ -1510,3 +1510,16 @@ reference/evidence/result files unchanged byte-for-byte. Added one focused MATLA
 static test for the matched rating, mass interpretation and adjacent-boundary
 steady demand, alongside the existing room/layer test. Both remain unexecuted
 here. No full repository/component duplication or new physics implementation.
+
+Purmo update published separately to replay-transfer(f72ea44):
+THERMA_C37_PURMO_RESIDENTIAL_UPDATE_2026-11-06.zip,11 files,17955bytes,
+source224eec64e6696a467d187c334763ad1801a922f0. SHA256
+f68326e515e68c5381b9a98b5b7fed6df1dd8e822a65623bfc15b4c342901cdb.
+Fresh extraction verified CRC, manifest, source transcription hash and correct
+relative paths, both over base C3.5 and after the earlier C3.7 preparation update.
+All241 original C3.5 package files preserved. Independent GitHub fetch confirmed
+uploaded bytes. No raw datasets, outputs, caches or full component duplication.
+Use START_C37.txt; previous preparation-only instructions are superseded. Local
+MATLAB source/config/test dependencies are in the existing C3.5 folder; no network,
+Git or Python needed. Runtime still pending on university MATLAB R2025a.
+Delivery receipt docs/C37_PURMO_DELIVERY.json; main/work and old artifacts preserved.

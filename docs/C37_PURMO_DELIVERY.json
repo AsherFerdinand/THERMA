@@ -1,0 +1,20 @@
+{
+  "filename": "THERMA_C37_PURMO_RESIDENTIAL_UPDATE_2026-11-06.zip",
+  "source_commit": "224eec64e6696a467d187c334763ad1801a922f0",
+  "sha256": "f68326e515e68c5381b9a98b5b7fed6df1dd8e822a65623bfc15b4c342901cdb",
+  "bytes": 17955,
+  "files": 11,
+  "status": "implementation_ready_native_MATLAB_execution_pending",
+  "kind": "C37_only_overlay_requires_existing_C35_project",
+  "original_C35_files_unchanged": 241,
+  "clean_and_preparation_overlay_verified": true,
+  "crc_manifest_and_rating_source_hash_verified": true,
+  "python_tests_passed": 215,
+  "matlab_executed": false,
+  "manufacturer_data_provenance": "user_supplied_transcription_with_URL_not_independent_cloud_retrieval",
+  "listed_weight_water_inclusion": "unresolved; wet-mass interpretation explicitly assumed for illustrative run",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C37_PURMO_RESIDENTIAL_UPDATE_2026-11-06.zip",
+  "transfer_commit": "f72ea44a1559f599f02e162ed597c06f66c13802",
+  "uploaded_bytes_sha256_verified": true,
+  "existing_artifacts_and_main_work_C35_preserved": true
+}
