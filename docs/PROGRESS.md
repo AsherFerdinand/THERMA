@@ -1618,3 +1618,38 @@ preserved; no raw FMU/source datasets or generated models duplicated. START_C39.
 contains offline MATLAB post-processing commands. docs/C39_DELIVERY.json.
 Actual reference comparison complete on preserved results; MATLAB entry/test
 execution remains pending. No C4.0 or new physics implemented.
+
+## C4.0 residential heating-system workbench — 2026-11-08
+
+User reports successful R2025a execution/verification of C3.7,C3.8,C3.9; no new
+native C4.0 evidence supplied. Created a separate presentation-only builder/entry
+point using the verified C3.8 copy helper and C3.7 saved model/parameters. Original
+geometry/materials/initial conditions/UA/flow/deadband/solver settings preserved.
+Four clearly named physical subsystems laid out left-to-right; main feedback and
+heat/mass-flow signals named. Existing diagnostics grouped into a fifth passive
+Results and checks utility. Main source-to-destination connections asserted after
+grouping; no thermal/control equations or component implementations duplicated.
+Only the run's owned intermediate model is removed after saving the final C40 SLX.
+
+Original result/CSV/model hashes and effective release/parameters are checked via
+the existing baseline reader. Missing baseline artifacts stop without a substitute
+or rerun. One new24h demonstration, existing numerical/hysteresis/valve/power
+checks, source/result preservation checks and fixed baseline-comparison gate:
+0.001K temperature,0.5W power,0.001kWh energy and identical sampled demands/full-day
+transition counts. No tolerances changed after observing results. Controller ticks
+use verified post-event sample-selection semantics, not linear discrete interpolation.
+One figure overlays C3.7/C4.0 air temperature and radiator power. Model and figure
+remain open; only new C4.0 outputs/report written. No original C3.7/C3.8/BESTEST
+files modified. No new plant components/controllers/weather or next phase added.
+
+MATLAB unavailable here: no SLX binary or C4.0 trajectory/plot fabricated. The
+entry point must generate/open THERMA_C40_HeatingSystem.slx, simulate and establish
+reproduction on the university PC. Layout inspection and both small MATLAB
+software comparator tests also remain pending. docs/C40_HEATING_SYSTEM.md.
+
+Checks:221 Python tests passed(18.67s), Ruff lint/format(112 files), mypy(13
+modules), MATLAB static lint91 files and4 targeted C4.0 files, archive integrity,
+14 replay mappings and wheel/sdist builds passed.136 previous source/config/
+reference/result files unchanged byte-for-byte. Native model generation, topology/
+layout inspection, two MATLAB software tests and one demonstration comparison
+remain unexecuted here. C4.0 completion is pending those university checks.

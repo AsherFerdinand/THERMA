@@ -168,6 +168,15 @@ Phase 1B.2 and later implementation await university diagnostic results.
 
 - [x] Reproduce C2.8 air MAE/RMSE and audit prescribed heating input; exactly two plots.
 - [x] Retain initial-state/solar/boundary and execution-lineage limitations.
-- [ ] University MATLAB reproduction of the post-processing entry point (no simulation).
+- [x] University R2025a reproduction user-reported successful (no new cloud execution).
 - [ ] Resolve old execution/solver/event evidence before stronger validation claims.
-- [ ] C4.0 not started.
+- [x] C4.0 visual workbench authorized; native generation/reproduction pending.
+
+
+### C4.0 integrated residential workbench
+
+- [x] Presentation-only builder with four named physical subsystems, visible inputs/feedback and collapsed checks.
+- [x] One-run C3.7 comparison driver, fixed numerical tolerances and one result figure prepared.
+- [ ] Generate/open SLX and inspect layout in university MATLAB R2025a.
+- [ ] Pass existing physical checks and reproduce C3.7 trajectories, switching and energy.
+- [ ] No subsequent phase started.
