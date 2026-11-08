@@ -1,0 +1,20 @@
+{
+  "filename": "THERMA_C42_ANNEX58_INSPECTION_BLOCKED_2026-11-08.zip",
+  "source_commit": "65383b49d73d2b5854592957d4af2c1003586bc0",
+  "sha256": "bac92878c4b5bdc638308ffc8181d385b151695037e0a9593435bc11c18c8aa2",
+  "bytes": 11446,
+  "files": 7,
+  "status": "blocked_missing_authoritative_PDF_and_measurements_C42_incomplete",
+  "previous_installation_files_unchanged": 280,
+  "fresh_extraction_crc_manifest_dependencies_verified": true,
+  "python_tests_passed": 220,
+  "optional_plotting_tests_skipped": 3,
+  "MATLAB_executed_in_cloud": false,
+  "original_or_processed_measurements_included": false,
+  "actual_building_geometry_extracted": false,
+  "fallback_dataset_switched": false,
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C42_ANNEX58_INSPECTION_BLOCKED_2026-11-08.zip",
+  "transfer_commit": "e168aa0b2a786d79ca5f14897aae3a676d009a36",
+  "uploaded_bytes_sha256_verified": true,
+  "existing_artifacts_and_main_work_C35_preserved": true
+}

@@ -1747,3 +1747,14 @@ same field set for MATLAB struct-array decoding.209 previous implementation/
 configuration/evidence/result files unchanged byte-for-byte. New native inspection
 entry remains unexecuted; no measurements, processed CSV, plot, empirical-validation
 claim or geometry-readiness claim produced. Raw downloads remain ignored.
+
+Published explicitly blocked inspection-only update on replay-transfer(e168aa0):
+THERMA_C42_ANNEX58_INSPECTION_BLOCKED_2026-11-08.zip,7 files,11446bytes,
+source65383b49d73d2b5854592957d4af2c1003586bc0. SHA256
+bac92878c4b5bdc638308ffc8181d385b151695037e0a9593435bc11c18c8aa2.
+Fresh extraction/CRC/manifest/dependency checks preserve all280 previous installed
+package files. Only the small uploaded ZIP was fetched for independent HTTP/hash
+verification; no unrelated historical datasets downloaded for delivery checks.
+Previous branches/artifacts preserved. docs/C42_BLOCKED_DELIVERY.json records
+that no actual geometry/data integration has occurred. Official PDF/structure/
+measurements are still required; native inspection entry is unexecuted here.
