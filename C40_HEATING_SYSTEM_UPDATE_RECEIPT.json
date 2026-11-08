@@ -1,0 +1,17 @@
+{
+  "filename": "THERMA_C40_HEATING_SYSTEM_UPDATE_2026-11-08.zip",
+  "source_commit": "40973742501e0930c24786b72b91613fdbffc0c0",
+  "sha256": "f7964f6609f62f450ba80e3c07b857ed0aeaa94753e0c9beae58dea689c8ca45",
+  "bytes": 11443,
+  "files": 7,
+  "status": "implementation_ready_native_model_generation_and_reproduction_pending",
+  "kind": "C40_only_source_overlay_requires_existing_C37_C38_and_original_C37_artifacts",
+  "previous_installation_files_unchanged": 273,
+  "fresh_extraction_crc_manifest_dependencies_verified": true,
+  "python_tests_passed": 221,
+  "MATLAB_executed_in_cloud": false,
+  "SLX_binary_included": false,
+  "native_SLX_filename": "THERMA_C40_HeatingSystem.slx",
+  "new_simulations_required_on_PC": 1,
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C40_HEATING_SYSTEM_UPDATE_2026-11-08.zip"
+}

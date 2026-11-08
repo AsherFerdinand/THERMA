@@ -180,3 +180,10 @@ SHA256: `628695c1e8c842bca231b8dbe5b4d1e1171e1b425bcf9639b0b1940bf69ba9e8`. Sour
 Download [THERMA_C39_BOPTEST_COMPARISON_UPDATE_2026-11-08.zip](THERMA_C39_BOPTEST_COMPARISON_UPDATE_2026-11-08.zip). Extract INTO the existing THERMA_C35_MATLAB folder. Read START_C39.txt; run the two C3.9 software tests then run_c39_boptest_comparison. Includes compact verified DERIVED actual-data tables and exactly two plots, with no old C2.7/C2.8 folder dependency. Solar air MAE0.792534195K,RMSE0.923975534K; operative reaTRoo_y is excluded. Heating input consistency only, not independent equipment validation. Retains solar execution-lineage and sampled-energy limitations. Actual Python post-processing complete; native MATLAB reproduction unexecuted in cloud. C3.7/C3.8 and BESTEST unchanged; no C4.0.
 
 SHA256: `3fd6c9974c5201ae61c5869eba0c5ebb49ab0998502672535b576085c38217db`. Source `30ea3c50f71b95957cf5b5f75d22950d3e44c5e4`.
+
+
+## C4.0 integrated residential heating workbench - native build pending
+
+Download [THERMA_C40_HEATING_SYSTEM_UPDATE_2026-11-08.zip](THERMA_C40_HEATING_SYSTEM_UPDATE_2026-11-08.zip). Extract INTO the existing THERMA_C35_MATLAB folder with C3.7/C3.8 updates and original C3.7 result/CSV/model. Read START_C40.txt; run two comparator software tests then run_c40_heating_system. The script generates/opens THERMA_C40_HeatingSystem.slx, runs one24h demonstration and compares C3.7 temperature/power/demand/energy. Four named physical subsystems plus one passive results group; no changed thermal equations or solver settings. This SOURCE update contains no prebuilt SLX or fabricated result: native model/layout/test/run/reproduction remain pending. One result figure only; original artifacts preserved. No subsequent phase.
+
+SHA256: `f7964f6609f62f450ba80e3c07b857ed0aeaa94753e0c9beae58dea689c8ca45`. Source `40973742501e0930c24786b72b91613fdbffc0c0`.
