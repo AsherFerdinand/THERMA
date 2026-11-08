@@ -1,0 +1,23 @@
+{
+  "filename": "THERMA_C38_THERMOSTAT_UPDATE_2026-11-08.zip",
+  "source_commit": "c9b5469e2744ec38814c6a2304b9b9c55becedd8",
+  "sha256": "628695c1e8c842bca231b8dbe5b4d1e1171e1b425bcf9639b0b1940bf69ba9e8",
+  "bytes": 13544,
+  "files": 9,
+  "status": "implementation_ready_native_comparison_pending",
+  "kind": "C38_only_overlay_requires_existing_C35_and_C37_Purmo_project",
+  "previous_package_files_unchanged": 252,
+  "fresh_extraction_crc_manifest_and_dependencies_verified": true,
+  "python_tests_passed": 217,
+  "matlab_executed_in_cloud": false,
+  "simulation_policy": "reuse compatible original C3.7 baseline and run modified only; otherwise two cases total",
+  "comparison_interval_h": [
+    2,
+    24
+  ],
+  "plot_interval_h": [
+    2,
+    8
+  ],
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C38_THERMOSTAT_UPDATE_2026-11-08.zip"
+}

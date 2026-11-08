@@ -166,3 +166,10 @@ SHA256: `c94bcb81da726b01eac550f558f4cd5b38eb65dc3feddd00597796cc8cde7774`. Sour
 Download [THERMA_C37_PURMO_RESIDENTIAL_UPDATE_2026-11-06.zip](THERMA_C37_PURMO_RESIDENTIAL_UPDATE_2026-11-06.zip). Extract directly INTO the existing THERMA_C35_MATLAB folder, replacing old C3.7 preparation files only. Read START_C37.txt. This supersedes the earlier preparation-only package. Run the two C3.7 static tests, then run_c37_residential_heating for one24h simulation and exactly two plots. Purmo864W at55/45/20C is user supplied; matches UA34.56W/K,flow0.02066985646kg/s. Listed weight water inclusion remains unresolved: wet-mass interpretation is explicitly assumed. MATLAB execution remains pending; no dynamic manufacturer or real-world validation. Existing BESTEST/components unchanged.
 
 SHA256: `f68326e515e68c5381b9a98b5b7fed6df1dd8e822a65623bfc15b4c342901cdb`. Source `224eec64e6696a467d187c334763ad1801a922f0`.
+
+
+## C3.8 thermostat comparison - native execution pending
+
+Download [THERMA_C38_THERMOSTAT_UPDATE_2026-11-08.zip](THERMA_C38_THERMOSTAT_UPDATE_2026-11-08.zip). Extract INTO the existing THERMA_C35_MATLAB folder containing the C3.7 Purmo update and completed outputs. Read START_C38.txt. Run the two C3.8 software metric tests, then run_c38_thermostat_comparison. Reuses a compatible original C3.7 result/CSV/saved model; only the0.5C case is simulated when baseline artifacts pass. Otherwise runs two cases in C3.8 outputs. Primary interval2-24h, exactly two plots showing2-8h. C3.7 sources/results and BESTEST remain unchanged; no efficiency or native comparison result claimed in cloud. No C3.9.
+
+SHA256: `628695c1e8c842bca231b8dbe5b4d1e1171e1b425bcf9639b0b1940bf69ba9e8`. Source `c9b5469e2744ec38814c6a2304b9b9c55becedd8`.
