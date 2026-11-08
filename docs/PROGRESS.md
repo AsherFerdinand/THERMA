@@ -1569,3 +1569,39 @@ or output duplication. Independent GitHub fetch verified uploaded bytes. Previou
 feature/main/work branches and transfer artifacts preserved. START_C38.txt gives
 native test/run commands and baseline reuse policy. Native C3.8 comparison and
 recommendation remain pending university execution. docs/C38_DELIVERY.json.
+
+
+## C3.8 supplied summary review and C3.9 — 2026-11-08
+
+Supplied actual comparison.json SHA256 94855980324494daa8b88b73ceb734fe36a41cd2e2e2371b0566cbb142b4973c.
+R2025a report records one new simulation and reused baseline; both numerical/
+controller checks passed.2–24h MAE0.358421→0.263136K; switches57→80; delivered
+heat8.990510→9.249685kWh. Narrower hysteresis reduced deviation with more switching;
+no efficiency claim. Raw trajectories/source artifacts were not supplied for
+independent rehashing. Original upload retained unchanged locally; no private
+machine paths or fabricated test logs archived, and no C3.8 files modified.
+
+C3.9 reused hash-verified C2.8 controlled pair and original BOPTEST reference run.
+Solar MAE0.792534195K,RMSE0.923975534K reproduced exactly with the original native
+air trajectory mod.case900Template.TAir; operative reaTRoo_y explicitly excluded.
+40,321 common30s absolute evaluation samples,14days after7-day warm-up. Brussels
+weather, selected293.15K initial temperatures, existing radiator/internal gains
+and six opaque solar powers preserved. No FMU/MATLAB simulation or calibration.
+
+Signed source30s heat529.386194kWh; THERMA adaptive-log hold529.450119kWh; source
+on same log grid529.450119kWh. Components match pointwise to5.01e-12W. The0.063925
+kWh grid difference is a sampled reconstruction limitation, not independent
+heating-system validation or a continuous native-integral proof. Negative source
+heat retained. Existing R2021a/R2024a duplicate-solar execution-lineage caveat and
+missing event/convergence certification retained. Compact derived tables support
+standalone post-processing on the C3.5 installation with no old C2.7/C2.8 folder.
+Exactly two actual-data PNGs, metrics/provenance and concise C39 report prepared.
+MATLAB R2025a entry/two SOFTWARE tests remain unexecuted; no C4.0 started.
+
+Checks:219 Python tests passed(17.61s), Ruff lint/format(110 files), mypy(13
+modules), static MATLAB lint87 files plus3 C3.9 targets, archive integrity,
+14 replay mappings and wheel/sdist builds passed.116 previous source/config/
+evidence/benchmark files unchanged byte-for-byte. New MATLAB tests are software
+fixtures only and remain unexecuted. Original source CSVs/receipts/reports are
+preserved; only derived tables are prepared for the transfer ZIP. Exactly two
+actual-data PNGs committed. MATLAB reproduction pending, no new model simulation.

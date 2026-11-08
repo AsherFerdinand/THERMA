@@ -1,0 +1,102 @@
+{
+  "status": "postprocessed_preserved_actual_results_no_simulation",
+  "temperature_quantity": "air_temperature",
+  "reference_temperature_source": "mod.case900Template.TAir",
+  "excluded_operative_source": "reaTRoo_y",
+  "temperature_unit": "K",
+  "power_unit": "W",
+  "heating_quantity": "delivered_zone_heat",
+  "heating_source": "-(mod.rad.QCon_flow + mod.rad.QRad_flow)",
+  "scenario": {
+    "name": "typical_heat_day",
+    "center_day": 341,
+    "evaluation_start_day": 334,
+    "evaluation_end_day": 348,
+    "warmup_days": 7,
+    "initialization_time_s": 28252800,
+    "evaluation_start_s": 28857600,
+    "evaluation_end_s": 30067200,
+    "reset_at_evaluation_start": false
+  },
+  "boptest_commit": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+  "ideas_commit": "f1fdd8b22d39dc50297c47b6433e44381e40d0ff",
+  "fmu_sha256": "365b3085d97cc4620c06b6036156126a056d7f160fcc4f181d6b2fac4b05743b",
+  "weather": "Brussels.mos",
+  "sample_count": 40321,
+  "metrics": {
+    "MAE_K": 0.7925341950338989,
+    "RMSE_K": 0.9239755340437169,
+    "maximum_absolute_error_K": 2.3971545332768756,
+    "bias_K": -0.4506132799970814
+  },
+  "heating_energy": {
+    "reference_30s_hold_kWh": 529.3861941632234,
+    "THERMA_logged_hold_kWh": 529.450118967999,
+    "reference_on_log_grid_hold_kWh": 529.4501189679988,
+    "component_max_discrepancy_W": {
+      "delivered_heating_convective_power": 5.002220859751105e-12,
+      "delivered_heating_radiative_power": 5.002220859751105e-12
+    },
+    "zone_total_vs_components_max_W": 1.0913936421275139e-11,
+    "source_negative_power_samples": 392,
+    "method": "Signed previous-hold reconstructions; no gas/equipment input or clamping",
+    "limitation": "Not continuous FMU energy or native integrator proof; adaptive export grid aliases held jumps"
+  },
+  "source_provenance": {
+    "study_index_sha256": "a71f5519bd0341b12a5bb87a9e9e24726679ef85bcafa343ec1e76d8e7da2ab2",
+    "contract_sha256": "964ead36905b6275ef65bf922dcc78245d813a9fa0add516ba31cac47ffd5d0a",
+    "matlab_version": "24.1.0.2537033 (R2024a)",
+    "independent_MATLAB_execution": false,
+    "verification_scope": "Supplied controlled-pair artifacts only; not all C2.7 outputs",
+    "no_solar_30": {
+      "completion_sha256": "0f8200d16228427977c85603b893f471a7afafcd7a3fad4281bb4e13d57e914d",
+      "supplied_artifacts": {
+        "evaluation.csv": "b32f1aebcf8382c2dabd4c90dc3dbe66466b3891f02ebcc3ecacabf16754796c",
+        "comparison_metadata.json": "aad5023ac0dfae40b5c257557f055de96b52c0f3d5e8a98c4600c76dfe3d3b58",
+        "replay_run.json": "1b1de5f644e19b15b3953e0d59f9eb9ad595c3a076e9250d7a0ca8b45acdc316"
+      },
+      "unverified_unsupplied_artifacts": [
+        "THERMA_BOPTEST_ThermalZone_C2.slx",
+        "energy_events.csv",
+        "solver_metadata.json"
+      ],
+      "samples": 58008,
+      "maximum_sample_gap_s": 30.0,
+      "packet_sha256": "c4b3fd86502908779eb5d8fbcdafabe9b6e8f8e71b7a305cfa5621e718d1517c"
+    },
+    "solar_30": {
+      "completion_sha256": "6bd2d51938e90bd420a1cb00e6cc53ec18b54012c9d2250daaa6fcee26fa2590",
+      "supplied_artifacts": {
+        "evaluation.csv": "b1c340ae56d42877ff000104f921dc42f43faa41f040f7e5c1a9230e6255cb0d",
+        "comparison_metadata.json": "d45f35a876d5de0c1b566616b19072f89d4ae0a5c6e743fa30153ca774e012d2",
+        "replay_run.json": "ede4a7753bd5918535b96d3815705a3b6eac4867e037bb232a3355ea6a916d07"
+      },
+      "unverified_unsupplied_artifacts": [
+        "THERMA_BOPTEST_ThermalZone_C2.slx",
+        "energy_events.csv",
+        "solver_metadata.json"
+      ],
+      "samples": 59292,
+      "maximum_sample_gap_s": 30.0,
+      "packet_sha256": "5f923d220e77bad415559572b155c5aaa776407352f0930ee0c2f9558fda33a3"
+    }
+  },
+  "reference_metadata_sha256": "77c0589e5c38fca34a0e1ec915f97fe5d443b454510d25c2b2f45c9632929d2d",
+  "reference_manifest_sha256": "07f761b8cdf0e001b416419833b44bf62144698f6f24f17f1517616fc1f3f247",
+  "reference_trajectory_sha256": "36a8db48d0283868a04310ed6447b358ee854846fdbd9c03250bca0c06336093",
+  "reference_initialized_air_K": 293.15,
+  "THERMA_initial_conditions": "provisional_uniform_declared_start_not_full_FMU_state",
+  "limitations": [
+    "Prescribed reference radiator heat, not independent hydronic prediction",
+    "Reduced initial-state/envelope/window/airflow representation",
+    "Full C2.7 convergence and event energy evidence not supplied",
+    "MATLAB comparison script unexecuted in cloud; metrics/plots generated in Python",
+    "Maximum errors are sampled, not bounds between timestamps",
+    "Uploaded solar CSV matches C2.6C solar evidence previously reported R2021a; new report/contract state R2024a. Independent fresh-run lineage is not established."
+  ],
+  "MATLAB_executed_in_cloud": false,
+  "derived_files": {
+    "temperature_csv": "71642920ae1880cbc2d9d532381ed1794730b7acbf40a9ebb2a3be58c00afebf",
+    "heating_csv": "3af327eff7f4bcc795d6640d0ff00b12b5bd1e1ea433a9464e11e98fc711c9d1"
+  }
+}

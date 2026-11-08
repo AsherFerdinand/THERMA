@@ -156,9 +156,18 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [x] C3.8 thermostat investigation authorized; implementation prepared, native comparison pending.
 
 
-### C3.8 thermostat hysteresis (native comparison pending)
+### C3.8 thermostat hysteresis (supplied native summary reviewed)
 
 - [x] Two-deadband driver, compatible C3.7 reuse,2–24h metrics and two2–8h plots prepared.
-- [ ] Execute in university MATLAB; review both actual cases and physical checks.
-- [ ] Decide regulation-versus-switching trade-off from actual results.
-- [ ] C3.9 not started.
+- [x] Supplied R2025a comparison summary confirms both cases/checks; original trajectories not rehashed.
+- [x] Narrower band reduced MAE with more switching in supplied comparison.
+- [x] C3.9 existing-result reference comparison authorized and analyzed.
+
+
+### C3.9 BOPTEST reference comparison
+
+- [x] Reproduce C2.8 air MAE/RMSE and audit prescribed heating input; exactly two plots.
+- [x] Retain initial-state/solar/boundary and execution-lineage limitations.
+- [ ] University MATLAB reproduction of the post-processing entry point (no simulation).
+- [ ] Resolve old execution/solver/event evidence before stronger validation claims.
+- [ ] C4.0 not started.
