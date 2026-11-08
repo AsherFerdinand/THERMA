@@ -1558,3 +1558,14 @@ modules), MATLAB static lint84 files and6 targeted C3.8 files passed. Archive
 integrity/14 replay mappings and wheel/sdist builds passed.95 previous source/
 config/reference/evidence/result files compared byte-for-byte unchanged. New
 MATLAB metric tests are unexecuted here; no native C3.8 execution is claimed.
+
+Published minimal C3.8 update to replay-transfer(e9ec002):
+THERMA_C38_THERMOSTAT_UPDATE_2026-11-08.zip,9 files,13544bytes. Source
+c9b5469e2744ec38814c6a2304b9b9c55becedd8. SHA256
+628695c1e8c842bca231b8dbe5b4d1e1171e1b425bcf9639b0b1940bf69ba9e8.
+Fresh extraction over C3.5+Purmo C3.7 verified CRC, manifest, dependencies and
+all252 previous installation files unchanged. No raw datasets, existing models
+or output duplication. Independent GitHub fetch verified uploaded bytes. Previous
+feature/main/work branches and transfer artifacts preserved. START_C38.txt gives
+native test/run commands and baseline reuse policy. Native C3.8 comparison and
+recommendation remain pending university execution. docs/C38_DELIVERY.json.
