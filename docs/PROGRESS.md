@@ -1653,3 +1653,15 @@ modules), MATLAB static lint91 files and4 targeted C4.0 files, archive integrity
 reference/result files unchanged byte-for-byte. Native model generation, topology/
 layout inspection, two MATLAB software tests and one demonstration comparison
 remain unexecuted here. C4.0 completion is pending those university checks.
+
+Published C4.0 source update on replay-transfer(c330958):
+THERMA_C40_HEATING_SYSTEM_UPDATE_2026-11-08.zip,7 files,11443bytes. Source
+40973742501e0930c24786b72b91613fdbffc0c0. SHA256
+f7964f6609f62f450ba80e3c07b857ed0aeaa94753e0c9beae58dea689c8ca45.
+Fresh extraction/CRC/manifest/dependency checks preserved all273 prior installed
+C3.5/C3.7/C3.8/C3.9 package files. Independent GitHub fetch verified ZIP bytes;
+previous branches and transfer artifacts preserved. No generated SLX, results,
+large datasets or caches included: native builder creates the requested model
+on the university PC. START_C40.txt gives test/run/baseline instructions.
+docs/C40_DELIVERY.json records pending native generation/reproduction explicitly.
+C4.0 not marked complete; no subsequent phase started.
