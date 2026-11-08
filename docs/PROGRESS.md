@@ -1605,3 +1605,16 @@ evidence/benchmark files unchanged byte-for-byte. New MATLAB tests are software
 fixtures only and remain unexecuted. Original source CSVs/receipts/reports are
 preserved; only derived tables are prepared for the transfer ZIP. Exactly two
 actual-data PNGs committed. MATLAB reproduction pending, no new model simulation.
+
+Published C3.9 compact update on replay-transfer(2decad0):
+THERMA_C39_BOPTEST_COMPARISON_UPDATE_2026-11-08.zip,12 files,2386927bytes.
+Source30ea3c50f71b95957cf5b5f75d22950d3e44c5e4; SHA256
+3fd6c9974c5201ae61c5869eba0c5ebb49ab0998502672535b576085c38217db.
+Fresh extraction over C3.5+C3.7+C3.8 preserved all261 existing files. CRC,
+manifest, dependencies,40321x4 temperature and59292x3 heating derived tables,
+MAE/RMSE and both energy reconstructions verified without C2.7/C2.8 folders.
+Independent GitHub fetch confirmed ZIP bytes. Previous branches and artifacts
+preserved; no raw FMU/source datasets or generated models duplicated. START_C39.txt
+contains offline MATLAB post-processing commands. docs/C39_DELIVERY.json.
+Actual reference comparison complete on preserved results; MATLAB entry/test
+execution remains pending. No C4.0 or new physics implemented.
