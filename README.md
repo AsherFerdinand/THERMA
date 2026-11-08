@@ -194,3 +194,10 @@ SHA256: `f7964f6609f62f450ba80e3c07b857ed0aeaa94753e0c9beae58dea689c8ca45`. Sour
 Download [THERMA_C42_ANNEX58_INSPECTION_BLOCKED_2026-11-08.zip](THERMA_C42_ANNEX58_INSPECTION_BLOCKED_2026-11-08.zip). Extract into existing THERMA_C35_MATLAB; read START_C42.txt. run_c42_reference_inspection reports missing originals/unknown geometry/signals and writes a summary only. No actual PDF or measurement archive obtained; no geometry, processed data or temperature plot fabricated. DOI and publisher/metadata routes blocked locally by proxy403; file download URL/status unknown. User must provide the official specification PDF, archive structure and genuine measurements for continuation. No Annex71 substitution or automatic FRP-2 fallback. C4.2 incomplete; no C4.3.
 
 SHA256: `bac92878c4b5bdc638308ffc8181d385b151695037e0a9593435bc11c18c8aa2`. Source `65383b49d73d2b5854592957d4af2c1003586bc0`.
+
+
+## C4.2B FLEXLAB measurement inspection
+
+Download [THERMA_C42B_FLEXLAB_INSPECTION_UPDATE_2026-11-08.zip](THERMA_C42B_FLEXLAB_INSPECTION_UPDATE_2026-11-08.zip). Extract into existing THERMA_C35_MATLAB and read START_C42B.md. Inspection code/docs and genuine-measurement previews only; six original CSVs must be downloaded directly from pinned official source URLs in the ZIP. No raw datasets redistributed. No simulation/model change. CONDITIONAL separate Cell3B benchmark; not a residential building. Native MATLAB execution pending.
+
+SHA256: `5a808c3731d38c632a35849f4a8f2fd51f87b1cbfad8c8c8f5fafca40c6548f3`. Source `cf8a6b73e2be305e3669f645b2960f92af9fa01a`.
