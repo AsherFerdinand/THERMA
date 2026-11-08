@@ -1,0 +1,1600 @@
+{
+  "source_commit": "265312ec3843c97d5a24b7d5671ee2891f326af6",
+  "timezone": "PST fixed UTC-08:00 (report p23/p31)",
+  "selection_start_inclusive": "2021-06-23 00:00:00",
+  "selection_end_inclusive": "2021-06-23 12:00:00",
+  "selection_expected_rows": 721,
+  "matlab_executed": false,
+  "simulation_performed": false,
+  "redistribution_license": "not_found_in_pinned_repository",
+  "files": [
+    {
+      "path": "Appendix C - Walls - THERM Files/H-Wall Equiv Layers/H-Wall Middle/H-Middle-Full Model.THM",
+      "bytes": 57465,
+      "sha256": "35db4f8de1382d0940bbdd8ea720bc29dcbecb610844264898b08a2de950daad",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Appendix%20C%20-%20Walls%20-%20THERM%20Files/H-Wall%20Equiv%20Layers/H-Wall%20Middle/H-Middle-Full%20Model.THM"
+    },
+    {
+      "path": "Appendix C - Walls - THERM Files/Wall Uvalues.xlsx",
+      "bytes": 96922,
+      "sha256": "616c5fc2947b3858bc49a204330ac4198b501383cc8aae3265dd8d92705e02f9",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Appendix%20C%20-%20Walls%20-%20THERM%20Files/Wall%20Uvalues.xlsx"
+    },
+    {
+      "path": "Architectural and Structural Drawings/FLEXLAB Achitectural.pdf",
+      "bytes": 4310181,
+      "sha256": "63e8da384e4e52eb513b13da29afcc40df38d027c562c2bfc5d3e5199cf41a49",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Architectural%20and%20Structural%20Drawings/FLEXLAB%20Achitectural.pdf"
+    },
+    {
+      "path": "Architectural and Structural Drawings/FLEXLAB structural.pdf",
+      "bytes": 23365232,
+      "sha256": "e40c20eb89b8c34600775c2dbcbf8bf593f0a1bad3077fb34f7b1dd81cab869d",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Architectural%20and%20Structural%20Drawings/FLEXLAB%20structural.pdf"
+    },
+    {
+      "path": "Auxiliary Data/Construction.csv",
+      "bytes": 9315,
+      "sha256": "bf80e2e075e1a1907bdbb6a3efd8ffec0fb20c0a58ce57744c1dcc96b937d4fe",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Auxiliary%20Data/Construction.csv"
+    },
+    {
+      "path": "Auxiliary Data/Materials and Construction.idf",
+      "bytes": 42232,
+      "sha256": "5cef01b209d795f844c5dc6186048561b1fd14c22556aae420295f3b149adb72",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Auxiliary%20Data/Materials%20and%20Construction.idf"
+    },
+    {
+      "path": "Auxiliary Data/Materials.csv",
+      "bytes": 4217,
+      "sha256": "b59504c79ef310d5b0b5892f4fbde4656e8193118cba8171e5126c47b64c7073",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Auxiliary%20Data/Materials.csv"
+    },
+    {
+      "path": "Auxiliary Data/No mass.csv",
+      "bytes": 109,
+      "sha256": "26d3f4bf9837054fa8c20e9d03e760289a84457b163950361f784eaff27b4d7e",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Auxiliary%20Data/No%20mass.csv"
+    },
+    {
+      "path": "Auxiliary Data/Pressure.csv",
+      "bytes": 6840368,
+      "sha256": "9aa9218ed7721f3de54bf0ac6d57c69e90a6dc25c602488a8d4c445d31e31d11",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Auxiliary%20Data/Pressure.csv"
+    },
+    {
+      "path": "Auxiliary Data/Sensor locations.xlsx",
+      "bytes": 13861,
+      "sha256": "f2bfa30d21769eb33574d6b3388c513a99341c73eb623f41af9a35d2fa9cd13e",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Auxiliary%20Data/Sensor%20locations.xlsx"
+    },
+    {
+      "path": "Direct Validation Data/Air temperature.csv",
+      "bytes": 22745327,
+      "sha256": "4acf940bd14959eaf5928d707ea23069477f440c736c6dbd7d96c5a1c5e852ea",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Direct%20Validation%20Data/Air%20temperature.csv"
+    },
+    {
+      "path": "Direct Validation Data/Fan coil units.csv",
+      "bytes": 1407769,
+      "sha256": "f6ec373a516c85e98214bf286387d1c09dc8ab82f891f2dbbaf58f59a1504794",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Direct%20Validation%20Data/Fan%20coil%20units.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/DropCeiling interior temperature.csv",
+      "bytes": 10564070,
+      "sha256": "e6a611d372862145beba21e89810690e8639a29148d0d694f2cbcfe57e43ad4a",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Interior%20Surface%20Temperature/DropCeiling%20interior%20temperature.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/EastWall interior temperature.csv",
+      "bytes": 15214082,
+      "sha256": "2ebe77a41df4176ae0cd2582e7258e2d19aef29d313d82602b3659c9907179fb",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Interior%20Surface%20Temperature/EastWall%20interior%20temperature.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/Floor interior temperature.csv",
+      "bytes": 14838218,
+      "sha256": "744e512eb11e59cc4ccd6d21d38988d8162a19b595f770b2337a3e8ad1fa273c",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Interior%20Surface%20Temperature/Floor%20interior%20temperature.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/SouthWall interior temperature.csv",
+      "bytes": 13742694,
+      "sha256": "38dbbc87e8ea747378074d45487492557bc005c838a4fc318d7ebf63708d6a30",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Interior%20Surface%20Temperature/SouthWall%20interior%20temperature.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/TemporaryNorthWall interior temperature.csv",
+      "bytes": 7965351,
+      "sha256": "9a168ac6678f417a207f5cd1ebafbfae0de7c49a52c5dedf768fe15a69d50d15",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Interior%20Surface%20Temperature/TemporaryNorthWall%20interior%20temperature.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/WestWall interior temperature.csv",
+      "bytes": 13158949,
+      "sha256": "a0e96bdf99fac7f8055e7d261e081befc4d1b44a336b5c607cc11d6dcbc7c5de",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Interior%20Surface%20Temperature/WestWall%20interior%20temperature.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/DropCeiling heat flux.csv",
+      "bytes": 1390085,
+      "sha256": "aacad2565854fa188731258eeacaf2aa3fb22f7fa54bfd3bdef89eb984d58407",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Surface%20Heat%20Flux/DropCeiling%20heat%20flux.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/EastWall heat flux.csv",
+      "bytes": 1403844,
+      "sha256": "1fa50a885c62371ebee83094c226582e3b76a8f878fd9b7a3ba5a0c2fcd2f5da",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Surface%20Heat%20Flux/EastWall%20heat%20flux.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/Floor heat flux.csv",
+      "bytes": 1413150,
+      "sha256": "6b846765196f2adbe42d9731c7c0b00abaeaf7e575dddc815da10c2414c81dce",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Surface%20Heat%20Flux/Floor%20heat%20flux.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/SouthWall heat flux.csv",
+      "bytes": 4994264,
+      "sha256": "ec9c514f400e310350eb67091af19780801cc9c43554edb5e34a5f40d4f72799",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Surface%20Heat%20Flux/SouthWall%20heat%20flux.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/TemporaryNorthWall heat flux.csv",
+      "bytes": 1413405,
+      "sha256": "267e870d9db268325a6db9d656b2a0ad6c42c8862727f14da58c37c230dc401f",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Surface%20Heat%20Flux/TemporaryNorthWall%20heat%20flux.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/WestWall heat flux.csv",
+      "bytes": 1311221,
+      "sha256": "56b7878bf13aedbee383092f865f059a33340505b0c0bf0b48bf9a8df1a5b710",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Surface%20Heat%20Flux/WestWall%20heat%20flux.csv"
+    },
+    {
+      "path": "Indirect Validation Data/Surface heat transfer.csv",
+      "bytes": 2731000,
+      "sha256": "04067a992a2cede334d54be71e1e969506c8cf65d0cd32337d54508e9291cb34",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Indirect%20Validation%20Data/Surface%20heat%20transfer.csv"
+    },
+    {
+      "path": "Input Data/Duct blaster.csv",
+      "bytes": 2893313,
+      "sha256": "938737f6f923c519bc22cfd272d830aad715aac0f2d66a8997031bf31d8146ed",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Duct%20blaster.csv"
+    },
+    {
+      "path": "Input Data/Exterior surface temperature.csv",
+      "bytes": 10337879,
+      "sha256": "7b511a998c12ef627593c64071fd32b98bba4499ee8047726bfb8a261776553b",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Exterior%20surface%20temperature.csv"
+    },
+    {
+      "path": "Input Data/Ground temperatures.csv",
+      "bytes": 32627109,
+      "sha256": "fd6c3edc9ae175a1df235974bf886e0196dd28ebb96d4e6752fbfefe6181a87c",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Ground%20temperatures.csv"
+    },
+    {
+      "path": "Input Data/Internal heat gain rate.csv",
+      "bytes": 1977915,
+      "sha256": "b2406f14eedab4bae634370c33618ddbbe250d73401c55b54c137aa2545d713e",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Internal%20heat%20gain%20rate.csv"
+    },
+    {
+      "path": "Input Data/Weather data.csv",
+      "bytes": 13598147,
+      "sha256": "bf568d2ee4e59e8d19c8248ae533174c9a2b88abda6797bff381f4e6b7c6e9d0",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Weather%20data.csv"
+    },
+    {
+      "path": "Measured dataset for validation of building energy modeling programs.pdf",
+      "bytes": 6500696,
+      "sha256": "70199cac9c2e814e6d89e4c100291a6b98a7c8f7c4fc08207159fe314824cbbf",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Measured%20dataset%20for%20validation%20of%20building%20energy%20modeling%20programs.pdf"
+    },
+    {
+      "path": "Meta data.xlsx",
+      "bytes": 20056,
+      "sha256": "01b950b1f699fc1cb1c6b30510198eb492377d7e1ef263ea3b92c59861fecd8a",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Meta%20data.xlsx"
+    },
+    {
+      "path": "README.md",
+      "bytes": 467,
+      "sha256": "a2669e7cfa155664ceb09d019bda683ee185cf106ff7f6d5ad3c921710aae9fa",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/README.md"
+    },
+    {
+      "path": "Window Models/Final/w78-FLEXLAB detailed report.txt",
+      "bytes": 77766,
+      "sha256": "b2f1087392d2af7c4a773e446d46e9eedbe916a57ef964ee74d3917cb60df011",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Window%20Models/Final/w78-FLEXLAB%20detailed%20report.txt"
+    },
+    {
+      "path": "Window Models/Final/w78-FLEXLAB-Window_Avg.idf",
+      "bytes": 14535,
+      "sha256": "6bb66893a8039170cfa1b1c76f321065078a857887334165f3c93d644f2f1234",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Window%20Models/Final/w78-FLEXLAB-Window_Avg.idf"
+    }
+  ],
+  "csv_audit": [
+    {
+      "path": "Direct Validation Data/Air temperature.csv",
+      "rows": 69934,
+      "channels": [
+        "X3B-stree1_d_c67",
+        "X3B-stree1_e_c68",
+        "X3B-stree1_g_c70",
+        "X3B-stree1_f_c69",
+        "X3B-stree1_b_c65",
+        "X3B-stree1_a_c64",
+        "X3B-stree1_c_c66",
+        "X2B-stree3_c_c106",
+        "X2B-stree3_g_c110",
+        "X2B-stree2_b_c98",
+        "X2B-stree3_b_c105",
+        "X2B-stree3_d_c107",
+        "X2B-stree2_d_c100",
+        "X2B-stree2_e_c101",
+        "X2B-stree3_f_c109",
+        "X2B-stree3_e_c108",
+        "X2B-stree2_c_c99",
+        "X2B-stree3_a_c104",
+        "X2B-stree2_g_c103",
+        "X2B-stree4_a_c111",
+        "X2B-stree4_f_c116",
+        "X2B-stree4_c_c113",
+        "X2B-stree4_e_c115",
+        "X2B-stree4_d_c114",
+        "X2B-stree4_g_c117",
+        "X2B-stree4_b_c112"
+      ],
+      "first_timestamp": "2021-05-09 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 69916,
+        "120.0": 1,
+        "180.0": 1,
+        "240.0": 1,
+        "300.0": 1,
+        "420.0": 1,
+        "1020.0": 1,
+        "1140.0": 1,
+        "1440.0": 2,
+        "1500.0": 1,
+        "1560.0": 2,
+        "2160.0": 1,
+        "4860.0": 1,
+        "5640.0": 1,
+        "6240.0": 1,
+        "8760.0": 1
+      },
+      "missing_cells": 1632,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "X3B-stree1_d_c67": 0,
+        "X3B-stree1_e_c68": 0,
+        "X3B-stree1_g_c70": 0,
+        "X3B-stree1_f_c69": 0,
+        "X3B-stree1_b_c65": 0,
+        "X3B-stree1_a_c64": 0,
+        "X3B-stree1_c_c66": 0,
+        "X2B-stree3_c_c106": 0,
+        "X2B-stree3_g_c110": 0,
+        "X2B-stree2_b_c98": 0,
+        "X2B-stree3_b_c105": 0,
+        "X2B-stree3_d_c107": 0,
+        "X2B-stree2_d_c100": 0,
+        "X2B-stree2_e_c101": 0,
+        "X2B-stree3_f_c109": 0,
+        "X2B-stree3_e_c108": 0,
+        "X2B-stree2_c_c99": 0,
+        "X2B-stree3_a_c104": 0,
+        "X2B-stree2_g_c103": 0,
+        "X2B-stree4_a_c111": 0,
+        "X2B-stree4_f_c116": 0,
+        "X2B-stree4_c_c113": 0,
+        "X2B-stree4_e_c115": 0,
+        "X2B-stree4_d_c114": 0,
+        "X2B-stree4_g_c117": 0,
+        "X2B-stree4_b_c112": 0
+      },
+      "selected_min": {
+        "X3B-stree1_d_c67": 20.03229404,
+        "X3B-stree1_e_c68": 20.00118106,
+        "X3B-stree1_g_c70": 20.00971128,
+        "X3B-stree1_f_c69": 19.96834816,
+        "X3B-stree1_b_c65": 20.00367413,
+        "X3B-stree1_a_c64": 20.15874584,
+        "X3B-stree1_c_c66": 20.0052125,
+        "X2B-stree3_c_c106": 19.83599324,
+        "X2B-stree3_g_c110": 19.86614584,
+        "X2B-stree2_b_c98": 19.9758434,
+        "X2B-stree3_b_c105": 19.86475081,
+        "X2B-stree3_d_c107": 19.86263934,
+        "X2B-stree2_d_c100": 19.96968961,
+        "X2B-stree2_e_c101": 19.89696969,
+        "X2B-stree3_f_c109": 19.92124816,
+        "X2B-stree3_e_c108": 19.91633591,
+        "X2B-stree2_c_c99": 19.96619721,
+        "X2B-stree3_a_c104": 19.83998413,
+        "X2B-stree2_g_c103": 19.94473875,
+        "X2B-stree4_a_c111": 19.78432812,
+        "X2B-stree4_f_c116": 19.81732942,
+        "X2B-stree4_c_c113": 19.76685141,
+        "X2B-stree4_e_c115": 19.80417704,
+        "X2B-stree4_d_c114": 19.80223337,
+        "X2B-stree4_g_c117": 19.87079083,
+        "X2B-stree4_b_c112": 19.85308661
+      },
+      "selected_max": {
+        "X3B-stree1_d_c67": 20.24199842,
+        "X3B-stree1_e_c68": 20.2175637,
+        "X3B-stree1_g_c70": 20.19741336,
+        "X3B-stree1_f_c69": 20.17027011,
+        "X3B-stree1_b_c65": 20.19037695,
+        "X3B-stree1_a_c64": 20.30687922,
+        "X3B-stree1_c_c66": 20.20419165,
+        "X2B-stree3_c_c106": 20.05088965,
+        "X2B-stree3_g_c110": 20.06262886,
+        "X2B-stree2_b_c98": 20.17894689,
+        "X2B-stree3_b_c105": 20.07925386,
+        "X2B-stree3_d_c107": 20.07183053,
+        "X2B-stree2_d_c100": 20.18392361,
+        "X2B-stree2_e_c101": 20.11317358,
+        "X2B-stree3_f_c109": 20.12796599,
+        "X2B-stree3_e_c108": 20.11118347,
+        "X2B-stree2_c_c99": 20.18173747,
+        "X2B-stree3_a_c104": 20.11607342,
+        "X2B-stree2_g_c103": 20.16883662,
+        "X2B-stree4_a_c111": 20.04938202,
+        "X2B-stree4_f_c116": 20.00539418,
+        "X2B-stree4_c_c113": 19.98969017,
+        "X2B-stree4_e_c115": 19.99561313,
+        "X2B-stree4_d_c114": 19.99615985,
+        "X2B-stree4_g_c117": 20.08826321,
+        "X2B-stree4_b_c112": 20.09752484
+      }
+    },
+    {
+      "path": "Direct Validation Data/Fan coil units.csv",
+      "rows": 7191,
+      "channels": [
+        "T_Supply_4 [C]",
+        "T_Supply_2 [C]",
+        "T_Return_4 [C]",
+        "T_Return_2 [C]",
+        "Flow_2 [m3/s]",
+        "Flow_4 [m3/s]",
+        "Cooling_2 rate [W]",
+        "Cooling_4 rate [W]",
+        "Total cooling rate [W]"
+      ],
+      "first_timestamp": "2021-06-21 22:01:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 7181,
+        "120.0": 3,
+        "180.0": 1,
+        "1020.0": 1,
+        "1140.0": 1,
+        "1560.0": 2,
+        "2400.0": 1
+      },
+      "missing_cells": 0,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "T_Supply_4 [C]": 0,
+        "T_Supply_2 [C]": 0,
+        "T_Return_4 [C]": 0,
+        "T_Return_2 [C]": 0,
+        "Flow_2 [m3/s]": 0,
+        "Flow_4 [m3/s]": 0,
+        "Cooling_2 rate [W]": 0,
+        "Cooling_4 rate [W]": 0,
+        "Total cooling rate [W]": 0
+      },
+      "selected_min": {
+        "T_Supply_4 [C]": 12.232888951663824,
+        "T_Supply_2 [C]": 12.371558390373536,
+        "T_Return_4 [C]": 18.88696151256653,
+        "T_Return_2 [C]": 19.34093907504291,
+        "Flow_2 [m3/s]": 1.991948851633044e-06,
+        "Flow_4 [m3/s]": 6.9706632292575085e-06,
+        "Cooling_2 rate [W]": 26.113206980145502,
+        "Cooling_4 rate [W]": 108.22287114177074,
+        "Total cooling rate [W]": 143.7339697654872
+      },
+      "selected_max": {
+        "T_Supply_4 [C]": 15.900895413865612,
+        "T_Supply_2 [C]": 16.90341572768523,
+        "T_Return_4 [C]": 19.669847862474057,
+        "T_Return_2 [C]": 19.88354305298901,
+        "Flow_2 [m3/s]": 1.2029978763083556e-05,
+        "Flow_4 [m3/s]": 1.444134602037701e-05,
+        "Cooling_2 rate [W]": 341.841678027778,
+        "Cooling_4 rate [W]": 400.6074740876277,
+        "Total cooling rate [W]": 738.2967452454338
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/DropCeiling interior temperature.csv",
+      "rows": 69876,
+      "channels": [
+        "X3B-tms_dcbottom_72_120_c187",
+        "X3B-tms_dcbottom_72_180_c186",
+        "X3B-tms_dcbottom_72_60_c188",
+        "X3B-tms_dcbottom_232_180_c192",
+        "X3B-tms_dcbottom_232_60_c194",
+        "X3B-tms_dcbottom_144_120_c190",
+        "X3B-tms_dcbottom_144_60_c191"
+      ],
+      "first_timestamp": "2021-05-09 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 69855,
+        "120.0": 1,
+        "180.0": 1,
+        "240.0": 1,
+        "300.0": 1,
+        "480.0": 1,
+        "960.0": 3,
+        "1020.0": 1,
+        "1140.0": 1,
+        "1500.0": 2,
+        "1560.0": 1,
+        "1620.0": 1,
+        "1800.0": 1,
+        "2160.0": 1,
+        "5040.0": 1,
+        "5640.0": 1,
+        "6240.0": 1,
+        "8820.0": 1
+      },
+      "missing_cells": 300,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "X3B-tms_dcbottom_72_120_c187": 0,
+        "X3B-tms_dcbottom_72_180_c186": 0,
+        "X3B-tms_dcbottom_72_60_c188": 0,
+        "X3B-tms_dcbottom_232_180_c192": 0,
+        "X3B-tms_dcbottom_232_60_c194": 0,
+        "X3B-tms_dcbottom_144_120_c190": 0,
+        "X3B-tms_dcbottom_144_60_c191": 0
+      },
+      "selected_min": {
+        "X3B-tms_dcbottom_72_120_c187": 19.71034761515849,
+        "X3B-tms_dcbottom_72_180_c186": 19.83535321789605,
+        "X3B-tms_dcbottom_72_60_c188": 19.69419205515095,
+        "X3B-tms_dcbottom_232_180_c192": 19.845838699766333,
+        "X3B-tms_dcbottom_232_60_c194": 19.708938152979005,
+        "X3B-tms_dcbottom_144_120_c190": 19.747526649517468,
+        "X3B-tms_dcbottom_144_60_c191": 19.694978724713543
+      },
+      "selected_max": {
+        "X3B-tms_dcbottom_72_120_c187": 20.08272310529424,
+        "X3B-tms_dcbottom_72_180_c186": 20.17009921248127,
+        "X3B-tms_dcbottom_72_60_c188": 20.07726274779047,
+        "X3B-tms_dcbottom_232_180_c192": 20.35409653064115,
+        "X3B-tms_dcbottom_232_60_c194": 20.038973400791978,
+        "X3B-tms_dcbottom_144_120_c190": 20.15344526995488,
+        "X3B-tms_dcbottom_144_60_c191": 20.06900650643301
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/EastWall interior temperature.csv",
+      "rows": 69891,
+      "channels": [
+        "X3B-TMR_293",
+        "X3B-TMR_292",
+        "X3B-tms_column_se_e_353_83_c106",
+        "X3B-tms_column_se_s_353_83_c107",
+        "X3B-tms_column_se_e_360_83_c105",
+        "X3B-tms_e_282_40_c110",
+        "X3B-tms_fpa_me_c296",
+        "X3B-tms_fpa_ne_c297",
+        "X3B-tms_spare_e1_c298",
+        "X3B-tms_e_98_40_c38",
+        "X3B-tms_e_282_83_c109",
+        "X3B-tms_e_98_83_c21"
+      ],
+      "first_timestamp": "2021-05-09 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 69871,
+        "120.0": 1,
+        "180.0": 1,
+        "240.0": 1,
+        "300.0": 1,
+        "480.0": 1,
+        "960.0": 2,
+        "1020.0": 1,
+        "1140.0": 1,
+        "1500.0": 2,
+        "1560.0": 1,
+        "1620.0": 1,
+        "1800.0": 1,
+        "2160.0": 1,
+        "5040.0": 1,
+        "5640.0": 1,
+        "6240.0": 1,
+        "8820.0": 1
+      },
+      "missing_cells": 105651,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "X3B-TMR_293": 0,
+        "X3B-TMR_292": 0,
+        "X3B-tms_column_se_e_353_83_c106": 0,
+        "X3B-tms_column_se_s_353_83_c107": 0,
+        "X3B-tms_column_se_e_360_83_c105": 0,
+        "X3B-tms_e_282_40_c110": 0,
+        "X3B-tms_fpa_me_c296": 0,
+        "X3B-tms_fpa_ne_c297": 0,
+        "X3B-tms_spare_e1_c298": 0,
+        "X3B-tms_e_98_40_c38": 0,
+        "X3B-tms_e_282_83_c109": 0,
+        "X3B-tms_e_98_83_c21": 0
+      },
+      "selected_min": {
+        "X3B-TMR_293": 19.9761584789594,
+        "X3B-TMR_292": 20.078709281538583,
+        "X3B-tms_column_se_e_353_83_c106": 20.01428554901369,
+        "X3B-tms_column_se_s_353_83_c107": 19.86047166555668,
+        "X3B-tms_column_se_e_360_83_c105": 20.019593065475235,
+        "X3B-tms_e_282_40_c110": 19.974177400660757,
+        "X3B-tms_fpa_me_c296": 19.77523590232591,
+        "X3B-tms_fpa_ne_c297": 19.79569927445261,
+        "X3B-tms_spare_e1_c298": 19.768526327891525,
+        "X3B-tms_e_98_40_c38": 19.80771380409967,
+        "X3B-tms_e_282_83_c109": 19.95452311155669,
+        "X3B-tms_e_98_83_c21": 19.43445250109514
+      },
+      "selected_max": {
+        "X3B-TMR_293": 20.23418785004537,
+        "X3B-TMR_292": 20.31585977151144,
+        "X3B-tms_column_se_e_353_83_c106": 20.261578049393787,
+        "X3B-tms_column_se_s_353_83_c107": 20.40420707136664,
+        "X3B-tms_column_se_e_360_83_c105": 20.362549851285195,
+        "X3B-tms_e_282_40_c110": 20.391462629339493,
+        "X3B-tms_fpa_me_c296": 20.108172989411887,
+        "X3B-tms_fpa_ne_c297": 20.08259231534854,
+        "X3B-tms_spare_e1_c298": 20.100616101873424,
+        "X3B-tms_e_98_40_c38": 20.01495339731234,
+        "X3B-tms_e_282_83_c109": 20.24700022588248,
+        "X3B-tms_e_98_83_c21": 19.53587253944808
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/Floor interior temperature.csv",
+      "rows": 69919,
+      "channels": [
+        "X3B-tms_fpa_sm_c279",
+        "X3B-tms_cylinder_high_c273",
+        "X3B-tms_fir_se_c268",
+        "X3B-TMR_291",
+        "X2B-tms_fir_ne_c127",
+        "X2B-tms_fir_nm_c126",
+        "X2B-tms_fir_nw_c125",
+        "X3B-tms_fir_sw_c266",
+        "X3B-tms_fir_mw_c269",
+        "X3B-tms_fir_mm_c270",
+        "X3B-tms_fir_me_c271"
+      ],
+      "first_timestamp": "2021-05-09 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 69900,
+        "120.0": 1,
+        "180.0": 1,
+        "240.0": 1,
+        "300.0": 1,
+        "420.0": 1,
+        "960.0": 1,
+        "1020.0": 1,
+        "1140.0": 1,
+        "1440.0": 2,
+        "1500.0": 1,
+        "1560.0": 2,
+        "2160.0": 1,
+        "4860.0": 1,
+        "5640.0": 1,
+        "6240.0": 1,
+        "8760.0": 1
+      },
+      "missing_cells": 53524,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "X3B-tms_fpa_sm_c279": 0,
+        "X3B-tms_cylinder_high_c273": 0,
+        "X3B-tms_fir_se_c268": 0,
+        "X3B-TMR_291": 0,
+        "X2B-tms_fir_ne_c127": 0,
+        "X2B-tms_fir_nm_c126": 0,
+        "X2B-tms_fir_nw_c125": 0,
+        "X3B-tms_fir_sw_c266": 0,
+        "X3B-tms_fir_mw_c269": 0,
+        "X3B-tms_fir_mm_c270": 0,
+        "X3B-tms_fir_me_c271": 0
+      },
+      "selected_min": {
+        "X3B-tms_fpa_sm_c279": 19.980381205520484,
+        "X3B-tms_cylinder_high_c273": 19.600052161683376,
+        "X3B-tms_fir_se_c268": 19.984879847131342,
+        "X3B-TMR_291": 20.091636888325915,
+        "X2B-tms_fir_ne_c127": 19.829400539375687,
+        "X2B-tms_fir_nm_c126": 19.896632492706004,
+        "X2B-tms_fir_nw_c125": 20.557108936153973,
+        "X3B-tms_fir_sw_c266": 19.92616943880555,
+        "X3B-tms_fir_mw_c269": 19.87433107230781,
+        "X3B-tms_fir_mm_c270": 19.83259026217207,
+        "X3B-tms_fir_me_c271": 19.87098616761098
+      },
+      "selected_max": {
+        "X3B-tms_fpa_sm_c279": 20.160607941113245,
+        "X3B-tms_cylinder_high_c273": 19.78506052714944,
+        "X3B-tms_fir_se_c268": 20.248287981131345,
+        "X3B-TMR_291": 20.30011078430781,
+        "X2B-tms_fir_ne_c127": 20.14779038209967,
+        "X2B-tms_fir_nm_c126": 20.087380129212796,
+        "X2B-tms_fir_nw_c125": 20.644975677384743,
+        "X3B-tms_fir_sw_c266": 20.16620942451596,
+        "X3B-tms_fir_mw_c269": 20.08843804858836,
+        "X3B-tms_fir_mm_c270": 20.135372853991072,
+        "X3B-tms_fir_me_c271": 20.16753931216302
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/SouthWall interior temperature.csv",
+      "rows": 69891,
+      "channels": [
+        "X3B-tms_fpa_nw_c275",
+        "X3B-tms_fpa_nm_c276",
+        "X3B-TMR_294",
+        "X3B-TMR_289",
+        "X3B-TMR_284",
+        "X3B-TMR_290",
+        "X3B-TMR_285",
+        "X3B-tms_sir_west_c77",
+        "X3B-tms_fpa_se_c295",
+        "X3B-tms_sir_east_c254",
+        "X3B-tms_s_176_17_C119",
+        "X3B-tms_s_116_17_C118",
+        "X3B-tms_s_56_17_C104"
+      ],
+      "first_timestamp": "2021-05-09 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 69871,
+        "120.0": 1,
+        "180.0": 1,
+        "240.0": 1,
+        "300.0": 1,
+        "480.0": 1,
+        "960.0": 2,
+        "1020.0": 1,
+        "1140.0": 1,
+        "1500.0": 2,
+        "1560.0": 1,
+        "1620.0": 1,
+        "1800.0": 1,
+        "2160.0": 1,
+        "5040.0": 1,
+        "5640.0": 1,
+        "6240.0": 1,
+        "8820.0": 1
+      },
+      "missing_cells": 263053,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "X3B-tms_fpa_nw_c275": 0,
+        "X3B-tms_fpa_nm_c276": 0,
+        "X3B-TMR_294": 0,
+        "X3B-TMR_289": 0,
+        "X3B-TMR_284": 0,
+        "X3B-TMR_290": 0,
+        "X3B-TMR_285": 0,
+        "X3B-tms_sir_west_c77": 0,
+        "X3B-tms_fpa_se_c295": 0,
+        "X3B-tms_sir_east_c254": 0,
+        "X3B-tms_s_176_17_C119": 0,
+        "X3B-tms_s_116_17_C118": 0,
+        "X3B-tms_s_56_17_C104": 0
+      },
+      "selected_min": {
+        "X3B-tms_fpa_nw_c275": 19.567714925095142,
+        "X3B-tms_fpa_nm_c276": 19.773753241067997,
+        "X3B-TMR_294": 19.765212295429983,
+        "X3B-TMR_289": 19.483121840506904,
+        "X3B-TMR_284": 19.540736141828177,
+        "X3B-TMR_290": 19.863471932434507,
+        "X3B-TMR_285": 19.79857239155668,
+        "X3B-tms_sir_west_c77": 20.25606429162908,
+        "X3B-tms_fpa_se_c295": 20.118494761918672,
+        "X3B-tms_sir_east_c254": 20.12720689315849,
+        "X3B-tms_s_176_17_C119": 18.881334716696948,
+        "X3B-tms_s_116_17_C118": 19.422259278108715,
+        "X3B-tms_s_56_17_C104": 19.16742000986437
+      },
+      "selected_max": {
+        "X3B-tms_fpa_nw_c275": 20.194103581629083,
+        "X3B-tms_fpa_nm_c276": 20.352241176099675,
+        "X3B-TMR_294": 20.37561994533044,
+        "X3B-TMR_289": 19.85929098447071,
+        "X3B-TMR_284": 20.19303087808157,
+        "X3B-TMR_290": 20.858461825529535,
+        "X3B-TMR_285": 20.441702278452617,
+        "X3B-tms_sir_west_c77": 20.86629897276936,
+        "X3B-tms_fpa_se_c295": 20.82384746349334,
+        "X3B-tms_sir_east_c254": 20.91202431847977,
+        "X3B-tms_s_176_17_C119": 19.717346119466185,
+        "X3B-tms_s_116_17_C118": 20.51958963735759,
+        "X3B-tms_s_56_17_C104": 19.95881649714944
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/TemporaryNorthWall interior temperature.csv",
+      "rows": 69890,
+      "channels": [
+        "X2B-tms_nir_180_35_c38",
+        "X2B-tms_nir_120_35_c37",
+        "X2B-tms_nir_120_84_c34",
+        "X2B-tms_nir_180_84_c35",
+        "X2B-tms_nir_60_84_c33"
+      ],
+      "first_timestamp": "2021-05-09 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 69869,
+        "120.0": 3,
+        "180.0": 1,
+        "240.0": 1,
+        "300.0": 1,
+        "420.0": 1,
+        "1020.0": 1,
+        "1140.0": 1,
+        "1440.0": 2,
+        "1500.0": 1,
+        "1560.0": 1,
+        "1740.0": 1,
+        "2160.0": 1,
+        "2400.0": 1,
+        "4860.0": 1,
+        "5640.0": 1,
+        "6240.0": 1,
+        "8760.0": 1
+      },
+      "missing_cells": 285,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "X2B-tms_nir_180_35_c38": 0,
+        "X2B-tms_nir_120_35_c37": 0,
+        "X2B-tms_nir_120_84_c34": 0,
+        "X2B-tms_nir_180_84_c35": 0,
+        "X2B-tms_nir_60_84_c33": 0
+      },
+      "selected_min": {
+        "X2B-tms_nir_180_35_c38": 19.87914518188549,
+        "X2B-tms_nir_120_35_c37": 19.914348554125304,
+        "X2B-tms_nir_120_84_c34": 19.87382979357478,
+        "X2B-tms_nir_180_84_c35": 19.83973909008307,
+        "X2B-tms_nir_60_84_c33": 19.852375211960904
+      },
+      "selected_max": {
+        "X2B-tms_nir_180_35_c38": 19.982570740520487,
+        "X2B-tms_nir_120_35_c37": 20.015727032647185,
+        "X2B-tms_nir_120_84_c34": 19.980412607617016,
+        "X2B-tms_nir_180_84_c35": 19.97370916447222,
+        "X2B-tms_nir_60_84_c33": 19.985859634615508
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Interior Surface Temperature/WestWall interior temperature.csv",
+      "rows": 69891,
+      "channels": [
+        "X3B-tms_w_98_40_c47",
+        "X3B-tms_w_282_40_c114",
+        "X3B-tms_column_sw_w_353_83_c102",
+        "X3B-tms_column_sw_s_353_83_c101",
+        "X3B-tms_column_sw_w_360_83_c103",
+        "X3B-tms_fpa_mm_c277",
+        "X3B-tms_fpa_sw_c280",
+        "X3B-tms_w_98_83_c28",
+        "X3B-tms_w_282_83_c113"
+      ],
+      "first_timestamp": "2021-05-09 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 69871,
+        "120.0": 1,
+        "180.0": 1,
+        "240.0": 1,
+        "300.0": 1,
+        "480.0": 1,
+        "960.0": 2,
+        "1020.0": 1,
+        "1140.0": 1,
+        "1500.0": 2,
+        "1560.0": 1,
+        "1620.0": 1,
+        "1800.0": 1,
+        "2160.0": 1,
+        "5040.0": 1,
+        "5640.0": 1,
+        "6240.0": 1,
+        "8820.0": 1
+      },
+      "missing_cells": 750,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "X3B-tms_w_98_40_c47": 0,
+        "X3B-tms_w_282_40_c114": 0,
+        "X3B-tms_column_sw_w_353_83_c102": 0,
+        "X3B-tms_column_sw_s_353_83_c101": 0,
+        "X3B-tms_column_sw_w_360_83_c103": 0,
+        "X3B-tms_fpa_mm_c277": 0,
+        "X3B-tms_fpa_sw_c280": 0,
+        "X3B-tms_w_98_83_c28": 0,
+        "X3B-tms_w_282_83_c113": 0
+      },
+      "selected_min": {
+        "X3B-tms_w_98_40_c47": 19.50092695602576,
+        "X3B-tms_w_282_40_c114": 18.9709334342158,
+        "X3B-tms_column_sw_w_353_83_c102": 19.90130981592018,
+        "X3B-tms_column_sw_s_353_83_c101": 20.052934845414903,
+        "X3B-tms_column_sw_w_360_83_c103": 20.11303271281309,
+        "X3B-tms_fpa_mm_c277": 19.75568839085985,
+        "X3B-tms_fpa_sw_c280": 19.885837450610985,
+        "X3B-tms_w_98_83_c28": 19.753513386606457,
+        "X3B-tms_w_282_83_c113": 19.121301457594384
+      },
+      "selected_max": {
+        "X3B-tms_w_98_40_c47": 19.612998141048383,
+        "X3B-tms_w_282_40_c114": 19.4878264741781,
+        "X3B-tms_column_sw_w_353_83_c102": 20.244649892179613,
+        "X3B-tms_column_sw_s_353_83_c101": 20.5275825792686,
+        "X3B-tms_column_sw_w_360_83_c103": 20.55815966769997,
+        "X3B-tms_fpa_mm_c277": 20.056686109887,
+        "X3B-tms_fpa_sw_c280": 20.099341240769355,
+        "X3B-tms_w_98_83_c28": 19.896721449811587,
+        "X3B-tms_w_282_83_c113": 19.68777137029424
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/DropCeiling heat flux.csv",
+      "rows": 26525,
+      "channels": [
+        "DropCeiling_HeatFluxOut_FarSouth-Center",
+        "DropCeiling_HeatFluxOut_South-Center",
+        "DropCeiling_HeatFluxOut_North-Center"
+      ],
+      "first_timestamp": "2021-06-08 13:55:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 26524
+      },
+      "missing_cells": 123,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "DropCeiling_HeatFluxOut_FarSouth-Center": 0,
+        "DropCeiling_HeatFluxOut_South-Center": 0,
+        "DropCeiling_HeatFluxOut_North-Center": 0
+      },
+      "selected_min": {
+        "DropCeiling_HeatFluxOut_FarSouth-Center": 0.119745807,
+        "DropCeiling_HeatFluxOut_South-Center": -0.265313972,
+        "DropCeiling_HeatFluxOut_North-Center": -0.318494391
+      },
+      "selected_max": {
+        "DropCeiling_HeatFluxOut_FarSouth-Center": 0.726,
+        "DropCeiling_HeatFluxOut_South-Center": 0.365,
+        "DropCeiling_HeatFluxOut_North-Center": 0.492864723
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/EastWall heat flux.csv",
+      "rows": 26525,
+      "channels": [
+        "EastWall_HeatFluxOut_Edge-Bottom",
+        "EastWall_HeatFluxOut_Bottom-Left",
+        "EastWall_HeatFluxOut_Edge-Top"
+      ],
+      "first_timestamp": "2021-06-08 13:55:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 26524
+      },
+      "missing_cells": 71,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "EastWall_HeatFluxOut_Edge-Bottom": 0,
+        "EastWall_HeatFluxOut_Bottom-Left": 0,
+        "EastWall_HeatFluxOut_Edge-Top": 0
+      },
+      "selected_min": {
+        "EastWall_HeatFluxOut_Edge-Bottom": 0.229942463,
+        "EastWall_HeatFluxOut_Bottom-Left": -0.99943142,
+        "EastWall_HeatFluxOut_Edge-Top": -0.280478885
+      },
+      "selected_max": {
+        "EastWall_HeatFluxOut_Edge-Bottom": 1.31,
+        "EastWall_HeatFluxOut_Bottom-Left": 1.281792469,
+        "EastWall_HeatFluxOut_Edge-Top": 0.782374158
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/Floor heat flux.csv",
+      "rows": 26523,
+      "channels": [
+        "FloorPlywood_HeatFluxOut_East_Center_1",
+        "FloorPlywood_HeatFluxOut_South_East_2",
+        "FloorPlywood_HeatFluxOut_South_West_0"
+      ],
+      "first_timestamp": "2021-06-08 13:56:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 26521,
+        "120.0": 1
+      },
+      "missing_cells": 0,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "FloorPlywood_HeatFluxOut_East_Center_1": 0,
+        "FloorPlywood_HeatFluxOut_South_East_2": 0,
+        "FloorPlywood_HeatFluxOut_South_West_0": 0
+      },
+      "selected_min": {
+        "FloorPlywood_HeatFluxOut_East_Center_1": 0.197115493,
+        "FloorPlywood_HeatFluxOut_South_East_2": 0.208620947,
+        "FloorPlywood_HeatFluxOut_South_West_0": 0.533519081
+      },
+      "selected_max": {
+        "FloorPlywood_HeatFluxOut_East_Center_1": 1.135180132,
+        "FloorPlywood_HeatFluxOut_South_East_2": 1.397734181,
+        "FloorPlywood_HeatFluxOut_South_West_0": 1.446926866
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/SouthWall heat flux.csv",
+      "rows": 26524,
+      "channels": [
+        "SouthWall_HeatFluxOut_Wall_Middle-Right",
+        "SouthWall_HeatFluxOut_Wall_Top-Right",
+        "SouthWall_HeatFluxOut_Wall_Middle-Left",
+        "SouthWall_HeatFluxOut_Wall_Left-Top",
+        "SouthWall_HeatFluxOut_Wall_Bottom-Left",
+        "SouthWall_HeatFluxOut_Stud-Right2",
+        "SouthWall_HeatFluxOut_Wall-Middle",
+        "SouthWall_HeatFluxOut_Stud-Left2",
+        "SouthWall_HeatFluxOut_Stud-Right1",
+        "SouthWall_HeatFluxOut_Glass-Middle",
+        "SouthWall_HeatFluxOut_Stud-Left1",
+        "SouthWall_Glass-Left",
+        "SouthWall_HeatFluxOut_Glass-Right",
+        "SouthWall_HeatFluxOut_Frame-Junction"
+      ],
+      "first_timestamp": "2021-06-08 13:56:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 26523
+      },
+      "missing_cells": 320,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "SouthWall_HeatFluxOut_Wall_Middle-Right": 0,
+        "SouthWall_HeatFluxOut_Wall_Top-Right": 0,
+        "SouthWall_HeatFluxOut_Wall_Middle-Left": 0,
+        "SouthWall_HeatFluxOut_Wall_Left-Top": 0,
+        "SouthWall_HeatFluxOut_Wall_Bottom-Left": 0,
+        "SouthWall_HeatFluxOut_Stud-Right2": 0,
+        "SouthWall_HeatFluxOut_Wall-Middle": 0,
+        "SouthWall_HeatFluxOut_Stud-Left2": 0,
+        "SouthWall_HeatFluxOut_Stud-Right1": 0,
+        "SouthWall_HeatFluxOut_Glass-Middle": 0,
+        "SouthWall_HeatFluxOut_Stud-Left1": 0,
+        "SouthWall_Glass-Left": 0,
+        "SouthWall_HeatFluxOut_Glass-Right": 0,
+        "SouthWall_HeatFluxOut_Frame-Junction": 0
+      },
+      "selected_min": {
+        "SouthWall_HeatFluxOut_Wall_Middle-Right": -1.0,
+        "SouthWall_HeatFluxOut_Wall_Top-Right": -2.2,
+        "SouthWall_HeatFluxOut_Wall_Middle-Left": -0.960328167,
+        "SouthWall_HeatFluxOut_Wall_Left-Top": -2.487290772,
+        "SouthWall_HeatFluxOut_Wall_Bottom-Left": -0.17,
+        "SouthWall_HeatFluxOut_Stud-Right2": -2.238393217,
+        "SouthWall_HeatFluxOut_Wall-Middle": -3.1,
+        "SouthWall_HeatFluxOut_Stud-Left2": -1.884343989,
+        "SouthWall_HeatFluxOut_Stud-Right1": -1.745430576,
+        "SouthWall_HeatFluxOut_Glass-Middle": -1.510498345,
+        "SouthWall_HeatFluxOut_Stud-Left1": -1.962013462,
+        "SouthWall_Glass-Left": -1.1,
+        "SouthWall_HeatFluxOut_Glass-Right": -1.982833805,
+        "SouthWall_HeatFluxOut_Frame-Junction": -2.39088772
+      },
+      "selected_max": {
+        "SouthWall_HeatFluxOut_Wall_Middle-Right": 2.026312939,
+        "SouthWall_HeatFluxOut_Wall_Top-Right": 2.586339049,
+        "SouthWall_HeatFluxOut_Wall_Middle-Left": 4.074314557,
+        "SouthWall_HeatFluxOut_Wall_Left-Top": 2.92480602,
+        "SouthWall_HeatFluxOut_Wall_Bottom-Left": 4.096936115,
+        "SouthWall_HeatFluxOut_Stud-Right2": 2.866376226,
+        "SouthWall_HeatFluxOut_Wall-Middle": 3.9796744,
+        "SouthWall_HeatFluxOut_Stud-Left2": 5.415885674,
+        "SouthWall_HeatFluxOut_Stud-Right1": 3.282534804,
+        "SouthWall_HeatFluxOut_Glass-Middle": 2.850623421,
+        "SouthWall_HeatFluxOut_Stud-Left1": 5.484534415,
+        "SouthWall_Glass-Left": 2.908114872,
+        "SouthWall_HeatFluxOut_Glass-Right": 2.965263858,
+        "SouthWall_HeatFluxOut_Frame-Junction": 3.066406548
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/TemporaryNorthWall heat flux.csv",
+      "rows": 26525,
+      "channels": [
+        "TemporaryNorthWall_HeatFluxOut_Middle-Center",
+        "TemporaryNorthWall_HeatFluxOut_Door",
+        "TemporaryNorthWall_HeatFluxOut_Edge-Right"
+      ],
+      "first_timestamp": "2021-06-08 13:55:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 26524
+      },
+      "missing_cells": 71,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "TemporaryNorthWall_HeatFluxOut_Middle-Center": 0,
+        "TemporaryNorthWall_HeatFluxOut_Door": 0,
+        "TemporaryNorthWall_HeatFluxOut_Edge-Right": 0
+      },
+      "selected_min": {
+        "TemporaryNorthWall_HeatFluxOut_Middle-Center": -0.621207966,
+        "TemporaryNorthWall_HeatFluxOut_Door": 0.0654,
+        "TemporaryNorthWall_HeatFluxOut_Edge-Right": -0.512289108
+      },
+      "selected_max": {
+        "TemporaryNorthWall_HeatFluxOut_Middle-Center": 0.694818997,
+        "TemporaryNorthWall_HeatFluxOut_Door": 0.415066538,
+        "TemporaryNorthWall_HeatFluxOut_Edge-Right": 0.401973329
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Surface Heat Flux/WestWall heat flux.csv",
+      "rows": 24392,
+      "channels": [
+        "WestWall_HeatFluxOut_Edge-Bottom",
+        "WestWall_HeatFluxOut_Top-Left",
+        "WestWall_HeatFluxOut_Edge-Left"
+      ],
+      "first_timestamp": "2021-06-08 13:55:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 24388,
+        "120.0": 1,
+        "3600.0": 1,
+        "124440.0": 1
+      },
+      "missing_cells": 0,
+      "infinite_cells": 0,
+      "selected_rows": 172,
+      "selected_absent_timestamps": 549,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "WestWall_HeatFluxOut_Edge-Bottom": 0,
+        "WestWall_HeatFluxOut_Top-Left": 0,
+        "WestWall_HeatFluxOut_Edge-Left": 0
+      },
+      "selected_min": {
+        "WestWall_HeatFluxOut_Edge-Bottom": -0.066102537,
+        "WestWall_HeatFluxOut_Top-Left": -0.459601371,
+        "WestWall_HeatFluxOut_Edge-Left": 0.146333439
+      },
+      "selected_max": {
+        "WestWall_HeatFluxOut_Edge-Bottom": 0.471093474,
+        "WestWall_HeatFluxOut_Top-Left": 0.135269602,
+        "WestWall_HeatFluxOut_Edge-Left": 0.83915332
+      }
+    },
+    {
+      "path": "Indirect Validation Data/Surface heat transfer.csv",
+      "rows": 26525,
+      "channels": [
+        "Ceiling [W]",
+        "East [W]",
+        "Floor [W]",
+        "West [W]",
+        "North [W]",
+        "South [W]",
+        "Total heat transfer rate [W]"
+      ],
+      "first_timestamp": "2021-06-08 13:56:00",
+      "last_timestamp": "2021-06-27 00:00:00",
+      "interval_seconds_counts": {
+        "60.0": 26524
+      },
+      "missing_cells": 0,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "Ceiling [W]": 0,
+        "East [W]": 0,
+        "Floor [W]": 0,
+        "West [W]": 0,
+        "North [W]": 0,
+        "South [W]": 0,
+        "Total heat transfer rate [W]": 0
+      },
+      "selected_min": {
+        "Ceiling [W]": -6.761236728,
+        "East [W]": 2.628228435,
+        "Floor [W]": 11.86170702,
+        "West [W]": -12.34998979,
+        "North [W]": -6.603077099,
+        "South [W]": -22.35371729,
+        "Total heat transfer rate [W]": -1.806162132
+      },
+      "selected_max": {
+        "Ceiling [W]": 23.38824821,
+        "East [W]": 30.65980713,
+        "Floor [W]": 57.88115275,
+        "West [W]": 5.992427234,
+        "North [W]": 8.227499764,
+        "South [W]": 49.15296342,
+        "Total heat transfer rate [W]": 134.1780852
+      }
+    },
+    {
+      "path": "Input Data/Duct blaster.csv",
+      "rows": 31680,
+      "channels": [
+        "P1 [Pa]",
+        "P2 [Pa]",
+        "Flow [m3/h]",
+        "Coefficient",
+        "Flow adjusted [m3/h]",
+        "Ventilation air temperature [C]",
+        "Ventilation heat transfer rate [W]"
+      ],
+      "first_timestamp": "2021-06-05 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 31679
+      },
+      "missing_cells": 24383,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "P1 [Pa]": 0,
+        "P2 [Pa]": 0,
+        "Flow [m3/h]": 0,
+        "Coefficient": 0,
+        "Flow adjusted [m3/h]": 0,
+        "Ventilation air temperature [C]": 0,
+        "Ventilation heat transfer rate [W]": 0
+      },
+      "selected_min": {
+        "P1 [Pa]": 3.846675,
+        "P2 [Pa]": -252.6178833,
+        "Flow [m3/h]": 276.7756486,
+        "Coefficient": 0.992245001,
+        "Flow adjusted [m3/h]": 275.2361694,
+        "Ventilation air temperature [C]": 18.83856412,
+        "Ventilation heat transfer rate [W]": -130.7574793
+      },
+      "selected_max": {
+        "P1 [Pa]": 5.947158333,
+        "P2 [Pa]": -107.21805,
+        "Flow [m3/h]": 427.1900602,
+        "Coefficient": 1.003674035,
+        "Flow adjusted [m3/h]": 427.5808934,
+        "Ventilation air temperature [C]": 20.51358682,
+        "Ventilation heat transfer rate [W]": 69.4308808
+      }
+    },
+    {
+      "path": "Input Data/Exterior surface temperature.csv",
+      "rows": 69785,
+      "channels": [
+        "DropCeiling",
+        "TemporaryNorthWall",
+        "EastWall",
+        "SouthWall",
+        "WestWall",
+        "Ground ",
+        "Floor"
+      ],
+      "first_timestamp": "2021-05-09 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 69759,
+        "120.0": 2,
+        "180.0": 1,
+        "240.0": 1,
+        "300.0": 1,
+        "420.0": 1,
+        "960.0": 4,
+        "1020.0": 2,
+        "1140.0": 1,
+        "1440.0": 2,
+        "1500.0": 1,
+        "1560.0": 1,
+        "1740.0": 1,
+        "1860.0": 1,
+        "2160.0": 1,
+        "2400.0": 1,
+        "4860.0": 1,
+        "5640.0": 1,
+        "6240.0": 1,
+        "8760.0": 1
+      },
+      "missing_cells": 221,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "DropCeiling": 0,
+        "TemporaryNorthWall": 0,
+        "EastWall": 0,
+        "SouthWall": 0,
+        "WestWall": 0,
+        "Ground ": 0,
+        "Floor": 0
+      },
+      "selected_min": {
+        "DropCeiling": 20.413509625,
+        "TemporaryNorthWall": 19.75444677708333,
+        "EastWall": 14.633537183333338,
+        "SouthWall": 14.202458705555555,
+        "WestWall": 20.161336401666677,
+        "Ground ": 22.45931374722222,
+        "Floor": 21.63703041388889
+      },
+      "selected_max": {
+        "DropCeiling": 20.65961899166666,
+        "TemporaryNorthWall": 20.187834631249995,
+        "EastWall": 40.600197366666656,
+        "SouthWall": 35.852186277777776,
+        "WestWall": 20.79526188333333,
+        "Ground ": 22.919572169444447,
+        "Floor": 22.127645672222226
+      }
+    },
+    {
+      "path": "Input Data/Ground temperatures.csv",
+      "rows": 69891,
+      "channels": [
+        "X3B-tmi_root4_east_j_c239",
+        "X3B-tmi_root4_east_i_c238",
+        "X3B-tmi_root4_east_h_c237",
+        "X3B-tmi_root4_east_d_c233",
+        "X3B-tmi_root4_east_f_c235",
+        "X3B-tmi_root4_east_g_c236",
+        "X3B-tmi_root4_east_b_c231",
+        "X3B-tmi_root4_east_c_c232",
+        "X3B-tmi_root3_south_j_c229",
+        "X3B-tmi_root3_south_h_c227",
+        "X3B-tmi_root3_south_i_c228",
+        "X3B-tmi_root3_south_g_c226",
+        "X3B-tmi_root3_south_e_c224",
+        "X3B-tmi_root3_south_f_c225",
+        "X3B-tmi_root3_south_c_c222",
+        "X3B-tmi_root2_middle_j_c218",
+        "X3B-tmi_root2_middle_h_c216",
+        "X3B-tmi_root2_middle_i_c217",
+        "X3B-tmi_root2_middle_g_c215",
+        "X3B-tmi_root2_middle_e_c213",
+        "X3B-tmi_root2_middle_d_c212",
+        "X3B-tmi_root2_middle_c_c211",
+        "X3B-tmi_root2_middle_b_c210",
+        "X3B-tmi_root2_middle_f_c214"
+      ],
+      "first_timestamp": "2021-05-09 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 69871,
+        "120.0": 1,
+        "180.0": 1,
+        "240.0": 1,
+        "300.0": 1,
+        "480.0": 1,
+        "960.0": 2,
+        "1020.0": 1,
+        "1140.0": 1,
+        "1500.0": 2,
+        "1560.0": 1,
+        "1620.0": 1,
+        "1800.0": 1,
+        "2160.0": 1,
+        "5040.0": 1,
+        "5640.0": 1,
+        "6240.0": 1,
+        "8820.0": 1
+      },
+      "missing_cells": 2804,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "X3B-tmi_root4_east_j_c239": 0,
+        "X3B-tmi_root4_east_i_c238": 0,
+        "X3B-tmi_root4_east_h_c237": 0,
+        "X3B-tmi_root4_east_d_c233": 0,
+        "X3B-tmi_root4_east_f_c235": 0,
+        "X3B-tmi_root4_east_g_c236": 0,
+        "X3B-tmi_root4_east_b_c231": 0,
+        "X3B-tmi_root4_east_c_c232": 0,
+        "X3B-tmi_root3_south_j_c229": 0,
+        "X3B-tmi_root3_south_h_c227": 0,
+        "X3B-tmi_root3_south_i_c228": 0,
+        "X3B-tmi_root3_south_g_c226": 0,
+        "X3B-tmi_root3_south_e_c224": 0,
+        "X3B-tmi_root3_south_f_c225": 0,
+        "X3B-tmi_root3_south_c_c222": 0,
+        "X3B-tmi_root2_middle_j_c218": 0,
+        "X3B-tmi_root2_middle_h_c216": 0,
+        "X3B-tmi_root2_middle_i_c217": 0,
+        "X3B-tmi_root2_middle_g_c215": 0,
+        "X3B-tmi_root2_middle_e_c213": 0,
+        "X3B-tmi_root2_middle_d_c212": 0,
+        "X3B-tmi_root2_middle_c_c211": 0,
+        "X3B-tmi_root2_middle_b_c210": 0,
+        "X3B-tmi_root2_middle_f_c214": 0
+      },
+      "selected_min": {
+        "X3B-tmi_root4_east_j_c239": 21.59423361266228,
+        "X3B-tmi_root4_east_i_c238": 21.64853057106348,
+        "X3B-tmi_root4_east_h_c237": 21.61152991573165,
+        "X3B-tmi_root4_east_d_c233": 21.75211079360496,
+        "X3B-tmi_root4_east_f_c235": 21.12988646684025,
+        "X3B-tmi_root4_east_g_c236": 21.560986853537088,
+        "X3B-tmi_root4_east_b_c231": 21.75334540880858,
+        "X3B-tmi_root4_east_c_c232": 21.748905066546136,
+        "X3B-tmi_root3_south_j_c229": 22.90386234555821,
+        "X3B-tmi_root3_south_h_c227": 22.920766902503907,
+        "X3B-tmi_root3_south_i_c228": 22.955194523959417,
+        "X3B-tmi_root3_south_g_c226": 22.95296464073166,
+        "X3B-tmi_root3_south_e_c224": 23.19319006951749,
+        "X3B-tmi_root3_south_f_c225": 22.98273092144056,
+        "X3B-tmi_root3_south_c_c222": 23.985100989804067,
+        "X3B-tmi_root2_middle_j_c218": 22.59760319668188,
+        "X3B-tmi_root2_middle_h_c216": 22.703801318522004,
+        "X3B-tmi_root2_middle_i_c217": 22.71237787681009,
+        "X3B-tmi_root2_middle_g_c215": 22.698173055339502,
+        "X3B-tmi_root2_middle_e_c213": 22.79374669628973,
+        "X3B-tmi_root2_middle_d_c212": 22.575941248016733,
+        "X3B-tmi_root2_middle_c_c211": 22.737509283423968,
+        "X3B-tmi_root2_middle_b_c210": 23.52839413413288,
+        "X3B-tmi_root2_middle_f_c214": 22.781799995792
+      },
+      "selected_max": {
+        "X3B-tmi_root4_east_j_c239": 21.900008421365136,
+        "X3B-tmi_root4_east_i_c238": 21.946449091621552,
+        "X3B-tmi_root4_east_h_c237": 21.9552367183938,
+        "X3B-tmi_root4_east_d_c233": 21.970251427639653,
+        "X3B-tmi_root4_east_f_c235": 21.55803443508309,
+        "X3B-tmi_root4_east_g_c236": 21.93764237930632,
+        "X3B-tmi_root4_east_b_c231": 22.039357657096662,
+        "X3B-tmi_root4_east_c_c232": 22.02209285650843,
+        "X3B-tmi_root3_south_j_c229": 23.095226245784453,
+        "X3B-tmi_root3_south_h_c227": 23.09036797558838,
+        "X3B-tmi_root3_south_i_c228": 23.14234816381613,
+        "X3B-tmi_root3_south_g_c226": 23.11184992904237,
+        "X3B-tmi_root3_south_e_c224": 23.34509516194585,
+        "X3B-tmi_root3_south_f_c225": 23.15112952414796,
+        "X3B-tmi_root3_south_c_c222": 24.17880873370301,
+        "X3B-tmi_root2_middle_j_c218": 22.81735344355217,
+        "X3B-tmi_root2_middle_h_c216": 22.966228642473745,
+        "X3B-tmi_root2_middle_i_c217": 22.940267332270125,
+        "X3B-tmi_root2_middle_g_c215": 22.9254348620288,
+        "X3B-tmi_root2_middle_e_c213": 22.990152745264098,
+        "X3B-tmi_root2_middle_d_c212": 22.72603297273769,
+        "X3B-tmi_root2_middle_c_c211": 22.93012660978898,
+        "X3B-tmi_root2_middle_b_c210": 23.67212002691568,
+        "X3B-tmi_root2_middle_f_c214": 22.948472300128344
+      }
+    },
+    {
+      "path": "Input Data/Internal heat gain rate.csv",
+      "rows": 70024,
+      "channels": [
+        "Internal heat gain rate [W]"
+      ],
+      "first_timestamp": "2021-05-09 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 70004,
+        "120.0": 3,
+        "180.0": 1,
+        "240.0": 1,
+        "300.0": 1,
+        "420.0": 1,
+        "1020.0": 1,
+        "1140.0": 1,
+        "1380.0": 1,
+        "1500.0": 3,
+        "1860.0": 1,
+        "2460.0": 1,
+        "2820.0": 1,
+        "4740.0": 1,
+        "5640.0": 1,
+        "6240.0": 1
+      },
+      "missing_cells": 124,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "Internal heat gain rate [W]": 0
+      },
+      "selected_min": {
+        "Internal heat gain rate [W]": 340.2569418
+      },
+      "selected_max": {
+        "Internal heat gain rate [W]": 349.7427455
+      }
+    },
+    {
+      "path": "Input Data/Weather data.csv",
+      "rows": 70554,
+      "channels": [
+        "PIRin",
+        "3-OAT_South",
+        "3-OAT_North",
+        "GHI",
+        "DNI",
+        "DHI",
+        "W-3DUA-WINDSPD",
+        "W-3DUA-WINDDIR",
+        "W-SP-GLOB-IRRAD",
+        "W-SS-GLOB-ILLUM",
+        "W-OAT-2",
+        "W-SP-DIFF-IRRAD",
+        "W-SS-DIFF-ILLUM",
+        "W-CMH-DEWPT",
+        "W-OAP-1"
+      ],
+      "first_timestamp": "2021-05-09 00:00:00",
+      "last_timestamp": "2021-06-26 23:59:00",
+      "interval_seconds_counts": {
+        "60.0": 70552,
+        "420.0": 1
+      },
+      "missing_cells": 6420,
+      "infinite_cells": 0,
+      "selected_rows": 721,
+      "selected_absent_timestamps": 0,
+      "selected_missing_cells": 0,
+      "selected_nonfinite_cells": 0,
+      "selected_missing_by_channel": {
+        "PIRin": 0,
+        "3-OAT_South": 0,
+        "3-OAT_North": 0,
+        "GHI": 0,
+        "DNI": 0,
+        "DHI": 0,
+        "W-3DUA-WINDSPD": 0,
+        "W-3DUA-WINDDIR": 0,
+        "W-SP-GLOB-IRRAD": 0,
+        "W-SS-GLOB-ILLUM": 0,
+        "W-OAT-2": 0,
+        "W-SP-DIFF-IRRAD": 0,
+        "W-SS-DIFF-ILLUM": 0,
+        "W-CMH-DEWPT": 0,
+        "W-OAP-1": 0
+      },
+      "selected_min": {
+        "PIRin": 329.3781569,
+        "3-OAT_South": 13.89507347,
+        "3-OAT_North": 13.19914087,
+        "GHI": 0.238275461,
+        "DNI": 0.28023956,
+        "DHI": 0.05571804,
+        "W-3DUA-WINDSPD": 0.19035965,
+        "W-3DUA-WINDDIR": 56.95744867,
+        "W-SP-GLOB-IRRAD": 0.345938667,
+        "W-SS-GLOB-ILLUM": 3.18478825,
+        "W-OAT-2": 11.88012964,
+        "W-SP-DIFF-IRRAD": -0.319079,
+        "W-SS-DIFF-ILLUM": 3.470679217,
+        "W-CMH-DEWPT": 26.09450003,
+        "W-OAP-1": 987.0613287
+      },
+      "selected_max": {
+        "PIRin": 388.2773135,
+        "3-OAT_South": 19.4862779,
+        "3-OAT_North": 18.83355073,
+        "GHI": 1401.326965,
+        "DNI": 799.6586202,
+        "DHI": 693.796224,
+        "W-3DUA-WINDSPD": 3.070822942,
+        "W-3DUA-WINDDIR": 313.7971836,
+        "W-SP-GLOB-IRRAD": 1314.226727,
+        "W-SS-GLOB-ILLUM": 3.838097725,
+        "W-OAT-2": 19.67371265,
+        "W-SP-DIFF-IRRAD": 561.8314967,
+        "W-SS-DIFF-ILLUM": 4.037229208,
+        "W-CMH-DEWPT": 26.1015587,
+        "W-OAP-1": 989.7582479
+      }
+    }
+  ],
+  "selected_core_files": [
+    "Direct Validation Data/Air temperature.csv",
+    "Input Data/Weather data.csv",
+    "Input Data/Internal heat gain rate.csv",
+    "Input Data/Duct blaster.csv",
+    "Direct Validation Data/Fan coil units.csv",
+    "Input Data/Exterior surface temperature.csv"
+  ],
+  "selected_core_complete": true,
+  "initial_states": "air/boundary observations available; complete fabric states unknown"
+}

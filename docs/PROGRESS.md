@@ -1758,3 +1758,46 @@ verification; no unrelated historical datasets downloaded for delivery checks.
 Previous branches/artifacts preserved. docs/C42_BLOCKED_DELIVERY.json records
 that no actual geometry/data integration has occurred. Official PDF/structure/
 measurements are still required; native inspection entry is unexecuted here.
+
+## C4.2B FLEXLAB acquisition and feasibility — 2026-11-08
+
+Official LBNL-ETA/FLEXLAB-ASHRAE140 commit265312ec3843c97d5a24b7d5671ee2891f326af6
+successfully acquired with selective primary file downloads.35 original files,
+including report/drawings, metadata/sensor workbooks, material/construction tables,
+window IDF and all20 input/direct/indirect time-series CSVs opened/inspected.
+Source SHA256/byte sizes/immutable URLs and channel/missing/gap audit committed as
+metadata only. Raw originals stay outside repository. No explicit repository-wide
+data redistribution licence found; report copyright does not establish one.
+
+Recommendation CONDITIONAL: separate Cell3B envelope benchmark, not residential
+house/main model replacement. Main volume documented6.08×7.57×2.63m (AppendixB),
+three physical zones; only main-cell direct validation established. Report's
+recommended conditioned experiment22–27June2021 selected over co-heating, whose
+experimental energy closure was unsatisfactory. Genuine23June00:00–12:00 PST
+fixedUTC−08 selected:721 minute rows with complete finite data in all six core
+CSVs and19 of20 audited time series. West-wall heat flux has172 selected records
+(549 expected timestamps absent), blocking complete west-flux comparison. Whole files contain gaps/NaNs; no filling, clipping or invented data.
+Two actual-data inspection PNGs generated with Python; no MATLAB execution or
+model/empirical validation claimed. Temperature aggregate explicitly unweighted26
+supplied air sensors, not operative temperature. Metadata conflicts include pressure
+Pa/mbar, sampling description10min versus actual1min, missingstree5 headers,
+ceiling construction, temporary-wall layer order and unusual Cotton Batt density.
+The purported window detailed-report .txt has an Access/Jet binary signature.
+Complete fabric initial states unresolved; future preconditioning required.
+
+Prepared lightweight native R2025a run_c42b_flexlab_inspection, original-byte hash
+checks, channel/missing/gap display,721-row strict selection, two measured plots
+and JSON summary. No MATLAB simulation; native inspection remains pending. Update
+requires six original CSVs downloaded directly from pinned source, preserving their
+subfolders; no raw-data rehosting. Three concise requested docs plus reproducible
+metadata-only Python audit; two focused guards, no extensive new suite/dependencies.
+Existing C3/C4/BESTEST models, parameters and results unchanged. Annex58 remains
+blocked/separate. C4.3 not started.
+
+C4.2B checks:222 Python tests passed,3 optional plotting tests skipped in base
+environment; optional publication-plot smoke test separately passed with existing
+matplotlib overlay. Ruff lint/format124 files and mypy13 modules passed; archived
+report and14 signal-map integrity checks passed; static MATLAB lint87 files passed;
+Python sdist/wheel built. Native MATLAB inspection remains unexecuted. All35 acquired
+files(217081214bytes) independently matched pinned upstream Git blob identities in
+addition to recorded SHA256. No raw CSV/PDF, cache or generated model staged.

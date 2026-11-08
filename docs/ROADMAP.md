@@ -200,3 +200,13 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [ ] Establish verified zone adjacency and readiness for later implementation.
 - [ ] FRP-2 remains unselected; primary assessment/approval required before any switch.
 - [ ] C4.3 not started.
+
+### C4.2B FLEXLAB acquisition and feasibility
+
+- [x] Acquire/authenticate primary documentation and authentic experimental CSVs.
+- [x] Map Cell3B geometry/materials/measurements; audit gaps and a continuous12h period.
+- [x] Recommend CONDITIONAL separate single-zone benchmark; multi-zone/equipment validation unestablished.
+- [x] Prepare measured-data-only MATLAB inspection and transfer instructions.
+- [ ] Execute new inspection in MATLAB R2025a; no cloud native execution claimed.
+- [ ] Resolve construction/property conflicts, initial-state conditioning and raw redistribution rights before a frozen model/data packet.
+- [ ] C4.3 remains unauthorized/not started.
