@@ -177,6 +177,15 @@ Phase 1B.2 and later implementation await university diagnostic results.
 
 - [x] Presentation-only builder with four named physical subsystems, visible inputs/feedback and collapsed checks.
 - [x] One-run C3.7 comparison driver, fixed numerical tolerances and one result figure prepared.
-- [ ] Generate/open SLX and inspect layout in university MATLAB R2025a.
-- [ ] Pass existing physical checks and reproduce C3.7 trajectories, switching and energy.
-- [ ] No subsequent phase started.
+- [x] Native C4.0 R2025a generation/verification user-reported; no new native execution in cloud.
+- [x] C3.7 reproduction user-reported successful; original C4.0 verification artifacts not supplied.
+- [x] C4.1 dataset assessment explicitly authorized; no new physics.
+
+
+### C4.1 residential dataset assessment
+
+- [x] Assess Twin Houses documentation and official ResStock inputs; ThermBuild catalogue locally blocked.
+- [x] Conditionally select N2 Annex71; document missing primary geometry, N2 measurements and rights.
+- [x] Document source-supported openings, candidate zoning and proposed measured-data validation.
+- [ ] Close data-access/geometry/licensing gates before any implementation.
+- [ ] C4.2 not started.

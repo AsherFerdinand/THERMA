@@ -1,0 +1,4 @@
+# Keep original measurements, downloaded documents and derived datasets local.
+*
+!README.md
+!.gitignore

@@ -1665,3 +1665,49 @@ large datasets or caches included: native builder creates the requested model
 on the university PC. START_C40.txt gives test/run/baseline instructions.
 docs/C40_DELIVERY.json records pending native generation/reproduction explicitly.
 C4.0 not marked complete; no subsequent phase started.
+
+## C4.1 building-reference assessment — 2026-11-08
+
+User reports native C4.0 R2025a verification reproducing C3.7. No actual C4.0
+verification JSON/model supplied in this turn; recorded as user-reported, with
+no cloud execution or manufactured test log. Existing C3.7–C4.0 files unchanged.
+
+All three requested primary sites returned proxy HTTP403 locally. Inspected
+accessible immutable GitHub documentation instead: Twin Houses research mirror
+at ae7614bed0d7e5f5e73b3d52e6bcec8efe5f85f9, official ResStock source at
+33433157aa52d1a97f35b9640bdf7a2c46f5d908. Twin documentation comprises a198KB
+exercise description,34KB channel catalogue and3.87MB KU Leuven report. Only
+small repository metadata/text/schema examples also downloaded; no raw measurement
+workbooks/FMUs or large dataset archive. Source files retained only in temporary
+research storage; source links/hashes recorded, no third-party data redistribution.
+
+Conditional recommendation: IBP Twin House N2, Annex71 2018–2019 campaign,
+Holzkirchen. N2 electric heating is simpler for envelope validation than O5's
+underfloor-heated periods. Catalogue establishes N2 room-air/heat/weather/ventilation/
+cellar/opening signal names/units; report documents ten model zones, six openings
+and references primary plans/constructions. Proposed graph includes only those
+source-reported openings, with unknown adjacencies explicit. No floor areas,
+dimensions, construction properties or measurements invented. Modeller assumptions
+and simulated emulator outputs explicitly separated from actual measurements.
+
+Not execution-ready: primary plans/material workbook/spec revision, original N2
+measurement/time metadata and data reuse terms remain missing. GPL repository
+text does not establish third-party dataset rights. ThermBuild contents/licence
+remain unverified. ResStock official XML/YML/code are accessible, but establish
+synthetic/representative simulation inputs, not measured multi-room homes; custom
+software licence noted separately from data terms. One HPXML case is a simulation-
+only fallback, not empirical validation. Proposed conditioning/holdout dates remain
+conditional on actual N2 schedule/coverage. No empirical validation performed.
+
+Deliverables: docs/C41_BUILDING_DATASET_ASSESSMENT.md,
+docs/C41_BUILDING_ZONE_DIAGRAM.md, data/reference_building/README.md. Local data
+folder ignores all downloads except README/.gitignore. No model/physics/controller,
+plant component, simulation, preprocessing pipeline, dependency or new test suite.
+C4.1 assessment complete with documented acquisition blocker; C4.2 not started.
+
+Documentation-only checks:218 existing Python tests passed,3 optional plotting
+tests skipped (plotting dependency absent from the base environment); no new tests.
+Ruff lint/format(115 files), mypy(13 modules), new Markdown local links/code fences,
+git diff whitespace and raw-file ignore rules checked.209 prior implementation/
+configuration/evidence/result files compared byte-for-byte unchanged. No native
+MATLAB execution needed or claimed for this assessment; no ZIP/model produced.
