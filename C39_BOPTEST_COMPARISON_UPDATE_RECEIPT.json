@@ -1,0 +1,16 @@
+{
+  "filename": "THERMA_C39_BOPTEST_COMPARISON_UPDATE_2026-11-08.zip",
+  "source_commit": "30ea3c50f71b95957cf5b5f75d22950d3e44c5e4",
+  "sha256": "3fd6c9974c5201ae61c5869eba0c5ebb49ab0998502672535b576085c38217db",
+  "bytes": 2386927,
+  "files": 12,
+  "status": "actual_preserved_result_comparison_complete_MATLAB_reproduction_pending",
+  "kind": "C39_only_overlay_with_verified_compact_derived_tables",
+  "previous_installation_files_unchanged": 261,
+  "fresh_crc_manifest_dependencies_metrics_energy_verified": true,
+  "external_C27_C28_folders_required": false,
+  "python_tests_passed": 219,
+  "MATLAB_or_FMU_simulation_rerun": false,
+  "MATLAB_postprocessing_executed_in_cloud": false,
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C39_BOPTEST_COMPARISON_UPDATE_2026-11-08.zip"
+}

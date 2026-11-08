@@ -173,3 +173,10 @@ SHA256: `f68326e515e68c5381b9a98b5b7fed6df1dd8e822a65623bfc15b4c342901cdb`. Sour
 Download [THERMA_C38_THERMOSTAT_UPDATE_2026-11-08.zip](THERMA_C38_THERMOSTAT_UPDATE_2026-11-08.zip). Extract INTO the existing THERMA_C35_MATLAB folder containing the C3.7 Purmo update and completed outputs. Read START_C38.txt. Run the two C3.8 software metric tests, then run_c38_thermostat_comparison. Reuses a compatible original C3.7 result/CSV/saved model; only the0.5C case is simulated when baseline artifacts pass. Otherwise runs two cases in C3.8 outputs. Primary interval2-24h, exactly two plots showing2-8h. C3.7 sources/results and BESTEST remain unchanged; no efficiency or native comparison result claimed in cloud. No C3.9.
 
 SHA256: `628695c1e8c842bca231b8dbe5b4d1e1171e1b425bcf9639b0b1940bf69ba9e8`. Source `c9b5469e2744ec38814c6a2304b9b9c55becedd8`.
+
+
+## C3.9 preserved BOPTEST air comparison - no simulations
+
+Download [THERMA_C39_BOPTEST_COMPARISON_UPDATE_2026-11-08.zip](THERMA_C39_BOPTEST_COMPARISON_UPDATE_2026-11-08.zip). Extract INTO the existing THERMA_C35_MATLAB folder. Read START_C39.txt; run the two C3.9 software tests then run_c39_boptest_comparison. Includes compact verified DERIVED actual-data tables and exactly two plots, with no old C2.7/C2.8 folder dependency. Solar air MAE0.792534195K,RMSE0.923975534K; operative reaTRoo_y is excluded. Heating input consistency only, not independent equipment validation. Retains solar execution-lineage and sampled-energy limitations. Actual Python post-processing complete; native MATLAB reproduction unexecuted in cloud. C3.7/C3.8 and BESTEST unchanged; no C4.0.
+
+SHA256: `3fd6c9974c5201ae61c5869eba0c5ebb49ab0998502672535b576085c38217db`. Source `30ea3c50f71b95957cf5b5f75d22950d3e44c5e4`.
