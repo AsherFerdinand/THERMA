@@ -187,3 +187,10 @@ SHA256: `3fd6c9974c5201ae61c5869eba0c5ebb49ab0998502672535b576085c38217db`. Sour
 Download [THERMA_C40_HEATING_SYSTEM_UPDATE_2026-11-08.zip](THERMA_C40_HEATING_SYSTEM_UPDATE_2026-11-08.zip). Extract INTO the existing THERMA_C35_MATLAB folder with C3.7/C3.8 updates and original C3.7 result/CSV/model. Read START_C40.txt; run two comparator software tests then run_c40_heating_system. The script generates/opens THERMA_C40_HeatingSystem.slx, runs one24h demonstration and compares C3.7 temperature/power/demand/energy. Four named physical subsystems plus one passive results group; no changed thermal equations or solver settings. This SOURCE update contains no prebuilt SLX or fabricated result: native model/layout/test/run/reproduction remain pending. One result figure only; original artifacts preserved. No subsequent phase.
 
 SHA256: `f7964f6609f62f450ba80e3c07b857ed0aeaa94753e0c9beae58dea689c8ca45`. Source `40973742501e0930c24786b72b91613fdbffc0c0`.
+
+
+## C4.2 Annex58 inspection - BLOCKED, not integrated
+
+Download [THERMA_C42_ANNEX58_INSPECTION_BLOCKED_2026-11-08.zip](THERMA_C42_ANNEX58_INSPECTION_BLOCKED_2026-11-08.zip). Extract into existing THERMA_C35_MATLAB; read START_C42.txt. run_c42_reference_inspection reports missing originals/unknown geometry/signals and writes a summary only. No actual PDF or measurement archive obtained; no geometry, processed data or temperature plot fabricated. DOI and publisher/metadata routes blocked locally by proxy403; file download URL/status unknown. User must provide the official specification PDF, archive structure and genuine measurements for continuation. No Annex71 substitution or automatic FRP-2 fallback. C4.2 incomplete; no C4.3.
+
+SHA256: `bac92878c4b5bdc638308ffc8181d385b151695037e0a9593435bc11c18c8aa2`. Source `65383b49d73d2b5854592957d4af2c1003586bc0`.
