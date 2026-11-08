@@ -1,0 +1,16 @@
+{
+  "filename": "THERMA_C42B_FLEXLAB_INSPECTION_UPDATE_2026-11-08.zip",
+  "sha256": "5a808c3731d38c632a35849f4a8f2fd51f87b1cbfad8c8c8f5fafca40c6548f3",
+  "bytes": 218069,
+  "files": 13,
+  "source_commit": "cf8a6b73e2be305e3669f645b2960f92af9fa01a",
+  "upstream_commit": "265312ec3843c97d5a24b7d5671ee2891f326af6",
+  "raw_measurements_included": false,
+  "matlab_executed": false,
+  "simulation_performed": false,
+  "recommendation": "CONDITIONAL: separate Cell3B envelope benchmark",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C42B_FLEXLAB_INSPECTION_UPDATE_2026-11-08.zip",
+  "transfer_commit": "647a7a81a00ab9462e9c754e190b45a962fae513",
+  "uploaded_sha256_verified": true,
+  "prior_artifacts_and_main_work_unchanged": true
+}

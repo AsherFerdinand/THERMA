@@ -1801,3 +1801,12 @@ report and14 signal-map integrity checks passed; static MATLAB lint87 files pass
 Python sdist/wheel built. Native MATLAB inspection remains unexecuted. All35 acquired
 files(217081214bytes) independently matched pinned upstream Git blob identities in
 addition to recorded SHA256. No raw CSV/PDF, cache or generated model staged.
+
+Published13-file C4.2B inspection update(218069bytes) on replay-transfer commit
+647a7a81a00ab9462e9c754e190b45a962fae513. ZIP sourcecf8a6b73e2be305e3669f645b2960f92af9fa01a;
+SHA2565a808c3731d38c632a35849f4a8f2fd51f87b1cbfad8c8c8f5fafca40c6548f3.
+ZIP CRC/fresh extraction/manifest and byte-identical existing-helper checks passed;
+independent small-file HTTP download matches SHA256. Previous transfer artifacts,
+main/work and Annex58 branch unchanged. Delivery receipt docs/C42B_DELIVERY.json.
+The update contains no raw CSV/PDF/SLX; six original CSV downloads from official
+pinned URLs are required. No Git/Python/WSL required on PC. Native gate pending.
