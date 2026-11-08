@@ -1523,3 +1523,38 @@ Use START_C37.txt; previous preparation-only instructions are superseded. Local
 MATLAB source/config/test dependencies are in the existing C3.5 folder; no network,
 Git or Python needed. Runtime still pending on university MATLAB R2025a.
 Delivery receipt docs/C37_PURMO_DELIVERY.json; main/work and old artifacts preserved.
+
+## C3.8 thermostat comparison preparation — 2026-11-08
+
+User reports actual C3.7 MATLAB R2025a execution:20m²/50m³,15°C air/20°C
+fabric,21°C setpoint,1K total hysteresis,55°C supply; first21°C0.310h,
+62 full-day transitions,10.215kWh delivered, maximum21.754°C; existing energy
+and controller checks passed. No actual C3.7 files/test log supplied this turn;
+these are user-reported results, not independently inspected or archived logs.
+C3.7 files, original results and BESTEST remain unchanged.
+
+Added separate run_c38_thermostat_comparison entry point:1.0/0.5K only, matching
+20.5/21.5 and20.75/21.25°C inclusive thermostat thresholds. Reuses unchanged
+C3.7 data and original components; only C3.deadband_K changes on a saved-model
+copy. Auto-discovers original result/CSV/model, checks hashes/status/room/P/release,
+recomputes existing numerical/hysteresis/valve checks and validates saved workspace/
+solver/initialization. Compatible C3.7 baseline means only one new simulation.
+If no compatible baseline exists, creates both cases in C3.8 outputs; never runs
+the C3.7 entry point or overwrites its report/results. Explicit incompatible
+baseline input errors. Old source/config/selected result bytes checked preserved.
+
+Primary metrics share2–24h: time-weighted mean/MAE, logged min/max, switches in
+(2h,24h], native cumulative-energy difference. Full-day energy is kept separate.
+Exactly two PNGs show temperature and thermostat demand during2–8h. Compact report
+and conditional recommendation generated from actual results only. No efficiency
+claim from delivered energy: boiler/pump efficiencies absent. No physics, building,
+weather, new controller or large sweep added. Two focused MATLAB software tests
+cover weighting, interpolation, duplicate/boundary events and incomplete coverage.
+MATLAB unavailable in cloud: modified case and comparison remain pending native
+execution; no fabricated comparison table/plots/results. C3.9 not started.
+
+Checks:217 Python tests passed(17.56s), Ruff lint/format(107 files), mypy(13
+modules), MATLAB static lint84 files and6 targeted C3.8 files passed. Archive
+integrity/14 replay mappings and wheel/sdist builds passed.95 previous source/
+config/reference/evidence/result files compared byte-for-byte unchanged. New
+MATLAB metric tests are unexecuted here; no native C3.8 execution is claimed.

@@ -143,14 +143,22 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [x] Inspect actual C3.5 UA60/180 traces; quantify storage/loss and create two plots.
 - [x] Prepare read-only MATLAB entry point reusing the existing C3.5 study.
 - [ ] University execution of the new C3.6 entry point/static test (no new simulations).
-- [ ] C3.7: agree intended building and manufacturer emitter specification; not started.
+- [x] C3.7 building and manufacturer emitter specification established.
 
 
-### C3.7 residential scenario (implementation ready; native verification pending)
+### C3.7 residential scenario (native execution user-reported)
 
 - [x] Separate20m² corner-room data and one-run integration entry point prepared.
 - [x] Record user-supplied Purmo864W at55/45/20°C with URL and transcription provenance.
 - [x] Match existing model UA/flow; document unresolved weight interpretation and capacitance.
-- [ ] Execute the two static C3.7 tests and one24h run in university MATLAB.
-- [ ] Review actual heating time, energy, two plots and physical checks.
-- [ ] C3.8 not started.
+- [x] Successful R2025a residential execution and checks user-reported on2026-11-08.
+- [ ] Independently review the actual C3.7 trajectory/report when supplied.
+- [x] C3.8 thermostat investigation authorized; implementation prepared, native comparison pending.
+
+
+### C3.8 thermostat hysteresis (native comparison pending)
+
+- [x] Two-deadband driver, compatible C3.7 reuse,2–24h metrics and two2–8h plots prepared.
+- [ ] Execute in university MATLAB; review both actual cases and physical checks.
+- [ ] Decide regulation-versus-switching trade-off from actual results.
+- [ ] C3.9 not started.
