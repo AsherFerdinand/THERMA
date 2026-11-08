@@ -1711,3 +1711,39 @@ Ruff lint/format(115 files), mypy(13 modules), new Markdown local links/code fen
 git diff whitespace and raw-file ignore rules checked.209 prior implementation/
 configuration/evidence/result files compared byte-for-byte unchanged. No native
 MATLAB execution needed or claimed for this assessment; no ZIP/model produced.
+
+## C4.2 Annex58 acquisition attempt — 2026-11-08
+
+User explicitly changed reference to Annex58 Experiment1, DOI10.15129/
+8a86bbbb-7be8-4a87-be76-0372985ea228,University of Strathclyde,reported21Aug–
+30Sep2013 and CC BY4.0. Those metadata are attributed to the user's publisher
+listing, not independently retrieved. No Annex71 geometry, catalogue or conditions
+transferred. Existing PDF not attached/found in workspace.
+
+Official DOI/DataCite and candidate university Pure/Strathprints routes failed
+with HTTP403 at proxy CONNECT; no publisher-origin response. No actual published
+archive/PDF/structure file URL could be discovered, so archive origin status/size
+remain unknown. No invented direct links, authentication bypass or substitute data.
+FRP-2 Nature/Crossref/PubMed and secondary-cited OpenEI routes also proxy403;
+no authenticated fallback geometry/data obtained, no switch made. Detailed exact
+URLs and manual publisher-browser instructions in C42_DATASET_INSPECTION.md.
+
+Prepared separate JSON scaffold with dataset provenance and physical fields null/
+empty, explicit not-ready status; no claimed room count, dimensions, materials,
+adjacencies, units, sampling or initial conditions. No page references fabricated.
+Three docs distinguish missing actual topology from a metadata-dependency Mermaid,
+not a physical house graph. Original data not obtained or processed; no reference
+plot/validation generated. Entry point run_c42_reference_inspection reports missing
+local originals/unknown signals and writes an inspection summary only; present
+filenames alone are not treated as verified sources. No thermal simulation/new
+physics or code dependencies. Two focused Python guards cover campaign separation
+and no synthetic output. Raw files remain ignored. C4.2 is incomplete pending the
+actual PDF/measurements; no C4.3 work. Previous models/results preserved.
+
+Checks:220 existing/new Python tests passed,3 optional plotting tests skipped;
+Ruff lint/format119 files, mypy13 modules, static MATLAB lint1 entry point and new
+Markdown local links/fences/JSON checked. Source-file metadata objects share the
+same field set for MATLAB struct-array decoding.209 previous implementation/
+configuration/evidence/result files unchanged byte-for-byte. New native inspection
+entry remains unexecuted; no measurements, processed CSV, plot, empirical-validation
+claim or geometry-readiness claim produced. Raw downloads remain ignored.

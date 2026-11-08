@@ -188,4 +188,15 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [x] Conditionally select N2 Annex71; document missing primary geometry, N2 measurements and rights.
 - [x] Document source-supported openings, candidate zoning and proposed measured-data validation.
 - [ ] Close data-access/geometry/licensing gates before any implementation.
-- [ ] C4.2 not started.
+- [x] C4.2 explicitly authorized; target changed to Annex58 Experiment1, without copying Annex71.
+
+
+### C4.2 Annex58 integration (blocked, not complete)
+
+- [x] Attempt official DOI, metadata and university routes; record proxy403 failures.
+- [x] Prepare clearly blocked configuration, missing-input MATLAB inspection and dependency diagram.
+- [ ] Obtain the official PDF/structure and extract page-cited building parameters.
+- [ ] Obtain/inspect original measurements and prepare a genuine short subset/temperature plot.
+- [ ] Establish verified zone adjacency and readiness for later implementation.
+- [ ] FRP-2 remains unselected; primary assessment/approval required before any switch.
+- [ ] C4.3 not started.

@@ -1,3 +1,9 @@
+> **C4.2 update:** the user has switched the intended reference to Annex58
+> Experiment1, DOI10.15129/8a86bbbb-7be8-4a87-be76-0372985ea228,2013 campaign.
+> See [C4.2 inspection](../../docs/C42_DATASET_INSPECTION.md). Authoritative PDF
+> and measurements are unavailable here; this historical C4.1 N2 assessment is
+> retained below and must **not** supply Annex58 geometry, channels or conditions.
+
 # Reference building — C4.1 assessment only
 
 **Conditional target:** Fraunhofer IBP Twin House **N2**, Holzkirchen,Germany,

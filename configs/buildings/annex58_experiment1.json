@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "reference_id": "annex58_twin_houses_experiment1",
+  "status": "blocked_authoritative_specification_and_measurements_unavailable",
+  "dataset": {
+    "title": "IEA EBC Annex 58 Twin Houses Empirical Dataset, Experiment 1",
+    "doi": "10.15129/8a86bbbb-7be8-4a87-be76-0372985ea228",
+    "url": "https://doi.org/10.15129/8a86bbbb-7be8-4a87-be76-0372985ea228",
+    "publisher": "University of Strathclyde",
+    "annex": 58,
+    "experiment": 1,
+    "reported_period": {
+      "start_date": "2013-08-21",
+      "end_date": "2013-09-30",
+      "timezone": null
+    },
+    "licence": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "provenance": "User reports publisher listing; not independently retrieved here"
+    },
+    "metadata_provenance": "User-supplied dataset identification and period, not downloaded publisher metadata",
+    "formal_creator_attribution": null
+  },
+  "source_files": [
+    {
+      "filename": "Empirical_Modelling_Specification_200514.pdf",
+      "role": "authoritative building and experiment specification",
+      "published_download_url": null,
+      "sha256": null,
+      "reviewed_pages": []
+    },
+    {
+      "filename": "Supplementary_files.zip",
+      "role": "original measurement archive",
+      "published_download_url": null,
+      "sha256": null,
+      "reviewed_pages": []
+    },
+    {
+      "filename": "Supplementary_file_structure",
+      "role": "archive inventory and signal documentation; extension unverified",
+      "published_download_url": null,
+      "sha256": null,
+      "reviewed_pages": []
+    }
+  ],
+  "geometry": {
+    "status": "not_extracted",
+    "house_identifier": null,
+    "location": null,
+    "footprint_m2": null,
+    "storeys": null,
+    "overall_dimensions_m": null,
+    "zones": [],
+    "surfaces": [],
+    "constructions": [],
+    "windows": [],
+    "adjacent_zone_connections": [],
+    "parameter_page_references": []
+  },
+  "environment": {
+    "outdoor_temperature": null,
+    "solar_inputs": [],
+    "ventilation": null,
+    "infiltration": null,
+    "cellar_boundary": null,
+    "initial_conditions": null
+  },
+  "measurements": {
+    "status": "unavailable_not_inspected",
+    "original_filenames": [],
+    "signals": [],
+    "timestamp_column": null,
+    "timestamp_unit": null,
+    "timezone": null,
+    "sampling_interval_s": null,
+    "missing_value_encodings": [],
+    "processed_reference_file": null,
+    "processed_metadata_file": null,
+    "processed_sha256": null,
+    "selected_period": null
+  },
+  "units_for_future_geometry": {
+    "length": "m",
+    "area": "m2",
+    "volume": "m3",
+    "conductivity": "W/(m.K)",
+    "density": "kg/m3",
+    "specific_heat": "J/(kg.K)"
+  },
+  "modelling_intent": "Reuse existing multilayer-envelope approach after extraction. One record per shared physical partition; no dimensions, materials, adjacencies or defaults adopted from Annex71 or C3.7.",
+  "local_raw_directory": "data/reference_building/raw/annex58_experiment1",
+  "inspection_only": true,
+  "ready_for_simulink_implementation": false
+}
