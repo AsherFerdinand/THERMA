@@ -143,7 +143,9 @@ def verify_results(archive: Path) -> dict:
         name
         for name, value in raw.items()
         if name.endswith((".json", ".log"))
-        and re.search(rb"(?:[A-Za-z]:[\\/]|\\\\[^\s\\]+\\|/(?:home|workspace|Users)/)", value)
+        and re.search(
+            rb"(?:(?<![A-Za-z0-9])[A-Za-z]:[\\/]|\\\\[^\s\\]+\\|/(?:home|workspace|Users)/)", value
+        )
     ]
     with archive.open("rb") as stream:
         archive_hash = hashlib.file_digest(stream, "sha256").hexdigest()

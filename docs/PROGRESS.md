@@ -1847,3 +1847,27 @@ failed receipts cannot become successful evidence. Privacy review and verified
 remote archival receipt required before cleanup;no deletion code or approval is
 provided. New native wrappers/audit/packaging remain unexecuted in cloud;university
 R2025a acceptance gate still required. Actual PC savings cannot be measured here.
+
+Maintenance checks completed:229 Python tests passed,3 optional plotting tests
+skipped in the base environment;separate publication-plot smoke test passed with
+existing optional matplotlib overlay. Ruff lint/format135 files,mypy13 modules,
+archived report and14 signal-map checks passed;102 MATLAB files checked statically,
+including every root runner and new utilities. Python sdist/wheel build passed.
+Seven focused packaging tests exercise fresh extraction/hash closure,no raw-data
+leakage,missing dependencies,unsafe paths,tampering,source-object comparison and
+failed-versus-completed receipt schemas. Fixtures are software tests only,not
+MATLAB execution or benchmark results. Existing C3/C4 scripts,physics configs,
+reference/evidence/result files are unchanged byte-for-byte from a57a62a.
+
+Published standalone17-file THERMA_C42B_RUN_2026-11-10.zip,67079B,source
+c408225aaaaf07f3394e1646ce140b4ea3fcca0c,transfer commit
+e58dd0e546c554036e54a4b4d63f39e5e172b0c4. SHA256
+472d1e74bb34cc59f63a8c829c6100946dc3220d96a28740ce659e78adbf84ee.
+Fresh extraction,CRC,all per-file hashes,uniform MATLAB JSON structure fields and
+absence of raw datasets/models/prior outputs checked. Independent immutable HTTP
+download matches uploaded bytes. Every previous transfer artifact and source
+branch retained;main/work unchanged. docs/MAINTENANCE_DELIVERY.json records delivery.
+Runtime C42B source metadata is trimmed to six file identities/URLs/hashes only;
+source metadata hash records its derivation,with no prior measurement statistics
+redistributed. New MATLAB package/runner/results/audit still require native
+R2025a acceptance. No university files deleted and no cleanup approved.

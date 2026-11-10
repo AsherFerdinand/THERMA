@@ -124,6 +124,7 @@ def test_complete_receipt_schema_preserves_provenance(package: Path, tmp_path: P
     assert report["eligible_for_success_archive"]  # schema/software check only
     assert not report["native_execution_independently_verified"]
     assert not report["automatic_publication_performed"]
+    assert not report["privacy_review_required"]  # official HTTPS URLs are not Windows paths
 
 
 def test_changed_result_bytes_are_rejected(package: Path, tmp_path: Path) -> None:
