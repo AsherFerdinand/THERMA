@@ -1810,3 +1810,38 @@ independent small-file HTTP download matches SHA256. Previous transfer artifacts
 main/work and Annex58 branch unchanged. Delivery receipt docs/C42B_DELIVERY.json.
 The update contains no raw CSV/PDF/SLX; six original CSV downloads from official
 pinned URLs are required. No Git/Python/WSL required on PC. Native gate pending.
+
+## Maintenance — lightweight MATLAB execution and preservation — 2026-11-10
+
+Dedicated maintenance branch;C4.3 not started. Audited source/remote branch tips,
+cloud storage,large Git blobs and22 preserved transfer ZIPs.553 unique exact-byte
+identities (including archive members) recorded in tools/preservation_manifest.json;
+ZIP member reads checked CRC. Source snapshot5,702,975B;cloud ignored outputs
+2,286,062,890B and Python environment317,444,821B dominate. These are not measurements
+of the university folder. No native SLX exists in source/cloud/transfer ZIPs;
+builders are not generated-model backups. Milestone inventory explicitly marks
+native models/full trajectories/private originals missing from GitHub as NOT YET
+BACKED UP. Historical C28 original comparison trajectories and two C35 case CSVs
+are recoverable from existing transfer ZIPs. No original data/results deleted.
+
+Replaced the cumulative README with a concise engineering overview;retained its
+full chronological text under docs/archive/ with adjusted relative links. Stable
+source/config/evidence paths and old phase-specific START guides retained. Added
+one MATLAB_QUICKSTART and explicit review-only cleanup proposal. No changes to
+existing thermal/control/solver/reference implementation or numerical results.
+
+Implemented cloud-side committed-source dependency-closure package builder for
+C42B only;explicit graph plus repository-local call check. Added MATLAB-only runner,
+package hash/release/product/input checks,explicit optional official-data acquisition,
+compact success/failure result ZIP with hashes/provenance/log/configuration,and
+read-only recursive local storage audit. Existing C42B inspection is reused byte
+for byte. Six original external CSVs52,960,350B remain outside package;rights to
+redistribute unresolved. Inspection is never labelled simulation/empirical validation.
+No simulated-history downsampling or new physics. Other historical simulations
+retain original runners and are not silently migrated.
+
+Returned-ZIP verifier checks paths/CRC/hashes/source objects/input identity/status;
+failed receipts cannot become successful evidence. Privacy review and verified
+remote archival receipt required before cleanup;no deletion code or approval is
+provided. New native wrappers/audit/packaging remain unexecuted in cloud;university
+R2025a acceptance gate still required. Actual PC savings cannot be measured here.

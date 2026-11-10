@@ -210,3 +210,13 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [ ] Execute new inspection in MATLAB R2025a; no cloud native execution claimed.
 - [ ] Resolve construction/property conflicts, initial-state conditioning and raw redistribution rights before a frozen model/data packet.
 - [ ] C4.3 remains unauthorized/not started.
+
+### Maintenance — lightweight MATLAB execution
+
+- [x] Audit storage and milestone preservation;distinguish builders/native SLX and unbacked results.
+- [x] Preserve history/engineering docs;centralize new execution instructions.
+- [x] Implement explicit C42B dependency package,external-data verification and MATLAB-only runner/results ZIP.
+- [x] Provide read-only PC inventory and hash/source/status verification workflow.
+- [ ] University native R2025a execution/returned-ZIP acceptance;preserve original old-folder artifacts first.
+- [ ] Resolve NOT YET BACKED UP artifacts and obtain explicit approval before any local deletion.
+- [ ] C4.3 remains not started.

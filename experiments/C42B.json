@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "experiment_id": "C42B",
+  "kind": "inspection",
+  "description": "Read-only authentic FLEXLAB Cell3B measurement inspection; no simulation",
+  "matlab_release": "2025a",
+  "required_products": ["MATLAB"],
+  "entry_points": ["run_therma_experiment.m", "audit_therma_local_storage.m"],
+  "small_inputs": ["docs/results/c42b/source_audit.json", "tools/preservation_manifest.json", "MATLAB_QUICKSTART.md"],
+  "external_data": "Six originals from the pinned official URLs in source_audit.json; verify hashes; no raw data redistribution",
+  "expected_output_status": "completed_inspection",
+  "simulation_performed": false,
+  "matlab_dependencies": {
+    "run_therma_experiment.m": [
+      "tools/matlab/verify_therma_package.m", "tools/matlab/acquire_therma_inputs.m",
+      "tools/matlab/package_therma_results.m", "scripts/matlab/boptest/boptest_exception_diagnostic.m",
+      "run_c42b_flexlab_inspection.m"
+    ],
+    "audit_therma_local_storage.m": ["tools/matlab/verify_therma_package.m"],
+    "tools/matlab/verify_therma_package.m": ["tools/matlab/therma_safe_path.m", "scripts/matlab/boptest/boptest_file_sha256.m"],
+    "tools/matlab/acquire_therma_inputs.m": ["tools/matlab/therma_safe_path.m", "scripts/matlab/boptest/boptest_file_sha256.m"],
+    "tools/matlab/package_therma_results.m": ["scripts/matlab/boptest/boptest_file_sha256.m", "scripts/matlab/boptest/write_boptest_json.m"],
+    "run_c42b_flexlab_inspection.m": ["scripts/matlab/boptest/boptest_file_sha256.m", "scripts/matlab/boptest/write_boptest_json.m"],
+    "scripts/matlab/boptest/boptest_file_sha256.m": ["scripts/matlab/boptest/boptest_sha256_update.m"],
+    "scripts/matlab/boptest/boptest_sha256_update.m": [],
+    "scripts/matlab/boptest/write_boptest_json.m": [],
+    "scripts/matlab/boptest/boptest_exception_diagnostic.m": [],
+    "tools/matlab/therma_safe_path.m": []
+  }
+}

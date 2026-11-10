@@ -1,0 +1,391 @@
+{
+  "snapshot_date": "2026-11-10",
+  "source_commit": "a57a62aa823624688a62ccde0ac7ed8a039a210e",
+  "transfer_commit": "647a7a81a00ab9462e9c754e190b45a962fae513",
+  "scope": "cloud checkout; university folder not measured",
+  "directory_bytes": {
+    ".git": 178566309,
+    ".gitattributes": 546,
+    ".github": 1206,
+    ".gitignore": 464,
+    ".mypy_cache": 13701344,
+    ".pytest_cache": 20033,
+    ".python-version": 5,
+    ".ruff_cache": 9334,
+    ".venv": 317444821,
+    "AGENTS.md": 836,
+    "README.md": 11934,
+    "START_C28.md": 2280,
+    "START_C3.md": 3025,
+    "START_C34.md": 3090,
+    "START_C35.md": 3568,
+    "START_HERE.md": 5179,
+    "audit_therma_local_storage.m": 5276,
+    "configs": 174795,
+    "data": 6325,
+    "dist": 4086336,
+    "docs": 4501791,
+    "evidence_import": 352,
+    "experiments": 1883,
+    "models": 190,
+    "notebooks": 137,
+    "outputs": 2286062890,
+    "pyproject.toml": 652,
+    "run_c34_verification.m": 5660,
+    "run_c35_investigation.m": 10819,
+    "run_c36_physical_check.m": 13801,
+    "run_c37_residential_heating.m": 8369,
+    "run_c38_thermostat_comparison.m": 8408,
+    "run_c39_boptest_comparison.m": 2841,
+    "run_c3_verification.m": 4048,
+    "run_c40_heating_system.m": 7231,
+    "run_c42_reference_inspection.m": 3154,
+    "run_c42b_flexlab_inspection.m": 5415,
+    "run_therma_experiment.m": 3850,
+    "run_verification.m": 2246,
+    "scripts": 512187,
+    "src": 354659,
+    "tests": 653731,
+    "tools": 743801,
+    "uv.lock": 34403,
+    "verification": 116844
+  },
+  "tracked_source_bytes": 5702975,
+  "largest_files": [
+    {
+      "path": "outputs/boptest/solar_runs/typical_heat_day_21e4rhb0/trajectory.csv",
+      "bytes": 132329197,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/solar_runs/typical_heat_day_0aoxtlnc/trajectory.csv",
+      "bytes": 132329197,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/solar_runs/typical_heat_day_67o8rwav/trajectory.csv",
+      "bytes": 132329197,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/solar_runs/typical_heat_day_u7x05kpz/trajectory.csv",
+      "bytes": 132329197,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/solar_runs/typical_heat_day_21e4rhb0/evaluation.csv",
+      "bytes": 88067227,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/solar_runs/typical_heat_day_0aoxtlnc/evaluation.csv",
+      "bytes": 88067227,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/solar_runs/typical_heat_day_67o8rwav/evaluation.csv",
+      "bytes": 88067227,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/solar_runs/typical_heat_day_u7x05kpz/evaluation.csv",
+      "bytes": 88067227,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/runs/typical_heat_day_ailcox5y/trajectory.csv",
+      "bytes": 51181975,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/runs/typical_heat_day_t8_7qbxh/trajectory.csv",
+      "bytes": 51181975,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/compatibility_runs/typical_heat_day_hdugy1fk/trajectory.csv",
+      "bytes": 51181975,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/runs/peak_heat_day_wfla_b__/trajectory.csv",
+      "bytes": 50946851,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/runs/typical_heat_day_gg3i9krz/trajectory.csv",
+      "bytes": 46995178,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/runs/typical_heat_day_bv80ayco/trajectory.csv",
+      "bytes": 46995178,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/runs/peak_heat_day_uraxut1j/trajectory.csv",
+      "bytes": 46766306,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/runs/peak_heat_day_u88mt1zb/trajectory.csv",
+      "bytes": 46766306,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/replay_packets/typical_solar_v2_final/solar_sources.csv",
+      "bytes": 36951950,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/replay_packets/typical_solar_v2/solar_sources.csv",
+      "bytes": 36951950,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/c26/packet/solar_sources.csv",
+      "bytes": 36951950,
+      "tracked": false
+    },
+    {
+      "path": "outputs/boptest/handoff/THERMA_C26C_MATLAB_R2025a_e6c7d41_2026-11-02.zip",
+      "bytes": 36792521,
+      "tracked": false
+    }
+  ],
+  "local_slx": [],
+  "transfer_archives": [
+    {
+      "path": "THERMA_C26C_MATLAB_R2025a_e6c7d41_2026-11-02.zip",
+      "bytes": 36792521,
+      "sha256": "bf872ff3700b2c14e7ab02e48470de105f5817c4f482b9280fb00072dad2fb63",
+      "slx": [],
+      "members": 132
+    },
+    {
+      "path": "THERMA_C26_solar_replay.zip",
+      "bytes": 36415347,
+      "sha256": "117ce27286e078080fb6766c77b1e9ad0939d6ecb39ae2b86f1f354d666364aa",
+      "slx": [],
+      "members": 15
+    },
+    {
+      "path": "THERMA_C27_EOF_CLEANUP_FIX_R2024a_2026-11-03.zip",
+      "bytes": 12876800,
+      "sha256": "b680eb85123d1bcc5a648ca74b8d8c9c43d81e0d0cccbe2bb21721c6a359e4a9",
+      "slx": [],
+      "members": 162
+    },
+    {
+      "path": "THERMA_C27_EVENT_EXPORT_FIX_R2024a_2026-11-03.zip",
+      "bytes": 12869505,
+      "sha256": "fd6a09d46981df83dfb68b3167c600107580465c841053b040572a1ac1587a96",
+      "slx": [],
+      "members": 159
+    },
+    {
+      "path": "THERMA_C27_MATLAB_R2021a_2026-11-03.zip",
+      "bytes": 12853763,
+      "sha256": "01b093ce8c684d62a1e90912af2d837672251faab8cc74158e590e061d575db6",
+      "slx": [],
+      "members": 152
+    },
+    {
+      "path": "THERMA_C27_R2024A_READER_FIX_2026-11-03.zip",
+      "bytes": 12886495,
+      "sha256": "6147bc270ff95be5c94637c236b123ce6bc0ca25c09e925840156b4e12827d86",
+      "slx": [],
+      "members": 165
+    },
+    {
+      "path": "THERMA_C27_SHA256_FIX_R2024a_2026-11-03.zip",
+      "bytes": 12893239,
+      "sha256": "77e70085bbb45256a734195b7ea9e0adbbbdabdb43d330423a5562e565fc1fd6",
+      "slx": [],
+      "members": 171
+    },
+    {
+      "path": "THERMA_C28_REFERENCE_MATLAB_2026-11-05.zip",
+      "bytes": 3677143,
+      "sha256": "c27596e46cc6d89a081d5515f023311cd04331141032962acb8782d1c286f6a3",
+      "slx": [],
+      "members": 195
+    },
+    {
+      "path": "THERMA_C28_STANDALONE_MATLAB_2026-11-05.zip",
+      "bytes": 12900202,
+      "sha256": "026801895c81ba6442f79530172bf7b6b359606e612c013a90dd0be19e369714",
+      "slx": [],
+      "members": 207
+    },
+    {
+      "path": "THERMA_C34_CLOSED_LOOP_R2024a_2026-11-05.zip",
+      "bytes": 2992309,
+      "sha256": "690da942c3311cc1d803ba830d949500edf00fe4f919224ae5f0a8a8ecda3cf2",
+      "slx": [],
+      "members": 222
+    },
+    {
+      "path": "THERMA_C35_ENGINEERING_INVESTIGATION_2026-11-05.zip",
+      "bytes": 3032054,
+      "sha256": "0cb342a0a75d11319c20c690d8a8bbfe0476fb33971a4888c76e26a095a66472",
+      "slx": [],
+      "members": 241
+    },
+    {
+      "path": "THERMA_C36_PHYSICAL_CHECK_UPDATE_2026-11-06.zip",
+      "bytes": 454928,
+      "sha256": "c1b36c656e44ef3afbb17310dd068892cf273c45542c874d71103c32f29c05e9",
+      "slx": [],
+      "members": 9
+    },
+    {
+      "path": "THERMA_C37_PURMO_RESIDENTIAL_UPDATE_2026-11-06.zip",
+      "bytes": 17955,
+      "sha256": "f68326e515e68c5381b9a98b5b7fed6df1dd8e822a65623bfc15b4c342901cdb",
+      "slx": [],
+      "members": 11
+    },
+    {
+      "path": "THERMA_C37_RESIDENTIAL_PREPARATION_2026-11-06.zip",
+      "bytes": 13457,
+      "sha256": "c94bcb81da726b01eac550f558f4cd5b38eb65dc3feddd00597796cc8cde7774",
+      "slx": [],
+      "members": 9
+    },
+    {
+      "path": "THERMA_C38_THERMOSTAT_UPDATE_2026-11-08.zip",
+      "bytes": 13544,
+      "sha256": "628695c1e8c842bca231b8dbe5b4d1e1171e1b425bcf9639b0b1940bf69ba9e8",
+      "slx": [],
+      "members": 9
+    },
+    {
+      "path": "THERMA_C39_BOPTEST_COMPARISON_UPDATE_2026-11-08.zip",
+      "bytes": 2386927,
+      "sha256": "3fd6c9974c5201ae61c5869eba0c5ebb49ab0998502672535b576085c38217db",
+      "slx": [],
+      "members": 12
+    },
+    {
+      "path": "THERMA_C3_COMPONENT_VERIFICATION_R2024a_2026-11-05.zip",
+      "bytes": 2961448,
+      "sha256": "c56dd84a80e10f3214379a75f320ef11fc45144004adb0ec04999b20751f9355",
+      "slx": [],
+      "members": 206
+    },
+    {
+      "path": "THERMA_C40_HEATING_SYSTEM_UPDATE_2026-11-08.zip",
+      "bytes": 11443,
+      "sha256": "f7964f6609f62f450ba80e3c07b857ed0aeaa94753e0c9beae58dea689c8ca45",
+      "slx": [],
+      "members": 7
+    },
+    {
+      "path": "THERMA_C42B_FLEXLAB_INSPECTION_UPDATE_2026-11-08.zip",
+      "bytes": 218069,
+      "sha256": "5a808c3731d38c632a35849f4a8f2fd51f87b1cbfad8c8c8f5fafca40c6548f3",
+      "slx": [],
+      "members": 13
+    },
+    {
+      "path": "THERMA_C42_ANNEX58_INSPECTION_BLOCKED_2026-11-08.zip",
+      "bytes": 11446,
+      "sha256": "bac92878c4b5bdc638308ffc8181d385b151695037e0a9593435bc11c18c8aa2",
+      "slx": [],
+      "members": 7
+    },
+    {
+      "path": "THERMA_first_typical_actual_analysis.zip",
+      "bytes": 1804074,
+      "sha256": "108a5502e5604993a0782dad7759fa7f099732ddcb34c152063bcd1848e10314",
+      "slx": [],
+      "members": 20
+    },
+    {
+      "path": "THERMA_first_typical_replay.zip",
+      "bytes": 4676884,
+      "sha256": "b8a9e791b26554781360a07454db63c38bc0ff9410a60bb4a90561d675c5787d",
+      "slx": [],
+      "members": 8
+    }
+  ],
+  "duplicate_zip_groups": [],
+  "largest_git_blobs": [
+    {
+      "git_blob": "8589b273b62ef86492c89949bf0b16177115480e",
+      "path": "THERMA_C26C_MATLAB_R2025a_e6c7d41_2026-11-02.zip",
+      "uncompressed_bytes": 36792521
+    },
+    {
+      "git_blob": "c645a5b550a84b068602173921063cece3a11014",
+      "path": "THERMA_C26_solar_replay.zip",
+      "uncompressed_bytes": 36415347
+    },
+    {
+      "git_blob": "adebc731fe430816dfac90d2be802f66ceb4a9a9",
+      "path": "THERMA_C28_STANDALONE_MATLAB_2026-11-05.zip",
+      "uncompressed_bytes": 12900202
+    },
+    {
+      "git_blob": "046fb4e7c0247aae3d282228d0da0243f01e35b7",
+      "path": "THERMA_C27_SHA256_FIX_R2024a_2026-11-03.zip",
+      "uncompressed_bytes": 12893239
+    },
+    {
+      "git_blob": "f498b086f4398e9c2b5abaa72ca43a698ff4354c",
+      "path": "THERMA_C27_R2024A_READER_FIX_2026-11-03.zip",
+      "uncompressed_bytes": 12886495
+    },
+    {
+      "git_blob": "948af4421a23bcd2190b6f1c835bb7ef08e0c09a",
+      "path": "THERMA_C27_EOF_CLEANUP_FIX_R2024a_2026-11-03.zip",
+      "uncompressed_bytes": 12876800
+    },
+    {
+      "git_blob": "55a1da0d26fca46d27132fa84f38956713553bc8",
+      "path": "THERMA_C27_EVENT_EXPORT_FIX_R2024a_2026-11-03.zip",
+      "uncompressed_bytes": 12869505
+    },
+    {
+      "git_blob": "9f0b463e5711b7ce05078c62b4255593fc4121b8",
+      "path": "THERMA_C27_MATLAB_R2021a_2026-11-03.zip",
+      "uncompressed_bytes": 12853763
+    },
+    {
+      "git_blob": "48ac5b0d455440d8f79f1b7321ad00d2e4b75c88",
+      "path": "THERMA_first_typical_replay.zip",
+      "uncompressed_bytes": 4676884
+    },
+    {
+      "git_blob": "9c34a1a305805c56d38090cf7ddad51d4d98abc7",
+      "path": "THERMA_C28_REFERENCE_MATLAB_2026-11-05.zip",
+      "uncompressed_bytes": 3677143
+    },
+    {
+      "git_blob": "f50d703d9b823ee15473eac6da2c4f57d99f9af4",
+      "path": "THERMA_C35_ENGINEERING_INVESTIGATION_2026-11-05.zip",
+      "uncompressed_bytes": 3032054
+    },
+    {
+      "git_blob": "91de39977d0b7ceb4e447c5627768ad7fd4c1ec7",
+      "path": "THERMA_C34_CLOSED_LOOP_R2024a_2026-11-05.zip",
+      "uncompressed_bytes": 2992309
+    },
+    {
+      "git_blob": "d7ec888843d3b93dab3f3de28665058f3c7ec540",
+      "path": "THERMA_C3_COMPONENT_VERIFICATION_R2024a_2026-11-05.zip",
+      "uncompressed_bytes": 2961448
+    },
+    {
+      "git_blob": "c294b8710210d0b40f18a83009c1f83a3ffa048e",
+      "path": "THERMA_C39_BOPTEST_COMPARISON_UPDATE_2026-11-08.zip",
+      "uncompressed_bytes": 2386927
+    },
+    {
+      "git_blob": "80161177389d8d0b881d216c6fefcf3a43aa119b",
+      "path": "THERMA_first_typical_actual_analysis.zip",
+      "uncompressed_bytes": 1804074
+    }
+  ]
+}
