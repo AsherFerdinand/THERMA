@@ -1,0 +1,19 @@
+{
+  "filename": "THERMA_C42B_RUN_2026-11-10.zip",
+  "bytes": 67079,
+  "files": 17,
+  "sha256": "472d1e74bb34cc59f63a8c829c6100946dc3220d96a28740ce659e78adbf84ee",
+  "source_commit": "c408225aaaaf07f3394e1646ce140b4ea3fcca0c",
+  "experiment_id": "C42B",
+  "kind": "inspection",
+  "raw_measurements_included": false,
+  "native_execution_verified": false,
+  "thermal_physics_modified": false,
+  "python_tests_passed": 229,
+  "python_tests_skipped": 3,
+  "static_matlab_files_checked": 102,
+  "fresh_extraction_and_hash_checks": true,
+  "external_input_bytes": 52960350,
+  "preservation_gaps": "Native SLX and original university-only results remain NOT YET BACKED UP; do not delete old folder.",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_C42B_RUN_2026-11-10.zip"
+}

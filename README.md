@@ -201,3 +201,10 @@ SHA256: `bac92878c4b5bdc638308ffc8181d385b151695037e0a9593435bc11c18c8aa2`. Sour
 Download [THERMA_C42B_FLEXLAB_INSPECTION_UPDATE_2026-11-08.zip](THERMA_C42B_FLEXLAB_INSPECTION_UPDATE_2026-11-08.zip). Extract into existing THERMA_C35_MATLAB and read START_C42B.md. Inspection code/docs and genuine-measurement previews only; six original CSVs must be downloaded directly from pinned official source URLs in the ZIP. No raw datasets redistributed. No simulation/model change. CONDITIONAL separate Cell3B benchmark; not a residential building. Native MATLAB execution pending.
 
 SHA256: `5a808c3731d38c632a35849f4a8f2fd51f87b1cbfad8c8c8f5fafca40c6548f3`. Source `cf8a6b73e2be305e3669f645b2960f92af9fa01a`.
+
+
+## Lightweight MATLAB execution — 2026-11-10
+
+[THERMA_C42B_RUN_2026-11-10.zip](THERMA_C42B_RUN_2026-11-10.zip): 67079bytes,17files. Extract in a NEW EMPTY folder; read MATLAB_QUICKSTART.md. C42B inspection only, base MATLAB R2025a/JVM; six external original CSVs verified by hash, not bundled. Includes a read-only audit of the old university folder. No simulation, no deletion and no native verification of this new wrapper claimed. Preserve original SLX/results until archival gaps close. Source `c408225aaaaf07f3394e1646ce140b4ea3fcca0c`.
+
+SHA256 `472d1e74bb34cc59f63a8c829c6100946dc3220d96a28740ce659e78adbf84ee`.
