@@ -38,6 +38,21 @@ def dependency_closure(config: dict) -> set[str]:
     return selected | {safe_name(n) for n in config["small_inputs"]}
 
 
+def external_metadata(raw: bytes) -> bytes:
+    """Only six external file identities; omit all prior measurement statistics."""
+    original = json.loads(raw)
+    metadata = {
+        "source_commit": original["source_commit"],
+        "source_metadata_sha256": hashlib.sha256(raw).hexdigest(),
+        "kind": "external_file_identity_only",
+        "selected_core_files": original["selected_core_files"],
+        "files": [
+            item for item in original["files"] if item["path"] in original["selected_core_files"]
+        ],
+    }
+    return (json.dumps(metadata, indent=2) + "\n").encode()
+
+
 def build_package(experiment: str, output: Path) -> Path:
     if experiment.upper() != "C42B":
         raise ValueError(
@@ -64,6 +79,8 @@ def build_package(experiment: str, output: Path) -> Path:
         for called in re.findall(r"\b([A-Za-z]\w*)\s*\(", raw.decode()):
             if called in local_functions and local_functions[called] not in selected:
                 raise ValueError(f"Unpackaged local dependency {called} referenced by {name}")
+    metadata_path = "docs/results/c42b/source_audit.json"
+    payload[metadata_path] = external_metadata(payload[metadata_path])
     for name in payload:
         if any(p in {".git", ".venv", "tests", "outputs", "__pycache__"} for p in name.split("/")):
             raise ValueError(f"Excluded execution-package content: {name}")
@@ -97,7 +114,13 @@ def build_package(experiment: str, output: Path) -> Path:
                 "path": n,
                 "bytes": len(raw),
                 "sha256": hashlib.sha256(raw).hexdigest(),
-                "origin": "generated_readme" if n == "README.md" else "git_source",
+                "origin": (
+                    "generated_readme"
+                    if n == "README.md"
+                    else "derived_external_metadata"
+                    if n == metadata_path
+                    else "git_source"
+                ),
             }
             for n, raw in sorted(payload.items())
         ],

@@ -11,7 +11,7 @@ from pathlib import Path
 
 # Supports both direct CLI and import during software tests.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_matlab_package import ROOT, dependency_closure, safe_name  # noqa: E402
+from build_matlab_package import ROOT, dependency_closure, external_metadata, safe_name  # noqa: E402
 
 
 def verify_results(archive: Path) -> dict:
@@ -81,9 +81,13 @@ def verify_results(archive: Path) -> dict:
     for item in package["files"]:
         if item["path"] == "README.md" and item["origin"] == "generated_readme":
             continue  # Generated instruction text is not falsely treated as a Git source file.
-        if item["origin"] != "git_source":
-            raise ValueError("Unknown package provenance")
         value = source(item["path"])
+        if item["origin"] == "derived_external_metadata":
+            if item["path"] != "docs/results/c42b/source_audit.json":
+                raise ValueError("Unexpected metadata transformation")
+            value = external_metadata(value)
+        elif item["origin"] != "git_source":
+            raise ValueError("Unknown package provenance")
         if len(value) != item["bytes"] or hashlib.sha256(value).hexdigest() != item["sha256"]:
             raise ValueError(f"Source hash mismatch: {item['path']}")
     if any(

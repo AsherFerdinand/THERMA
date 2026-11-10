@@ -22,9 +22,10 @@ hash. Existing ZIPs are never overwritten. The resulting THERMA_C42B_RUN.zip has
 source commit,full per-file SHA256/size manifest,experiment configuration,one short
 README/quickstart,the unchanged inspection and its exact helper closure. The
 preservation manifest/read-only local audit are safety utilities,not copies of all
-historical source. Existing source metadata at docs/results/c42b/source_audit.json
-is required input provenance,not previous simulation results;plots/raw datasets
-are excluded. No native model/build script is needed for this inspection.
+historical source. The packaged docs/results/c42b/source_audit.json is a declared derivative containing
+only the six required external file identities/URLs/hashes and original metadata
+hash;all prior measured extrema/statistics and plots are omitted. Its transformation
+is rechecked against Git source when results return. No measurements are embedded. No native model/build script is needed for this inspection.
 
 External inputs remain in a shared dataset folder. acquire_therma_inputs verifies
 exact six original filenames/bytes/hashes from official immutable LBNL URLs. Its

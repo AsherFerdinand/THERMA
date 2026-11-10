@@ -85,6 +85,10 @@ def result_fixture(package: Path, destination: Path, *, success: bool = False) -
 def test_fresh_extraction_hash_closure_and_no_raw_data(package: Path, tmp_path: Path) -> None:
     with zipfile.ZipFile(package) as z:
         manifest = json.loads(z.read("package_manifest.json"))
+        metadata = json.loads(z.read("docs/results/c42b/source_audit.json"))
+        assert metadata["kind"] == "external_file_identity_only"
+        assert len(metadata["files"]) == 6
+        assert "csv_audit" not in metadata  # no prior measured extrema/trajectories
         z.extractall(tmp_path / "empty")
         assert len(z.namelist()) == len(manifest["files"]) + 1
         for item in manifest["files"]:
