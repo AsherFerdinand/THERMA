@@ -1821,8 +1821,10 @@ ZIP member reads checked CRC. Source snapshot5,702,975B;cloud ignored outputs
 of the university folder. No native SLX exists in source/cloud/transfer ZIPs;
 builders are not generated-model backups. Milestone inventory explicitly marks
 native models/full trajectories/private originals missing from GitHub as NOT YET
-BACKED UP. Historical C28 original comparison trajectories and two C35 case CSVs
-are recoverable from existing transfer ZIPs. No original data/results deleted.
+BACKED UP. Historical C28 original comparison trajectories are recoverable from its standalone
+transfer ZIP. Inspection of every C36 ZIP member confirms it contains derived plots/
+report,not original C35 trajectory CSVs;those remain NOT YET BACKED UP ON GITHUB.
+No original data/results deleted.
 
 Replaced the cumulative README with a concise engineering overview;retained its
 full chronological text under docs/archive/ with adjusted relative links. Stable

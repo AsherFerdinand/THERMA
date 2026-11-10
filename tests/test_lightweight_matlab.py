@@ -140,3 +140,26 @@ def test_unlisted_and_traversal_outputs_rejected(package: Path, tmp_path: Path) 
         z.writestr("../unexpected.csv", b"software test only")
     with pytest.raises(ValueError, match="Unsafe"):
         verify_results(original)
+
+
+def test_source_inventory_checked_against_git_not_just_returned_hashes(
+    package: Path, tmp_path: Path
+) -> None:
+    original = result_fixture(package, tmp_path / "source_fixture.zip")
+    with zipfile.ZipFile(original) as z:
+        payload = {name: z.read(name) for name in z.namelist()}
+    manifest = json.loads(payload["package_manifest.json"])
+    item = next(i for i in manifest["files"] if i["origin"] == "git_source")
+    item["sha256"] = "0" * 64
+    payload["package_manifest.json"] = json.dumps(manifest).encode()
+    result = json.loads(payload["result_manifest.json"])
+    item = next(i for i in result["files"] if i["path"] == "package_manifest.json")
+    item["sha256"] = hashlib.sha256(payload["package_manifest.json"]).hexdigest()
+    item["bytes"] = len(payload["package_manifest.json"])
+    payload["result_manifest.json"] = json.dumps(result).encode()
+    changed = tmp_path / "wrong_source.zip"
+    with zipfile.ZipFile(changed, "w") as z:
+        for name, value in payload.items():
+            z.writestr(name, value)
+    with pytest.raises(ValueError, match="Source hash mismatch"):
+        verify_results(changed)

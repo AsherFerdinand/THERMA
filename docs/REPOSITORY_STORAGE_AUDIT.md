@@ -17,6 +17,9 @@ backup or reproducibility. Unknown files are not deletion candidates.
 |---|---:|---|---|---|
 | Source snapshot,a57a62a |5,702,975B total | Complete prior engineering source/docs/compact evidence | Tracked feature branch | KEEP |
 | scripts/ |512,187B | MATLAB components/builders and automation | Source tracked; caches,if any,ignored | KEEP required dependency closure;EXCLUDE unrelated experiments from run ZIP |
+| src/,tests/ |354,659B /653,731B | Python analysis/software tests plus local caches | Source tracked,caches ignored | KEEP source in cloud;EXCLUDE from MATLAB run ZIP |
+| data/ |6,325B | Reference metadata/acquisition instructions;raw data external | Metadata tracked;raw ignored | KEEP metadata;external measurements separate |
+| tools/,experiments/,.github/,uv.lock | Small maintenance/configuration source | Packaging,CI and dependency lock | Tracked maintenance/engineering source | KEEP cloud;include only declared MATLAB/configuration dependencies on PC |
 | configs/ |174,795B | Physical/reference/experiment parameters | Tracked | KEEP;no numerical changes |
 | models/ |190B | Original-model acquisition/preservation guidance | README only;no native SLX | KEEP guidance;REVIEW missing native backups |
 | verification/ |116,844B | Original C2 report,selected C3 reports/logs,case receipts | Tracked compact evidence | KEEP/ARCHIVE;selected summaries are not original report backup |

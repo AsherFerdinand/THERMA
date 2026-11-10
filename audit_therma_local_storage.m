@@ -15,6 +15,7 @@ if isfile(fullfile(root,'package_manifest.json'))
     current=verify_therma_package(root);
     for j=1:numel(current.files)
         item=current.files(j);
+        if ~strcmp(item.origin,'git_source'), continue; end
         location=struct('commit',current.source_commit,'path',item.path, ...
             'member','','kind','source');
         preserved.records(end+1)=struct('sha256',item.sha256,'bytes',item.bytes, ...
