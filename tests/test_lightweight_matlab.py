@@ -119,7 +119,7 @@ def test_complete_receipt_schema_preserves_provenance(package: Path, tmp_path: P
     report = verify_results(result_fixture(package, tmp_path / "fixture.zip", success=True))
     assert report["eligible_for_success_archive"]  # schema/software check only
     assert not report["native_execution_independently_verified"]
-    assert not report["public_commit_approved"]
+    assert not report["automatic_publication_performed"]
 
 
 def test_changed_result_bytes_are_rejected(package: Path, tmp_path: Path) -> None:

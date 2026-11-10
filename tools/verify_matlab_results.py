@@ -15,6 +15,8 @@ from build_matlab_package import ROOT, dependency_closure, safe_name  # noqa: E4
 
 
 def verify_results(archive: Path) -> dict:
+    if archive.stat().st_size > 50 * 1024**2:
+        raise ValueError("Over50MiB: use reviewed external archival")
     with zipfile.ZipFile(archive) as z:
         names = z.namelist()
         if len(names) != len(set(n.casefold() for n in names)) or len(names) > 32:
@@ -139,8 +141,10 @@ def verify_results(archive: Path) -> dict:
         if name.endswith((".json", ".log"))
         and re.search(rb"(?:[A-Za-z]:[\\/]|\\\\[^\s\\]+\\|/(?:home|workspace|Users)/)", value)
     ]
+    with archive.open("rb") as stream:
+        archive_hash = hashlib.file_digest(stream, "sha256").hexdigest()
     return {
-        "zip_sha256": hashlib.sha256(archive.read_bytes()).hexdigest(),
+        "zip_sha256": archive_hash,
         "source_commit": commit,
         "execution_status": execution["status"],
         "reported_matlab_release": execution.get("matlab_release"),
@@ -148,7 +152,8 @@ def verify_results(archive: Path) -> dict:
         "native_execution_independently_verified": False,
         "eligible_for_success_archive": success,
         "privacy_review_files": privacy,
-        "public_commit_approved": False,
+        "automatic_publication_performed": False,
+        "privacy_review_required": bool(privacy),
     }
 
 

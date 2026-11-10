@@ -21,7 +21,8 @@ The runner checks every package dependency/hash, release, required product and a
 six original input hashes. It inspects23June2021,00:00–12:00 fixed PST(UTC−08),
 produces the existing temperature/cooling plots and saves a new
 `outputs/executions/<unique run>/THERMA_RESULTS_C42B.zip` plus its `.sha256` receipt.
-No measured values are filled/clamped and no solver is invoked. Logs and error
+A path-shadowing error means MATLAB is resolving an older project:change folder
+to this fresh package. No measured values are filled/clamped and no solver is invoked. Logs and error
 receipts are also packaged on ordinary execution failure; failed runs are never
 labelled successful. Package-integrity failure stops before execution.
 

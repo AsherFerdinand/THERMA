@@ -8,7 +8,7 @@ assert(isfolder(folder),'THERMA:AuditFolder','Choose the existing THERMA folder.
 assert(isfile(preservationFile),'THERMA:PreservationMissing','Preservation manifest is missing.');
 oldPath=path;
 pathCleanup=onCleanup(@() path(oldPath));
-addpath(fullfile(root,'tools','matlab'),fullfile(root,'scripts','matlab','boptest'));
+addpath(root,fullfile(root,'tools','matlab'),fullfile(root,'scripts','matlab','boptest'));
 preserved=jsondecode(fileread(preservationFile));
 % Include the current lightweight sources only after checking their package hashes.
 if isfile(fullfile(root,'package_manifest.json'))

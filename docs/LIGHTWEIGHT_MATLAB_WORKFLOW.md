@@ -45,7 +45,7 @@ Each attempt has a new outputs/executions/<unique run>/ folder. On normal comple
 or caught execution failure,the MATLAB packager creates **THERMA_RESULTS_C42B.zip**
 and an adjacent SHA256 receipt. A failed run is labelled failed,contains original
 nested diagnostics and is rethrown after the diagnostic ZIP is saved. Package
-integrity failure stops before execution. A packaging/filesystem failure itself
+integrity/path-shadowing failure stops before execution. A packaging/filesystem failure itself
 leaves the loose result folder for recovery;it must not be described as archived.
 
 Included artifacts:verification.json,original package_manifest.json,exact experiment

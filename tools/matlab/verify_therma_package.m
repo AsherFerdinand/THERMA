@@ -14,5 +14,18 @@ for k = 1:numel(manifest.files)
     assert(info.bytes==item.bytes && strcmp(boptest_file_sha256(file),item.sha256), ...
         'THERMA:PackageHash','Changed package dependency: %s',item.path);
 end
+% Refuse stale functions from a previous extracted project/current folder.
+for k=1:numel(manifest.files)
+    item=manifest.files(k);
+    if ~endsWith(item.path,'.m'), continue; end
+    [~,name]=fileparts(item.path);
+    resolved=which(name);
+    expected=therma_safe_path(root,item.path);
+    actual=char(java.io.File(resolved).getCanonicalPath());
+    same=strcmp(actual,expected);
+    if ispc, same=strcmpi(actual,expected); end
+    assert(same,'THERMA:PathShadow', ...
+        'Function %s is shadowed. Change folder to the fresh package and use its helpers.',name);
+end
 fprintf('Verified %d package files from source %s.\n',numel(paths),manifest.source_commit);
 end

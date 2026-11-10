@@ -3,7 +3,7 @@ function archive = run_therma_experiment(experimentId,dataRoot)
 root=fileparts(mfilename('fullpath'));
 oldPath=path;
 pathCleanup=onCleanup(@() path(oldPath));
-addpath(fullfile(root,'tools','matlab'),fullfile(root,'scripts','matlab','boptest'));
+addpath(root,fullfile(root,'tools','matlab'),fullfile(root,'scripts','matlab','boptest'));
 assert(usejava('jvm'),'THERMA:JVM','The MATLAB JVM is required for SHA-256.');
 manifest=verify_therma_package(root);
 if nargin<1, experimentId='C42B'; end
