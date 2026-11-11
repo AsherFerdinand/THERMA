@@ -1987,3 +1987,12 @@ transferce17cff496a1514bd15b42887f23d5a8b3a6e67f;SHA256
 Final238 Python tests pass (3 optional skips),CRC/fresh extraction/all dependency
 hashes and uploaded SHA verified. Earlier artifacts retained. Native code remains
 pending university tests;no cleanup authorization or C4.3 work.
+
+Single-disk clarification:after fresh remote download verification,the user may
+manually remove ONLY the generated working ZIP in Explorer if no external drive
+is available. Originals/catalog remain. This requires no deletion functionality
+and makes80MB-only operation possible;moving within one volume would not free space.
+Final r3 toolkit170124B,source3cb1638936e3b64cad4e956ee98c193ed3827706,
+transfer/source checksum in INCREMENTAL_HISTORY_DELIVERY.json. SHA256
+b992fe92fbf47009140e64570f258b28a0251e286defe7fea08a33c6e113e043.
+R2/earlier artifacts retained. No original-file cleanup is authorized.

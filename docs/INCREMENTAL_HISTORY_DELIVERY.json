@@ -1,9 +1,9 @@
 {
-  "filename": "THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11_r2.zip",
-  "bytes": 170028,
-  "sha256": "7c3732b559e04c92be8c553561017a25198454232f2ef9938dc29dece157d945",
+  "filename": "THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11_r3.zip",
+  "bytes": 170124,
+  "sha256": "b992fe92fbf47009140e64570f258b28a0251e286defe7fea08a33c6e113e043",
   "files": 30,
-  "source_commit": "33778730d741927e9561d825998af834ea486b1a",
+  "source_commit": "3cb1638936e3b64cad4e956ee98c193ed3827706",
   "max_zip_bytes": 45000000,
   "max_source_payload_bytes": 40000000,
   "max_per_part_space_estimate_bytes": 42497152,
@@ -17,8 +17,8 @@
   "remaining_source_bytes": 408603016,
   "part_count": 12,
   "cleanup_approved": false,
-  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11_r2.zip",
-  "transfer_commit": "ce17cff496a1514bd15b42887f23d5a8b3a6e67f",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11_r3.zip",
+  "transfer_commit": "4d93143e34ee71730989ae4421e0260ee0514281",
   "uploaded_sha256_verified": true,
   "previous_artifacts_preserved": true
 }
