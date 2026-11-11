@@ -220,3 +220,12 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [x] Actual C42B R2025a returned-ZIP accepted;old-folder audit supplied,history preservation still pending.
 - [ ] Resolve NOT YET BACKED UP artifacts and obtain explicit approval before any local deletion.
 - [ ] C4.3 remains not started.
+
+### Historical storage preservation — 2026-11-11
+
+- [x] Actual C42B R2025a ZIP accepted,redacted public evidence and encrypted original archived;Part A pushed.
+- [x] Verify602 audit rows and preserve plan for279 originals includingall36 native model paths.
+- [x] Prepare streaming milestone archiver,space/drift/resume safeguards and returned-archive verifier.
+- [ ] Execute new native archival self-tests and archive utility;return12 parts/catalog.
+- [ ] Verify original historical bodies and confirm remote recovery before any cleanup proposal/approval.
+- [ ] C4.3 not started.

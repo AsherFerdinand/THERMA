@@ -44,7 +44,7 @@ identified in the engineering report;duplicates are **not elided** from archives
 Expect12 milestone ZIPs plus one small catalog ZIP. C3.1–C3.6 history is split
 into seven parts. Each part targets at most64MiB of original bytes;files are
 never split. Reserve **at least450MB free destination capacity**,not another
-432MB uncompressed source copy. The conservative estimate is446,046,746 bytes;
+432MB uncompressed source copy. The conservative estimate is446,046,747 bytes;
 compression is not assumed to make SLX/MAT/FIG small. The tool queries volume
 free space;your user quota can be smaller. Zero/unavailable space or insufficient
 space blocks writing. Choose a different drive if the guard stops the run.

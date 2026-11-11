@@ -1,8 +1,9 @@
 # MATLAB quickstart — one experiment, one temporary folder
 
 The current lightweight package supports **C42B measurement inspection only**.
-It does not simulate a building. Native execution of this maintenance wrapper is
-pending university verification. MATLAB **R2025a with JVM**, base MATLAB only;
+It does not simulate a building. Actual sourcec408225 inspection was executed
+on university R2025a and its original returned evidence is archived in GitHub.
+Later source changes need their own execution checks. MATLAB **R2025a with JVM**,base MATLAB only;
 no Simulink, Git, Python, WSL or Docker is required for C42B.
 
 1. Keep `THERMA_C35_MATLAB` intact. Extract `THERMA_C42B_RUN.zip` into a **new empty

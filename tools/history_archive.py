@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import math
 import re
 import subprocess
 import zipfile
@@ -110,7 +111,7 @@ def make_plan(audit: dict, known: set[str], audit_hash: str) -> dict:
         "archive_files": sum(r["action"] == "archive" for r in rows),
         "all_audited_slx": sum(r["path"].lower().endswith(".slx") for r in rows),
         "source_bytes_to_archive": total,
-        "space_estimate_bytes": int(total * 1.05) + 4 * 1024**2,
+        "space_estimate_bytes": math.ceil(total * 1.05) + 4 * 1024**2,
         "parts": parts,
         "records": rows,
     }

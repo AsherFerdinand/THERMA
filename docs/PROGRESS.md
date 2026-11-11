@@ -1905,7 +1905,7 @@ Conservative plan279 originals/420,811,850B includingall36 SLX;12 milestone part
 with64MiB source-byte target,plus small catalog. Native archiver streams directly
 from source,hashes every original/rechecks all602 inventory entries,verifies ZIP
 members and current originals,retains partials and reuses verified completed parts.
-No uncompressed432MB staging copy. Conservative free-space budget446,046,746B;
+No uncompressed432MB staging copy. Conservative free-space budget446,046,747B;
 user network quota may be smaller than volume report. Missing/changed/new/unreadable
 sources or inadequate space block completion. No source writes,model loading,
 simulation,numeric conversion/downsampling or deletion functionality.

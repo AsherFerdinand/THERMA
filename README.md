@@ -16,9 +16,11 @@ No ML surrogate, production web application or new C4.3 physics is implemented.
 
 Use [MATLAB_QUICKSTART.md](MATLAB_QUICKSTART.md). The new lightweight C42B package
 works in a fresh folder with an external FLEXLAB data path; no previous THERMA
-installation, Git, Python or WSL is required on the university PC. The wrapper's
-native R2025a verification remains pending. It performs measurement inspection,
-not simulation, and returns a compact results ZIP.
+installation, Git, Python or WSL is required on the university PC. Actual c408225
+C42B R2025a inspection evidence is [archived](results/C42B/c146fd42ee036a3a/README.md).
+It performs measurement inspection,not simulation,and returns a compact results ZIP.
+The separate [historical archiver](docs/UNIVERSITY_HISTORY_PRESERVATION.md) still
+requires native university self-tests/execution.
 
 Keep the historical university folder until its local storage audit and archival
 receipts close preservation gaps. No automatic deletion is implemented.

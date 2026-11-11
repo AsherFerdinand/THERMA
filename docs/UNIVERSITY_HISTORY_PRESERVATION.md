@@ -74,7 +74,7 @@ No model or callback is loaded and no source file is modified.
 
 Parts target64MiB of original bytes;individual files are never split. There are
 12 parts and a small metadata-only catalog ZIP. No additional uncompressed432MB
-copy is made. Worst-case destination budget **446,046,746B**,so reserve at least
+copy is made. Worst-case destination budget **446,046,747B**,so reserve at least
 450MB on a suitable separate location. Do not assume compression of SLX/MAT/FIG
 will substantially help. Java volume free-space checks cannot establish a user's
 smaller network quota;zero/unknown or insufficient reported space blocks writing.
