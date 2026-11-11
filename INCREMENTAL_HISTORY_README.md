@@ -67,6 +67,9 @@ archive_therma_history_incremental(source,destination,'status');
 archive_therma_history_incremental(source,destination,'verify-local');
 ```
 
+Added files since the audit (including a new model-backup ZIP) are recorded as
+outside-snapshot outstanding items;they do not block archiving unchanged audited
+originals. Changed,missing or unreadable audited originals still block the run.
 A locally verified pending ZIP is returned/reverified rather than regenerated.
 A completed stage/final ZIP from an interrupted call is recovered after validation.
 An incomplete `.partial` causes a safe stop:move that GENERATED failed stage to

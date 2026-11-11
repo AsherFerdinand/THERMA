@@ -25,7 +25,18 @@ if isfile(catalogFile)
 else
     check=therma_history_preflight(source,legacy);
     write_boptest_json(fullfile(job,'initial_preflight.json'),check);
-    assert(strcmp(check.status,'source_matches_audit'),'THERMA:IncrementalPreflight','Read initial_preflight.json;originals changed.');
+    % Added backup ZIPs/reports must not prevent preserving the audited snapshot.
+    % They remain explicitly outstanding for a later fresh inventory;never discarded.
+    extra={};blocked=false;
+    for j=1:numel(check.issues)
+        issue=check.issues{j};
+        if startsWith(issue.problem,'New file absent from original audit;')
+            extra{end+1}=issue; %#ok<AGROW>
+        else
+            blocked=true;
+        end
+    end
+    assert(~blocked,'THERMA:IncrementalPreflight','Read initial_preflight.json;audited originals changed/missing/unreadable.');
     entries=struct('name',{},'status',{},'sha256',{},'bytes',{},'asset_url',{},'download_checked_utc',{});
     for k=1:numel(plan.parts)
         entries(k)=struct('name',plan.parts(k).name,'status','outstanding','sha256','', ...
@@ -35,7 +46,8 @@ else
         'plan_sha256',boptest_file_sha256(fullfile(ref,'incremental_plan.json')), ...
         'toolkit_source_commit',package.source_commit,'parts',entries, ...
         'remote_models',jsondecode(fileread(fullfile(ref,'remote_models_verified.json'))), ...
-        'cleanup_approved',false,'scope','audited snapshot;not a final live-folder cleanup authorization');
+        'cleanup_approved',false,'uncatalogued_files',{extra}, ...
+        'scope','audited snapshot;not a final live-folder cleanup authorization');
     copyfile(fullfile(ref,'incremental_plan.json'),fullfile(job,'incremental_plan.json'));
     copyfile(fullfile(ref,'remote_models_verified.json'),fullfile(job,'remote_models_verified.json'));
     copyfile(fullfile(root,'HISTORY_PACKAGE_MANIFEST.json'),fullfile(job,'HISTORY_PACKAGE_MANIFEST.json'));
@@ -54,6 +66,9 @@ end
 fprintf('%d parts outstanding,%d locally verified,%d remotely verified;36 original models separately verified.\n', ...
     sum(strcmp({catalog.parts.status},'outstanding')),sum(strcmp({catalog.parts.status},'local_verified')), ...
     sum(strcmp({catalog.parts.status},'remote_verified')));
+if isfield(catalog,'uncatalogued_files') && ~isempty(catalog.uncatalogued_files)
+    fprintf('%d added files remain outside this snapshot and require fresh inventory/review.\n',numel(catalog.uncatalogued_files));
+end
 if strcmp(action,'status'),return;end
 local=find(strcmp({catalog.parts.status},'local_verified'));
 if ~isempty(local)
