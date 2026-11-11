@@ -9,7 +9,7 @@ import subprocess
 import zipfile
 from pathlib import Path
 
-from build_history_archiver import FILES
+from build_history_archiver import FILES, INCREMENTAL_FILES
 from build_matlab_package import safe_name
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -152,9 +152,9 @@ def verify_return(folder: Path, reference: Path) -> dict:
         commit = toolkit["source_commit"]
         if not re.fullmatch(r"[0-9a-f]{40}", commit) or commit != catalog["toolkit_source_commit"]:
             raise ValueError("Toolkit source identity differs")
-        if len(toolkit["files"]) != len(FILES) or {i["path"] for i in toolkit["files"]} != set(
-            FILES
-        ):
+        paths = [i["path"] for i in toolkit["files"]]
+        required = set(FILES) - set(INCREMENTAL_FILES)
+        if len(paths) != len(set(paths)) or not required <= set(paths):
             raise ValueError("Toolkit dependency inventory differs")
         for item in toolkit["files"]:
             source = subprocess.check_output(

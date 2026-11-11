@@ -67,3 +67,16 @@ archiver includes all36 model paths plus unmatched reports/trajectories/figures:
 history_reference/. Previously missing models remain NOT YET BACKED UP until actual
 archives verify and immutable remote recovery is confirmed. The C42B inspection
 itself is already accepted/archived in Part A. No old-installation deletion approved.
+
+## Current update — independently downloaded model Release verified
+
+The36 audit-listed native model versions are now recoverable from the user-provided
+Release archive-matlab-models-2026-11. Downloaded asset SHA256
+5fab723d165a242974ad5de3dd78fd3d95434b8720c307106b33f7e6d2eb5328;
+all36 full relative paths/sizes/member hashes match the original audit. Receipt:
+history_reference/remote_models_verified.json. This supersedes NOT YET BACKED UP
+for those exact36 model byte identities only;other versions/out-of-scope artifacts
+and243 remaining original result/document files still require preservation.
+The asset URL is mutable;recheck its checksum before recovery/cleanup. No model
+was loaded or simulated. Use INCREMENTAL_HISTORY_README.md for80MB working space;
+the earlier all-at-once450MB procedure remains historical,not the current PC flow.

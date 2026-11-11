@@ -109,3 +109,17 @@ unmatched files are reviewed,and the user explicitly approves a final file-by-fi
 proposal can old installation removal be considered. No such proposal or deletion
 is issued in this delivery. C4.3 is not started. Existing lightweight C42B execution
 and all verified physical parameters/equations remain unchanged.
+
+##80MB superseding workflow
+
+Use INCREMENTAL_HISTORY_README.md in the updated toolkit. All36 uploaded models
+have now been downloaded/CRC/SHA checked against the original audit. Their bodies
+are not committed. The remaining243 originals are covered by12 incremental parts,
+<=40MB source payload/hard45MB ZIP. Oversized files are lossless byte ranges with
+original paths/full hashes,not oversized single ZIPs. One working ZIP is generated
+per call;fresh remote download hashing is streamed without a second disk copy.
+The catalog tracks outstanding/local/remote ranges and files. Upload through the
+browser,verify the actual asset bytes,then move only the generated ZIP externally
+before continuing. No deletion or original modification. Do not apply the earlier
+whole-job446MB space guard to the new incremental entry point. New native code
+requires university self-tests;C4.2B and legacy workflows remain unchanged.
