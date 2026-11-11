@@ -15,14 +15,14 @@ header=uint8(sprintf('THERMA-AES256-GCM-v1\n'));
 n=numel(header);
 assert(numel(bytes)>n+12+16 && isequal(bytes(1:n)',header), ...
     'THERMA:RecoveryFormat','Unexpected encrypted-archive format.');
-nonce=typecast(bytes(n+1:n+12),'int8');
+nonce=reshape(typecast(bytes(n+1:n+12),'int8'),1,[]);
 cipher=javax.crypto.Cipher.getInstance('AES/GCM/NoPadding');
 secret=javax.crypto.spec.SecretKeySpec(typecast(key,'int8'),'AES');
 parameters=javax.crypto.spec.GCMParameterSpec(int32(128),nonce);
 cipher.init(int32(2),secret,parameters);
 aad=typecast(header,'int8');
 cipher.updateAAD(aad,int32(0),int32(numel(aad)));
-payload=typecast(bytes(n+13:end),'int8');
+payload=reshape(typecast(bytes(n+13:end),'int8'),1,[]);
 plain=typecast(cipher.doFinal(payload,int32(0),int32(numel(payload))),'uint8');
 digest=java.security.MessageDigest.getInstance('SHA-256');
 boptest_sha256_update(digest,plain);

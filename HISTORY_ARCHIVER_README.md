@@ -7,7 +7,15 @@ this new archival utility is **pending university verification**.
 1. Extract this small ZIP into a **new folder**,not the old THERMA installation.
 2. Open MATLAB R2025a there. Base MATLAB with JVM is sufficient;no Simulink,Git,
    Python,WSL or additional software is required.
-3. Run the focused software self-tests first:
+3. Check the ZIP checksum against the delivery message,then verify packet files:
+
+```matlab
+addpath(pwd,'tools/matlab','scripts/matlab/boptest')
+disp(boptest_file_sha256('C:\PATH\TO\DOWNLOADS\THERMA_HISTORY_ARCHIVER.zip'))
+therma_history_packet(pwd);
+```
+
+Run the focused software self-tests before touching the real installation:
 
 ```matlab
 addpath(pwd,'tools/matlab','scripts/matlab/boptest')
