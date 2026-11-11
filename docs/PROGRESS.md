@@ -1996,3 +1996,18 @@ Final r3 toolkit170124B,source3cb1638936e3b64cad4e956ee98c193ed3827706,
 transfer/source checksum in INCREMENTAL_HISTORY_DELIVERY.json. SHA256
 b992fe92fbf47009140e64570f258b28a0251e286defe7fea08a33c6e113e043.
 R2/earlier artifacts retained. No original-file cleanup is authorized.
+
+## 2026-11-11 — Independent final historical recovery audit
+
+Downloaded all13 bulk Release assets (193857511B);12part SHA/size and catalog
+contents verified. Fresh reconstruction recovers279 archived +291 pinned-Git
+originals =570 files/431909956B,all sizes/SHA exact;36SLX inner CRC checks pass.
+All602 audit/cleanup rows accounted:32 declared caches excluded,0 missing
+non-cache originals. Catalog digest independently recorded;no external expected
+catalog digest supplied. See HISTORY_ARCHIVE_FINAL_VERIFICATION.md and
+history_reference/final_archive_verification.json. Original catalog unmodified.
+University network paths and36model creator metadata require manual privacy
+review;Git recovery dependencies and post-audit inventory remain preservation
+risks. No deletion recommended or authorized. No original/physics changes.
+238 Python tests pass,3 optional skips;Ruff/mypy/archive/mapping checks pass.
+No MATLAB executed;no C4.3 work.

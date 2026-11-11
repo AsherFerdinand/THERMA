@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "audit_date_utc": "2026-11-11",
+  "release_url": "https://github.com/AsherFerdinand/THERMA/releases/tag/archive-matlab-models-2026-11",
+  "auditor": "Codex cloud: Python streaming SHA-256, ZIP CRC and fresh directory reconstruction; no MATLAB execution",
+  "repository_commit_before_audit": "6a3ab55a83220981c7d888bc14e0a5033400a595",
+  "assets": [
+    {
+      "name": "THERMA_HISTORY_C1_C2_001.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C1_C2_001.zip",
+      "bytes": 1235788,
+      "sha256": "8f1f7f7d6fa211b7fdbceeaea5f12f87d62f69dc5b58d81ee367b6aa07410ba9"
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_001.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C31_C36_001.zip",
+      "bytes": 33070224,
+      "sha256": "45c1f4d55fba9ad007bd0ed5efdfbfa07d0291c6a7d06debf2f33e3bdef57a82"
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_002.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C31_C36_002.zip",
+      "bytes": 28124581,
+      "sha256": "8953f85a5c2335074b7385c43f3bcb07e3676a5e19bfaf5e0f54f7142e1e872c"
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_003.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C31_C36_003.zip",
+      "bytes": 17951929,
+      "sha256": "ed505e76d1f617616e82998cf29a6e78ef51e68fc41b9d535cfd38be9eb6b46a"
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_004.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C31_C36_004.zip",
+      "bytes": 29503811,
+      "sha256": "1e9d1c032731f519df7e2e235b33cc946cd354d7035fdc3b01d2f81ce7c5ded2"
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_005.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C31_C36_005.zip",
+      "bytes": 22175904,
+      "sha256": "c171a0b096de357696feea8eea589bd89b69131684771d7131be8e49be40ee20"
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_006.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C31_C36_006.zip",
+      "bytes": 22388801,
+      "sha256": "85cf69ed467a27046ad2f25dd334260d60a5ee58b2de83cc926d557074c64957"
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_007.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C31_C36_007.zip",
+      "bytes": 17907572,
+      "sha256": "650f27b26e46f066f77292224d2ad52bf98ab0643a3456e84ab8025485c4827b"
+    },
+    {
+      "name": "THERMA_HISTORY_C37_001.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C37_001.zip",
+      "bytes": 6786186,
+      "sha256": "7c41f87d4c174755883a7e21c25c7bc8477b4946ff243d9bf53a8f71253501ac"
+    },
+    {
+      "name": "THERMA_HISTORY_C38_001.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C38_001.zip",
+      "bytes": 7691849,
+      "sha256": "c5bede63749c0e10e843966ee70da04a40b8523851af2d5dd1584b549c4844a8"
+    },
+    {
+      "name": "THERMA_HISTORY_C39_001.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C39_001.zip",
+      "bytes": 260431,
+      "sha256": "e879e743a6c355c4c19970334d5acd77cc05f0b57818296583d70e760970c8a7"
+    },
+    {
+      "name": "THERMA_HISTORY_C40_001.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_C40_001.zip",
+      "bytes": 6636722,
+      "sha256": "8be3c5524e6350c7e34f4b27b7376db44c8eb742c14ac9d8e46cd56763cb0709"
+    },
+    {
+      "name": "THERMA_HISTORY_CATALOG.zip",
+      "url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_HISTORY_CATALOG.zip",
+      "bytes": 123713,
+      "sha256": "fb2f876ae19aadabc5ca1f19a319a74cddda536fb8dfcf953513cdbe3bc1363c"
+    }
+  ],
+  "source_files": {
+    "storage_audit.json": "5854d0a727fed8604eaadf7aacbcb1e3bcb00a585050ca53157e4d3e9927d8c4",
+    "cleanup_review.csv": "c652193579ed695396704d266745fdafee3842bc64efb6bde6ff6b2d274ec8ec",
+    "preservation_manifest.json": "9f5359501ea57d3d873a99f6a29d2fc5e4ce0fc9fab1f41099d5d52b52470214",
+    "history_plan.json": "9cdf40e6202c231944732179b306757b957a1500ca251e4a81018e478fd56c0d"
+  },
+  "recovery": {
+    "audited_files": 602,
+    "reconstructed_files": 570,
+    "reconstructed_bytes": 431909956.0,
+    "bulk_files": 279,
+    "git_recovered_files": 291,
+    "slx_recovered": 36,
+    "excluded_cache_files": [
+      "THERMA_C34_ClosedLoop.slxc",
+      "THERMA_C37_Residential.slxc",
+      "THERMA_C38_Thermostat.slxc",
+      "THERMA_C40_HeatingSystem.slxc",
+      "slprj/sim/varcache/THERMA_C34_ClosedLoop/checksumOfCache.mat",
+      "slprj/sim/varcache/THERMA_C34_ClosedLoop/varInfo.mat",
+      "slprj/sim/varcache/THERMA_C34_ClosedLoop/tmwinternal/simulink_cache.xml",
+      "slprj/sim/varcache/THERMA_C37_Residential/checksumOfCache.mat",
+      "slprj/sim/varcache/THERMA_C37_Residential/varInfo.mat",
+      "slprj/sim/varcache/THERMA_C37_Residential/tmwinternal/simulink_cache.xml",
+      "slprj/sim/varcache/THERMA_C38_Thermostat/checksumOfCache.mat",
+      "slprj/sim/varcache/THERMA_C38_Thermostat/varInfo.mat",
+      "slprj/sim/varcache/THERMA_C38_Thermostat/tmwinternal/simulink_cache.xml",
+      "slprj/sim/varcache/THERMA_C40_HeatingSystem/checksumOfCache.mat",
+      "slprj/sim/varcache/THERMA_C40_HeatingSystem/varInfo.mat",
+      "slprj/sim/varcache/THERMA_C40_HeatingSystem/tmwinternal/simulink_cache.xml",
+      "tests/matlab/THERMA_C34_ClosedLoop.slxc",
+      "tests/matlab/THERMA_C3_radiator.slxc",
+      "tests/matlab/THERMA_C3_thermostat.slxc",
+      "tests/matlab/THERMA_C3_valve.slxc",
+      "tests/matlab/slprj/sim/varcache/THERMA_C34_ClosedLoop/checksumOfCache.mat",
+      "tests/matlab/slprj/sim/varcache/THERMA_C34_ClosedLoop/varInfo.mat",
+      "tests/matlab/slprj/sim/varcache/THERMA_C34_ClosedLoop/tmwinternal/simulink_cache.xml",
+      "tests/matlab/slprj/sim/varcache/THERMA_C3_radiator/checksumOfCache.mat",
+      "tests/matlab/slprj/sim/varcache/THERMA_C3_radiator/varInfo.mat",
+      "tests/matlab/slprj/sim/varcache/THERMA_C3_radiator/tmwinternal/simulink_cache.xml",
+      "tests/matlab/slprj/sim/varcache/THERMA_C3_thermostat/checksumOfCache.mat",
+      "tests/matlab/slprj/sim/varcache/THERMA_C3_thermostat/varInfo.mat",
+      "tests/matlab/slprj/sim/varcache/THERMA_C3_thermostat/tmwinternal/simulink_cache.xml",
+      "tests/matlab/slprj/sim/varcache/THERMA_C3_valve/checksumOfCache.mat",
+      "tests/matlab/slprj/sim/varcache/THERMA_C3_valve/varInfo.mat",
+      "tests/matlab/slprj/sim/varcache/THERMA_C3_valve/tmwinternal/simulink_cache.xml"
+    ],
+    "unaccounted": [],
+    "errors": [],
+    "cleanup_csv_matches_audit": true
+  },
+  "part_digests_match_catalog": 12,
+  "catalog_digest_independently_calculated": true,
+  "catalog_digest_external_expected_value_supplied": false,
+  "release_originals_recovery_confirmed": true,
+  "git_file_recovery_method": "Recorded commit:path[#member] from original audit, read from locally available Git objects; every original size/SHA checked after reconstruction. These 291 files are not bundled in the 13 Release assets.",
+  "source_commit": "a57a62aa823624688a62ccde0ac7ed8a039a210e",
+  "transfer_commit": "647a7a81a00ab9462e9c754e190b45a962fae513",
+  "toolkit_source_commit": "8968ffa4fa396f27499a714a9336e31b2082080d",
+  "cleanup_approved": false,
+  "original_catalog_modified": false,
+  "privacy_review": {
+    "static_candidate_counts": {
+      "absolute_windows_path": 35,
+      "licence_or_restriction_text": 23,
+      "email_address": 3,
+      "slx_creator_metadata": 36
+    },
+    "structured_inspection_errors": [],
+    "png_visual_review_complete": false,
+    "rendered_pdf_fig_visual_review_complete": false,
+    "manual_review_required": true,
+    "note": "Candidate counts are pattern matches, not confirmed secrets or licence violations. Actual private path/account values intentionally omitted."
+  },
+  "checks": {
+    "pytest_passed": 238,
+    "pytest_optional_skipped": 3,
+    "ruff_lint": "passed",
+    "ruff_format": "passed",
+    "mypy": "passed",
+    "archive_report_check": "passed",
+    "replay_mapping_check": "passed",
+    "matlab_executed": false
+  }
+}

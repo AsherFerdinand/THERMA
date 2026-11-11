@@ -226,8 +226,9 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [x] Actual C42B R2025a ZIP accepted,redacted public evidence and encrypted original archived;Part A pushed.
 - [x] Verify602 audit rows and preserve plan for279 originals includingall36 native model paths.
 - [x] Prepare streaming milestone archiver,space/drift/resume safeguards and returned-archive verifier.
-- [ ] Execute new native archival self-tests and archive utility;return12 parts/catalog.
-- [ ] Verify original historical bodies and confirm remote recovery before any cleanup proposal/approval.
+- [x] Bulk archiver run/verification user-reported;12 parts/catalog returned via Release.
+- [x] Independently recover/hash all570 non-cache originals,including36SLX;see final archival report.
+- [ ] Resolve privacy review,Git recovery dependencies and fresh-inventory checks before any cleanup proposal.
 - [ ] C4.3 not started.
 
 ###80MB incremental preservation
@@ -236,4 +237,5 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [x] Prepare one-part generation,hard45MB cap,lossless oversized-file ranges and file/part catalog.
 - [x] Prepare streamed fresh-download verification and exact original reassembly.
 - [ ] Execute new native incremental self-test/archive/upload/remote-check loop on university PC.
-- [ ] Complete remaining243 originals and fresh recovery checks before any cleanup review.
+- [x] Remaining originals recovered through completed bulk Release archive;incremental route no longer required for this snapshot.
+- [ ] Complete final preservation/privacy conditions before any cleanup review.
