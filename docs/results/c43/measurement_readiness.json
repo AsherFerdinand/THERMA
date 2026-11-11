@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "upstream_commit": "265312ec3843c97d5a24b7d5671ee2891f326af6",
+  "timezone": "PST fixed UTC-08:00; no DST",
+  "status": "blocked_pending_cell3b_model_specification",
+  "measurement_only": true,
+  "matlab_executed_in_cloud": false,
+  "simulation_performed": false,
+  "empirical_validation_performed": false,
+  "start_inclusive": "2021-06-23 00:00:00",
+  "end_inclusive": "2021-06-23 12:00:00",
+  "rows_per_core_source": 721,
+  "sources": [
+    {
+      "path": "Direct Validation Data/Air temperature.csv",
+      "bytes": 22745327,
+      "sha256": "4acf940bd14959eaf5928d707ea23069477f440c736c6dbd7d96c5a1c5e852ea",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Direct%20Validation%20Data/Air%20temperature.csv"
+    },
+    {
+      "path": "Input Data/Weather data.csv",
+      "bytes": 13598147,
+      "sha256": "bf568d2ee4e59e8d19c8248ae533174c9a2b88abda6797bff381f4e6b7c6e9d0",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Weather%20data.csv"
+    },
+    {
+      "path": "Input Data/Internal heat gain rate.csv",
+      "bytes": 1977915,
+      "sha256": "b2406f14eedab4bae634370c33618ddbbe250d73401c55b54c137aa2545d713e",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Internal%20heat%20gain%20rate.csv"
+    },
+    {
+      "path": "Input Data/Duct blaster.csv",
+      "bytes": 2893313,
+      "sha256": "938737f6f923c519bc22cfd272d830aad715aac0f2d66a8997031bf31d8146ed",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Duct%20blaster.csv"
+    },
+    {
+      "path": "Direct Validation Data/Fan coil units.csv",
+      "bytes": 1407769,
+      "sha256": "f6ec373a516c85e98214bf286387d1c09dc8ab82f891f2dbbaf58f59a1504794",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Direct%20Validation%20Data/Fan%20coil%20units.csv"
+    },
+    {
+      "path": "Input Data/Exterior surface temperature.csv",
+      "bytes": 10337879,
+      "sha256": "7b511a998c12ef627593c64071fd32b98bba4499ee8047726bfb8a261776553b",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Exterior%20surface%20temperature.csv"
+    },
+    {
+      "path": "Measured dataset for validation of building energy modeling programs.pdf",
+      "bytes": 6500696,
+      "sha256": "70199cac9c2e814e6d89e4c100291a6b98a7c8f7c4fc08207159fe314824cbbf",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Measured%20dataset%20for%20validation%20of%20building%20energy%20modeling%20programs.pdf"
+    },
+    {
+      "path": "Auxiliary Data/Materials.csv",
+      "bytes": 4217,
+      "sha256": "b59504c79ef310d5b0b5892f4fbde4656e8193118cba8171e5126c47b64c7073",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Auxiliary%20Data/Materials.csv"
+    },
+    {
+      "path": "Auxiliary Data/Construction.csv",
+      "bytes": 9315,
+      "sha256": "bf80e2e075e1a1907bdbb6a3efd8ffec0fb20c0a58ce57744c1dcc96b937d4fe",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Auxiliary%20Data/Construction.csv"
+    },
+    {
+      "path": "Auxiliary Data/Materials and Construction.idf",
+      "bytes": 42232,
+      "sha256": "5cef01b209d795f844c5dc6186048561b1fd14c22556aae420295f3b149adb72",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Auxiliary%20Data/Materials%20and%20Construction.idf"
+    },
+    {
+      "path": "Meta data.xlsx",
+      "bytes": 20056,
+      "sha256": "01b950b1f699fc1cb1c6b30510198eb492377d7e1ef263ea3b92c59861fecd8a",
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Meta%20data.xlsx"
+    }
+  ],
+  "arithmetic_mean_air_C": {
+    "min": 19.925425740769235,
+    "max": 20.10228027538462,
+    "mean": 20.034518842529074,
+    "first": 19.973060205769233,
+    "last": 19.972890218846153
+  },
+  "maximum_sensor_spread_K": 0.46047379999999904,
+  "outdoor_W_OAT_2_C": {
+    "min": 11.88012964,
+    "max": 19.67371265,
+    "mean": 14.170897495242718,
+    "first": 12.46235587,
+    "last": 19.12527768
+  },
+  "internal_gain_W": {
+    "min": 340.2569418,
+    "max": 349.7427455,
+    "mean": 345.9694540988905,
+    "first": 345.3495484,
+    "last": 345.9612097
+  },
+  "raw_total_cooling_W": {
+    "min": 143.7339697654872,
+    "max": 738.2967452454338,
+    "mean": 298.69347919075074,
+    "first": 239.33392586948088,
+    "last": 657.5694752151071
+  },
+  "negative_cooling_samples": 0,
+  "cooling_component_sum_max_abs_difference_W": 1.1368683772161603e-13,
+  "adjusted_ventilation_flow_m3_s": {
+    "min": 0.0764544915,
+    "max": 0.11877247038888888,
+    "mean": 0.0941128054443674,
+    "first": 0.09079334241666667,
+    "last": 0.11424497297222222
+  },
+  "vent_supply_C": {
+    "min": 18.83856412,
+    "max": 20.51358682,
+    "mean": 19.303750147198333,
+    "first": 19.13207331,
+    "last": 20.453167
+  },
+  "derived_ventilation_W_diagnostic_only": {
+    "min": -130.7574793,
+    "max": 69.4308808,
+    "mean": -80.6076999861054,
+    "first": -94.11368361,
+    "last": 69.4308808
+  },
+  "radiation_W_m2": {
+    "GHI": {
+      "min": 0.238275461,
+      "max": 1401.326965,
+      "mean": 216.80743560983353,
+      "first": 0.538207759,
+      "last": 836.9763794
+    },
+    "DNI": {
+      "min": 0.28023956,
+      "max": 799.6586202,
+      "mean": 52.291858202227466,
+      "first": 0.46307825,
+      "last": 127.1064135
+    },
+    "DHI": {
+      "min": 0.05571804,
+      "max": 693.796224,
+      "mean": 154.47048325816644,
+      "first": 0.393034816,
+      "last": 657.3521729
+    },
+    "PIRin": {
+      "min": 329.3781569,
+      "max": 388.2773135,
+      "mean": 372.5989007718447,
+      "first": 377.7379702,
+      "last": 363.5980858
+    }
+  },
+  "measured_boundary_surface_C": {
+    "DropCeiling": {
+      "min": 20.413509625,
+      "max": 20.65961899166666,
+      "mean": 20.54005563446602,
+      "first": 20.631169616666668,
+      "last": 20.427875025
+    },
+    "TemporaryNorthWall": {
+      "min": 19.75444677708333,
+      "max": 20.187834631249995,
+      "mean": 19.88813214106854,
+      "first": 19.88465848958333,
+      "last": 20.177178947916666
+    },
+    "EastWall": {
+      "min": 14.633537183333338,
+      "max": 40.600197366666656,
+      "mean": 20.60131891434351,
+      "first": 15.739821575,
+      "last": 33.16898315833334
+    },
+    "SouthWall": {
+      "min": 14.202458705555555,
+      "max": 35.852186277777776,
+      "mean": 19.476265792055784,
+      "first": 15.35622110833333,
+      "last": 35.14711771666668
+    },
+    "WestWall": {
+      "min": 20.161336401666677,
+      "max": 20.79526188333333,
+      "mean": 20.362946626779937,
+      "first": 20.234057086666667,
+      "last": 20.786938828333334
+    },
+    "Ground ": {
+      "min": 22.45931374722222,
+      "max": 22.919572169444447,
+      "mean": 22.735030502176762,
+      "first": 22.750524455555556,
+      "last": 22.718450344444445
+    },
+    "Floor": {
+      "min": 21.63703041388889,
+      "max": 22.127645672222226,
+      "mean": 21.884323158175373,
+      "first": 21.92756965,
+      "last": 21.853433133333336
+    }
+  },
+  "full_conditioned_day_completeness_all_columns": [
+    {
+      "day_PST": "2021-06-22",
+      "expected_rows": 1440,
+      "invalid_rows_by_source": {
+        "Direct Validation Data/Air temperature.csv": 78,
+        "Input Data/Weather data.csv": 65,
+        "Input Data/Internal heat gain rate.csv": 64,
+        "Input Data/Duct blaster.csv": 52,
+        "Direct Validation Data/Fan coil units.csv": 64,
+        "Input Data/Exterior surface temperature.csv": 68
+      }
+    },
+    {
+      "day_PST": "2021-06-23",
+      "expected_rows": 1440,
+      "invalid_rows_by_source": {
+        "Direct Validation Data/Air temperature.csv": 47,
+        "Input Data/Weather data.csv": 21,
+        "Input Data/Internal heat gain rate.csv": 34,
+        "Input Data/Duct blaster.csv": 18,
+        "Direct Validation Data/Fan coil units.csv": 36,
+        "Input Data/Exterior surface temperature.csv": 34
+      }
+    },
+    {
+      "day_PST": "2021-06-24",
+      "expected_rows": 1440,
+      "invalid_rows_by_source": {
+        "Direct Validation Data/Air temperature.csv": 1,
+        "Input Data/Weather data.csv": 2,
+        "Input Data/Internal heat gain rate.csv": 1,
+        "Input Data/Duct blaster.csv": 0,
+        "Direct Validation Data/Fan coil units.csv": 2,
+        "Input Data/Exterior surface temperature.csv": 2
+      }
+    },
+    {
+      "day_PST": "2021-06-25",
+      "expected_rows": 1440,
+      "invalid_rows_by_source": {
+        "Direct Validation Data/Air temperature.csv": 0,
+        "Input Data/Weather data.csv": 1,
+        "Input Data/Internal heat gain rate.csv": 1,
+        "Input Data/Duct blaster.csv": 0,
+        "Direct Validation Data/Fan coil units.csv": 0,
+        "Input Data/Exterior surface temperature.csv": 0
+      }
+    },
+    {
+      "day_PST": "2021-06-26",
+      "expected_rows": 1440,
+      "invalid_rows_by_source": {
+        "Direct Validation Data/Air temperature.csv": 0,
+        "Input Data/Weather data.csv": 1,
+        "Input Data/Internal heat gain rate.csv": 0,
+        "Input Data/Duct blaster.csv": 0,
+        "Direct Validation Data/Fan coil units.csv": 0,
+        "Input Data/Exterior surface temperature.csv": 0
+      }
+    }
+  ],
+  "longest_complete_runs_all_columns": [
+    {
+      "start_inclusive_PST": "2021-06-26 00:00:00-08:00",
+      "end_inclusive_PST": "2021-06-26 23:58:00-08:00",
+      "rows": 1439,
+      "duration_hours": 23.966666666666665
+    },
+    {
+      "start_inclusive_PST": "2021-06-25 05:10:00-08:00",
+      "end_inclusive_PST": "2021-06-25 23:58:00-08:00",
+      "rows": 1129,
+      "duration_hours": 18.8
+    },
+    {
+      "start_inclusive_PST": "2021-06-24 01:10:00-08:00",
+      "end_inclusive_PST": "2021-06-24 17:23:00-08:00",
+      "rows": 974,
+      "duration_hours": 16.216666666666665
+    },
+    {
+      "start_inclusive_PST": "2021-06-23 00:00:00-08:00",
+      "end_inclusive_PST": "2021-06-23 12:35:00-08:00",
+      "rows": 756,
+      "duration_hours": 12.583333333333334
+    },
+    {
+      "start_inclusive_PST": "2021-06-22 00:00:00-08:00",
+      "end_inclusive_PST": "2021-06-22 11:59:00-08:00",
+      "rows": 720,
+      "duration_hours": 11.983333333333333
+    }
+  ],
+  "metrics": {
+    "MAE_K": null,
+    "RMSE_K": null,
+    "MBE_K": null,
+    "max_absolute_error_K": null
+  },
+  "metrics_unavailable_reason": "No prediction: Cell3B parameter/boundary/state choices remain open",
+  "calibration_performed": false
+}

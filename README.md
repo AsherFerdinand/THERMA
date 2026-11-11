@@ -34,6 +34,8 @@ receipts close preservation gaps. No automatic deletion is implemented.
   [integrated workbench](docs/C40_HEATING_SYSTEM.md).
 - [FLEXLAB acquisition/feasibility](docs/C42B_VALIDATION_FEASIBILITY.md): authentic
   files acquired; CONDITIONAL separate single-zone envelope benchmark.
+- [C4.3 measurement-validation assessment](docs/C43_MEASUREMENT_VALIDATION.md):
+  authentic inputs rechecked; prediction/validation blocked pending a Cell3B model specification.
 - [Milestone archive and missing backups](docs/PROJECT_MILESTONE_ARCHIVE.md).
 - [Storage audit](docs/REPOSITORY_STORAGE_AUDIT.md) and
   [lightweight execution/results workflow](docs/LIGHTWEIGHT_MATLAB_WORKFLOW.md).

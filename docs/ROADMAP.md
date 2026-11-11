@@ -209,7 +209,7 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [x] Prepare measured-data-only MATLAB inspection and transfer instructions.
 - [x] Actual university R2025a inspection ZIP reviewed/archived on2026-11-11;no cloud MATLAB execution.
 - [ ] Resolve construction/property conflicts, initial-state conditioning and raw redistribution rights before a frozen model/data packet.
-- [ ] C4.3 remains unauthorized/not started.
+- [x] C4.3 feasibility assessment authorized on2026-11-11;see the C4.3 gate below.
 
 ### Maintenance — lightweight MATLAB execution
 
@@ -247,3 +247,16 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [ ] Run native R2025a tests,rescan and independent recovery verification.
 - [ ] Preserve any drift,complete privacy/policy review and final inventory before requesting explicit cleanup approval.
 - [ ] C4.3 not started.
+
+### C4.3 measurement-based validation — explicitly authorized, experiment blocked
+
+- [x] Recheck authentic six-file measurements and five primary supporting sources.
+- [x] Review actual C4.2B R2025a evidence;separate inspection from simulation.
+- [x] Record forcing/target roles,finite intervals,sign conventions and construction/state gaps.
+- [x] Add reproducible measurement-only assessment and synthetic reader/alignment/unit tests.
+- [ ] Freeze defensible Cell3B surface/material/boundary/initial-state registry.
+- [ ] Define conditioning/holdout and identifiable parameter bounds before any fitting.
+- [ ] Execute documented MATLAB baseline and report genuine held-out temperature errors.
+
+See docs/C43_MEASUREMENT_VALIDATION.md. No new thermal physics implemented;
+stop at feasibility while the model-definition gates remain open.

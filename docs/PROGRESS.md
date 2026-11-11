@@ -2033,3 +2033,22 @@ cb2e73d61600b3ec741a21575f4b8049030a54225b6ec7c203ed1df541452c90
 verified;fresh extraction/AES-GCM decryption/all291 original hashes pass.
 Private recovery key excluded from Git/package. Full delivery metadata in
 CLEANUP_READINESS_DELIVERY.json. Native MATLAB gates remain pending.
+
+## 2026-11-11 — C4.3 authorized feasibility assessment; validation blocked
+
+Dedicated feat/c43-measurement-validation branch. Reauthenticated6core CSVs
+and5primary supporting files at upstream265312ec3843c97d5a24b7d5671ee2891f326af6.
+Actual C4.2B R2025a report confirms completed inspection,no simulation.
+Existing12h721-row window is complete;mean air19.9254–20.1023C,
+raw cooling143.73–738.30W. Preserved signed inputs/fixed PST and documented
+ventilation target dependence,adjacent boundaries,source construction conflicts
+and unknown fabric states. Five-day all-channel completeness fails;actual
+common finite runs are recorded without interpolation.
+No frozen Cell3B model or defensible R/C bounds;stopped at the expressly
+authorized feasibility outcome rather than inventing predictions/metrics.
+MAE/RMSE/MBE/max error are null. No fit,new physics,MATLAB execution,
+historical restoration,raw-data redistribution or cleanup.
+Added scripts/reference/assess_c43.py,measurement-only readiness JSON and
+C43_MEASUREMENT_VALIDATION.md.249 Python tests pass,3 optional skips;
+Ruff/mypy/archive/replay checks pass. Next:freeze source-reviewed Cell3B
+registry and conditioning/holdout before any empirical validation claim.
