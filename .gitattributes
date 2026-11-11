@@ -9,3 +9,8 @@ verification/c3/c36/**/*.json -text
 
 # Preserve supplied C3.7 specification transcription byte identity.
 verification/c3/c37/*.json -text
+
+# Preserve actual C42B evidence and original university storage reports byte-for-byte.
+/results/C42B/** -text
+/history_reference/storage_audit.json -text
+/history_reference/cleanup_review.csv -text

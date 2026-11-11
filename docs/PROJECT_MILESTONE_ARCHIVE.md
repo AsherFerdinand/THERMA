@@ -56,3 +56,14 @@ See [the archived native inspection](../results/C42B/c146fd42ee036a3a/README.md)
 The original private-path ZIP is preserved encrypted at an immutable GitHub URL
 with original/ciphertext hashes and separate private recovery key. Public redacted
 log is explicitly derived;original JSON/PNG bytes unchanged. No cloud MATLAB run.
+
+## 2026-11-11 university storage report — preservation still pending
+
+Original JSON/CSV audit files agree:602 files/431,966,619B. They identify36 native
+SLX files on the university PC,not in cloud/Git source. Historical ZIP generation
+has **not** happened in cloud and no model bodies have been returned. The prepared
+archiver includes all36 model paths plus unmatched reports/trajectories/figures:
+279 files/420,811,850B. Full plan/report at UNIVERSITY_HISTORY_PRESERVATION.md and
+history_reference/. Previously missing models remain NOT YET BACKED UP until actual
+archives verify and immutable remote recovery is confirmed. The C42B inspection
+itself is already accepted/archived in Part A. No old-installation deletion approved.

@@ -1,0 +1,4902 @@
+{
+  "schema_version": 1,
+  "audit_sha256": "5854d0a727fed8604eaadf7aacbcb1e3bcb00a585050ca53157e4d3e9927d8c4",
+  "selection_policy": "all SLX;all unknown originals;skip only exact known Git bytes and declared caches",
+  "expected_source_files": 602,
+  "archive_files": 279,
+  "all_audited_slx": 36,
+  "source_bytes_to_archive": 420811850,
+  "space_estimate_bytes": 446046746,
+  "parts": [
+    {
+      "name": "THERMA_HISTORY_C1_C2_001.zip",
+      "group": "C1_C2",
+      "files": 51,
+      "source_bytes": 5593174
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_001.zip",
+      "group": "C31_C36",
+      "files": 68,
+      "source_bytes": 66473848
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_002.zip",
+      "group": "C31_C36",
+      "files": 51,
+      "source_bytes": 59258316
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_003.zip",
+      "group": "C31_C36",
+      "files": 12,
+      "source_bytes": 29497571
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_004.zip",
+      "group": "C31_C36",
+      "files": 12,
+      "source_bytes": 66132527
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_005.zip",
+      "group": "C31_C36",
+      "files": 12,
+      "source_bytes": 47350938
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_006.zip",
+      "group": "C31_C36",
+      "files": 12,
+      "source_bytes": 56725499
+    },
+    {
+      "name": "THERMA_HISTORY_C31_C36_007.zip",
+      "group": "C31_C36",
+      "files": 35,
+      "source_bytes": 38321125
+    },
+    {
+      "name": "THERMA_HISTORY_C37_001.zip",
+      "group": "C37",
+      "files": 10,
+      "source_bytes": 16550270
+    },
+    {
+      "name": "THERMA_HISTORY_C38_001.zip",
+      "group": "C38",
+      "files": 7,
+      "source_bytes": 18534353
+    },
+    {
+      "name": "THERMA_HISTORY_C39_001.zip",
+      "group": "C39",
+      "files": 3,
+      "source_bytes": 271717
+    },
+    {
+      "name": "THERMA_HISTORY_C40_001.zip",
+      "group": "C40",
+      "files": 6,
+      "source_bytes": 16102512
+    }
+  ],
+  "records": [
+    {
+      "path": ".gitattributes",
+      "bytes": 346,
+      "sha256": "47f321a21f2ade4e1a0a035e226523e55cc899f0478ae00ddeb1797fbdd612e9",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 464,
+      "sha256": "313bbd7a327775ee5c534609c9fcdb94fe896ea2d2034dc85f36b90d743dcde9",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": ".python-version",
+      "bytes": 5,
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 836,
+      "sha256": "7582d041f55f06ec95a3c7fa6dbdecd03828af7a7d394dc61c4b89001eda8061",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "C35_PACKAGE_PROVENANCE.json",
+      "bytes": 26759,
+      "sha256": "d1c79ecc1b30574437d40f3ee38d09884e0cea15d941c1d5923da129f018a1aa",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "C35_PACKAGE_SHA256SUMS",
+      "bytes": 24269,
+      "sha256": "f4b17a26027b85bd15adc45003e92bead5228f07df0956c2c016a0a5f97ee050",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "C37_UPDATE_SHA256SUMS",
+      "bytes": 1018,
+      "sha256": "7f88b534e4a23f36fa5554f6a8d08085dfa7c9f68c8d1f8e913c014096a373c2",
+      "action": "github_preserved",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "C38_UPDATE_SHA256SUMS",
+      "bytes": 793,
+      "sha256": "88d4b9bead3a38f9a576122dfe6f11f97af18a6a4bc47826e9f66384287e658a",
+      "action": "github_preserved",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "C39_UPDATE_SHA256SUMS",
+      "bytes": 1138,
+      "sha256": "16bd3c34140bb5d260c6370df0761bdfe255d2f3eede2f4371e110ee8eaa025d",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "C40_UPDATE_SHA256SUMS",
+      "bytes": 563,
+      "sha256": "3d87d2b5b9b8b5679f50249f9029fd86ef2732019eeec18bcaae3b0c91a0b160",
+      "action": "github_preserved",
+      "group": "C40",
+      "part": ""
+    },
+    {
+      "path": "C42B_UPDATE_SHA256SUMS",
+      "bytes": 1225,
+      "sha256": "f51a0fd55442954da77425f6073b63744e1dfbf12490224b6ea17e540936dcb5",
+      "action": "github_preserved",
+      "group": "C42B",
+      "part": ""
+    },
+    {
+      "path": "DOWNLOAD_FLEXLAB_FILES.md",
+      "bytes": 2307,
+      "sha256": "3276e2df6128c751c97e2fd0e08f00af64c7ec95dec8338858a119e29612c710",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "README.md",
+      "bytes": 11934,
+      "sha256": "efa9469ec60aa25b2ccfb8604e2cbe4d232037eb78a7878ffb3b0d2f76ace6d6",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "START_C28.md",
+      "bytes": 2280,
+      "sha256": "5c86edffdc21b6ab58f00da10cc6f1261719ccc0d9a4798f4e95388467875c44",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "START_C3.md",
+      "bytes": 3025,
+      "sha256": "0c310817af4072ba8fef2389bd8f20fa7fa81d18eb0cb6709e2bbe0ba586b9f9",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "START_C34.md",
+      "bytes": 3090,
+      "sha256": "c1c614f4d8c405e6cbde11714b17bfba442b3927c4acc44fc827e76f691f4c1b",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "START_C35.md",
+      "bytes": 3568,
+      "sha256": "1752c52cee71d1a4ca37326ef76f229fcd494670ef834806432cf9b459947524",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "START_C37.txt",
+      "bytes": 2924,
+      "sha256": "ee8bc457383d375fc94521f4246b044e498a3b1567a94affc379879a98bddd4d",
+      "action": "github_preserved",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "START_C38.txt",
+      "bytes": 2925,
+      "sha256": "c6128402ab90f10d4ac2d73003e6ff37eb6650360a86217f5dc2f0f620f816a2",
+      "action": "github_preserved",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "START_C39.txt",
+      "bytes": 2301,
+      "sha256": "b6b059f9b97e32b3410e0a015123068649e8f346a8a5c9ee6088eabb5e5bfeb0",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "START_C40.txt",
+      "bytes": 2883,
+      "sha256": "547ae4215447bb4e7610172f9ff4231c6ace621805d0e9ab5822856c3ff93afb",
+      "action": "github_preserved",
+      "group": "C40",
+      "part": ""
+    },
+    {
+      "path": "START_C42B.md",
+      "bytes": 2083,
+      "sha256": "3a1d24a04965d909ad3c13a51084fe03477280b042fc6d9c599f123fd8dab342",
+      "action": "github_preserved",
+      "group": "C42B",
+      "part": ""
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 3568,
+      "sha256": "1752c52cee71d1a4ca37326ef76f229fcd494670ef834806432cf9b459947524",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "THERMA_C34_ClosedLoop.slxc",
+      "bytes": 5713,
+      "sha256": "ebb82775a78c1d4007e774671dee9ac48295914e62480e28eaa71a09ed63a197",
+      "action": "regenerable_cache",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "THERMA_C37_Residential.slxc",
+      "bytes": 5108,
+      "sha256": "a06a48cbc6249c9eb7350ce872754b762b40d8dca4805fe54b2d4745fe948689",
+      "action": "regenerable_cache",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "THERMA_C38_Thermostat.slxc",
+      "bytes": 5119,
+      "sha256": "1f29403f5cfb63d850509938c19d36264a93969fcd10ae553f77ab483f5af6ac",
+      "action": "regenerable_cache",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "THERMA_C40_HeatingSystem.slxc",
+      "bytes": 5120,
+      "sha256": "c850501bdcc80ef339f35f42bc1be90daef726a124d138a17b7a5ac654cbd0b9",
+      "action": "regenerable_cache",
+      "group": "C40",
+      "part": ""
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 652,
+      "sha256": "78e6f02cfb30acf6e8cc145c331ab872f91d58be4e82b456c149be429168e3c8",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "run_c34_verification.m",
+      "bytes": 5660,
+      "sha256": "79c0d58783bd6175a681d66e8f17db71c9e194d416c0ab6cbd1d1cee6fe77e08",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "run_c35_investigation.m",
+      "bytes": 10819,
+      "sha256": "73202a172cac68eab326b633bc7d85e9ba54ed64725401bd46a4f8d3f63ed03c",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "run_c37_residential_heating.m",
+      "bytes": 8369,
+      "sha256": "cffa6d1752e560926926ef7c508161def0a79f970f6f1e92c86d9a4ec296c18a",
+      "action": "github_preserved",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "run_c38_thermostat_comparison.m",
+      "bytes": 8408,
+      "sha256": "d08b186fd9bb72115b2ee183c1dbb65a5ba655a17198109ff3ce4cdf4b678ef8",
+      "action": "github_preserved",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "run_c39_boptest_comparison.m",
+      "bytes": 2841,
+      "sha256": "6019085c61be27402788caee0eb37a2ee982f6e21ca387b2154655a8269f9a05",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "run_c3_verification.m",
+      "bytes": 4048,
+      "sha256": "607bb52a45ef13d7cc63cf7fd0e5f924cc87d9e309397d3ac20d972a9e964c35",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "run_c40_heating_system.m",
+      "bytes": 7231,
+      "sha256": "32bc4c1f8bf06addc790c9479d6fe218356f8c705454d9be06787341445d95ac",
+      "action": "github_preserved",
+      "group": "C40",
+      "part": ""
+    },
+    {
+      "path": "run_c42b_flexlab_inspection.m",
+      "bytes": 5415,
+      "sha256": "fca9db144818b923f4dec58eb8c98148a41c0f5ecc813d9c0114f2462a0f0949",
+      "action": "github_preserved",
+      "group": "C42B",
+      "part": ""
+    },
+    {
+      "path": "run_verification.m",
+      "bytes": 2246,
+      "sha256": "aebe631556a065a228496beb9bba37581fdb42ec03cc79e2285290d7dbcf7f93",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 34403,
+      "sha256": "3c66dde2de3e4e444ba9f72959537173f28109ee6666a01dc2dc9883d4089269",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 1206,
+      "sha256": "e7b9767a511fda3bfb95cc6ea99e52988d9cc081600b47305ce40231bba6eb73",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "configs/project.toml",
+      "bytes": 98,
+      "sha256": "657f565eac703752d664c72396f750cc9a01f55f0e9b1d360271cee0084efda0",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "configs/c3/illustrative_components.json",
+      "bytes": 2311,
+      "sha256": "91d52c84d06c7d2d49187ef80dd1c90f40d83f52f79e729fad51e93bb7c4d243",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "configs/c3/integration_c34.json",
+      "bytes": 1853,
+      "sha256": "c3b0da5ddc0c168f0011035ceefc367fb51340f2dd7eb843000f9a8c14a793e2",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "configs/c35/investigation.json",
+      "bytes": 1531,
+      "sha256": "6fdf6b1db968145c504ad8f4b3edc0637d8cb482530bf368a3014148faeae9f1",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "configs/c37/radiator_rating.json",
+      "bytes": 1628,
+      "sha256": "3357a4bba3b25aa3d46642b42cb8a314530ce5100fcfd19aa9b8d8342f20092b",
+      "action": "github_preserved",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "configs/c37/residential_room.json",
+      "bytes": 3136,
+      "sha256": "098d5b2c794137b620fa55bd127097b4584a72b398b0a2b68c5c52e0fffe9b7a",
+      "action": "github_preserved",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "configs/references/boptest_bestest_hydronic.json",
+      "bytes": 138497,
+      "sha256": "f91141d78668908525d484a4900dc69af1a163c4c5e07f5a5fbd0c43eae4451c",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "configs/references/boptest_scenarios.json",
+      "bytes": 1018,
+      "sha256": "5b817f1052e11ba04706ce093a3dd6428d6204267938c2cf8676342ed57b81c6",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "configs/references/c27_study.json",
+      "bytes": 830,
+      "sha256": "1e7753312faa473576635a9cd6e822b1f9d5ad554c613550f2a67e37f119c877",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "configs/references/c2_reduced_assumptions.json",
+      "bytes": 1733,
+      "sha256": "de81bc5fe282ff6f91c95a167d4db797cce66f0deeb4806bc6a0db3cfc1ffc61",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "configs/references/c2_reference_inventory.json",
+      "bytes": 12827,
+      "sha256": "3f5223dde7ebd896dd4e5f0bdd92b02a653e15384184a39f51da1a46d3845c45",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "configs/references/c2_signal_compatibility.json",
+      "bytes": 6234,
+      "sha256": "cc12e367a94ab9cedf3bf49d7f2ccc976f4bd386f32efba2fe861571a7105680",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "data/processed/README.md",
+      "bytes": 196,
+      "sha256": "cfc2eb0a7b40e5beaa150df4d6a0fe5bf3c00ca83978b56efff6578fbb1ad372",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "data/raw/README.md",
+      "bytes": 194,
+      "sha256": "59c33797cb7ef914e8cc41968fc5240db1694f0349113cbfe39ae1d320cda990",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/BOPTEST_BASELINE.md",
+      "bytes": 13992,
+      "sha256": "e0bb831e8b07a4594f9eb50b4069cda1212e44c79cd20b63033c1a59d64e7bf1",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/BOPTEST_REFERENCE.md",
+      "bytes": 24758,
+      "sha256": "b853fdffbf44240ec884455a819a471cb6b47f62e2b0d419dd0977df5164c0cc",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/BOPTEST_SIMULINK_C1.md",
+      "bytes": 13205,
+      "sha256": "8a62de4a00f107cea936adcf3af2dede10e8d330ddec99e4fba2fa0cbc62b1ee",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/BOPTEST_SIMULINK_C2.md",
+      "bytes": 14363,
+      "sha256": "dba91223089ed56ce7897e91a3eb2daf67246327f5e5e43ff8734ed8bc25135e",
+      "action": "github_preserved",
+      "group": "C1_C2",
+      "part": ""
+    },
+    {
+      "path": "docs/BOPTEST_SIMULINK_CONTRACT.md",
+      "bytes": 9121,
+      "sha256": "33eea9adb836d1ab52e03539ca40f11a43352acb19de3b755dce710fcad3ebbe",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C25C_FIRST_ACTUAL_RESULTS.md",
+      "bytes": 5625,
+      "sha256": "900d249c4b14fb5c67d465e51e50be9e58141d071051af545a1aff23ed619b01",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C25C_REPLAY_ANALYSIS.md",
+      "bytes": 9042,
+      "sha256": "ff7005bd18e13a81b594021a4c7155353df54e6bd0d99c08f665128ed292130a",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C25_REPLAY_DIAGNOSTICS.md",
+      "bytes": 7435,
+      "sha256": "791c793b7e0aec1cc501c941bf5f54f61cd668583c9265390dcc092af4615ec9",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C26C_ENGINEERING_REPORT.md",
+      "bytes": 13887,
+      "sha256": "49c60e914e8bf7901a5ddd7b5f78240ff591a1ca1e34a3c2d63a25351d442d55",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C26_ARTIFACTS.json",
+      "bytes": 3886,
+      "sha256": "cd87f4abd62b2e4345021e2490b9a8a7cdcb1da682a7fabbb29600aa491220a5",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C26_PREREQUISITES.md",
+      "bytes": 13876,
+      "sha256": "8e0096479b907eac5b155ca42b5875df28515b1d989751c1690f4342c1cf933f",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C26_SOLAR_BENCHMARK.md",
+      "bytes": 11773,
+      "sha256": "48f69b8ba6024cd1aa1744238851332e40b65c9e628f375070c84083d2a532b8",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C27_DELIVERY.json",
+      "bytes": 708,
+      "sha256": "be76c49901b23f7c518629fb7ba3dc713766debae1a5a7aec7d924e9bfc01ec2",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C27_EOF_CLEANUP_FIX.md",
+      "bytes": 6111,
+      "sha256": "c1a1519606c0ecf98ea286d63b2122af10e8df5e18ee9e6b0fcc7dc1a5c27275",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C27_EOF_CLEANUP_FIX_DELIVERY.json",
+      "bytes": 771,
+      "sha256": "714def717468e58617f92f34f2f24707d6d9e9eb66bceafb294c85b906b549df",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C27_EVENT_EXPORT_FIX.md",
+      "bytes": 8613,
+      "sha256": "6890ebd21c0b44e3e8c706b7f1164fa202f1a1a61eeca97512d99448c185c1e9",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C27_EVENT_EXPORT_FIX_DELIVERY.json",
+      "bytes": 763,
+      "sha256": "f1fb25859f6fc2f63bfac7b4ebc1fbde866485bcda40cec0b880e587166eb21c",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C27_NUMERICAL_VERIFICATION_REPORT.md",
+      "bytes": 12674,
+      "sha256": "443793f018b5be7468abe89b2ec39cf76238a84ee84405a88e041e445769b210",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C27_R2024A_READER_FIX.md",
+      "bytes": 8281,
+      "sha256": "97e7c47c3eff6a50df86620380fc9d1e0382c5571e341c86e6c3f78fc0a66715",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C27_R2024A_READER_FIX_DELIVERY.json",
+      "bytes": 783,
+      "sha256": "c71cb73c81ff144f845654bd3d60fd25d07641d649e7f251d5fec110591b4ed2",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C27_SHA256_COMPATIBILITY_FIX.md",
+      "bytes": 1765,
+      "sha256": "37421a3ce669b07d428836bd9b2394f6e669fc942f7e306596cb85d7c70169d2",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C27_SHA256_FIX_DELIVERY.json",
+      "bytes": 738,
+      "sha256": "b094b7c1f9bdd5308d5ff8366caac4302ef1fccd92e0b501266262d7813e95a7",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C28_ENGINEERING_REPORT.md",
+      "bytes": 4620,
+      "sha256": "2e6c411354a46b8795c0d904b9b05efaca8b82efd0ca5e50790a7ba7b6065ff2",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/C28_REFERENCE_DELIVERY.json",
+      "bytes": 757,
+      "sha256": "7578bebb586653efeb5d6f58e54c121c98b38602c0fa1d26de162d3941820ce7",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/C28_REFERENCE_VALIDATION.md",
+      "bytes": 11554,
+      "sha256": "105afc8696cf6d6682b2a2d96a6bf6bdf1d7aec83ca48481f4199f843a89aac3",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/C28_STANDALONE_DELIVERY.json",
+      "bytes": 954,
+      "sha256": "a388020ea9a9c553fa1d385f5fdf65a82e46f57fa1ebac95846bc253edeed310",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/C2_PHYSICS_GAPS.md",
+      "bytes": 4673,
+      "sha256": "fcde8beaff8d9e801e1f6723d52fcfae704dd318c21adfdb65dcce299954e37d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C2_REFERENCE_REPLAY.md",
+      "bytes": 8768,
+      "sha256": "36fdd8bb530bf195c1e310fa7fe0967d3521e4167abb72d1e2a19170b5c7f30b",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C2_SIGNAL_COMPATIBILITY.md",
+      "bytes": 3465,
+      "sha256": "8c330722e822ed01d4f8b75583e30f12a3d119fbb7aa58c63facef5573009180",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C2_STEP_DEBUGGING.md",
+      "bytes": 7254,
+      "sha256": "6e345ea9fbe43b470e4562d2e0b46e9be47f0f1df1f1d9d39f2f6022bbf7cee1",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C34_INTEGRATION.md",
+      "bytes": 10618,
+      "sha256": "131c3c39a2cc1501740fe2ede3764d76dc2e208bdddca983b680a642ec9a667c",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "docs/C34_INTEGRATION_DELIVERY.json",
+      "bytes": 1232,
+      "sha256": "4cdb6ae33ae25807319c840ee51f95ac617aabbb057be5b59fdf23afeab40dee",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "docs/C35_BASELINE_REVIEW.md",
+      "bytes": 2151,
+      "sha256": "5cc22a03b2c3bed05389827d7ee67cc5d43a44ab96e441bc0509743f48570103",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "docs/C35_INVESTIGATION.md",
+      "bytes": 8618,
+      "sha256": "3149fceb632431d6102f111e20e28145b59e371f983b9b205992bffb376276a4",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "docs/C37_RESIDENTIAL_HEATING.md",
+      "bytes": 7741,
+      "sha256": "d5c5a742ec2e9bc64d3f07b22bc06f94e8e5d5eda48f6448c8ff9709adb95413",
+      "action": "archive",
+      "group": "C37",
+      "part": "THERMA_HISTORY_C37_001.zip"
+    },
+    {
+      "path": "docs/C38_THERMOSTAT_COMPARISON.md",
+      "bytes": 5205,
+      "sha256": "a33a9d74344113e02793ee81e288e1d5271eae0709f0b9a223f08033c9dcd9ca",
+      "action": "archive",
+      "group": "C38",
+      "part": "THERMA_HISTORY_C38_001.zip"
+    },
+    {
+      "path": "docs/C39_BOPTEST_COMPARISON.md",
+      "bytes": 5709,
+      "sha256": "2bb67afa25a1e1d97794455a1b65d831a21cc4c8bd3bd50883c1e160a65974c8",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "docs/C3_COMPONENTS.md",
+      "bytes": 12307,
+      "sha256": "f4db9ca982547cd02bd39930092e8b011f34dbfe8fe2fca6d312a4dcd5f7ca6e",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C3_COMPONENT_DELIVERY.json",
+      "bytes": 1098,
+      "sha256": "2f18ebc290dc35bb33d7b17f155b4b881aaa08d624f2350d0196cff159ff8401",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C3_HYDRONIC_ARCHITECTURE_PLAN.md",
+      "bytes": 8100,
+      "sha256": "5db69bfebfd830f09f5a3931e670fcb63b217cd4efa8e0c79d09e1e0b504e08f",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C3_READINESS.md",
+      "bytes": 3857,
+      "sha256": "5c4d22b3fc2ca90a7a7f9ddf8737e671fdee9f0f8d86c7357dc0a64e08a0dc5a",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/C40_HEATING_SYSTEM.md",
+      "bytes": 4573,
+      "sha256": "a7093e9697ec8592d5dd20097ad331f50e4845f2f1d8bc44c4ced34edf12cb2c",
+      "action": "archive",
+      "group": "C40",
+      "part": "THERMA_HISTORY_C40_001.zip"
+    },
+    {
+      "path": "docs/C42B_BUILDING_SPECIFICATIONS.md",
+      "bytes": 8105,
+      "sha256": "5bedaff4bd233b3ae63015747edc4d31999a91c2eaf5ddc9c38e14b1338be868",
+      "action": "github_preserved",
+      "group": "C42B",
+      "part": ""
+    },
+    {
+      "path": "docs/C42B_FLEXLAB_DATASET_AUDIT.md",
+      "bytes": 9680,
+      "sha256": "7950f2d3a0ac5726a91c137978a042aaa5e3f41c40c5f7e382f2ae6227010da5",
+      "action": "github_preserved",
+      "group": "C42B",
+      "part": ""
+    },
+    {
+      "path": "docs/C42B_VALIDATION_FEASIBILITY.md",
+      "bytes": 5137,
+      "sha256": "8d273e2428bf1592aaee79a7d01be379281bf3a7c94a91a4050f6b26cf5de7f7",
+      "action": "github_preserved",
+      "group": "C42B",
+      "part": ""
+    },
+    {
+      "path": "docs/DEVELOPMENT.md",
+      "bytes": 2330,
+      "sha256": "b3db8fadde44fea6bdc179457951c9fde3f099d0b1647a774c06f669eee0babe",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/FIRST_PARTIAL_COMPARISON.md",
+      "bytes": 8229,
+      "sha256": "295f06245734641d0f7b52248db852ec72105d70507aad8805c08c5ed172898a",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/MATLAB_DIAGNOSTICS.md",
+      "bytes": 12091,
+      "sha256": "e2a4dbd4b619e3093af65a3caf11609c3b6eac139bbd7eefdd2483a9ba5e7c22",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/MIGRATION_PLAN.md",
+      "bytes": 8608,
+      "sha256": "5a4a287f7f8b698f658c97e7f8c742de448811ae530d971b241cb5a0834808e6",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/PROGRESS.md",
+      "bytes": 95708,
+      "sha256": "983e904c89fab4b9512a780c266f14c133b6605da9b6a128456f4fb722ec93bd",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/REFERENCE_COMPARISON.md",
+      "bytes": 5996,
+      "sha256": "db25b8a0e0a271f867e09e1094556932c154019f767a1354f8e3d61aae30e1d2",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/REFERENCE_DATA_PLAN.md",
+      "bytes": 8100,
+      "sha256": "72f3029842c02afa1d3d7696a41d266c3ecc6c14e182a16dad17b1b82b4280dc",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "bytes": 9216,
+      "sha256": "0ba7d854e2f4547ca5d22002c907305b141ff93e427e56713ed2fae177e75ccb",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/ROOM_DATA_CHECKLIST.md",
+      "bytes": 3000,
+      "sha256": "302e07c91300e1b329439cb5125722875af2f804c2f4f5dd59a3955fa3e47447",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/ROOM_REFERENCE_MODEL.md",
+      "bytes": 8250,
+      "sha256": "2c1ff471db2b720ca35355550e8d9532f95d968e6d029739e05a408d11ef6389",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/SIMULINK_INVENTORY.md",
+      "bytes": 14292,
+      "sha256": "462c715801c463895bd262c96ca1240815e60296f70ad7353c82011a96956e3c",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/SPRINT_AUDIT.md",
+      "bytes": 3638,
+      "sha256": "e69c5fe4dc9873c3dd1b7797077faf2fc272e613a73c647e9741f3ed15793f37",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/VERIFICATION_EVIDENCE.md",
+      "bytes": 4693,
+      "sha256": "c8c5e6c050b7319b31234553dc67f82a0483685ccedf1b67271abb8b5240dcf8",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c26c/controlled_comparison.pdf",
+      "bytes": 37946,
+      "sha256": "8308884f67f6071003438870f39245b2f6aa70c248545e6945b1a793d3747caf",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c26c/controlled_comparison.png",
+      "bytes": 363406,
+      "sha256": "3869f042324cc81a06e8441313bd67ff5f0e76cec6e0a081429c7f7fdb90becd",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c26c/daily_errors.pdf",
+      "bytes": 16955,
+      "sha256": "e26953735292d5f1bbce485ad6c0b563dd19b65a014701beaf7a44bf776c756f",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c26c/daily_errors.png",
+      "bytes": 158029,
+      "sha256": "1580195bcf3ce8538824c9e775df7151c8f23021a3c7d26778076009ee710a9d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c26c/energy_closure.pdf",
+      "bytes": 49556,
+      "sha256": "5d8535df7f572e935b776d9e9763ebadc9688db1fc7d24c13147121b7436bae7",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c26c/energy_closure.png",
+      "bytes": 325216,
+      "sha256": "bccdcc1bb83dc3006bf413c66783f1168b00c07e3ba8ebf366bfb447193a0e1d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c26c/energy_inputs.pdf",
+      "bytes": 55158,
+      "sha256": "a2e8349e45cdb7c2d3bdd7b30703e8c6633969427a756a477283f4f08eb35411",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c26c/energy_inputs.png",
+      "bytes": 507587,
+      "sha256": "b8953453c186a49fc7132c51f6e3280510712ffb1d994077d25f8dca6e7928f6",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c26c/temperature_errors.pdf",
+      "bytes": 28455,
+      "sha256": "51e398c716ff40f19c21fbac364431022395f9906a27bdd758f7eb845d5e7668",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c26c/temperature_errors.png",
+      "bytes": 238207,
+      "sha256": "077d4664377cf2d69adb0bce4926cba82cb05250f125f7fa87bf0a0a7c0a07de",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c28/daily_errors.pdf",
+      "bytes": 15914,
+      "sha256": "0d42924a1253cf6a65c6ea8c83b56c61b857e218b077c16c06ac7d4bc958f127",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c28/daily_errors.png",
+      "bytes": 142396,
+      "sha256": "c7f182863d122d3ac85716fff1a31d01cb39817c480b1ab060928bdbda6ffebb",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c28/temperature_comparison.pdf",
+      "bytes": 41517,
+      "sha256": "530dfbe7561d9aa53620a5f39d46eb7ad3cb6eb8af8f88cd55e95d1d42f72148",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c28/temperature_comparison.png",
+      "bytes": 385578,
+      "sha256": "cadbfa56044cf73fd568553fda543fbe598878093156d22366ac92736847a566",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c28/temperature_errors.pdf",
+      "bytes": 30964,
+      "sha256": "c7dc5cf64bdee10850f67e1063411af4b7c1dc80ae472fcddfb81a8a64bbef11",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c28/temperature_errors.png",
+      "bytes": 230845,
+      "sha256": "fe25fcf8a9b204389ae8dba643c5ad0e3991d8ac1551ccab28e265b64e42826d",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c39/temperature_comparison.png",
+      "bytes": 260683,
+      "sha256": "33e129c4dcae6dabb3cdd247454a563657aded2374d3256bbdde45976fa9b976",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "docs/figures/c39/temperature_error.png",
+      "bytes": 177554,
+      "sha256": "36c326da5a995bfe599d6d8e169c13e4751750d7fbe61f79ee4c49110ec2f8ca",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c26c/SHA256SUMS",
+      "bytes": 1770,
+      "sha256": "ad9f88ec601f41b6de5610871ad07eafb393e12f1b1f7bc6f40762b4773c2a90",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c26c/baseline_diagnostics.json",
+      "bytes": 31018,
+      "sha256": "01ba80353dc11be4fa1fe1e82f9575a1b01dabb61cbcd0dff1eb11dcde8ab770",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c26c/comparison.json",
+      "bytes": 9970,
+      "sha256": "ef52911530484478335fd14cfc2481852542c06063ee51099057a26200f9e782",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c26c/daily_errors.csv",
+      "bytes": 1167,
+      "sha256": "88b446227a42b8729b3bae9ef293dcafc61ed9fd71fc41bea851a6574b255a98",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c26c/input_energy_audit.json",
+      "bytes": 6084,
+      "sha256": "25b7417c8b3cc64522431a9e7570c1df390bb854baccdb49d99267bc45152aae",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c26c/provenance.json",
+      "bytes": 2203,
+      "sha256": "18403ecfb727f0077880e03283623860cf0b578a4409e98b898fa455629e6924",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c26c/solar_diagnostics.json",
+      "bytes": 32179,
+      "sha256": "9fce6478d65d3dc10fd7559d7f69cad279e83a35fd0d4ef30ecdf53c2ef8737d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c28/SHA256SUMS",
+      "bytes": 1227,
+      "sha256": "76f75d618ca6a39084449216449cbac7cdb5fc8d7e94b8d84c3adff6d367c8e3",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c28/daily_metrics.csv",
+      "bytes": 2692,
+      "sha256": "e720bc5113c9098160ccd9b5794b472f1a489aa3f1a9688ffd4cdf75373dcc57",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c28/metrics.csv",
+      "bytes": 249,
+      "sha256": "ec9936cc5c6d40389099632de6c68957cd212f9464aa2f18e08f3880f4ec8e0e",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c28/metrics.json",
+      "bytes": 3089,
+      "sha256": "dec554e2f1afdedfe1a538b2b108ef9210bc12b3204b893266b1b417b5c464e1",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c28/provenance.json",
+      "bytes": 2063,
+      "sha256": "f63842c7e4936c3ae361c03782164b66ebe009588e956669b2c5db92d56de383",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c28/reference_metadata.json",
+      "bytes": 2381,
+      "sha256": "77c0589e5c38fca34a0e1ec915f97fe5d443b454510d25c2b2f45c9632929d2d",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c39/metrics.json",
+      "bytes": 4932,
+      "sha256": "705d898d6e3748299531c57ae8c53532ef12f2efa3ff4404f4ae7e3b3542ba82",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c42b/measured_cooling.png",
+      "bytes": 101972,
+      "sha256": "1773cddb82fcee1416f350a1db231f4df84f9996b1f98e646bb78185be0ec600",
+      "action": "github_preserved",
+      "group": "C42B",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c42b/measured_temperatures.png",
+      "bytes": 100014,
+      "sha256": "2c234f2a19c32fc61f6b27a0b5f23a15c4efcef4d770ce226259e692d37a8c5e",
+      "action": "github_preserved",
+      "group": "C42B",
+      "part": ""
+    },
+    {
+      "path": "docs/results/c42b/source_audit.json",
+      "bytes": 60349,
+      "sha256": "d8113c0cc510b2f7b29cf10f19eef8689bb19c45a19fc43d1d58378f09750351",
+      "action": "github_preserved",
+      "group": "C42B",
+      "part": ""
+    },
+    {
+      "path": "evidence_import/README.md",
+      "bytes": 352,
+      "sha256": "79c0b9026ef870858f23450b22bf05788a41b881bbc03671c22e71e3c2e412fe",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "models/simulink/README.md",
+      "bytes": 190,
+      "sha256": "331d8713f543eb1fbcff34355838a37ebfb0be5bf81e534a690ddbc97a120dc0",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "notebooks/README.md",
+      "bytes": 137,
+      "sha256": "e99fb33f5b62b287b5d803ead641518b2abb90fe60d2d70770590712825e6910",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "outputs/boptest/c39/tp8d96f05a_39cb_4aa6_bf6d_8103d33ea164/comparison.json",
+      "bytes": 2620,
+      "sha256": "1e6333d3143a01d444d989b4b1831afe5526b9227355c06044c5d330edc11602",
+      "action": "archive",
+      "group": "C39",
+      "part": "THERMA_HISTORY_C39_001.zip"
+    },
+    {
+      "path": "outputs/boptest/c39/tp8d96f05a_39cb_4aa6_bf6d_8103d33ea164/temperature_comparison.png",
+      "bytes": 162611,
+      "sha256": "babc0f54cb3cc183189f09e7c7cfb5bc5a5805c2384dba5476d5e8f623b1cfad",
+      "action": "archive",
+      "group": "C39",
+      "part": "THERMA_HISTORY_C39_001.zip"
+    },
+    {
+      "path": "outputs/boptest/c39/tp8d96f05a_39cb_4aa6_bf6d_8103d33ea164/temperature_error.png",
+      "bytes": 106486,
+      "sha256": "88e66a9ff8d845717196a836f87cf06e3bc0216ff86d2fc5df9bbf57f14fd3ec",
+      "action": "archive",
+      "group": "C39",
+      "part": "THERMA_HISTORY_C39_001.zip"
+    },
+    {
+      "path": "outputs/boptest/c39/verified_comparison/heating.csv",
+      "bytes": 3306690,
+      "sha256": "3af327eff7f4bcc795d6640d0ff00b12b5bd1e1ea433a9464e11e98fc711c9d1",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "outputs/boptest/c39/verified_comparison/metrics.json",
+      "bytes": 4932,
+      "sha256": "705d898d6e3748299531c57ae8c53532ef12f2efa3ff4404f4ae7e3b3542ba82",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "outputs/boptest/c39/verified_comparison/temperature.csv",
+      "bytes": 2648095,
+      "sha256": "71642920ae1880cbc2d9d532381ed1794730b7acbf40a9ebb2a3be58c00afebf",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp08f91099_cb08_4279_b6db_3f26e306d10d/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 314500,
+      "sha256": "d5616142c76dbbca71144740148c90280a88743cfe7d4382e914830f0ccfe685",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp08f91099_cb08_4279_b6db_3f26e306d10d/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp08f91099_cb08_4279_b6db_3f26e306d10d/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp168da0c4_13f6_4136_9636_63ff74507582/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 310935,
+      "sha256": "4eaa5c280f721445ca18aeeaf1ed38b998f107c88daf9a4ef46186dd83e56700",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp168da0c4_13f6_4136_9636_63ff74507582/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp168da0c4_13f6_4136_9636_63ff74507582/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp178459cb_90e3_428c_b689_20bdb6d91dfc/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 311054,
+      "sha256": "7f70c6aea110dfd7ea61d0423ca1fae963be7329cc9d1329d381a181e5871eb3",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp178459cb_90e3_428c_b689_20bdb6d91dfc/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp178459cb_90e3_428c_b689_20bdb6d91dfc/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp213c0485_7003_4b41_bff4_338b3c22900c/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 305136,
+      "sha256": "6cbc2b2269cd2ea1761e5c0267a8449f9856c5408da9865e624ffdbb05d85161",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp213c0485_7003_4b41_bff4_338b3c22900c/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp213c0485_7003_4b41_bff4_338b3c22900c/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp21422512_9502_47c1_9443_71c56de1981f/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 309640,
+      "sha256": "7999a829be288cff3885c119675ca53c39904ee138853d4814fffab0097aa7f0",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp21422512_9502_47c1_9443_71c56de1981f/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp21422512_9502_47c1_9443_71c56de1981f/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp3b9626d9_84f7_4cfa_9cbe_56cc95d8a7a4/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 310417,
+      "sha256": "3b83382f1e264b27a1b6633f29766288e436476ebb0a740f9260aa60e7130d63",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp3b9626d9_84f7_4cfa_9cbe_56cc95d8a7a4/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp3b9626d9_84f7_4cfa_9cbe_56cc95d8a7a4/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp3e7125e7_ec12_4653_a3ba_c0ba7dcd145e/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 310453,
+      "sha256": "a0592c3388d2d780be6600a172aa11d4cddb77e6d1c02881d32bfbabd30347ec",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp3e7125e7_ec12_4653_a3ba_c0ba7dcd145e/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp3e7125e7_ec12_4653_a3ba_c0ba7dcd145e/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp4bcc7b18_ec12_4297_8cf6_744e174941c8/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 315087,
+      "sha256": "1f9ce51586d9f1d0173cd5b4b15babce7883e893c6eaf0683b03547d66f154bc",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp4bcc7b18_ec12_4297_8cf6_744e174941c8/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp4bcc7b18_ec12_4297_8cf6_744e174941c8/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp58b87422_d6ea_43c9_86c0_290db8189cdf/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 312735,
+      "sha256": "0559aa97f74892d38d42c8ef430033700c33e1ddccb5f5b70fc82b1c6a7750c1",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp58b87422_d6ea_43c9_86c0_290db8189cdf/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp58b87422_d6ea_43c9_86c0_290db8189cdf/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp7e9af969_610f_4851_94ea_6704c9d786c7/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 311679,
+      "sha256": "1767383d7e5ed5b97b608f5eb93e001cfcd9bdf06e797eff7fa4b1434312c280",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp7e9af969_610f_4851_94ea_6704c9d786c7/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp7e9af969_610f_4851_94ea_6704c9d786c7/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp845aa9d1_d033_47a9_a59f_4d3c75fc79e6/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 310503,
+      "sha256": "e988a5dfb6af7bd057dd7d21a3857e03048e41d16edf2f278bc565ede1d5f019",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp845aa9d1_d033_47a9_a59f_4d3c75fc79e6/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp845aa9d1_d033_47a9_a59f_4d3c75fc79e6/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp89725d27_129d_40d1_bb81_934ebda7b303/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 311957,
+      "sha256": "4c38b5cfc48cacbb328ad2a64e2517839b7792748399160014c4c7d0ff235587",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp89725d27_129d_40d1_bb81_934ebda7b303/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp89725d27_129d_40d1_bb81_934ebda7b303/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp983dac66_fd6f_4fe0_b6b8_e6ad20b5b24b/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 313406,
+      "sha256": "59f259a68807102be0628d6612ff4a150525dc62ba5905640710798af8f0aeb8",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp983dac66_fd6f_4fe0_b6b8_e6ad20b5b24b/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp983dac66_fd6f_4fe0_b6b8_e6ad20b5b24b/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp990bab7f_ff1e_47fc_8e14_6054430e9370/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 311639,
+      "sha256": "177e34dcee47e9a6258ad600fd61e67a4e0be9e86fb48f8f33ba612d1037300a",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp990bab7f_ff1e_47fc_8e14_6054430e9370/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp990bab7f_ff1e_47fc_8e14_6054430e9370/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp99a2dc66_11f7_4867_b5fc_3bbbcd9467fc/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 309838,
+      "sha256": "6543b97348de5ac04223d77bddaff9be21dcaa13baac654f51e28cf5bb4be8f5",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp99a2dc66_11f7_4867_b5fc_3bbbcd9467fc/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp99a2dc66_11f7_4867_b5fc_3bbbcd9467fc/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tpace35efc_0e92_4988_8364_a0082d9ec7c5/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 310956,
+      "sha256": "b856f33451df96384d8d2d6f8af8bcd16a269fb9eb955ce78850e55305321136",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tpace35efc_0e92_4988_8364_a0082d9ec7c5/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tpace35efc_0e92_4988_8364_a0082d9ec7c5/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tpb1ee83d3_1c92_4488_a25d_9fe1142761e4/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 314770,
+      "sha256": "cf611feb34cb23b7a4c0cdf1833c89f8e636dc61de646c391278f360a8356fff",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tpb1ee83d3_1c92_4488_a25d_9fe1142761e4/build.json",
+      "bytes": 216,
+      "sha256": "3467946be40c9f482b18af746791d9ce5b7b101cc72234e3d75bb23fe4c6fbef",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tpb1ee83d3_1c92_4488_a25d_9fe1142761e4/parameters.json",
+      "bytes": 17341,
+      "sha256": "0e121f11724e7840254fad4d0b16ddf2f74611b5ffe385d0e8e7fd836ff9c1be",
+      "action": "archive",
+      "group": "C1_C2",
+      "part": "THERMA_HISTORY_C1_C2_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/study_all.json",
+      "bytes": 4097,
+      "sha256": "eaa968661aef8c74bf833779a40eb689e7f471047f3a626fdc2004700f06e2c8",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/study_capacity.json",
+      "bytes": 1787,
+      "sha256": "711a9c9e62035ae498324372a56a73c654f12d841c5befbe0482349647e84a22",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/study_contract.json",
+      "bytes": 2786,
+      "sha256": "833cfeafc990423391a61832966977789a6ccd9f5b10dbfe10994d5aecd4ab27",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/study_quick.json",
+      "bytes": 592,
+      "sha256": "6047c17242503b519e49704e816ce20e5a33dfa087370501c087cb16c44093bb",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/test_gate.json",
+      "bytes": 286,
+      "sha256": "7fbe70870513b22028dc8739967abeacbee012d5923b11dc8e704b4b8e0dbb3a",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/tp7be314aa_dd47_4079_89b5_6f5dc7a2a607.txt",
+      "bytes": 330,
+      "sha256": "eca7487057e6d28de2b15afd3ec5a2deac895d6af6ce92beabed9b496fffee41",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/case_result.json",
+      "bytes": 5893,
+      "sha256": "44e84538e06b54c9d44f513c8c755937d5378ed07aa04a718718b9efe1ae8334",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/closed_loop_traces.fig",
+      "bytes": 1067128,
+      "sha256": "a01a4bdc42489663c796574eb427e79cdb52af296db8dcbfff535cd738bf5123",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/closed_loop_traces.png",
+      "bytes": 276151,
+      "sha256": "0d7ead3b76298c0f6e4bbe26876ce96ca3823ae23d52616d6e3d07be69b3f4f4",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/completion.json",
+      "bytes": 1632,
+      "sha256": "5898aa26ca1231fd62ffe54576fe1e340660a3ff44dfe8c4ca8d5b5361992894",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/energy_balances.fig",
+      "bytes": 501129,
+      "sha256": "9c74c6608f02974c5389520482e7860c843d2e787d1408437f5323543cb50c27",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/energy_balances.png",
+      "bytes": 281276,
+      "sha256": "aa17c81690afc9bc37f155f4b78d52cc12a4f8ebb77e28a8857098ddf7f3dc02",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/engineering_report.md",
+      "bytes": 1967,
+      "sha256": "8325859a3448e901b5a24611f72d61b7146a3e9c364ebe4589dfd5a54d816e91",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/integration_trajectory.csv",
+      "bytes": 5337777,
+      "sha256": "1ecb94e5e5cf726fea5dd952387d4e6277ec5c790fdf07dbcdba4d8b0ec63fb4",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/trajectory_metadata.json",
+      "bytes": 881,
+      "sha256": "38c1951bb4cf7051efedc20c13f90fbd370f50a8605a9803ccb9d2a95869eb23",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/tp93dcb3d2_f775_4472_9972_b77a70be75d4/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363189,
+      "sha256": "5b89f4a93e00896b30599d7703f5027d1b89b20f5558423892a6c148634b32fc",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/tp93dcb3d2_f775_4472_9972_b77a70be75d4/c35_build.json",
+      "bytes": 6103,
+      "sha256": "6912f79e06681cdd876d941794c03498a66e33cb68819abfa1bc637cdccdfb4b",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/tp93dcb3d2_f775_4472_9972_b77a70be75d4/integration_build.json",
+      "bytes": 4794,
+      "sha256": "169ccfb3bb74c634eb73588fbe4a14171cc0ff928a393f8859d907b8537f267e",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/case_result.json",
+      "bytes": 6004,
+      "sha256": "7d73c2f47a5a6efb9b2025bcfedc90416478c625ce6388a563448ebd1f7f5488",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/closed_loop_traces.fig",
+      "bytes": 3667612,
+      "sha256": "9680f84f1943d87a7ea0dc4e65d0fcf5b85e1d51d31aff80b83f4168ce72d70a",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/closed_loop_traces.png",
+      "bytes": 357447,
+      "sha256": "95dbf2cbf2ce5d9f69f623f4f74524bccaf4f962b2c017c309e25e469e9a0659",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/completion.json",
+      "bytes": 1632,
+      "sha256": "c7f8b0ec2773c3e0c9ef7f7ba7addb9004e88764e300e02112ad1e167aca25c3",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/energy_balances.fig",
+      "bytes": 1720025,
+      "sha256": "8654341b4dc58aa9f91f0b907798ae36c24f1e5e9a5a26f7c64ade22c684624f",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/energy_balances.png",
+      "bytes": 285374,
+      "sha256": "5a90568fdca978b122869199c860d7dc2004c9aa5d4f5fe26cdc4a7b2bdbcd22",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/engineering_report.md",
+      "bytes": 1965,
+      "sha256": "1b2e8e97fb7d928c0a7d63dc0eb8c9434e1251708367c6c79594ddffc9e86312",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/integration_trajectory.csv",
+      "bytes": 15651153,
+      "sha256": "f2c566459aaf1627c5a9b5c4fa72edd0d2fcaed5b659fc0f68dc16a2eb9c168c",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "83f8fbbffec947b3da72ccf9c1310c71db2a235b3cb2bbeb2f5705c588389421",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/tp0ecb8a9b_c1bb_4a4f_b923_1e5fb2a69632/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363211,
+      "sha256": "d75a10763888489e5ff62b08860f7760187050817d30e3dc59bc78e47f89e6ca",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/tp0ecb8a9b_c1bb_4a4f_b923_1e5fb2a69632/c35_build.json",
+      "bytes": 6103,
+      "sha256": "596ac2f4fa5c6510a76f794fe983feb5aa59a03eea913b2a387bd5eccecdee21",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/tp0ecb8a9b_c1bb_4a4f_b923_1e5fb2a69632/integration_build.json",
+      "bytes": 4794,
+      "sha256": "cc54a3e3f52017e981b4a3d3c7521aca318c68ca2dada0ccb116c50a4440a1c9",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/case_result.json",
+      "bytes": 5868,
+      "sha256": "fdaf7a92b0dcf723401a68656a7b007b49ce6dcbeab9180955f091a22d0893cf",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/closed_loop_traces.fig",
+      "bytes": 1068773,
+      "sha256": "9c3456689906eb8e340255e7f46068db44778e138f8a484db263bf42c041372c",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/closed_loop_traces.png",
+      "bytes": 268858,
+      "sha256": "91a5de1d1e680620ee48d7c136274b2c224e9a68190373a2a40dcce92fcdfdb5",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/completion.json",
+      "bytes": 1630,
+      "sha256": "5bfde83894650fc1689d15a6b70f74fda18f852f9c29ac2896b920b17e133e1f",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/energy_balances.fig",
+      "bytes": 501310,
+      "sha256": "83edfab10e8bcbd00420ad9220f44d7047f5904f63f10f64e04ca7a5bfaf12e8",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/energy_balances.png",
+      "bytes": 284865,
+      "sha256": "71e64f71db9832c3d38135102535befa04fe87282129dae122ba0c2589b5be0f",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/engineering_report.md",
+      "bytes": 1965,
+      "sha256": "a9bb303e57e0ba9702cf19bdac557f11076d2d259f1b3e1de06ba2bcb209116e",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/integration_trajectory.csv",
+      "bytes": 5359180,
+      "sha256": "deef313abb5ecf14078e36684137b551061245cd2074cd1256ff760df223f557",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/trajectory_metadata.json",
+      "bytes": 881,
+      "sha256": "8f473a42c8891971ecc9d85e13999204af40faa9ca54bd0d2a9a634b09a4e518",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/tp60cc904a_d2a5_486f_a5d9_d764604da7ee/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362939,
+      "sha256": "1a7248add2f177822d066b1e1415d8021e49aae36d303515402f9bfa3d2c332e",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/tp60cc904a_d2a5_486f_a5d9_d764604da7ee/c35_build.json",
+      "bytes": 6099,
+      "sha256": "b7deeb6a7e5dc8062256eae289cda9560dcbcfb938a841ae4736f078a098c545",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/tp60cc904a_d2a5_486f_a5d9_d764604da7ee/integration_build.json",
+      "bytes": 4794,
+      "sha256": "9952f4ee1dbfd3c9fed831b163e839b6090f092e5ee7dbfad95979bc5b7ea094",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/case_result.json",
+      "bytes": 5857,
+      "sha256": "1f3bb20c4052dd54a941beddfe1bb0b519a3e9983dbb5ea2e4e3325979d4f59d",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/closed_loop_traces.fig",
+      "bytes": 1053137,
+      "sha256": "48ad9e06a4dde1e873ea80e5f2be5a37491b9b15033a8073fe5f2a2e2e7af630",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/closed_loop_traces.png",
+      "bytes": 264793,
+      "sha256": "b7040d78b5a30122fa4a95b89777965561fdb46817288d554ea775737b03953d",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/completion.json",
+      "bytes": 1617,
+      "sha256": "fdb246065fb58d84b148c97ccf38b46a8e99eb7b9d359081e9bb87209005f25f",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/energy_balances.fig",
+      "bytes": 508488,
+      "sha256": "ab50c881d8582e9b12d38d813b97500195b6c4d4dc50118f71db2528578f75fb",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/energy_balances.png",
+      "bytes": 279378,
+      "sha256": "c563b5d1a374a0e7de1e7034ff7acc10a4b23afb1302ea19061406b8f38a9887",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/engineering_report.md",
+      "bytes": 1968,
+      "sha256": "0d4ae044a35685d6594fb81061b06ffe73be26a91de8abf49b75e354baf99499",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/integration_trajectory.csv",
+      "bytes": 5398505,
+      "sha256": "86956309180536fcc4687799fd5fa51c940c2100a2f8b5021fc998bdeb1afe33",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/trajectory_metadata.json",
+      "bytes": 881,
+      "sha256": "f9089b7a6d27ce72db930e42da6ca758234e67fb71cb91c9465438f2b58931c9",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/tpcdaa4375_456b_46e5_8089_db924fbebd9d/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363084,
+      "sha256": "36db1874f564f1a63b2b99ae8c3927764059758835e04cc83d1265ab0b70aa43",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/tpcdaa4375_456b_46e5_8089_db924fbebd9d/c35_build.json",
+      "bytes": 6090,
+      "sha256": "469c93274777f043f3212f944599acc1bdc32f99f3942307a81dac9886becf89",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/tpcdaa4375_456b_46e5_8089_db924fbebd9d/integration_build.json",
+      "bytes": 4794,
+      "sha256": "e1f9ebdde4e8c1e418b5707132755d3c540e33803605aad8584cf0452bd5afb7",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/case_result.json",
+      "bytes": 5862,
+      "sha256": "6b884b16ed52937607873a35b81a02dfdcd72ad2feb0eda1e6334e4ced6822ec",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/closed_loop_traces.fig",
+      "bytes": 2519244,
+      "sha256": "74027f5533c731d08a08f3803c89f5881c5b39b09acfdf1492a944e3cb68eb58",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/closed_loop_traces.png",
+      "bytes": 267161,
+      "sha256": "aa2efb7c8292e017be8a7bbb1340d2a00266da177b0d640330af5b80f28f8c80",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/completion.json",
+      "bytes": 1617,
+      "sha256": "d171fc8cab1e5d8435348adea2496c939e3ecad32ebedb088012221cd7c5242d",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/energy_balances.fig",
+      "bytes": 1210000,
+      "sha256": "009ea761fddcd11dc256bdec4b19dae61e34f9b2802fd673ee3a6194f0129c1f",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/energy_balances.png",
+      "bytes": 254450,
+      "sha256": "b5d328762d070f7a873320c1575efc093335fca9584f6c04640440f41091659c",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/engineering_report.md",
+      "bytes": 1969,
+      "sha256": "d4cfe6d2db4ded359d6d9450189b92fd8239de2cd9a612617adc3e8534bd4840",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/integration_trajectory.csv",
+      "bytes": 13760648,
+      "sha256": "0bb9892f29eff0e0800c60a404b526a421bd2d6b47314837d3e619015035a7d0",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "c2885a829e70c85cffe9c5e0afb595088a07c1f5afe157fd3f989fc960e9bbea",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/tp4acbb416_7907_4c59_9a00_a3e11775c2f9/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362983,
+      "sha256": "d87a455d00a9e76726583a233bb9408375e2ba98a9cedbd981fb9970b8539f96",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/tp4acbb416_7907_4c59_9a00_a3e11775c2f9/c35_build.json",
+      "bytes": 6090,
+      "sha256": "42090ff63ecb49357795a74e7794420aef12e0dd065fb8268542d01021f81700",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/tp4acbb416_7907_4c59_9a00_a3e11775c2f9/integration_build.json",
+      "bytes": 4794,
+      "sha256": "ee62d4a55d047ef078b01a65201cf4a2dbf3edbf772aea1b62d08d744efda395",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/case_result.json",
+      "bytes": 5860,
+      "sha256": "1787825dfbc10f5a99c73ae6598d2b0e7f2f3bb1a8b787468705c0f16465163e",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/closed_loop_traces.fig",
+      "bytes": 2130162,
+      "sha256": "5ad73defbc3063f2e191db9f1a2c348f71106a1d11eb576b2c48a71b66cdd210",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/closed_loop_traces.png",
+      "bytes": 268391,
+      "sha256": "fc724e9c6abc6825f0c40c8f6d0999d15f955fa70b26733be0292b3f367ee54d",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/completion.json",
+      "bytes": 1617,
+      "sha256": "ee64dd71bd81fe95263e7c9dabe98ead48f5b7e2c9df6290e430c4df4afab2dd",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_001.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/energy_balances.fig",
+      "bytes": 1007259,
+      "sha256": "530162faac43ba5920a1841c279900bc0dd67ac80a6115693422c413607e3a51",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/energy_balances.png",
+      "bytes": 293620,
+      "sha256": "2fcfa757e6b074bfff1d198974fead166dd763a80d1f086d40c773fee8f53939",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/engineering_report.md",
+      "bytes": 1970,
+      "sha256": "8dbffde99f7dd8c6ab8966fa4c14a7b7e9c3fecc8e9617f9e697ac28ec289980",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/integration_trajectory.csv",
+      "bytes": 10406334,
+      "sha256": "2faae72f84026921f7e478d8eedd668622b3941d588a5bd317fc111e1290e48f",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "4c8367ec54511da50d7eeb3594e0a8e0830f321cf8947ab6b81e3043537ba8b2",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/tp0ee7d611_79a1_4055_9f18_9abc2cf829cf/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362895,
+      "sha256": "2b644606c86af9ff54ac3623acd638430babcfa7bccbafa33647b1553c0577a8",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/tp0ee7d611_79a1_4055_9f18_9abc2cf829cf/c35_build.json",
+      "bytes": 6090,
+      "sha256": "eb71a7c77ecbd611fb3bc99a9e6b160010215bba40ce5f15bec1ccf3ebda19d7",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/tp0ee7d611_79a1_4055_9f18_9abc2cf829cf/integration_build.json",
+      "bytes": 4794,
+      "sha256": "95572ba732786cc3c91f8f0424d1d9f533595ee16dfd912d7533f8de96ad9fc1",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/case_result.json",
+      "bytes": 5839,
+      "sha256": "9db5877a26dfe29d6e06f15cc261eae9cb1516323ce52f7e0b5f685a98f7fe59",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/closed_loop_traces.fig",
+      "bytes": 2124665,
+      "sha256": "1790666f059f6c2d4e9f47f7c67379813c640946ace94a596279c5a6d9f7111b",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/closed_loop_traces.png",
+      "bytes": 263572,
+      "sha256": "cb329dddeb2c75c87a49abcae2b95a6c2029c412ae4330aacf525224b79b1e4f",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/completion.json",
+      "bytes": 1623,
+      "sha256": "3dadf47b1d07e6aaac30f00b59f4b81a2ea2bfa6fe01998a9c7cf03253eb9298",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/energy_balances.fig",
+      "bytes": 1012922,
+      "sha256": "e153038d8a9254ac28d8e5eed3f81f9555407f7d14b0fbbfbc80d9d59db381e3",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/energy_balances.png",
+      "bytes": 287427,
+      "sha256": "4b472df54438832e17db4ab681496f849afb196d0bbe240f1a8ba7b8df89f09e",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/engineering_report.md",
+      "bytes": 1975,
+      "sha256": "912533fda338d6bb8d49316a2f7ca7d086dda11aa95bc01bf1d2e55652aa8d35",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/integration_trajectory.csv",
+      "bytes": 10464788,
+      "sha256": "8ef38e42897daf2b78237fbfdf07a0235f0b720cb2953c4fbda8a36556b1e587",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "0ca83f55877d0fa93048dc1e7336ba0e824a5a7731f8c772dddf6a0083178fd0",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/tp0b893b0c_0c75_4893_907e_af8e79bc5cac/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362988,
+      "sha256": "7eee59a4690f9af3d07c8fe780330d93911047f74bfea5cbcb7e6e6127fd2f07",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/tp0b893b0c_0c75_4893_907e_af8e79bc5cac/c35_build.json",
+      "bytes": 6101,
+      "sha256": "4a5fbce2870c2793b41aca05a4ad2e8a0d0c11a152131df81a35f18a0f2822a7",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/tp0b893b0c_0c75_4893_907e_af8e79bc5cac/integration_build.json",
+      "bytes": 4794,
+      "sha256": "70b2ae88077032893e327d36f7a2cf532a251c6178271dd6a6c3df0819bbcba4",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/case_result.json",
+      "bytes": 5867,
+      "sha256": "85bcca70d2ce74b13565a0a8b4a04baa67c711ac3e6316690e582c562745d431",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/closed_loop_traces.fig",
+      "bytes": 2028809,
+      "sha256": "da4bddef5a5e747295b761ee429ee0f01424e18a56cfb16d6d791c61ad1bb635",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/closed_loop_traces.png",
+      "bytes": 259969,
+      "sha256": "684437b5e1a44c4af397c38c90b2a63030143304516d4e0bb338422d2247aa81",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/completion.json",
+      "bytes": 1622,
+      "sha256": "dfbd22c1d9c2d366df592dc56553331873a896d4859629e341c449daf09dce22",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/energy_balances.fig",
+      "bytes": 991356,
+      "sha256": "85918a1792e48735bd1eec10df66f1b8f1e57ab7d17fb8f814eeda0f014e438a",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/energy_balances.png",
+      "bytes": 272801,
+      "sha256": "44107a5dbbe7f81f5287619a7d8f80979767423688ddc57458b04872ec7d1a5e",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/engineering_report.md",
+      "bytes": 1974,
+      "sha256": "59cf24660f3c0b3b80f350a621da064970a4186e8a293c85a9f81dd74811aac1",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/integration_trajectory.csv",
+      "bytes": 10541048,
+      "sha256": "98d85813525b77723d6dc21d78de763cb79609632d69886197319f7299ca5526",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "f295e271176f43f8b2746bf3336b78364231b537b99046327b75d5da82faa4dd",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/tpc0308257_9d92_4df9_8ddc_b465e2f095ac/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363061,
+      "sha256": "dd7b1de47cc932b05c47149a1f0ab463a91c0b166d7a84d1a964d11e75da38b5",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/tpc0308257_9d92_4df9_8ddc_b465e2f095ac/c35_build.json",
+      "bytes": 6099,
+      "sha256": "803d47c17324eeeae5eae40b943c47afc819ad6cbf860c3673eabb4245a6c616",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/tpc0308257_9d92_4df9_8ddc_b465e2f095ac/integration_build.json",
+      "bytes": 4794,
+      "sha256": "b8fba7607862b602c2952cee226d30b980a4d99d8c4bd830ca7e6ea9ff27f3e1",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/case_result.json",
+      "bytes": 5869,
+      "sha256": "7e0ba95efb446aa53bfd98f1a9d7c1de9dc49894bae38d76796885ddab8f7122",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/closed_loop_traces.fig",
+      "bytes": 2125981,
+      "sha256": "f4f0be9b325ff0a64470a0b21213ea4ba50d94cad264435085342c6d8b645892",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/closed_loop_traces.png",
+      "bytes": 271288,
+      "sha256": "ce6b0018d9b2deeb5a8b2f7812a8d1a70c06b388ad8a2a03b0bbafe23131d2ef",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/completion.json",
+      "bytes": 1623,
+      "sha256": "117474531d9201440e08813906ad51315537907eeeba3b5fc77d69d831a13d1e",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/energy_balances.fig",
+      "bytes": 1004104,
+      "sha256": "82aa7c2eead93321cabc0174f8718009e21483c4878b97231264d76bf3771279",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/energy_balances.png",
+      "bytes": 283000,
+      "sha256": "c0f2fecaa52a9d08e65f03c6e339fab3cec172fd4d46b7bb22e578b497d64036",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/engineering_report.md",
+      "bytes": 1972,
+      "sha256": "ec2dcef7fb977ad7a12053368d676ee1e1a5ae733b3a850d2cc57c8921a5fe15",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/integration_trajectory.csv",
+      "bytes": 10371367,
+      "sha256": "fc2d7e2f04ed18ef6a57f01370dcd2d3b7e2ca3198f23ef332a7fc209c4f0339",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "2ef46163db66bb969b4cc27b29d7bd41be07d1ba373146eb4979bb6611f38729",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/tp084c0af0_e4c0_40f7_a60d_e1436c2fad22/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363304,
+      "sha256": "c62173bed7bf797fab1fe30642e88563f2f901bac26269612bdc565e36e9cb16",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/tp084c0af0_e4c0_40f7_a60d_e1436c2fad22/c35_build.json",
+      "bytes": 6101,
+      "sha256": "02ba0eb6b158c91fc2f50840bd71ace0d38b63c14911043cffe252cc71700619",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/tp084c0af0_e4c0_40f7_a60d_e1436c2fad22/integration_build.json",
+      "bytes": 4794,
+      "sha256": "0839af851e24b3def587679f3dec69fadaba56e1b2b3ea632ad1fa0e4b9ee807",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/case_result.json",
+      "bytes": 5828,
+      "sha256": "7e6d22454de0577cd99100421f6ccbf0437aa3d78925622d61d30c43539828ef",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/closed_loop_traces.fig",
+      "bytes": 2149340,
+      "sha256": "31aed00528a39df622cac80df781ce0b62c744649a7d1a28f430277dd2df1c73",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/closed_loop_traces.png",
+      "bytes": 267226,
+      "sha256": "6d5233d797eef854ed992b43b3935604d3ac0dd50d77d54fd432e46f2c0a45ac",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/completion.json",
+      "bytes": 1615,
+      "sha256": "faf0209653c1aba21d2dcac9e18e147598e81ced882b2a9365c1fe7447e9417e",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/energy_balances.fig",
+      "bytes": 1031912,
+      "sha256": "63b63c78a96886e7f341d99dac5f3c01cca0b036b4cfeaa6f866b419e5f9076d",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/energy_balances.png",
+      "bytes": 260070,
+      "sha256": "3e8444b00819e2a3748c00ccdd1f8aa311a98d57c0bb7b6000eeafa2512e4ea4",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/engineering_report.md",
+      "bytes": 2338,
+      "sha256": "aea26d98a397b8f2b230f28a775de23d0b396d3f3af69d472fac2821cb4f2263",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_002.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/integration_trajectory.csv",
+      "bytes": 10905903,
+      "sha256": "3d582cd6769345368dd0c8b940bbc7519d8f17880537adccf42a89f69764eeba",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "4b44e75c2871eea4f467775a42480f93cfcf238080d23c056348677c7d156925",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/tpeb182ed0_3f11_4bc5_8b50_a796c77b4854/THERMA_C34_ClosedLoop.slx",
+      "bytes": 369178,
+      "sha256": "4a830e2e7e43b0804ceb6911dd550a5bb8e338a0d915d888def7bd56c15f7abd",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/tpeb182ed0_3f11_4bc5_8b50_a796c77b4854/c35_build.json",
+      "bytes": 6091,
+      "sha256": "331f2585bcebdb9fc5945f269ae4451c47329dcf4ed9bb27bfab0bd4f2daddfc",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/tpeb182ed0_3f11_4bc5_8b50_a796c77b4854/integration_build.json",
+      "bytes": 4801,
+      "sha256": "1d865541b360b85b988c27e1f2c9c1ccab25aa2af7dda3829b63bb74dc61b0b9",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/case_result.json",
+      "bytes": 6020,
+      "sha256": "dcf4a73020d2bb79ad1da5dd95e2f383b8944cb64e0506cc0f44072642ca3281",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/closed_loop_traces.fig",
+      "bytes": 11960136,
+      "sha256": "82652c1c08a82ef60e3bc8279496c4f1b83ea77ccd607ca009c10df850111c32",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/closed_loop_traces.png",
+      "bytes": 355704,
+      "sha256": "08a9bc2a7728ddfc979274d2da1e649feea7e7bc31bb2824b41fcc334220b284",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/completion.json",
+      "bytes": 1640,
+      "sha256": "fc4c498ac967e3dbe72814d16a95069a008e0593a4da27ebfcfc81f248c6cf63",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/energy_balances.fig",
+      "bytes": 5622410,
+      "sha256": "a8c82b6bda8e13755391bb972537cb58c73012f7aff44741c1cf64c0efbf2314",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/energy_balances.png",
+      "bytes": 262832,
+      "sha256": "492b21c729fb24e0becca22f27328ea07b260d42e69f50d4eea90ad770c453b1",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/engineering_report.md",
+      "bytes": 1974,
+      "sha256": "ff2cd8bbc0bc378938e00fba3e509cc444825d2612ffb243fc5fd6f361c3d167",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_003.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/integration_trajectory.csv",
+      "bytes": 55206299,
+      "sha256": "ce2154df7621f49c7c966cc7971a185f5d466956c73867c0fd52c37b6c321701",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "32ceaa0f1af15ed61f7f721078d08c8255f69640f4e53b93e4984f9eec312af6",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/tpf0c9e13d_9b69_457e_bb5b_eb0f79a3b52c/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363162,
+      "sha256": "e39987157f2f1d61cbc6a6f3a87b36f4ff69b0d2e9f0e110e10d481020c62af2",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/tpf0c9e13d_9b69_457e_bb5b_eb0f79a3b52c/c35_build.json",
+      "bytes": 6119,
+      "sha256": "499f3e1f71cccc92a66602f40af4e5a9d75b993bd6178b7be6e573b1a692ca1c",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/tpf0c9e13d_9b69_457e_bb5b_eb0f79a3b52c/integration_build.json",
+      "bytes": 4793,
+      "sha256": "ce4c418bdcb1e7c3044e913e2a146410e09167da63a45db8e8a7692bc6f49cf8",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/case_result.json",
+      "bytes": 6018,
+      "sha256": "3eb33fe97b4aa5b336d4f695aa07d267c58faa4cf7243bec1a6cf51f2d8bec3b",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/closed_loop_traces.fig",
+      "bytes": 6748467,
+      "sha256": "d626b0d3652501268a17943f8a5d2593eb7331a947d34bfa59f95bf0b30cb450",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/closed_loop_traces.png",
+      "bytes": 357459,
+      "sha256": "1894be361aafb5b20905d01fb4e9c48282a6c1042688536e3f3ba384bb9e03e2",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/completion.json",
+      "bytes": 1640,
+      "sha256": "84d43785ba79ef2e948238846a734b2959ef7aab14e4ef27e0b10d333c0be34c",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/energy_balances.fig",
+      "bytes": 3156639,
+      "sha256": "3e2e614ce67c9c0e3e7829b54d52fea54c67aec5a8e1a37c9e13f999c1971978",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/energy_balances.png",
+      "bytes": 279078,
+      "sha256": "18ec9d1f17ddd23d255456f2df44333cde1e01ecdd26778dba372a48d7b50ac7",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/engineering_report.md",
+      "bytes": 1971,
+      "sha256": "8284038799d397fe14b412856e89221cdf722d8faf185548f45aa0e562aa7bc8",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_004.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/integration_trajectory.csv",
+      "bytes": 31946344,
+      "sha256": "14e391b9a226e0ce38597cd069ae643d2e966fdcd68841b37a8ef6759cc9606c",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "2b48b66bd0ebc7302269d0885b9708ff27da7bbc37d5cfaa9d5253de0d1ff65e",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/tpbe8bc106_b3fd_463a_b06d_a3c7458e658b/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362753,
+      "sha256": "81ecc0376a737149421880b7fa19dda84fb836f42d0294fb9932f52eddf259bc",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/tpbe8bc106_b3fd_463a_b06d_a3c7458e658b/c35_build.json",
+      "bytes": 6119,
+      "sha256": "55e77671d1253a91c4d1aa6926a025afbbbee2cee9c1399aa4136ed242e5acb0",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/tpbe8bc106_b3fd_463a_b06d_a3c7458e658b/integration_build.json",
+      "bytes": 4793,
+      "sha256": "e004e62fa0f89c9211c6b8b3adfe28519adee08115915fbdb6abef1d031733e9",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/case_result.json",
+      "bytes": 5883,
+      "sha256": "7b5d317d5b4b2810b0ff3c4a628eb596741ac9f238b378b69fcf0ab8c1c482ad",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/closed_loop_traces.fig",
+      "bytes": 9798627,
+      "sha256": "8fa85338d777ca1708b6093787b3093deabced7cbf403a0fa06b2b8bc2da6cce",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/closed_loop_traces.png",
+      "bytes": 266187,
+      "sha256": "50902d22780bed649982157e37e414469f4bf1905245432b51a0f83836960f0f",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/completion.json",
+      "bytes": 1634,
+      "sha256": "09c489bae01dd775c1ace3a390cb05f89279401f2425e07aab0a8d2bbe8a4c0a",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/energy_balances.fig",
+      "bytes": 4710459,
+      "sha256": "f4f1ee59315a8b28926ca946d7b7e1ad27cad61643869f54bf1636fe2e0c87c1",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/energy_balances.png",
+      "bytes": 245284,
+      "sha256": "464556218de4d8bdc63f28ae12fa0a1ce4846dfb4693165fd89a4896204abda9",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/engineering_report.md",
+      "bytes": 1973,
+      "sha256": "f00695e0feadf6d5635b620a8df073f346cd0a210e769b60e3d98a6646646bdb",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_005.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/integration_trajectory.csv",
+      "bytes": 50832341,
+      "sha256": "5142ce122b127218cd0cda6fee5e2249f6be83cd237451f6d1814ae68f2d7fcf",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "1e5809a78b647a78665c0ba9cd2c8f7e9a83cb282ae2a822b3b207030e12cbea",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/tpf7f49efe_8e07_4a4e_b833_da515e9510cb/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363101,
+      "sha256": "358fab1c68c7c9c171255f1345596b4fc45b624f780e83362af496ca170a0b22",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/tpf7f49efe_8e07_4a4e_b833_da515e9510cb/c35_build.json",
+      "bytes": 6112,
+      "sha256": "5742454d35e8ebd5c971d99088f594338fb523026290a99cea147c21f2760794",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/tpf7f49efe_8e07_4a4e_b833_da515e9510cb/integration_build.json",
+      "bytes": 4793,
+      "sha256": "dbcbcb33c7b9b2ba60aaa730c8e26410c87f12eb879f05b2ae50594508d181b5",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/case_result.json",
+      "bytes": 5881,
+      "sha256": "ff19d4a6f082a6336d36889e8cc2cf9f596ade19ed4648762133e7c78c12cfb7",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/closed_loop_traces.fig",
+      "bytes": 3378870,
+      "sha256": "9e628874233fb1377759ae130652d54d6bca920982d484933fe89519fea18238",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/closed_loop_traces.png",
+      "bytes": 267769,
+      "sha256": "6435c73f9bfe0b549f6eaa175f93497f4dc86688a05e67fba400f09a0322ed0b",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/completion.json",
+      "bytes": 1634,
+      "sha256": "d8082ac91bf7aae95bd250f32927231eccd722dbfb6b9689fd5d188cd8713e64",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/energy_balances.fig",
+      "bytes": 1588464,
+      "sha256": "80185598b7d58b2dc2ae739e3aa951bff6eb14b4e84e81da82e35eea5d0e8883",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/energy_balances.png",
+      "bytes": 273677,
+      "sha256": "85aa8c2ed04724e41a5cffcdd7c919315de8d0373d2515d916a138cc2f1dfde0",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/engineering_report.md",
+      "bytes": 1975,
+      "sha256": "06931449e8ebadbe91cea5343e62816dd1d69ced4141706e38f694a45853ddb2",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_006.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/integration_trajectory.csv",
+      "bytes": 18038434,
+      "sha256": "4aeb232874b33a97725d101ba94f1ed33ccc6036a14f22d76505337a16e5e0a3",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "a8076a5a1e242a42e9f0add45319b8fa775121834ffc6c492c8a626d1c4bdc2f",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/tpacc28184_36e5_42fc_ab23_c1d5ffc7e23f/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363127,
+      "sha256": "870a992b0746013284ba04bfb9f04af9b2f4e0c2d49187eb886b522dfda8efdd",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/tpacc28184_36e5_42fc_ab23_c1d5ffc7e23f/c35_build.json",
+      "bytes": 6112,
+      "sha256": "a3c17891f83b7a07f3f97b860d88eff1533073805743e71fb79f160451439700",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/tpacc28184_36e5_42fc_ab23_c1d5ffc7e23f/integration_build.json",
+      "bytes": 4793,
+      "sha256": "d92e3f012963c89e903c8b89b72a8be05a355046a43561a19af372eddc479410",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/case_result.json",
+      "bytes": 5861,
+      "sha256": "2b55f524b0a14eaa1d70425ba99013a01fb0905fe35b4a478ebf118ff8355286",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/closed_loop_traces.fig",
+      "bytes": 2107179,
+      "sha256": "199cc84766cc211ff1ed976a430eeab58342aa89fb65f2f2150de20e1aa6d919",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/closed_loop_traces.png",
+      "bytes": 265131,
+      "sha256": "abab7e900dc1cf0adf16e8e2e94e482a588470ee97f01dd623808a97c78d9afd",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/completion.json",
+      "bytes": 1626,
+      "sha256": "b04f3f3f6bd44b9c61254450d12b33df43827883c65524a10deafd765053da0a",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/energy_balances.fig",
+      "bytes": 997270,
+      "sha256": "53273dad45ecf0b1958ffaa8767131b4013454c6ea7453780a9f6432edebb4ff",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/energy_balances.png",
+      "bytes": 276179,
+      "sha256": "6edb368d25c0806ba3a65baa07192751ffd7ff164a5b9a184c41383cc8674def",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/engineering_report.md",
+      "bytes": 1967,
+      "sha256": "3982f1c83e5354e3c107e9b6b3a515392656f0142d870f0a7667f86064b2533d",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/integration_trajectory.csv",
+      "bytes": 10485923,
+      "sha256": "5ade36ba7e6a08883328c2b58ae5d15696026ca69bad93820cd8c7e1163cc527",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/trajectory_metadata.json",
+      "bytes": 882,
+      "sha256": "2ad03d5f9627e41670fbb5c2092bae46f0b73d1aec0b48da10790945e8672ed2",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/tp5c76a8dd_1259_4f9d_a5d8_7db4356cbee0/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362991,
+      "sha256": "5e28e6e2aa6e6967e31956d66c0cf0a10d8d35dbd6d947a36039c33dc49b9afd",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/tp5c76a8dd_1259_4f9d_a5d8_7db4356cbee0/c35_build.json",
+      "bytes": 6096,
+      "sha256": "f2bb85344be4bd9f474da0936f3c351538d098eb0402815b1ec6f2c0b0544f0f",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/tp5c76a8dd_1259_4f9d_a5d8_7db4356cbee0/integration_build.json",
+      "bytes": 4794,
+      "sha256": "dce10cc21e14a783c5d044d0a16547b25e6f8e098f7744298bf7d3d9615d458a",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/A_capacity.fig",
+      "bytes": 707362,
+      "sha256": "7273ee9657ed09362d46d8476aaa8b928f5fa6905a8ad6a9c36ad629880b1751",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/A_capacity.png",
+      "bytes": 171189,
+      "sha256": "ec95cae53281f10b4811c2b3c7132a06202ec622442fb42a5e6e91d3e14caffa",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/B_supply.fig",
+      "bytes": 704530,
+      "sha256": "3005fb52a403bf5d8436253103c15e059ddb5213e2b245170d72af2da04c1db9",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/B_supply.png",
+      "bytes": 115193,
+      "sha256": "e377b816942b8f160ce39728c7eee6a8bd3d3e790401ba89d09df51bc9ce8e20",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/C_controller.fig",
+      "bytes": 1210352,
+      "sha256": "293cd98be3775063a98dfc7877b2c3ca57b8472b66a559edd52b8a91fef89a6b",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/C_controller.png",
+      "bytes": 190984,
+      "sha256": "92ef1fb9c61eb2f863d471ad4f579e6c45c7340b03a5e323d844d857ca5a708e",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/D_outdoor.fig",
+      "bytes": 756029,
+      "sha256": "71cfc346f22a6a1c88fe6e0ac32d88f9fc5d3647462ba1371145e8249d420fb6",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/D_outdoor.png",
+      "bytes": 125492,
+      "sha256": "2345f2a62a7a30252ffa043be2ceda428b257b50ab818d904b0800c1359e4201",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/E_solar.fig",
+      "bytes": 388988,
+      "sha256": "7bb615a1fad807b401a6b3aa843b4b9f70e1f0e6ddbdd23d15d86fb7403b8173",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/E_solar.png",
+      "bytes": 78233,
+      "sha256": "48ace5a59e8e77f93dff7f029a3dbb14e475a2441da99483ae4d096430a75299",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/engineering_report.md",
+      "bytes": 10527,
+      "sha256": "4d046b4da8f0e6933428f8045ee537efccc527df8760f7106d1eb171b78971b6",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/numerical_sensitivity.json",
+      "bytes": 6606,
+      "sha256": "86a2751e70f9053937304f1a27b40f44d864b789f45e174c6124becff7817bea",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/results_table.csv",
+      "bytes": 9702,
+      "sha256": "4daac14677f003f545d0713a6eea50666bfca74710d500a05e562bca70c1ce8b",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tp43b287a7_a798_4079_b1d2_a43ea3aad642/results_table.json",
+      "bytes": 29956,
+      "sha256": "d72ed05de25785d15b1c1a85c36ea78cca2a31a4b662c401fd575a18f52db926",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tpcbc0d570_be74_44c7_90b8_a2bde109b57f/A_capacity.fig",
+      "bytes": 707364,
+      "sha256": "77397a9834053a8084ae71cab95a06950b4e61d8fa5b12260c6bb32290f8be9a",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tpcbc0d570_be74_44c7_90b8_a2bde109b57f/A_capacity.png",
+      "bytes": 171189,
+      "sha256": "c2285264cd1c7109cb49bbb31c391cd05d64a942f2d6ca5115b17e172f1cdb0d",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tpcbc0d570_be74_44c7_90b8_a2bde109b57f/engineering_report.md",
+      "bytes": 4270,
+      "sha256": "8907c305f2c709ae6b518c22bbcb2180accdc1c87d406bb58e14f48e0b365d6f",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tpcbc0d570_be74_44c7_90b8_a2bde109b57f/numerical_sensitivity.json",
+      "bytes": 131,
+      "sha256": "d4b8b1e4102d9abdf1cafda74279e81605996be78a17eecc7574703acdac038c",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tpcbc0d570_be74_44c7_90b8_a2bde109b57f/results_table.csv",
+      "bytes": 3276,
+      "sha256": "588da02a35b17c32c2ec9bcf4f2494b9d95909ba39d084c2aa0e9e7b47a94070",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/summaries/tpcbc0d570_be74_44c7_90b8_a2bde109b57f/results_table.json",
+      "bytes": 7992,
+      "sha256": "77ffbfe36275d23cb104b235a1c743a88025c80c340f1c5f4a5a648370ce5be7",
+      "action": "archive",
+      "group": "C31_C36",
+      "part": "THERMA_HISTORY_C31_C36_007.zip"
+    },
+    {
+      "path": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/heating_system.png",
+      "bytes": 148299,
+      "sha256": "321ba82a869af79f5a8049f96d5a7815c451aa3d50be858d2031424a122bedff",
+      "action": "archive",
+      "group": "C37",
+      "part": "THERMA_HISTORY_C37_001.zip"
+    },
+    {
+      "path": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/residential_result.json",
+      "bytes": 10458,
+      "sha256": "72572fffed263e82aac33719df462865bf4eb79f7293a8e9c978629e9d2a053a",
+      "action": "archive",
+      "group": "C37",
+      "part": "THERMA_HISTORY_C37_001.zip"
+    },
+    {
+      "path": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/residential_trajectory.csv",
+      "bytes": 15557899,
+      "sha256": "b058b7ca65616698efc8870653c381f1f79c74e7f793f5f02db99a8d67413322",
+      "action": "archive",
+      "group": "C37",
+      "part": "THERMA_HISTORY_C37_001.zip"
+    },
+    {
+      "path": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/room_heating.png",
+      "bytes": 82723,
+      "sha256": "a5cb88d60eaff988d1c8f3f2e243d87d1921d189ed3749a80f115601ec0574e2",
+      "action": "archive",
+      "group": "C37",
+      "part": "THERMA_HISTORY_C37_001.zip"
+    },
+    {
+      "path": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/tp3eec7749_4016_42bd_a025_fa2c0b5f271f/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363386,
+      "sha256": "87416ab542cce138d649c3fc5f2ed4022b0eb9e814b579cd18c81876c3e640a0",
+      "action": "archive",
+      "group": "C37",
+      "part": "THERMA_HISTORY_C37_001.zip"
+    },
+    {
+      "path": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/tp3eec7749_4016_42bd_a025_fa2c0b5f271f/THERMA_C37_Residential.slx",
+      "bytes": 362891,
+      "sha256": "2df3d2b598b23dda18bf5584d636ca54ade2813c8b6f73cfcc962618e3cdd408",
+      "action": "archive",
+      "group": "C37",
+      "part": "THERMA_HISTORY_C37_001.zip"
+    },
+    {
+      "path": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/tp3eec7749_4016_42bd_a025_fa2c0b5f271f/c35_build.json",
+      "bytes": 6095,
+      "sha256": "6ea37740cfb0c7bd39b7ff8ec92ed75aaeb51d630c539e78895a6df1e9bb36b6",
+      "action": "archive",
+      "group": "C37",
+      "part": "THERMA_HISTORY_C37_001.zip"
+    },
+    {
+      "path": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/tp3eec7749_4016_42bd_a025_fa2c0b5f271f/c37_build.json",
+      "bytes": 5984,
+      "sha256": "03435dc5b29de492c43a08c3381d2ba5d6affc546879f0cc1776868ec541ad60",
+      "action": "archive",
+      "group": "C37",
+      "part": "THERMA_HISTORY_C37_001.zip"
+    },
+    {
+      "path": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/tp3eec7749_4016_42bd_a025_fa2c0b5f271f/integration_build.json",
+      "bytes": 4794,
+      "sha256": "3695d38e5766fd702dba02f1d35b1a66d444dcdbde87c9966f37c3a4aee8893e",
+      "action": "archive",
+      "group": "C37",
+      "part": "THERMA_HISTORY_C37_001.zip"
+    },
+    {
+      "path": "outputs/c3/c38/tpdc130bf0_c9b7_4d43_8e94_234c782613d2/comparison.json",
+      "bytes": 10630,
+      "sha256": "94855980324494daa8b88b73ceb734fe36a41cd2e2e2371b0566cbb142b4973c",
+      "action": "archive",
+      "group": "C38",
+      "part": "THERMA_HISTORY_C38_001.zip"
+    },
+    {
+      "path": "outputs/c3/c38/tpdc130bf0_c9b7_4d43_8e94_234c782613d2/temperature_comparison.png",
+      "bytes": 166290,
+      "sha256": "e55ac8048ba014247a8c688cce00c4caf99aba3bef8c7cdab5f73fdc012681c4",
+      "action": "archive",
+      "group": "C38",
+      "part": "THERMA_HISTORY_C38_001.zip"
+    },
+    {
+      "path": "outputs/c3/c38/tpdc130bf0_c9b7_4d43_8e94_234c782613d2/thermostat_comparison.png",
+      "bytes": 48423,
+      "sha256": "e0662bb47c7813c70a96a8626bb94ce99942138e86ef4804e2b0c64eaa9a42ca",
+      "action": "archive",
+      "group": "C38",
+      "part": "THERMA_HISTORY_C38_001.zip"
+    },
+    {
+      "path": "outputs/c3/c38/tpdc130bf0_c9b7_4d43_8e94_234c782613d2/deadband_0.5/THERMA_C38_Thermostat.slx",
+      "bytes": 362893,
+      "sha256": "92bd6bb7f924797ad621b50f17c109dde13f8d9cbc3a2c7db56970c9cda0e7c4",
+      "action": "archive",
+      "group": "C38",
+      "part": "THERMA_HISTORY_C38_001.zip"
+    },
+    {
+      "path": "outputs/c3/c38/tpdc130bf0_c9b7_4d43_8e94_234c782613d2/deadband_0.5/case_result.json",
+      "bytes": 4776,
+      "sha256": "86c3811d22e7e33fc1e047cc81b8a4753238c2f19370dc679bd73c481440549c",
+      "action": "archive",
+      "group": "C38",
+      "part": "THERMA_HISTORY_C38_001.zip"
+    },
+    {
+      "path": "outputs/c3/c38/tpdc130bf0_c9b7_4d43_8e94_234c782613d2/deadband_0.5/trajectory.csv",
+      "bytes": 17936136,
+      "sha256": "1f734984c790d09c88b3e3e00e730ab18e1be12531ff097e074c462d78825fee",
+      "action": "archive",
+      "group": "C38",
+      "part": "THERMA_HISTORY_C38_001.zip"
+    },
+    {
+      "path": "outputs/c4/c40/tpe617fee3_5298_4ce9_8cae_b530fdd3b61c/THERMA_C40_HeatingSystem.slx",
+      "bytes": 372993,
+      "sha256": "5776a61f68dbd84659ca72c7ac57f501a749ca1ba033c961438364ea051b002a",
+      "action": "archive",
+      "group": "C40",
+      "part": "THERMA_HISTORY_C40_001.zip"
+    },
+    {
+      "path": "outputs/c4/c40/tpe617fee3_5298_4ce9_8cae_b530fdd3b61c/heating_system.png",
+      "bytes": 160813,
+      "sha256": "4fdacb2dd3348817e901c1fa73bbaf971fa99c0f706a2ac28fe3dfa9e06ceb7a",
+      "action": "archive",
+      "group": "C40",
+      "part": "THERMA_HISTORY_C40_001.zip"
+    },
+    {
+      "path": "outputs/c4/c40/tpe617fee3_5298_4ce9_8cae_b530fdd3b61c/trajectory.csv",
+      "bytes": 15557899,
+      "sha256": "b058b7ca65616698efc8870653c381f1f79c74e7f793f5f02db99a8d67413322",
+      "action": "archive",
+      "group": "C40",
+      "part": "THERMA_HISTORY_C40_001.zip"
+    },
+    {
+      "path": "outputs/c4/c40/tpe617fee3_5298_4ce9_8cae_b530fdd3b61c/verification.json",
+      "bytes": 5119,
+      "sha256": "be3e5aa27334d2831420fca92837b4b36fb62bcbb8e7e4441479540adbb5f003",
+      "action": "archive",
+      "group": "C40",
+      "part": "THERMA_HISTORY_C40_001.zip"
+    },
+    {
+      "path": "outputs/c4/c40/tpffa27a32_3f9f_4e10_8c4f_7f2a6d56ee38/failure.json",
+      "bytes": 1115,
+      "sha256": "6b56d8ce7acf186964aba4921c82965c6771627ccca4a315ecd56d174d67eec1",
+      "action": "archive",
+      "group": "C40",
+      "part": "THERMA_HISTORY_C40_001.zip"
+    },
+    {
+      "path": "scripts/README.md",
+      "bytes": 138,
+      "sha256": "4da7b461094bc1eb03e57d0018b3a47fb0276c49793b08b1236fa6090fbae998",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/boptest/audit_c26c_results.py",
+      "bytes": 8630,
+      "sha256": "363565a4464deb5e08ef264737e06dc8be7573fb8e1ec5fdf736d2887f4ce51a",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/boptest/check_envelope_parameters.py",
+      "bytes": 9174,
+      "sha256": "16cc0aee02ac856b8f04d2739fd2f7afc33d06b9924ee5dd7292726eac031334",
+      "action": "github_preserved",
+      "group": "C1_C2",
+      "part": ""
+    },
+    {
+      "path": "scripts/boptest/compare_results.py",
+      "bytes": 3759,
+      "sha256": "36cd0121c7e2a5278225e3b5ca2e3227ecee95c3d664800b6b31685096aa991d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/boptest/normalize_results.py",
+      "bytes": 5600,
+      "sha256": "13275e0797c79ed5481a65d16004e4b22fc438185b67240aa8e88d18fff7b5a5",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/boptest/package_c27.py",
+      "bytes": 4664,
+      "sha256": "b40f752bbe561bf051d379770f39fe02f5302604120096f2610c001000120099",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/boptest/package_c28.py",
+      "bytes": 5035,
+      "sha256": "b2e3212cabd3423406196630f703315b672f739b53f080aff9a925bc716c893c",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "scripts/boptest/prepare_native_runtime.sh",
+      "bytes": 1403,
+      "sha256": "a7ed2a2bb4362724e4d9ab03b2a76aea508ac1b5c399f1cb9d4ad93b35482de9",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/boptest/requirements.in",
+      "bytes": 120,
+      "sha256": "74a8d223ad5149feb2916d00b280b1a8a45c5b46117a75fbd026af08351f47db",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/boptest/requirements.txt",
+      "bytes": 76367,
+      "sha256": "2cb0e33fa0abcaddd2d00bbe16ed872a3d95ca7af1a1e58b8363e66337c0b706",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/boptest/run_reference.py",
+      "bytes": 22682,
+      "sha256": "5c19fd7c07e0c392db525e3b8fffc112a50547ced5761c725e3a2d24ce814b68",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/c3/package_components.py",
+      "bytes": 6611,
+      "sha256": "868e6a2f1f7442714d840cdf63b10f912c5a484a55972c2132f72f591b0e336d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/build_room_heating_model.m",
+      "bytes": 9998,
+      "sha256": "8301e0d2e86af846a0b6505aa0c2b6d6d59e9bf2a96d2230ea0bf50407a87ee8",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/diagnose_reference.m",
+      "bytes": 25464,
+      "sha256": "796c437a814d88dcaf22209703e3bb0ac1b99568817d41c86a6947eee07375d4",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/room_heating_parameters.m",
+      "bytes": 1690,
+      "sha256": "2f9924bd670acf50676514e3324d53aa45747e084bce8dbf6656ceb8fb2bc72b",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/BoptestEventExportResources.m",
+      "bytes": 1370,
+      "sha256": "452e7ce2d49b4330bdd09620bc3695d0d72dd043f21cf9b837ed8e56f135007f",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/add_boptest_construction.m",
+      "bytes": 6452,
+      "sha256": "12aba9ec13b2f77c74f85877b1a9a27fb34e2657c6eec13c49fbed13f54a45e8",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_c27_completed.m",
+      "bytes": 2065,
+      "sha256": "cb110340fb973901b46e17f931baa8605ff5a954f349293134ea90d71f8e842f",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_event_export_context.m",
+      "bytes": 1576,
+      "sha256": "167442c9196dfefa13a96c855ab25e755a185b8e4be5e30a56c35afa337d69d1",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_exception_diagnostic.m",
+      "bytes": 865,
+      "sha256": "36d00223193b401f9c165521deb333ddde6e4ea84321b258f3351dfa87634d92",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_export_energy_events.m",
+      "bytes": 8273,
+      "sha256": "1761081e3d6de8aa448b057913b7f4fac376e9e90e982998374d3e979591be7e",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_file_sha256.m",
+      "bytes": 1073,
+      "sha256": "57646150cf5469292a735dd1fc6e0180607b38b270f544faa522db09259d81cd",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_hold_integral.m",
+      "bytes": 642,
+      "sha256": "4b84f890df0f1ad36c8ddfce3f81eaa2693deb9d068c8087458cc75cc706bf7a",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_hold_values.m",
+      "bytes": 1119,
+      "sha256": "a8fd582dcbfb25019b781eb16fa6da5855abc1476acc5b6ea0ec55191a082ea0",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_input_diagnostics.m",
+      "bytes": 2392,
+      "sha256": "c1c7e3958a178d63260a3f2455329f2775ffcc7b5617f88cd7af1fd817f22e7e",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_piecewise_reference.m",
+      "bytes": 1186,
+      "sha256": "1bc90398a831cb08ccd83fe332b26ec3e61252daaff108a45792bfbdfd60cc43",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_sha256_update.m",
+      "bytes": 704,
+      "sha256": "eee26e557ed3f43a32778fb7360d1155db7543cd1dfa0f412a39f0041deb1d84",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_solver_metadata.m",
+      "bytes": 1259,
+      "sha256": "fcbaa2bacba681ea59023dc6bc127ac3d1a80668826f2f2150469f0efe4fa3d6",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_temperature_metrics.m",
+      "bytes": 1348,
+      "sha256": "deccd2105b5c44085e2c4e29ef2f57c380fbabfcfd0661139548f3f2b0d4a9c6",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_verify_energy_csv.m",
+      "bytes": 4768,
+      "sha256": "f4875c9116635d025fea64e39dd805ed160cdecc8e5ffaab61905e3fb3b8b8cf",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_zone_analytical_network.m",
+      "bytes": 1345,
+      "sha256": "a2efa0eafc36e8647a96fa82141dddafcd1b98c8649461f7413784c668faddc1",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_zone_scenarios.m",
+      "bytes": 1223,
+      "sha256": "786dde351c2baa0fcb8b23cf7c6b07c27efa375a349b86e5563017595a8349f8",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/build_boptest_envelope_c1.m",
+      "bytes": 7756,
+      "sha256": "3454d662469d16208998b472ad4085e87cb4a41199565ab168f813bae14e48b0",
+      "action": "github_preserved",
+      "group": "C1_C2",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/build_boptest_zone_c2.m",
+      "bytes": 10795,
+      "sha256": "ba49141a0795de160047daaece79714f1142f3a98a100da80f8a131b022604a3",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/compare_boptest_c28.m",
+      "bytes": 13360,
+      "sha256": "50da56e54d2fb9aa558c7ab79fa915d8b25476aadfd9476c61d1470e3c7c33c2",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/configure_boptest_replay_sources.m",
+      "bytes": 3584,
+      "sha256": "50066ab4f8e443f0d17872ad7c4fcbf655b4945ed1e5fa26ab59753ec8425c34",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/load_boptest_envelope_parameters.m",
+      "bytes": 8769,
+      "sha256": "3f8e7688329f31e2f0d7784e4c794731cecfab928b4f1b8cafce579876c6fd41",
+      "action": "github_preserved",
+      "group": "C1_C2",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/load_boptest_replay.m",
+      "bytes": 6949,
+      "sha256": "39cf1ebd535aa82496f48617fdc062679175c3d2a64c66f6ef971fa88ff5ea6e",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/load_boptest_zone_parameters.m",
+      "bytes": 2889,
+      "sha256": "5972fb8cf98fea1c7ac7ee0f3cc3e609aff1e89b3c64760c60d1655cdb1b5089",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/print_boptest_exception.m",
+      "bytes": 757,
+      "sha256": "b3335d96532a4ae16df0b8ae4ea0fc1e94524f2f8b730ca5050bd0aa0c2b5790",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/reproduce_boptest_csv_reader.m",
+      "bytes": 2663,
+      "sha256": "2185ca4ccf46b43f09995e93370cc31419dabccba9a71f8bad6238295cb7ad98",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/run_boptest_c27.m",
+      "bytes": 6430,
+      "sha256": "31f275339891c4bdbe93b5331b0503c4fa0db273e0f2574d42a5ac9382d05cf7",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/run_boptest_solar_batch.m",
+      "bytes": 798,
+      "sha256": "5b119c33f41277e90789fc58b1057a5050190e32829c21dccd1a0283f1fa3ec5",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/run_boptest_zone_replay.m",
+      "bytes": 11643,
+      "sha256": "9cb997ca289e9e5e41cd38736428c095ae809826c24c2b0cf32c3f6f3d447225",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/verify_boptest_envelope_c1.m",
+      "bytes": 16671,
+      "sha256": "e354021afd46d46595dcc1383d60163e22835fb213d44f53a1928b190bfb6aa1",
+      "action": "github_preserved",
+      "group": "C1_C2",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/verify_boptest_zone_c2.m",
+      "bytes": 13976,
+      "sha256": "648527aa15240ac36b18d34e7f4fb8fb75f4cc41e7b3a7dfa868b242b79f13d1",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/boptest/write_boptest_json.m",
+      "bytes": 333,
+      "sha256": "f981c52a07c5eb52b7ebf2ffee733f72e8a82006487c82d71e9a3f94f218eaf3",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/add_c3_radiator.m",
+      "bytes": 3847,
+      "sha256": "18121ff2dd966278e4c604af26db26179b5482afc167fcb120db366b84431100",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/add_c3_thermostat.m",
+      "bytes": 2486,
+      "sha256": "f825b5ca732d18c2b37b5d149ee521dee0788594bade0aa1b6d7b36eacb57e80",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/add_c3_valve.m",
+      "bytes": 1783,
+      "sha256": "ddd9bdc43cde641bac3ec2b6db6b59e7cb18cc95f0676a257d10b44d00f333ce",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/assess_c34.m",
+      "bytes": 4209,
+      "sha256": "4b74c6c734d9530fa83ee66b361e8d8720efc2f8ed7055b04c809fc40d57e57e",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/build_c34_model.m",
+      "bytes": 7648,
+      "sha256": "ef34889f6e0a4d3afea2b093e49bd4d7ac41f0d6c89fc9c42b84ad69220fa041",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/build_c3_component.m",
+      "bytes": 3060,
+      "sha256": "713cd1c27d642055d1f3520824e4e1ac9313a57d4af0532d9b0e4a944038da35",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/c3_block.m",
+      "bytes": 229,
+      "sha256": "3f6ef5782430a8bd25080a3662f5a549bc117e42774766b588f02736b41b41c4",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/export_c34_results.m",
+      "bytes": 6500,
+      "sha256": "ecb6d36af976c343dc262b624b3927cf2de1d424b45377c6ee9a5610f6d9cbce",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/load_c34_experiment.m",
+      "bytes": 2396,
+      "sha256": "772887ccfff4714175b1877e80fcb5f8c7d526c6b3a9744e466abcb22c16949f",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/load_c3_parameters.m",
+      "bytes": 1771,
+      "sha256": "9d70f9aa14ca8239c7220857aea8650a3cf05bd391b1bd6d6e09c3f3aa9a84c0",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/simulate_c34_model.m",
+      "bytes": 1799,
+      "sha256": "bdd1e35f77801a0a43e6c92e17c26bd96f1c8389b46fc7bedbba5ae48357c031",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/simulate_c3_component.m",
+      "bytes": 1835,
+      "sha256": "c4c9e71bac8e5f27fa4667e72ec8df66c727c75d8517dae3f31b24250213806d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c3/write_c34_csv.m",
+      "bytes": 1262,
+      "sha256": "1935d7900427defefda4bf82cc733d5c628f75ac7b5044a92d268c335e975769",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c35/c35_build_case.m",
+      "bytes": 2697,
+      "sha256": "2b8e88940c2c6becf5fa110a460eebee5e5f6298d4c3f979efbb80afe8d12847",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c35/c35_compare_cases.m",
+      "bytes": 1812,
+      "sha256": "af0027f1c5f802bbaf479aa8477909d6864f187eff776b4b154769fa9e67553b",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c35/c35_metrics.m",
+      "bytes": 3782,
+      "sha256": "4ba2be9a71fda943d55a66eb04753107c013276731c4caebfd2dff93b06d049a",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c35/c35_plan.m",
+      "bytes": 2208,
+      "sha256": "263eff6e87f9f567ae8565c39f14e5b5ac15d1ba63d89dd2f93bdbab9700e92a",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c35/c35_render.m",
+      "bytes": 9960,
+      "sha256": "e0b71a548406c789e49ba193a08b6917cf6db7db17a8577d7c9fef607f10819a",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c35/c35_run_case.m",
+      "bytes": 5553,
+      "sha256": "d536bdd064c723858e9a6f5c51d6955a1c8471089b6d7e061ef9bda0601460e9",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c35/c35_steady_diagnostics.m",
+      "bytes": 1778,
+      "sha256": "309b8628f90ee826cdb2928cfff3283f7364aa153cde26b7ab5317e1bf67ebea",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c35/c35_time_metrics.m",
+      "bytes": 1943,
+      "sha256": "fa8f78bd69edcd37b60fefc65169ea8a88abe190c0a06edcf657472f0086617e",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c37/c37_radiator_parameters.m",
+      "bytes": 3667,
+      "sha256": "7e66e6c7746c8ed583a5751981b1776977adaaaa9e92c7d2cab870e6198dac6b",
+      "action": "github_preserved",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c37/c37_room_parameters.m",
+      "bytes": 3849,
+      "sha256": "0add223b11877c8cc3e03d4125634bdc2246c6ef1eee352c7b5a419de6128639",
+      "action": "github_preserved",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c37/c37_steady_demand.m",
+      "bytes": 1233,
+      "sha256": "08f962b8feb1b7258c76fa4ea2f2126027e927cb46f8ff5f49a460b3feaadc34",
+      "action": "github_preserved",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c38/c38_build_case.m",
+      "bytes": 3332,
+      "sha256": "933c8ea39d31f963248ffbbe892fb274889d13759433dbb67e7ff343a458aa66",
+      "action": "github_preserved",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c38/c38_check_trace.m",
+      "bytes": 1292,
+      "sha256": "b17a27602b59f781befb1ba889db1f810f4db9c4e5b42d5ac5b8bc92310d94eb",
+      "action": "github_preserved",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c38/c38_interval_metrics.m",
+      "bytes": 1746,
+      "sha256": "dd8d162eed0854d4f706ccb6ab434c1650bd4d274de4b825bd674b025659e896",
+      "action": "github_preserved",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c38/c38_read_baseline.m",
+      "bytes": 2921,
+      "sha256": "2c147796c75737ae49cfe9fe2ff18c997a6dac8f3bc221086d6d21faee2a008e",
+      "action": "github_preserved",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c39/c39_metrics.m",
+      "bytes": 1816,
+      "sha256": "ea40b92e79000ab96eaeac4ce3cc486b69a064ffd66d866b010917a693d0d0d6",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c40/c40_build_model.m",
+      "bytes": 5501,
+      "sha256": "f0d26157274174860e0ca2d67de3fc1aa773062030a7bf9104e8419220a9e3e4",
+      "action": "github_preserved",
+      "group": "C40",
+      "part": ""
+    },
+    {
+      "path": "scripts/matlab/c40/c40_compare.m",
+      "bytes": 2350,
+      "sha256": "c43e0ba184c339e9281f692aae9e83fc07c89884ae48406e312bc271d86df314",
+      "action": "github_preserved",
+      "group": "C40",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C34_ClosedLoop/checksumOfCache.mat",
+      "bytes": 392,
+      "sha256": "c3153d62f78bb6039f98dd85297615de2c3eac36c56bb859227ad33373d42aa8",
+      "action": "regenerable_cache",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C34_ClosedLoop/varInfo.mat",
+      "bytes": 1352,
+      "sha256": "4b16b7096f69e6455c3d7a6312905b3ffd95131439b2f8297625bc2b00f759c7",
+      "action": "regenerable_cache",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C34_ClosedLoop/tmwinternal/simulink_cache.xml",
+      "bytes": 376,
+      "sha256": "ee417cdd1305dbb217a134af0f1b150b788fb528fe0e1711710df2f4e0e2370b",
+      "action": "regenerable_cache",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C37_Residential/checksumOfCache.mat",
+      "bytes": 392,
+      "sha256": "9d3b455ec20c23736da6e856d8c08566595434eb636f00122b02b1e8277ee5b4",
+      "action": "regenerable_cache",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C37_Residential/varInfo.mat",
+      "bytes": 1352,
+      "sha256": "c328f7e884c06984ef631a0f708b103a7595e7f9f5f140ccd033bf8a26b9916c",
+      "action": "regenerable_cache",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C37_Residential/tmwinternal/simulink_cache.xml",
+      "bytes": 376,
+      "sha256": "36a0840e2d799f784bd54144db57e5d8e4825d554c6ef08402a3024479af47c5",
+      "action": "regenerable_cache",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C38_Thermostat/checksumOfCache.mat",
+      "bytes": 392,
+      "sha256": "f7c37dbc8fd940dbf9933457f1015421656d5c958eaa4219e37391aeeaa1a8f8",
+      "action": "regenerable_cache",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C38_Thermostat/varInfo.mat",
+      "bytes": 1352,
+      "sha256": "640edf447cefb2aeb40d605e17b11d3beb4dd4d22bb399a96bb19ec29d0a1ad1",
+      "action": "regenerable_cache",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C38_Thermostat/tmwinternal/simulink_cache.xml",
+      "bytes": 376,
+      "sha256": "322fed2849a27a613d1649e7059d5bf9878fde872169ac69c1dd1c80ead35924",
+      "action": "regenerable_cache",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C40_HeatingSystem/checksumOfCache.mat",
+      "bytes": 392,
+      "sha256": "3688a8d7cd357a058a1d3a2176c085646177ae346f86932acd7425b40023811a",
+      "action": "regenerable_cache",
+      "group": "C40",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C40_HeatingSystem/varInfo.mat",
+      "bytes": 1352,
+      "sha256": "eb849e59ad86b3d5c2cae6f9688bcd2f3dd5f6b6fe4d6aef15adbb6bbd0fcc74",
+      "action": "regenerable_cache",
+      "group": "C40",
+      "part": ""
+    },
+    {
+      "path": "slprj/sim/varcache/THERMA_C40_HeatingSystem/tmwinternal/simulink_cache.xml",
+      "bytes": 376,
+      "sha256": "3753042d6e29f49456f173303d334570353178eec40273317c66d9119ed8fabf",
+      "action": "regenerable_cache",
+      "group": "C40",
+      "part": ""
+    },
+    {
+      "path": "src/therma/__init__.py",
+      "bytes": 63,
+      "sha256": "51fca03a8fa2812cac4df6fb4ca151880f9f734eaa6d19a9b8885d35b7e673a1",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/comparison.py",
+      "bytes": 8446,
+      "sha256": "b00070d62b0719e085febd62fe295773f2e901f410dfe04a65516f01941f4014",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/config.py",
+      "bytes": 1382,
+      "sha256": "015858989077b3035619f946e3a3d2550c30b8503dea44e7ba8ae34298581d17",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/validation/__init__.py",
+      "bytes": 88,
+      "sha256": "121983bc25a1828ab58c0507f7dbfdb0db50939b58d1d400b6d523b40160c40d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/validation/analysis.py",
+      "bytes": 40461,
+      "sha256": "cab088f4b120464f85778eed35db214a0d87e38e77964449d80b07b8d7776804",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/validation/archive.py",
+      "bytes": 14846,
+      "sha256": "32bc2887ea66bf9c447e3d979b9c1942541698aa7bb9c0eba59e6bd21668c0bb",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/validation/benchmark.py",
+      "bytes": 11354,
+      "sha256": "bebb194c13703560eb6c38f07d4b2042e87fb7632d1f24219197e6282ab3852e",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/validation/replay.py",
+      "bytes": 11583,
+      "sha256": "07ec15689f157ff35cee1c15abcbe7570fd57eeedb5fd05794860baf531f51f2",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/validation/reporting.py",
+      "bytes": 7489,
+      "sha256": "f22dcca7ae650a80e7a4ba8bca63543b91b74561e8b912a3259b1302f5f35028",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/validation/solar.py",
+      "bytes": 21677,
+      "sha256": "98e290d96d850d2790fa0dfe31617713bca24ba3cc78e801f6a6d82a6e19c892",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/validation/study.py",
+      "bytes": 12641,
+      "sha256": "1d1921a10c552f1595cdd1c533c63307d67b7db564718720d630d22ffd1c544f",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/validation/temperature.py",
+      "bytes": 8658,
+      "sha256": "0b08fe3a50216b4b106a9a57b8d2cfb829e4ab3f419e7555ae62013f4551efa2",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "src/therma/validation/temperature_study.py",
+      "bytes": 15484,
+      "sha256": "ec6729aa01fa34517a90f33e7f5d97755e009b1a4cc57fab32f76c38f1fb38c7",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_boptest_envelope_parameters.py",
+      "bytes": 5180,
+      "sha256": "3bdc65196bbec1fc29539b46e1f08ba863e6a0eb2a5695b4a068b2a84c92db47",
+      "action": "github_preserved",
+      "group": "C1_C2",
+      "part": ""
+    },
+    {
+      "path": "tests/test_boptest_reference.py",
+      "bytes": 5147,
+      "sha256": "34d81d728a9c4fa554e5d80f3e48622f628a86fa0fa77afd76f755d0d743cb9b",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_c34_contract.py",
+      "bytes": 4958,
+      "sha256": "c362e123de50fd1484263179b9b4c0dcbdfbea71b48c3a35aa184d4083d3860c",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "tests/test_c35_contract.py",
+      "bytes": 3806,
+      "sha256": "2bdb7e862572e977b69b7220ead2767f524b8f6e14ba49acc4c506e59136d192",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "tests/test_c3_contract.py",
+      "bytes": 4468,
+      "sha256": "22308670e03573530c0552d93f58f63e7e02f572e8ff95f68b263ede9a16373b",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_comparison.py",
+      "bytes": 8645,
+      "sha256": "f7fb7cbdd10b323ac0248aaa8121599282e7119d7cfc8f360a46803d45decb39",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_comparison_reporting.py",
+      "bytes": 2600,
+      "sha256": "0379aa40edb4b6136c69b3f465b6c5e669eab639bb2d0f06dbf71e19874c69a5",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_config.py",
+      "bytes": 1522,
+      "sha256": "a63bb2d98f1f0d9f9238c276e4372e7393af60c3fd880ff997aabe64b2513794",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_event_export_contract.py",
+      "bytes": 4190,
+      "sha256": "7a2617d4d1d55851896d088293d241308737b98f7e1a115a9d46bde35deb42b7",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_evidence_archive.py",
+      "bytes": 5964,
+      "sha256": "0d1a9f4078d2c5a4d0b42e77745a5fc3ff1520b5eee50e703c309a9741ccc925",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_matlab_step_contract.py",
+      "bytes": 2630,
+      "sha256": "35ef1c866d9cd64de08a4bc54a0a33000b81c6961f2c1d68470cdc15ad113954",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_numerical_study.py",
+      "bytes": 7719,
+      "sha256": "058fa6050182c4b3636e9211af47cdd3d67ffe085bc510c19ddd461998c7720d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_replay_analysis.py",
+      "bytes": 13439,
+      "sha256": "60be7e99cd78651c32ac5387085d4a120f2759747789611e576fe693cd10270f",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_replay_diagnostics_contract.py",
+      "bytes": 3711,
+      "sha256": "d9077856d6af06a114c78c289636232bd3741eb0188183e1982157e9211ded42",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_replay_preparation.py",
+      "bytes": 5557,
+      "sha256": "c478fa72c44a26ed50ea7546a3118d2a30af1403c66a8442309ce44e01ffa2aa",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_sha256_vectors.py",
+      "bytes": 1642,
+      "sha256": "68380a351316c4d5bda0380018da71395d3ebdb18a4851163105ec0073501654",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_solar_benchmark.py",
+      "bytes": 6471,
+      "sha256": "99541861bb3dca16302c205203823627f6a5b71b6c061cc08443dac4054743c8",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_solar_replay.py",
+      "bytes": 9860,
+      "sha256": "d823e69d8b5837c3c89039921f3e0cb1bf03eb5b3352bd947cb0633c294a8e9b",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_temperature_study.py",
+      "bytes": 4965,
+      "sha256": "983c8f1859a43b3b6793c336f3a0106c534d5092464848af33182c9f29a29559",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/test_temperature_validation.py",
+      "bytes": 4619,
+      "sha256": "aee4ad57b7bed0a6a14a29a3b5d0133e5084ed76e7777eaa7b055b79db264ac4",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/fixtures/sha256_vectors.json",
+      "bytes": 1100,
+      "sha256": "de58e829cf64a39508ec2deba25f9cdd6b24b4b1c36e13df3e861873be539f9c",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/THERMA_C34_ClosedLoop.slxc",
+      "bytes": 5144,
+      "sha256": "60475bce9dce8f0705f104a43acc46020b202fe81cc4d0c60b83957979dd784c",
+      "action": "regenerable_cache",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/THERMA_C3_radiator.slxc",
+      "bytes": 5067,
+      "sha256": "7433a469617a250a761671fa8159a0b6badfba9110492b1c1ee27bf276581896",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/THERMA_C3_thermostat.slxc",
+      "bytes": 5074,
+      "sha256": "52766400ec5b3f5d2e7715bbe3feed2aa03c0c68e2888a0ba763cdd7c26cd900",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/THERMA_C3_valve.slxc",
+      "bytes": 5062,
+      "sha256": "7e18e6988abf507c3c23b40b61efc777c91430b2db180df14044cf192b5956d6",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_boptest_c27_resume.m",
+      "bytes": 3690,
+      "sha256": "9ecc5e7fb8bbc629530f3e8f9b818720bc444217f3a0a0035c8cc8db598c5f3d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_boptest_c28_standalone.m",
+      "bytes": 1208,
+      "sha256": "b038b1ca12f8637672a38531204445790b64b677a2af397bbd07e328d856adb7",
+      "action": "github_preserved",
+      "group": "C28",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_boptest_envelope_loader.m",
+      "bytes": 2146,
+      "sha256": "eac812cc4a57ea30fcf8746fdd367dc623504d4b420fa7fe665237d9ca181002",
+      "action": "github_preserved",
+      "group": "C1_C2",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_boptest_event_export.m",
+      "bytes": 11397,
+      "sha256": "d6177821c63f955653e4b905445ad8c918ad10cda9976c943e83adf88d661622",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_boptest_replay.m",
+      "bytes": 5250,
+      "sha256": "3a0a47075699b7a3e9ba5d54dcc6c7f027267e4db8043aaa810e260a45c0ca81",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_boptest_replay_diagnostics.m",
+      "bytes": 7668,
+      "sha256": "823455105574bab77d078de146cbc242f45c376110cca76b8421452aa6ca2d9a",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_boptest_sha256.m",
+      "bytes": 1632,
+      "sha256": "38bd5ed1b805cc9ed104de3a798db0930bd8c63cfd5e2edc77213596c0c79946",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_boptest_step_inputs.m",
+      "bytes": 4111,
+      "sha256": "eaf709e30758ae6823abc0db637a6419be9806405307918f7fe6b14ed828e7b3",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_boptest_temperature_validation.m",
+      "bytes": 1273,
+      "sha256": "19327509594de2a4be1790c705c11ee38c6cc9129b46e38fc595c9d06314ceb8",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_boptest_zone_parameters.m",
+      "bytes": 1791,
+      "sha256": "744bdacbada462c0d731a647c19320c8e7d7219ae1d34c854e466c62a8511898",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_therma_c34_integration.m",
+      "bytes": 2781,
+      "sha256": "a7fd1a2d07330c3b4c6ec2f342e48c3fe774c7f128066e1680a9217b40053ad2",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_therma_c35.m",
+      "bytes": 2432,
+      "sha256": "9a4946c65559782239ec5545c0e03bfbc6c0cc240bc75ba744948368789b8bca",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_therma_c37.m",
+      "bytes": 2250,
+      "sha256": "e919f8a40c13baa3337ac3c99bfc5d90ccabc23687cc9253681117b3a6c03fc5",
+      "action": "github_preserved",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_therma_c38.m",
+      "bytes": 1860,
+      "sha256": "8dee6e9621df70bb0c1b29859762751d97031056e93e12204853d843d9ebf85d",
+      "action": "github_preserved",
+      "group": "C38",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_therma_c39.m",
+      "bytes": 1597,
+      "sha256": "544becc51c766185f3feae87f3737a5a96d00d09ce62a5a5cb69095a328582b3",
+      "action": "github_preserved",
+      "group": "C39",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_therma_c3_components.m",
+      "bytes": 5577,
+      "sha256": "36306b5306ecfed712a96e838545ba4ac8485a27ca1a4bcf0f64bff29489e3e6",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/test_therma_c40.m",
+      "bytes": 1214,
+      "sha256": "c4ba8d51577f52d6ac0cecf36046a7762f4be288216f69380084c2667ed9bee4",
+      "action": "github_preserved",
+      "group": "C40",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C34_ClosedLoop/checksumOfCache.mat",
+      "bytes": 392,
+      "sha256": "7fcbb8997174b31c09f865810b6221fc831b359b0ff36ab40ab8c80cf2ff74b6",
+      "action": "regenerable_cache",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C34_ClosedLoop/varInfo.mat",
+      "bytes": 1712,
+      "sha256": "5fd8246fabff67533d4c4a5d563f6efd68b07929d31dbf0b2478a9c7fc92f73c",
+      "action": "regenerable_cache",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C34_ClosedLoop/tmwinternal/simulink_cache.xml",
+      "bytes": 376,
+      "sha256": "33d436266a9522d21b43817a67ea749ec155c0c8272d77b00350e69e3e4fa620",
+      "action": "regenerable_cache",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C3_radiator/checksumOfCache.mat",
+      "bytes": 392,
+      "sha256": "9c588281209b147053e286852bb8497ee712d6f4be90c8c0634e60870db72b40",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C3_radiator/varInfo.mat",
+      "bytes": 664,
+      "sha256": "b75ce8bdbfad7f549ddb698b09da990b88650ac7caa83911038f19e7703e7fdc",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C3_radiator/tmwinternal/simulink_cache.xml",
+      "bytes": 376,
+      "sha256": "c1547b71f43f0a5787c4d8a44be6aeb99814ab9d421e1de7f32754bb96355174",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C3_thermostat/checksumOfCache.mat",
+      "bytes": 392,
+      "sha256": "219dc6107e434a7ed16544120263fddf5df17a65c998968d7e99de15b75c9a3c",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C3_thermostat/varInfo.mat",
+      "bytes": 664,
+      "sha256": "591eaa955ff8642d59f897156113467a449b2466de1dee5a3bd58f1eda8c2e91",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C3_thermostat/tmwinternal/simulink_cache.xml",
+      "bytes": 376,
+      "sha256": "456d02375aafb31f046785548e16a80849a7bbb2b876823ffa01497851923afe",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C3_valve/checksumOfCache.mat",
+      "bytes": 392,
+      "sha256": "5221106ac0bc4e743513ae4ebcc000b743dd0ccd75b796ebc69c4273ccb5f80f",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C3_valve/varInfo.mat",
+      "bytes": 664,
+      "sha256": "d04d4f4da3e9a6f926b0d3d3ea7531a19350fc8769744de1721b6b11d5bace6e",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "tests/matlab/slprj/sim/varcache/THERMA_C3_valve/tmwinternal/simulink_cache.xml",
+      "bytes": 376,
+      "sha256": "391e04579840f26769464f1d1d59941ab56e18e41875965406d43dc0d4afdb2d",
+      "action": "regenerable_cache",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "verification/README.md",
+      "bytes": 929,
+      "sha256": "369fb7645316f24ff5c458538abeadc71fa51a5f69e08c09f1587073afa7d2f9",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "verification/c1/matlab-r2025a/README.md",
+      "bytes": 193,
+      "sha256": "6f497c052694d74e08b8576519f68f6d1e339ee3f06776e4b0bb7e6758e69f6d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "verification/c2/matlab-r2025a/README.md",
+      "bytes": 683,
+      "sha256": "4054c8d64d277be3c6a5d849ec0182939919a8926d23665ce72436abe6ac2d29",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "verification/c2/matlab-r2025a/b00092e4236789a4/README.md",
+      "bytes": 158,
+      "sha256": "5843c3e76ff493d6dec554c3b0e2addcef28b20ee59f31ec632e9a0f6d9d452d",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "verification/c2/matlab-r2025a/b00092e4236789a4/metadata.json",
+      "bytes": 3180,
+      "sha256": "28514a3189845f56f8f033a26540c99984c59f7949755090f846f8ce926a91cb",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "verification/c2/matlab-r2025a/b00092e4236789a4/verification.json",
+      "bytes": 75326,
+      "sha256": "b00092e4236789a4fca959fc0a18d779b038d4b686064d8d876a402e22c8babe",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "verification/c3/c34_gate/README.md",
+      "bytes": 1204,
+      "sha256": "04c9d5194711445b214f609c1c110160b3eadd23407ddf6375a6303bd9868e41",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "verification/c3/c34_gate/matlab_integration_test_log.redacted.txt",
+      "bytes": 601,
+      "sha256": "396242943838eaf85381a4aba18cb16c2dae04c7fc312bd2f3a5f9210218988a",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "verification/c3/c34_gate/summary.json",
+      "bytes": 14094,
+      "sha256": "40b36631c8741488cc73f75f6a23c9f91535f6baf9903cfb585172c514c2bdeb",
+      "action": "github_preserved",
+      "group": "C31_C36",
+      "part": ""
+    },
+    {
+      "path": "verification/c3/c37/purmo_user_supplied_specification.json",
+      "bytes": 985,
+      "sha256": "29201b3fbaf496bc43503c0779a8b2899b8a023ad3ce9ddf0065e9273acf6385",
+      "action": "github_preserved",
+      "group": "C37",
+      "part": ""
+    },
+    {
+      "path": "verification/c3/component_gate/README.md",
+      "bytes": 1348,
+      "sha256": "b86ccd23ae6f98a0a45ca1d408ccbc5c231ce9564de405573267c172afc7e8ec",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "verification/c3/component_gate/matlab_component_test_log.txt",
+      "bytes": 92,
+      "sha256": "284af533b87a94d33a0db90c8b381895ee65827cf598f61aeea370cd5349530c",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    },
+    {
+      "path": "verification/c3/component_gate/summary.json",
+      "bytes": 2928,
+      "sha256": "dbf678c6fc80c1d90135641ea3fd5f8b567ea725ce45fc0b94664b7ffe9fe979",
+      "action": "github_preserved",
+      "group": "REVIEW",
+      "part": ""
+    }
+  ]
+}

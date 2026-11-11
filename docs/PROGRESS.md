@@ -1890,3 +1890,28 @@ immutable URL/ciphertext hash in provenance. Key kept out of Git and delivered o
 in private conversation;Python encrypt/decrypt round-trip and remote ciphertext
 bytes verified. Native MATLAB recovery helper prepared,unexecuted. Part A is
 committed/pushed before beginning Part B archival-tool implementation.
+
+## 2026-11-11 — Part B: university historical preservation utility prepared
+
+Part A commitf0fb2718bb138833250a0a6892ee38f2450927f6 pushed/remote-verified before
+Part B implementation. Original auditJSON/CSV validated acrossall602 rows,totals
+431,966,619B;291 exactGit matches,179 KEEP,100 REVIEW,32 tiny caches. All291 match
+trusted preservation identities. Audited36 SLX/12,208,834B,25CSV/319,729,849B,
+36FIG/83,966,502B;all16MAT files are cache metadata. No historical file bodies
+received/verified independently in cloud. Three exactduplicate groups identified;
+all selected paths retained. No file deletion or cleanup recommendation issued.
+
+Conservative plan279 originals/420,811,850B includingall36 SLX;12 milestone parts
+with64MiB source-byte target,plus small catalog. Native archiver streams directly
+from source,hashes every original/rechecks all602 inventory entries,verifies ZIP
+members and current originals,retains partials and reuses verified completed parts.
+No uncompressed432MB staging copy. Conservative free-space budget446,046,746B;
+user network quota may be smaller than volume report. Missing/changed/new/unreadable
+sources or inadequate space block completion. No source writes,model loading,
+simulation,numeric conversion/downsampling or deletion functionality.
+
+Prepared four native software-fixture tests and a cloud returned-archive verifier;
+local success is not remote backup. Actual historical archives must be returned,
+verified and preserved at confirmed immutable privacy-appropriate remote locations
+before a final file-by-file cleanup proposal/user approval. New native archiver/
+self-tests remain unexecuted. Existing C42B runner/thermal code/parameters unchanged.
