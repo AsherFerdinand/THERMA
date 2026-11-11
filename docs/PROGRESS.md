@@ -1915,3 +1915,24 @@ local success is not remote backup. Actual historical archives must be returned,
 verified and preserved at confirmed immutable privacy-appropriate remote locations
 before a final file-by-file cleanup proposal/user approval. New native archiver/
 self-tests remain unexecuted. Existing C42B runner/thermal code/parameters unchanged.
+
+Part B checks:235 Python tests passed,3 optional plotting tests skipped;separate
+publication-plot smoke passed. Ruff lint/format141 files,mypy13 modules,original
+report/14 mapping integrity checks and Python build passed.114 MATLAB files passed
+static lint;CI now covers root runners/native tests/tools. Six focused archival
+Python tests cover actual audit/CSV/model coverage,public evidence hashes,empty/
+chunked/duplicate software fixtures,changed originals despite updated outer ZIP
+receipts,unsafe entries and clean toolkit extraction. Java21 stream smoke verified
+five byte-boundary cases;this is explicitly NOT native MATLAB execution. Four
+MATLAB archival software tests are prepared/unexecuted. No old experiment reruns.
+
+Delivered22-file THERMA_HISTORY_ARCHIVER.zip140327B,source
+8968ffa4fa396f27499a714a9336e31b2082080d,transfer commit
+0f4947640bd1b509dc96a51632770403ea50bcf8. SHA256
+0c46c1aaeca0708db1573614b622ad4df79c59c7798200bb89b9a44d61f8e5e1.
+Fresh empty-folder extraction,CRC,all toolkit dependency hashes and exact original
+audit bytes verified. Independent immutable HTTP download matches uploaded ZIP.
+Previous artifacts/source branches retained. No native models,MATs,figures or
+historical output bodies are included. docs/HISTORY_ARCHIVER_DELIVERY.json records
+scope/native-pending/storage details. Wait for returned12 parts/catalog and verified
+remote recovery before any old-installation cleanup proposal. No deletion approved.

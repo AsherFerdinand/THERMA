@@ -26,5 +26,5 @@ jobs:
       - run: uv run --frozen ruff format --check .
       - run: uv run --frozen mypy
       # Static MATLAB lint only; this does not execute Simulink verification.
-      - run: uv tool run --from miss-hit==0.9.44 mh_lint --brief run_verification.m scripts/matlab tests/matlab
+      - run: uv tool run --from miss-hit==0.9.44 mh_lint --brief *.m scripts/matlab tests/matlab tools/matlab
       - run: uv build
