@@ -1,0 +1,21 @@
+{
+  "filename": "THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11.zip",
+  "bytes": 169670,
+  "sha256": "10c0f32b7c24ea594fcff41bc95a6bd70bf4a6de30f557dc212ec476bf999aa8",
+  "files": 30,
+  "source_commit": "dc606708870c3f9854923ec75eaefd5c722088b7",
+  "max_zip_bytes": 45000000,
+  "max_source_payload_bytes": 40000000,
+  "max_per_part_space_estimate_bytes": 42497152,
+  "one_zip_per_call": true,
+  "native_execution_verified": false,
+  "python_tests_passed": 238,
+  "python_tests_skipped": 3,
+  "static_matlab_files_checked": 119,
+  "model_versions_downloaded_and_sha_verified": 36,
+  "remaining_original_files": 243,
+  "remaining_source_bytes": 408603016,
+  "part_count": 12,
+  "cleanup_approved": false,
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11.zip"
+}

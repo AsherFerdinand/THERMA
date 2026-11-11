@@ -215,3 +215,10 @@ SHA256 `472d1e74bb34cc59f63a8c829c6100946dc3220d96a28740ce659e78adbf84ee`.
 [THERMA_HISTORY_ARCHIVER.zip](THERMA_HISTORY_ARCHIVER.zip) — 140327bytes. Extract separately;read HISTORY_ARCHIVER_README.md and run its native self-tests. Base MATLAB R2025a/JVM only. Plan279 original files includingall36 audited SLX,12 parts plus catalog. Worst-case destination budget446,046,747bytes;choose a separate location with at least450MB capacity. No historical bodies included in this toolkit. New native archiver unexecuted in cloud;no remote-backup/deletion claim.
 
 SHA256 `0c46c1aaeca0708db1573614b622ad4df79c59c7798200bb89b9a44d61f8e5e1`;source `8968ffa4fa396f27499a714a9336e31b2082080d`.
+
+
+##80MB incremental history archival
+
+[THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11.zip](THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11.zip) — 169670bytes. Read INCREMENTAL_HISTORY_README.md. ONE ZIP per call,40MB source payload/hard45MB ZIP cap;oversized originals use lossless byte ranges. Stream fresh download verification without a second disk copy;move only remotely verified generated ZIP externally before next call.36 separately released model versions downloaded/SHA-verified;243 originals remain. Catalog tracks file/range/part progress. No original deletion/modification;new MATLAB code native-pending.
+
+SHA256 `10c0f32b7c24ea594fcff41bc95a6bd70bf4a6de30f557dc212ec476bf999aa8`.
