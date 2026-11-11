@@ -222,3 +222,10 @@ SHA256 `0c46c1aaeca0708db1573614b622ad4df79c59c7798200bb89b9a44d61f8e5e1`;source
 [THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11.zip](THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11.zip) — 169670bytes. Read INCREMENTAL_HISTORY_README.md. ONE ZIP per call,40MB source payload/hard45MB ZIP cap;oversized originals use lossless byte ranges. Stream fresh download verification without a second disk copy;move only remotely verified generated ZIP externally before next call.36 separately released model versions downloaded/SHA-verified;243 originals remain. Catalog tracks file/range/part progress. No original deletion/modification;new MATLAB code native-pending.
 
 SHA256 `10c0f32b7c24ea594fcff41bc95a6bd70bf4a6de30f557dc212ec476bf999aa8`.
+
+
+##80MB incremental history archival
+
+[THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11_r2.zip](THERMA_HISTORY_ARCHIVER_INCREMENTAL_2026-11-11_r2.zip) — 170028bytes. Read INCREMENTAL_HISTORY_README.md. ONE ZIP per call,40MB source payload/hard45MB ZIP cap;oversized originals use lossless byte ranges. Stream fresh download verification without a second disk copy;move only remotely verified generated ZIP externally before next call.36 separately released model versions downloaded/SHA-verified;243 originals remain. Catalog tracks file/range/part progress. No original deletion/modification;new MATLAB code native-pending.
+
+SHA256 `7c3732b559e04c92be8c553561017a25198454232f2ef9938dc29dece157d945`.
