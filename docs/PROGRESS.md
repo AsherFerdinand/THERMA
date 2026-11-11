@@ -1962,3 +1962,18 @@ Recovery writes only a new directory and verifies each full original SHA. Remote
 Release availability must be rechecked before any later cleanup;new files outside
 the audited snapshot remain unreviewed. New native incremental code is unexecuted
 in cloud;five native software tests prepared. No thermal physics or C4.3 work.
+
+Incremental checks:238 Python tests passed,3 optional plotting skips;119 MATLAB
+files statically linted. Ruff144 files,mypy13 modules,evidence/mapping checks and
+Python build passed. New software tests cover100MB+ originals split without any
+compression assumption,duplicate timestamps/CRLF/opaque bytes/empty files reassembled
+with original SHA256,and actual36-model verification/243-file plan. ExistingC42B,
+physics/reference code unchanged. Native incremental self-test/range/recovery/HTTPS
+bindings still require university execution;no native success claimed.
+
+Published30-file incremental toolkit169670B,source dc606708870c3f9854923ec75eaefd5c722088b7,
+transfer582ce7fdba6e533bbfda8ca2ce204861411c5e67. SHA256
+10c0f32b7c24ea594fcff41bc95a6bd70bf4a6de30f557dc212ec476bf999aa8.
+Fresh extraction/all source hashes and independently downloaded upload verified.
+Old artifacts retained. Delivery receipt docs/INCREMENTAL_HISTORY_DELIVERY.json.
+No source deletion,original modifications or C4.3 work. Stop for native verification.

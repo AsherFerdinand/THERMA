@@ -20,7 +20,8 @@ installation, Git, Python or WSL is required on the university PC. Actual c40822
 C42B R2025a inspection evidence is [archived](results/C42B/c146fd42ee036a3a/README.md).
 It performs measurement inspection,not simulation,and returns a compact results ZIP.
 The separate [historical archiver](docs/UNIVERSITY_HISTORY_PRESERVATION.md) still
-requires native university self-tests/execution.
+requires native university self-tests/execution. For80MB working space,use the
+[one-part incremental guide](INCREMENTAL_HISTORY_README.md),not the old whole-job mode.
 
 Keep the historical university folder until its local storage audit and archival
 receipts close preservation gaps. No automatic deletion is implemented.
