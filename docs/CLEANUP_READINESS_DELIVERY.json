@@ -1,0 +1,30 @@
+{
+  "source_commit": "9c7c79855406ec4301e998c3e20e3286b1af4d9e",
+  "toolkit": {
+    "name": "THERMA_CLEANUP_READINESS_2026-11-11.zip",
+    "bytes": 5780744,
+    "sha256": "cb2e73d61600b3ec741a21575f4b8049030a54225b6ec7c203ed1df541452c90"
+  },
+  "git_recovery": {
+    "name": "THERMA_HISTORY_GIT_RECOVERY_291_2026-11-11.zip",
+    "bytes": 5692700,
+    "sha256": "2303f6009842e5d15f6abb8fe414dfa0069651875822d513910eefe5fcc4cbd0",
+    "encrypted_name": "THERMA_HISTORY_GIT_RECOVERY_291_2026-11-11.zip.aesgcm",
+    "encrypted_sha256": "5565f434f6c570e9a4b413a0458dacd8114ea28965b498d6ba64c00aaaac4aa5"
+  },
+  "transfer_commit": "f70c834d9b85f5caab672558fd2053645616cb35",
+  "download_url": "https://raw.githubusercontent.com/AsherFerdinand/THERMA/f70c834d9b85f5caab672558fd2053645616cb35/THERMA_CLEANUP_READINESS_2026-11-11.zip",
+  "uploaded_zip_fresh_download_sha256_verified": true,
+  "fresh_extraction_and_291_original_hashes_verified": true,
+  "matlab_executed": false,
+  "tests": {
+    "python_passed": 241,
+    "optional_skipped": 3,
+    "ruff": "passed",
+    "mypy": "passed",
+    "static_matlab_files": 5,
+    "native_matlab_tests": "pending"
+  },
+  "cleanup_approved": false,
+  "key_location": "Separate private conversation/user-held copy; never in Git or transfer ZIP"
+}

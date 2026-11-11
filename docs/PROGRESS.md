@@ -2025,3 +2025,11 @@ No deletion authorized;new native rescan/tests/recovery and final fresh scan
 remain pending. Existing C4.2B workflow/thermal physics untouched;no C4.3.
 241 Python tests pass,3 optional skips;Ruff/mypy and static MATLAB lint pass.
 Delivery ZIP/source identities recorded separately after final packaging.
+
+Cleanup delivery source9c7c79855406ec4301e998c3e20e3286b1af4d9e;transfer
+f70c834d9b85f5caab672558fd2053645616cb35. Toolkit5780744B includes
+encrypted291-file payload. Fresh GitHub download SHA256
+cb2e73d61600b3ec741a21575f4b8049030a54225b6ec7c203ed1df541452c90
+verified;fresh extraction/AES-GCM decryption/all291 original hashes pass.
+Private recovery key excluded from Git/package. Full delivery metadata in
+CLEANUP_READINESS_DELIVERY.json. Native MATLAB gates remain pending.
