@@ -1,0 +1,22 @@
+{
+  "filename": "THERMA_HISTORY_ARCHIVER.zip",
+  "bytes": 140327,
+  "files": 22,
+  "sha256": "0c46c1aaeca0708db1573614b622ad4df79c59c7798200bb89b9a44d61f8e5e1",
+  "source_commit": "8968ffa4fa396f27499a714a9336e31b2082080d",
+  "native_execution_verified": false,
+  "matlab_target": "R2025a base MATLAB/JVM",
+  "python_tests_passed": 235,
+  "python_tests_skipped": 3,
+  "static_matlab_files_checked": 114,
+  "university_original_files": 602,
+  "planned_archive_files": 279,
+  "native_slx_paths_in_plan": 36,
+  "historical_bytes_to_archive": 420811850,
+  "destination_budget_bytes": 446046747,
+  "planned_part_zips": 12,
+  "cleanup_approved": false,
+  "historical_bodies_received": false,
+  "c42b_evidence_commit": "f0fb2718bb138833250a0a6892ee38f2450927f6",
+  "download_url": "https://github.com/AsherFerdinand/THERMA/raw/refs/heads/replay-transfer/THERMA_HISTORY_ARCHIVER.zip"
+}

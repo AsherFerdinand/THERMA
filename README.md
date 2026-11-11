@@ -208,3 +208,10 @@ SHA256: `5a808c3731d38c632a35849f4a8f2fd51f87b1cbfad8c8c8f5fafca40c6548f3`. Sour
 [THERMA_C42B_RUN_2026-11-10.zip](THERMA_C42B_RUN_2026-11-10.zip): 67079bytes,17files. Extract in a NEW EMPTY folder; read MATLAB_QUICKSTART.md. C42B inspection only, base MATLAB R2025a/JVM; six external original CSVs verified by hash, not bundled. Includes a read-only audit of the old university folder. No simulation, no deletion and no native verification of this new wrapper claimed. Preserve original SLX/results until archival gaps close. Source `c408225aaaaf07f3394e1646ce140b4ea3fcca0c`.
 
 SHA256 `472d1e74bb34cc59f63a8c829c6100946dc3220d96a28740ce659e78adbf84ee`.
+
+
+## University history preservation — 2026-11-11
+
+[THERMA_HISTORY_ARCHIVER.zip](THERMA_HISTORY_ARCHIVER.zip) — 140327bytes. Extract separately;read HISTORY_ARCHIVER_README.md and run its native self-tests. Base MATLAB R2025a/JVM only. Plan279 original files includingall36 audited SLX,12 parts plus catalog. Worst-case destination budget446,046,747bytes;choose a separate location with at least450MB capacity. No historical bodies included in this toolkit. New native archiver unexecuted in cloud;no remote-backup/deletion claim.
+
+SHA256 `0c46c1aaeca0708db1573614b622ad4df79c59c7798200bb89b9a44d61f8e5e1`;source `8968ffa4fa396f27499a714a9336e31b2082080d`.
