@@ -23,7 +23,7 @@ also no native `.slx` models in any of the22 preserved transfer ZIPs. Cloud loca
 | C4.0 | `73deb0b694bd17534ba42f32c7f981ffdab410e1` | run_c40_heating_system.m,scripts/matlab/c40/ | THERMA_C40_HeatingSystem.slx **NOT YET BACKED UP** | Reproduction user-reported; actual native verification,figure/MAT/SLX **NOT YET BACKED UP**. Builder/config preserved, not a saved generated model. |
 | C4.1 | `69e4af0e16fea1c5bd10445468852951a81feabd` | C41 assessment/diagram,data/reference_building/README.md | No model intended | Documentation-only conditional assessment; original measurements unavailable. |
 | C4.2 | `3debf556067e11976bc31ff0f60924af86ca77a8` | run_c42_reference_inspection.m,configs/buildings/annex58_experiment1.json,C42 docs | No model intended | Blocked scaffold; original Annex58 PDF/data not acquired. Inspection-only ZIP is not an integrated dataset. |
-| C4.2B | `a57a62aa823624688a62ccde0ac7ed8a039a210e` | run_c42b_flexlab_inspection.m,C42B docs,source_audit.json | No model intended | Genuine-source audit/plots tracked. New inspection native execution pending. Raw originals external by design and not republished. |
+| C4.2B | `a57a62aa823624688a62ccde0ac7ed8a039a210e` | run_c42b_flexlab_inspection.m,C42B docs,source_audit.json | No model intended | Genuine-source audit/plots tracked. Actual R2025a inspection accepted2026-11-11 at results/C42B/c146fd42ee036a3a/. Original returned ZIP recoverable encrypted;private key separate. No simulation/model validation. Raw FLEXLAB originals remain external. |
 
 ## Exact-byte recovery
 
@@ -49,3 +49,10 @@ reports privately if they contain network/user paths; public selected/redacted
 copies must link original hashes and cannot substitute for original backup.
 For large/private binaries, record an accessible controlled archive and its hash;
 do not add large data to normal Git history or claim a local-only copy is a backup.
+
+## 2026-11-11 actual C42B evidence
+
+See [the archived native inspection](../results/C42B/c146fd42ee036a3a/README.md).
+The original private-path ZIP is preserved encrypted at an immutable GitHub URL
+with original/ciphertext hashes and separate private recovery key. Public redacted
+log is explicitly derived;original JSON/PNG bytes unchanged. No cloud MATLAB run.

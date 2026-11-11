@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "experiment_id": "C42B",
+  "kind": "inspection",
+  "source_commit": "c408225aaaaf07f3394e1646ce140b4ea3fcca0c",
+  "status": "completed_inspection",
+  "matlab_executed": true,
+  "matlab_version": "25.1.0.2943329 (R2025a)",
+  "matlab_release": "2025a",
+  "simulation_performed": false,
+  "empirical_validation_performed": false,
+  "solver": {
+    "status": "not_applicable_inspection"
+  },
+  "inputs_verified": true,
+  "external_inputs": [
+    {
+      "path": "Direct Validation Data/Air temperature.csv",
+      "sha256": "4acf940bd14959eaf5928d707ea23069477f440c736c6dbd7d96c5a1c5e852ea",
+      "bytes": 2.2745327E+7,
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Direct%20Validation%20Data/Air%20temperature.csv",
+      "verified": true
+    },
+    {
+      "path": "Input Data/Weather data.csv",
+      "sha256": "bf568d2ee4e59e8d19c8248ae533174c9a2b88abda6797bff381f4e6b7c6e9d0",
+      "bytes": 1.3598147E+7,
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Weather%20data.csv",
+      "verified": true
+    },
+    {
+      "path": "Input Data/Internal heat gain rate.csv",
+      "sha256": "b2406f14eedab4bae634370c33618ddbbe250d73401c55b54c137aa2545d713e",
+      "bytes": 1.977915E+6,
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Internal%20heat%20gain%20rate.csv",
+      "verified": true
+    },
+    {
+      "path": "Input Data/Duct blaster.csv",
+      "sha256": "938737f6f923c519bc22cfd272d830aad715aac0f2d66a8997031bf31d8146ed",
+      "bytes": 2.893313E+6,
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Duct%20blaster.csv",
+      "verified": true
+    },
+    {
+      "path": "Direct Validation Data/Fan coil units.csv",
+      "sha256": "f6ec373a516c85e98214bf286387d1c09dc8ab82f891f2dbbaf58f59a1504794",
+      "bytes": 1.407769E+6,
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Direct%20Validation%20Data/Fan%20coil%20units.csv",
+      "verified": true
+    },
+    {
+      "path": "Input Data/Exterior surface temperature.csv",
+      "sha256": "7b511a998c12ef627593c64071fd32b98bba4499ee8047726bfb8a261776553b",
+      "bytes": 1.0337879E+7,
+      "source": "https://raw.githubusercontent.com/LBNL-ETA/FLEXLAB-ASHRAE140/265312ec3843c97d5a24b7d5671ee2891f326af6/Input%20Data/Exterior%20surface%20temperature.csv",
+      "verified": true
+    }
+  ],
+  "error": []
+}

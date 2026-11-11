@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "experiment_id": "C42B",
+  "kind": "inspection",
+  "source_commit": "c408225aaaaf07f3394e1646ce140b4ea3fcca0c",
+  "matlab_release": "2025a",
+  "required_products": [
+    "MATLAB"
+  ],
+  "native_execution_verified": false,
+  "files": [
+    {
+      "path": "MATLAB_QUICKSTART.md",
+      "bytes": 3079,
+      "sha256": "d071aa8f49e3c8eca24a8cd917faf1938edb6677427126e52f05d5d8ac4cd055",
+      "origin": "git_source"
+    },
+    {
+      "path": "README.md",
+      "bytes": 848,
+      "sha256": "8e3870c0b5fe75810ccbbe7807fab957dcfba0b1c0b9f186fc56bbcb92311ce1",
+      "origin": "generated_readme"
+    },
+    {
+      "path": "audit_therma_local_storage.m",
+      "bytes": 5341,
+      "sha256": "275b28e1f6c26d5ef72b262960b0d2134bf790386379492133ab41e123dbdf88",
+      "origin": "git_source"
+    },
+    {
+      "path": "docs/results/c42b/source_audit.json",
+      "bytes": 2552,
+      "sha256": "ae4928879ac43d832400d391dc4995a351f2bab640c0bd3dfad9206b6a695143",
+      "origin": "derived_external_metadata"
+    },
+    {
+      "path": "experiments/C42B.json",
+      "bytes": 1883,
+      "sha256": "42a5300362b36d07bc5298798428aa7fa8b12459403acf1c0978eb7c92f1ac29",
+      "origin": "git_source"
+    },
+    {
+      "path": "run_c42b_flexlab_inspection.m",
+      "bytes": 5415,
+      "sha256": "fca9db144818b923f4dec58eb8c98148a41c0f5ecc813d9c0114f2462a0f0949",
+      "origin": "git_source"
+    },
+    {
+      "path": "run_therma_experiment.m",
+      "bytes": 3855,
+      "sha256": "b2f488c87fb43a858795804e6a4abdbecc1433af63dcd414eddff589c8261497",
+      "origin": "git_source"
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_exception_diagnostic.m",
+      "bytes": 865,
+      "sha256": "36d00223193b401f9c165521deb333ddde6e4ea84321b258f3351dfa87634d92",
+      "origin": "git_source"
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_file_sha256.m",
+      "bytes": 1073,
+      "sha256": "57646150cf5469292a735dd1fc6e0180607b38b270f544faa522db09259d81cd",
+      "origin": "git_source"
+    },
+    {
+      "path": "scripts/matlab/boptest/boptest_sha256_update.m",
+      "bytes": 704,
+      "sha256": "eee26e557ed3f43a32778fb7360d1155db7543cd1dfa0f412a39f0041deb1d84",
+      "origin": "git_source"
+    },
+    {
+      "path": "scripts/matlab/boptest/write_boptest_json.m",
+      "bytes": 333,
+      "sha256": "f981c52a07c5eb52b7ebf2ffee733f72e8a82006487c82d71e9a3f94f218eaf3",
+      "origin": "git_source"
+    },
+    {
+      "path": "tools/matlab/acquire_therma_inputs.m",
+      "bytes": 2219,
+      "sha256": "afb9730dc46e1ae0e120e019716e44103484928d17e8e73c88d9d286cc87d583",
+      "origin": "git_source"
+    },
+    {
+      "path": "tools/matlab/package_therma_results.m",
+      "bytes": 2005,
+      "sha256": "d18d81d571a728a76fdbbf828987f3594e16f516f8e32dfb3c27c0d3b2c32061",
+      "origin": "git_source"
+    },
+    {
+      "path": "tools/matlab/therma_safe_path.m",
+      "bytes": 855,
+      "sha256": "3701f0ddac572cc6789718de77d729eb46ce69cc969766de9b8f8e603e584776",
+      "origin": "git_source"
+    },
+    {
+      "path": "tools/matlab/verify_therma_package.m",
+      "bytes": 1564,
+      "sha256": "3f094c55cf83776a93975831a62c287b7a8378381f128fe6f3173c8fdc10c1dc",
+      "origin": "git_source"
+    },
+    {
+      "path": "tools/preservation_manifest.json",
+      "bytes": 719061,
+      "sha256": "9f5359501ea57d3d873a99f6a29d2fc5e4ce0fc9fab1f41099d5d52b52470214",
+      "origin": "git_source"
+    }
+  ]
+}

@@ -207,7 +207,7 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [x] Map Cell3B geometry/materials/measurements; audit gaps and a continuous12h period.
 - [x] Recommend CONDITIONAL separate single-zone benchmark; multi-zone/equipment validation unestablished.
 - [x] Prepare measured-data-only MATLAB inspection and transfer instructions.
-- [ ] Execute new inspection in MATLAB R2025a; no cloud native execution claimed.
+- [x] Actual university R2025a inspection ZIP reviewed/archived on2026-11-11;no cloud MATLAB execution.
 - [ ] Resolve construction/property conflicts, initial-state conditioning and raw redistribution rights before a frozen model/data packet.
 - [ ] C4.3 remains unauthorized/not started.
 
@@ -217,6 +217,6 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [x] Preserve history/engineering docs;centralize new execution instructions.
 - [x] Implement explicit C42B dependency package,external-data verification and MATLAB-only runner/results ZIP.
 - [x] Provide read-only PC inventory and hash/source/status verification workflow.
-- [ ] University native R2025a execution/returned-ZIP acceptance;preserve original old-folder artifacts first.
+- [x] Actual C42B R2025a returned-ZIP accepted;old-folder audit supplied,history preservation still pending.
 - [ ] Resolve NOT YET BACKED UP artifacts and obtain explicit approval before any local deletion.
 - [ ] C4.3 remains not started.

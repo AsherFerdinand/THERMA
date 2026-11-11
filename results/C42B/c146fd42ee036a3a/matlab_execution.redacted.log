@@ -1,0 +1,86 @@
+Verified 6 external inputs. No originals modified.
+
+Direct Validation Data/Air temperature.csv: 69934 rows; selected 721; missing in full file 1632
+    "X3B-stree1_d_c67"
+    "X3B-stree1_e_c68"
+    "X3B-stree1_g_c70"
+    "X3B-stree1_f_c69"
+    "X3B-stree1_b_c65"
+    "X3B-stree1_a_c64"
+    "X3B-stree1_c_c66"
+    "X2B-stree3_c_c106"
+    "X2B-stree3_g_c110"
+    "X2B-stree2_b_c98"
+    "X2B-stree3_b_c105"
+    "X2B-stree3_d_c107"
+    "X2B-stree2_d_c100"
+    "X2B-stree2_e_c101"
+    "X2B-stree3_f_c109"
+    "X2B-stree3_e_c108"
+    "X2B-stree2_c_c99"
+    "X2B-stree3_a_c104"
+    "X2B-stree2_g_c103"
+    "X2B-stree4_a_c111"
+    "X2B-stree4_f_c116"
+    "X2B-stree4_c_c113"
+    "X2B-stree4_e_c115"
+    "X2B-stree4_d_c114"
+    "X2B-stree4_g_c117"
+    "X2B-stree4_b_c112"
+
+
+Input Data/Weather data.csv: 70554 rows; selected 721; missing in full file 6420
+    "PIRin"
+    "3-OAT_South"
+    "3-OAT_North"
+    "GHI"
+    "DNI"
+    "DHI"
+    "W-3DUA-WINDSPD"
+    "W-3DUA-WINDDIR"
+    "W-SP-GLOB-IRRAD"
+    "W-SS-GLOB-ILLUM"
+    "W-OAT-2"
+    "W-SP-DIFF-IRRAD"
+    "W-SS-DIFF-ILLUM"
+    "W-CMH-DEWPT"
+    "W-OAP-1"
+
+
+Input Data/Internal heat gain rate.csv: 70024 rows; selected 721; missing in full file 124
+Internal heat gain rate [W]
+
+Input Data/Duct blaster.csv: 31680 rows; selected 721; missing in full file 24383
+    "P1 [Pa]"
+    "P2 [Pa]"
+    "Flow [m3/h]"
+    "Coefficient"
+    "Flow adjusted [m3/h]"
+    "Ventilation air temperature [C]"
+    "Ventilation heat transfer rate [W]"
+
+
+Direct Validation Data/Fan coil units.csv: 7191 rows; selected 721; missing in full file 0
+    "T_Supply_4 [C]"
+    "T_Supply_2 [C]"
+    "T_Return_4 [C]"
+    "T_Return_2 [C]"
+    "Flow_2 [m3/s]"
+    "Flow_4 [m3/s]"
+    "Cooling_2 rate [W]"
+    "Cooling_4 rate [W]"
+    "Total cooling rate [W]"
+
+
+Input Data/Exterior surface temperature.csv: 69785 rows; selected 721; missing in full file 221
+    "DropCeiling"
+    "TemporaryNorthWall"
+    "EastWall"
+    "SouthWall"
+    "WestWall"
+    "Ground"
+    "Floor"
+
+
+Inspection only; no building simulation or validation.
+Output: [PRIVATE_UNIVERSITY_OUTPUT_PATH_REDACTED]

@@ -1871,3 +1871,22 @@ Runtime C42B source metadata is trimmed to six file identities/URLs/hashes only;
 source metadata hash records its derivation,with no prior measurement statistics
 redistributed. New MATLAB package/runner/results/audit still require native
 R2025a acceptance. No university files deleted and no cleanup approved.
+
+## 2026-11-11 — Part A: actual C42B university inspection archived
+
+Original THERMA_RESULTS_C42B.zip182600B,SHA256c146fd42ee036a3ac1fa487dfd411d3e1e691adb109d83de9cc36e288ec1cd9f.
+Existing verifier accepts sourcec408225aaaaf07f3394e1646ce140b4ea3fcca0c,all result/
+source/config/input hashes,statuscompleted_inspection,MATLAB25.1.0.2943329(R2025a).
+All six required original FLEXLAB inputs match;721 complete selected minute rows
+per input;no reported exception/error/warning. Both native PNGs inspected/preserved.
+No simulation,empirical model validation or unit-test-suite execution is claimed;
+no native MATLAB execution occurred in cloud.
+
+Public evidence at results/C42B/c146fd42ee036a3a/:original JSONs/plots/source receipt,
+input provenance,original manifest and explicitly redacted log. One private university
+Output line removed only from separately named public log;original hash retained.
+Unchanged original ZIP is recoverable through AES-256-GCM encryption on replay-transfer;
+immutable URL/ciphertext hash in provenance. Key kept out of Git and delivered only
+in private conversation;Python encrypt/decrypt round-trip and remote ciphertext
+bytes verified. Native MATLAB recovery helper prepared,unexecuted. Part A is
+committed/pushed before beginning Part B archival-tool implementation.

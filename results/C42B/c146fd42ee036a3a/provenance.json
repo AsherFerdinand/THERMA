@@ -1,0 +1,77 @@
+{
+  "original_zip_sha256": "c146fd42ee036a3ac1fa487dfd411d3e1e691adb109d83de9cc36e288ec1cd9f",
+  "original_zip_bytes": 182600,
+  "encrypted_sha256": "48ac6bee0b1015187cdb57b9059bb2c6ab01d57e04d7a9afd343557694207362",
+  "encrypted_bytes": 182649,
+  "encryption": "AES-256-GCM; header as AAD;12-byte nonce;16-byte tag appended",
+  "encryption_key_committed": false,
+  "key_delivery": "private conversation; save separately; local ignored private recovery file",
+  "source_commit": "c408225aaaaf07f3394e1646ce140b4ea3fcca0c",
+  "matlab_release": "2025a",
+  "status": "completed_inspection",
+  "matlab_execution": "user university execution; original report inspected; no cloud MATLAB execution",
+  "simulation_performed": false,
+  "empirical_validation_performed": false,
+  "source_input_files_verified": 6,
+  "rows_per_input": 721,
+  "sampling_seconds": 60,
+  "original_log_sha256": "446105f5f7fc2123faf681192f2b634e8365b057dcdc77614a40742333a1761b",
+  "redacted_log_sha256": "0905b0c200b62984e020fe07422bbb5ab981a66b211155d2b2dc17b9d8865afc",
+  "redaction": "one private Output directory line replaced; all other lines unchanged",
+  "log_errors_or_warnings_detected": false,
+  "files": [
+    {
+      "path": "SOURCE_COMMIT.txt",
+      "bytes": 41,
+      "sha256": "4802f1e24fbe796f28869663d76b0b17a44c99ff6991a402ffda95c08b0a41cf"
+    },
+    {
+      "path": "experiment.json",
+      "bytes": 1883,
+      "sha256": "42a5300362b36d07bc5298798428aa7fa8b12459403acf1c0978eb7c92f1ac29"
+    },
+    {
+      "path": "input_provenance.json",
+      "bytes": 2471,
+      "sha256": "a6d2044401274e2ccd7617351f4bdb6252fe147480cf8ac13fda101fabfe06b4"
+    },
+    {
+      "path": "inspection_summary.json",
+      "bytes": 5608,
+      "sha256": "3e3c58077009f0829bb0c46ed2b88475f479333c536aca75a38f145e98750d9b"
+    },
+    {
+      "path": "matlab_execution.redacted.log",
+      "bytes": 2089,
+      "sha256": "0905b0c200b62984e020fe07422bbb5ab981a66b211155d2b2dc17b9d8865afc"
+    },
+    {
+      "path": "measured_cooling.png",
+      "bytes": 88150,
+      "sha256": "0715ec05ee13b6bfb1cbab68db84c263a6c5e6f3c5f784857d8258a7936aa4e0"
+    },
+    {
+      "path": "measured_temperatures.png",
+      "bytes": 101379,
+      "sha256": "085ff7591eac829a336a57c25365722daf56782f71e85b96a6a2f90f1b35d7ab"
+    },
+    {
+      "path": "original_result_manifest.json",
+      "bytes": 1522,
+      "sha256": "ae350c4d07f24a5ff9e52754167352b5b9b130bc8f3f9392d66e2bda620a4a3f"
+    },
+    {
+      "path": "package_manifest.json",
+      "bytes": 3448,
+      "sha256": "ca78e4c65cdfa795cc800cba05abc0a5df097a91b470ed893ec5bd5e1ea95784"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 2688,
+      "sha256": "fd78344a30bf216ab0d11f8183ca24fb46168307dc49d196782987636a0e99ab"
+    }
+  ],
+  "original_encrypted_archive_url": "https://raw.githubusercontent.com/AsherFerdinand/THERMA/6c36a1f187472f13317f15d5067ce3fa8da21852/THERMA_C42B_ORIGINAL_c146fd42ee036a3a.aesgcm",
+  "encrypted_archive_commit": "6c36a1f187472f13317f15d5067ce3fa8da21852",
+  "uploaded_ciphertext_sha256_verified": true
+}
