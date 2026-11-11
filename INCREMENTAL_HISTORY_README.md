@@ -55,9 +55,11 @@ Actual byte count/hash must match the locally verified ZIP before status changes
 to remote_verified. HTML pages,failed/partial/wrong downloads do not change receipts.
 Record asset IDs/immutable URLs where available. Keep the catalog and always recheck
 hashes on retrieval;upload success or a link alone is never evidence of backup.
-3. Using Explorer,move ONLY this remotely verified GENERATED ZIP to external
-   storage outside the working job folder. Originals are never moved/deleted.
-   Keep catalog JSONs and plan in place. The utility contains no deletion code.
+3. After the fresh remote hash succeeds,use Explorer to move ONLY the GENERATED
+   ZIP to another physical drive,or manually remove that verified generated working
+   copy if no external drive is available. Moving within the same disk does not
+   free space. Keep catalog JSONs/plan and EVERY original model/result file.
+   The utility contains no deletion code;this is not old-installation cleanup.
 4. Generate next:
 
 ```matlab
@@ -75,8 +77,8 @@ A completed stage/final ZIP from an interrupted call is recovered after validati
 An incomplete `.partial` causes a safe stop:move that GENERATED failed stage to
 external storage for diagnosis before retrying. Never remove original source files.
 Next generation is blocked while any previous working ZIP remains,preventing
-accumulation beyond the80MB budget. If space cannot be freed externally,stop and
-choose a separate working drive. No original-file cleanup is authorized.
+accumulation beyond the80MB budget. Free only a remotely verified generated working
+copy as described above,or choose a separate working drive. No original-file cleanup is authorized.
 
 The persistent incremental_catalog.json plus snapshots track outstanding,local
 and remote part states. incremental_plan.json maps every original/range to its

@@ -82,7 +82,7 @@ end
 if strcmp(action,'verify-local'),return;end
 for k=1:numel(catalog.parts)
     assert(~isfile(fullfile(job,catalog.parts(k).name)),'THERMA:IncrementalWorkingSpace', ...
-        'Move the remotely verified GENERATED ZIP to external storage using Explorer first. Never move/delete originals.');
+        'After remote verification,use Explorer to remove/move ONLY the GENERATED working ZIP. Never move/delete originals.');
 end
 k=find(strcmp({catalog.parts.status},'outstanding'),1);
 if isempty(k),fprintf('All planned parts remotely verified. Fresh inventory/review still required;no cleanup approved.\n');return;end
