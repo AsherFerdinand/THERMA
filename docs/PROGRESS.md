@@ -1977,3 +1977,13 @@ transfer582ce7fdba6e533bbfda8ca2ce204861411c5e67. SHA256
 Fresh extraction/all source hashes and independently downloaded upload verified.
 Old artifacts retained. Delivery receipt docs/INCREMENTAL_HISTORY_DELIVERY.json.
 No source deletion,original modifications or C4.3 work. Stop for native verification.
+
+Final incremental revision records newly added files (such as the generated model
+backup ZIP) as outside-snapshot outstanding items rather than blocking unchanged
+audited originals. Missing/changed/unreadable audited originals still block.
+Published r2 toolkit170028B,source33778730d741927e9561d825998af834ea486b1a,
+transferce17cff496a1514bd15b42887f23d5a8b3a6e67f;SHA256
+7c3732b559e04c92be8c553561017a25198454232f2ef9938dc29dece157d945.
+Final238 Python tests pass (3 optional skips),CRC/fresh extraction/all dependency
+hashes and uploaded SHA verified. Earlier artifacts retained. Native code remains
+pending university tests;no cleanup authorization or C4.3 work.
