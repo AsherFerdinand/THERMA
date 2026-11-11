@@ -1936,3 +1936,29 @@ Previous artifacts/source branches retained. No native models,MATs,figures or
 historical output bodies are included. docs/HISTORY_ARCHIVER_DELIVERY.json records
 scope/native-pending/storage details. Wait for returned12 parts/catalog and verified
 remote recovery before any old-installation cleanup proposal. No deletion approved.
+
+## 2026-11-11 —80MB incremental archival update
+
+User-provided Release archive-matlab-models-2026-11 inspected via GitHub website;
+API route blocked by proxy403. Downloaded THERMA_NATIVE_MODELS_BACKUP.zip2511883B,
+SHA2565fab723d165a242974ad5de3dd78fd3d95434b8720c307106b33f7e6d2eb5328.
+All36 members match full original relative paths,size andSHA256;CRC checked,no
+models loaded. Source model bodies not committed. Recovery URL is mutable;hashes
+must be rechecked on retrieval. Public verification receipt in history_reference/.
+
+New separate incremental entry point keeps legacy/C42B behavior intact. One ZIP
+per call,<=40,000,000source bytes and hard45,000,000final ZIP cap,deflate level0;
+no assumptions about compression. Large files become lossless offset/length ranges,
+with original paths/full hashes and reassembly verification. New plan12 parts for
+243 remaining originals;36 exact remotely verified model versions skipped. Per-part
+space guard about43MB,not whole-job446MB. No second on-disk download for remote
+checking:HTTPS bytes stream throughSHA256/count before remote status is recorded.
+Generated catalog snapshots track each file/range/part;uploaded links alone never
+qualify. A pending ZIP is reverified/reused;interrupted completed stages/finals can
+resume. Failed partials retained;no deletion code. User moves only remotely verified
+generated working ZIPs elsewhere before the next call. Original files untouched.
+
+Recovery writes only a new directory and verifies each full original SHA. Remote
+Release availability must be rechecked before any later cleanup;new files outside
+the audited snapshot remain unreviewed. New native incremental code is unexecuted
+in cloud;five native software tests prepared. No thermal physics or C4.3 work.

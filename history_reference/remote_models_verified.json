@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "status": "downloaded_sha256_verified",
+  "release_url": "https://github.com/AsherFerdinand/THERMA/releases/tag/archive-matlab-models-2026-11",
+  "asset_url": "https://github.com/AsherFerdinand/THERMA/releases/download/archive-matlab-models-2026-11/THERMA_NATIVE_MODELS_BACKUP.zip",
+  "asset_bytes": 2511883,
+  "asset_sha256": "5fab723d165a242974ad5de3dd78fd3d95434b8720c307106b33f7e6d2eb5328",
+  "verified_models": [
+    {
+      "path": "outputs/boptest/simulink_c2/tp08f91099_cb08_4279_b6db_3f26e306d10d/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 314500,
+      "sha256": "d5616142c76dbbca71144740148c90280a88743cfe7d4382e914830f0ccfe685",
+      "member": "outputs/boptest/simulink_c2/tp08f91099_cb08_4279_b6db_3f26e306d10d/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp168da0c4_13f6_4136_9636_63ff74507582/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 310935,
+      "sha256": "4eaa5c280f721445ca18aeeaf1ed38b998f107c88daf9a4ef46186dd83e56700",
+      "member": "outputs/boptest/simulink_c2/tp168da0c4_13f6_4136_9636_63ff74507582/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp178459cb_90e3_428c_b689_20bdb6d91dfc/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 311054,
+      "sha256": "7f70c6aea110dfd7ea61d0423ca1fae963be7329cc9d1329d381a181e5871eb3",
+      "member": "outputs/boptest/simulink_c2/tp178459cb_90e3_428c_b689_20bdb6d91dfc/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp213c0485_7003_4b41_bff4_338b3c22900c/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 305136,
+      "sha256": "6cbc2b2269cd2ea1761e5c0267a8449f9856c5408da9865e624ffdbb05d85161",
+      "member": "outputs/boptest/simulink_c2/tp213c0485_7003_4b41_bff4_338b3c22900c/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp21422512_9502_47c1_9443_71c56de1981f/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 309640,
+      "sha256": "7999a829be288cff3885c119675ca53c39904ee138853d4814fffab0097aa7f0",
+      "member": "outputs/boptest/simulink_c2/tp21422512_9502_47c1_9443_71c56de1981f/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp3b9626d9_84f7_4cfa_9cbe_56cc95d8a7a4/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 310417,
+      "sha256": "3b83382f1e264b27a1b6633f29766288e436476ebb0a740f9260aa60e7130d63",
+      "member": "outputs/boptest/simulink_c2/tp3b9626d9_84f7_4cfa_9cbe_56cc95d8a7a4/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp3e7125e7_ec12_4653_a3ba_c0ba7dcd145e/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 310453,
+      "sha256": "a0592c3388d2d780be6600a172aa11d4cddb77e6d1c02881d32bfbabd30347ec",
+      "member": "outputs/boptest/simulink_c2/tp3e7125e7_ec12_4653_a3ba_c0ba7dcd145e/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp4bcc7b18_ec12_4297_8cf6_744e174941c8/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 315087,
+      "sha256": "1f9ce51586d9f1d0173cd5b4b15babce7883e893c6eaf0683b03547d66f154bc",
+      "member": "outputs/boptest/simulink_c2/tp4bcc7b18_ec12_4297_8cf6_744e174941c8/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp58b87422_d6ea_43c9_86c0_290db8189cdf/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 312735,
+      "sha256": "0559aa97f74892d38d42c8ef430033700c33e1ddccb5f5b70fc82b1c6a7750c1",
+      "member": "outputs/boptest/simulink_c2/tp58b87422_d6ea_43c9_86c0_290db8189cdf/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp7e9af969_610f_4851_94ea_6704c9d786c7/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 311679,
+      "sha256": "1767383d7e5ed5b97b608f5eb93e001cfcd9bdf06e797eff7fa4b1434312c280",
+      "member": "outputs/boptest/simulink_c2/tp7e9af969_610f_4851_94ea_6704c9d786c7/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp845aa9d1_d033_47a9_a59f_4d3c75fc79e6/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 310503,
+      "sha256": "e988a5dfb6af7bd057dd7d21a3857e03048e41d16edf2f278bc565ede1d5f019",
+      "member": "outputs/boptest/simulink_c2/tp845aa9d1_d033_47a9_a59f_4d3c75fc79e6/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp89725d27_129d_40d1_bb81_934ebda7b303/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 311957,
+      "sha256": "4c38b5cfc48cacbb328ad2a64e2517839b7792748399160014c4c7d0ff235587",
+      "member": "outputs/boptest/simulink_c2/tp89725d27_129d_40d1_bb81_934ebda7b303/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp983dac66_fd6f_4fe0_b6b8_e6ad20b5b24b/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 313406,
+      "sha256": "59f259a68807102be0628d6612ff4a150525dc62ba5905640710798af8f0aeb8",
+      "member": "outputs/boptest/simulink_c2/tp983dac66_fd6f_4fe0_b6b8_e6ad20b5b24b/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp990bab7f_ff1e_47fc_8e14_6054430e9370/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 311639,
+      "sha256": "177e34dcee47e9a6258ad600fd61e67a4e0be9e86fb48f8f33ba612d1037300a",
+      "member": "outputs/boptest/simulink_c2/tp990bab7f_ff1e_47fc_8e14_6054430e9370/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tp99a2dc66_11f7_4867_b5fc_3bbbcd9467fc/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 309838,
+      "sha256": "6543b97348de5ac04223d77bddaff9be21dcaa13baac654f51e28cf5bb4be8f5",
+      "member": "outputs/boptest/simulink_c2/tp99a2dc66_11f7_4867_b5fc_3bbbcd9467fc/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tpace35efc_0e92_4988_8364_a0082d9ec7c5/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 310956,
+      "sha256": "b856f33451df96384d8d2d6f8af8bcd16a269fb9eb955ce78850e55305321136",
+      "member": "outputs/boptest/simulink_c2/tpace35efc_0e92_4988_8364_a0082d9ec7c5/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/boptest/simulink_c2/tpb1ee83d3_1c92_4488_a25d_9fe1142761e4/THERMA_BOPTEST_ThermalZone_C2.slx",
+      "bytes": 314770,
+      "sha256": "cf611feb34cb23b7a4c0cdf1833c89f8e636dc61de646c391278f360a8356fff",
+      "member": "outputs/boptest/simulink_c2/tpb1ee83d3_1c92_4488_a25d_9fe1142761e4/THERMA_BOPTEST_ThermalZone_C2.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/tp93dcb3d2_f775_4472_9972_b77a70be75d4/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363189,
+      "sha256": "5b89f4a93e00896b30599d7703f5027d1b89b20f5558423892a6c148634b32fc",
+      "member": "outputs/c3/c35/833cfeafc9904233/A_UA_120/tp52e63502_5f1b_42d8_9816_abe7c40ea0eb/tp93dcb3d2_f775_4472_9972_b77a70be75d4/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/tp0ecb8a9b_c1bb_4a4f_b923_1e5fb2a69632/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363211,
+      "sha256": "d75a10763888489e5ff62b08860f7760187050817d30e3dc59bc78e47f89e6ca",
+      "member": "outputs/c3/c35/833cfeafc9904233/A_UA_180/tp9fdfac58_5c85_485f_bdd5_79fe24c77c66/tp0ecb8a9b_c1bb_4a4f_b923_1e5fb2a69632/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/tp60cc904a_d2a5_486f_a5d9_d764604da7ee/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362939,
+      "sha256": "1a7248add2f177822d066b1e1415d8021e49aae36d303515402f9bfa3d2c332e",
+      "member": "outputs/c3/c35/833cfeafc9904233/A_UA_90/tp8a6945b8_2c44_494c_a10d_c5e0cce1797b/tp60cc904a_d2a5_486f_a5d9_d764604da7ee/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/tpcdaa4375_456b_46e5_8089_db924fbebd9d/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363084,
+      "sha256": "36db1874f564f1a63b2b99ae8c3927764059758835e04cc83d1265ab0b70aa43",
+      "member": "outputs/c3/c35/833cfeafc9904233/B_supply_40/tpef1950b5_c007_4621_83da_34468e7c0e1c/tpcdaa4375_456b_46e5_8089_db924fbebd9d/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/tp4acbb416_7907_4c59_9a00_a3e11775c2f9/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362983,
+      "sha256": "d87a455d00a9e76726583a233bb9408375e2ba98a9cedbd981fb9970b8539f96",
+      "member": "outputs/c3/c35/833cfeafc9904233/B_supply_45/tpc2562969_511d_4b60_b8b0_f384a01b6764/tp4acbb416_7907_4c59_9a00_a3e11775c2f9/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/tp0ee7d611_79a1_4055_9f18_9abc2cf829cf/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362895,
+      "sha256": "2b644606c86af9ff54ac3623acd638430babcfa7bccbafa33647b1553c0577a8",
+      "member": "outputs/c3/c35/833cfeafc9904233/B_supply_65/tpff433d7f_34fa_46ef_90c5_15eb17d39462/tp0ee7d611_79a1_4055_9f18_9abc2cf829cf/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/tp0b893b0c_0c75_4893_907e_af8e79bc5cac/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362988,
+      "sha256": "7eee59a4690f9af3d07c8fe780330d93911047f74bfea5cbcb7e6e6127fd2f07",
+      "member": "outputs/c3/c35/833cfeafc9904233/D_outdoor_minus5/tpd9509825_1c8b_4e0d_b2bb_66f0edd1faee/tp0b893b0c_0c75_4893_907e_af8e79bc5cac/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/tpc0308257_9d92_4df9_8ddc_b465e2f095ac/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363061,
+      "sha256": "dd7b1de47cc932b05c47149a1f0ab463a91c0b166d7a84d1a964d11e75da38b5",
+      "member": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus0/tp92193bac_c71d_43fb_adae_1bac0a3dc968/tpc0308257_9d92_4df9_8ddc_b465e2f095ac/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/tp084c0af0_e4c0_40f7_a60d_e1436c2fad22/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363304,
+      "sha256": "c62173bed7bf797fab1fe30642e88563f2f901bac26269612bdc565e36e9cb16",
+      "member": "outputs/c3/c35/833cfeafc9904233/D_outdoor_plus10/tpfb308248_4ea2_43d8_b8d9_e7c70d0ca14f/tp084c0af0_e4c0_40f7_a60d_e1436c2fad22/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/tpeb182ed0_3f11_4bc5_8b50_a796c77b4854/THERMA_C34_ClosedLoop.slx",
+      "bytes": 369178,
+      "sha256": "4a830e2e7e43b0804ceb6911dd550a5bb8e338a0d915d888def7bd56c15f7abd",
+      "member": "outputs/c3/c35/833cfeafc9904233/E_solar/tpc078613d_ce42_4cd4_8383_b7a31cfc6c04/tpeb182ed0_3f11_4bc5_8b50_a796c77b4854/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/tpf0c9e13d_9b69_457e_bb5b_eb0f79a3b52c/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363162,
+      "sha256": "e39987157f2f1d61cbc6a6f3a87b36f4ff69b0d2e9f0e110e10d481020c62af2",
+      "member": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_1/tp0f058564_5e09_4140_b652_b968bb117c2b/tpf0c9e13d_9b69_457e_bb5b_eb0f79a3b52c/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/tpbe8bc106_b3fd_463a_b06d_a3c7458e658b/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362753,
+      "sha256": "81ecc0376a737149421880b7fa19dda84fb836f42d0294fb9932f52eddf259bc",
+      "member": "outputs/c3/c35/833cfeafc9904233/F_A_UA_180_step_5/tpf3a96155_3d01_4017_a545_47622499602a/tpbe8bc106_b3fd_463a_b06d_a3c7458e658b/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/tpf7f49efe_8e07_4a4e_b833_da515e9510cb/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363101,
+      "sha256": "358fab1c68c7c9c171255f1345596b4fc45b624f780e83362af496ca170a0b22",
+      "member": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_1/tpa128fc36_01d7_4ae3_905a_c47568fde236/tpf7f49efe_8e07_4a4e_b833_da515e9510cb/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/tpacc28184_36e5_42fc_ab23_c1d5ffc7e23f/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363127,
+      "sha256": "870a992b0746013284ba04bfb9f04af9b2f4e0c2d49187eb886b522dfda8efdd",
+      "member": "outputs/c3/c35/833cfeafc9904233/F_baseline_step_5/tp11a13e60_2a75_4348_a5e1_42ded4e8bb4b/tpacc28184_36e5_42fc_ab23_c1d5ffc7e23f/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/tp5c76a8dd_1259_4f9d_a5d8_7db4356cbee0/THERMA_C34_ClosedLoop.slx",
+      "bytes": 362991,
+      "sha256": "5e28e6e2aa6e6967e31956d66c0cf0a10d8d35dbd6d947a36039c33dc49b9afd",
+      "member": "outputs/c3/c35/833cfeafc9904233/baseline/tpbb24a0e6_c09f_4c0d_9931_f0c906f36030/tp5c76a8dd_1259_4f9d_a5d8_7db4356cbee0/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/tp3eec7749_4016_42bd_a025_fa2c0b5f271f/THERMA_C34_ClosedLoop.slx",
+      "bytes": 363386,
+      "sha256": "87416ab542cce138d649c3fc5f2ed4022b0eb9e814b579cd18c81876c3e640a0",
+      "member": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/tp3eec7749_4016_42bd_a025_fa2c0b5f271f/THERMA_C34_ClosedLoop.slx"
+    },
+    {
+      "path": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/tp3eec7749_4016_42bd_a025_fa2c0b5f271f/THERMA_C37_Residential.slx",
+      "bytes": 362891,
+      "sha256": "2df3d2b598b23dda18bf5584d636ca54ade2813c8b6f73cfcc962618e3cdd408",
+      "member": "outputs/c3/c37/tp076e1779_56f2_4bc4_8a13_083f80b5ba93/tp3eec7749_4016_42bd_a025_fa2c0b5f271f/THERMA_C37_Residential.slx"
+    },
+    {
+      "path": "outputs/c3/c38/tpdc130bf0_c9b7_4d43_8e94_234c782613d2/deadband_0.5/THERMA_C38_Thermostat.slx",
+      "bytes": 362893,
+      "sha256": "92bd6bb7f924797ad621b50f17c109dde13f8d9cbc3a2c7db56970c9cda0e7c4",
+      "member": "outputs/c3/c38/tpdc130bf0_c9b7_4d43_8e94_234c782613d2/deadband_0.5/THERMA_C38_Thermostat.slx"
+    },
+    {
+      "path": "outputs/c4/c40/tpe617fee3_5298_4ce9_8cae_b530fdd3b61c/THERMA_C40_HeatingSystem.slx",
+      "bytes": 372993,
+      "sha256": "5776a61f68dbd84659ca72c7ac57f501a749ca1ba033c961438364ea051b002a",
+      "member": "outputs/c4/c40/tpe617fee3_5298_4ce9_8cae_b530fdd3b61c/THERMA_C40_HeatingSystem.slx"
+    }
+  ],
+  "verification_scope": "downloaded asset and every original SLX byte identity; no MATLAB execution",
+  "checked_date": "2026-11-11"
+}

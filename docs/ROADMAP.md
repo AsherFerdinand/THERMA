@@ -229,3 +229,11 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [ ] Execute new native archival self-tests and archive utility;return12 parts/catalog.
 - [ ] Verify original historical bodies and confirm remote recovery before any cleanup proposal/approval.
 - [ ] C4.3 not started.
+
+###80MB incremental preservation
+
+- [x] Download/verify36 uploaded model byte identities;record asset checksum/recovery URL.
+- [x] Prepare one-part generation,hard45MB cap,lossless oversized-file ranges and file/part catalog.
+- [x] Prepare streamed fresh-download verification and exact original reassembly.
+- [ ] Execute new native incremental self-test/archive/upload/remote-check loop on university PC.
+- [ ] Complete remaining243 originals and fresh recovery checks before any cleanup review.

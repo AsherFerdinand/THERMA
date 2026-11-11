@@ -10,6 +10,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 FILES = ["archive_therma_history.m", "test_therma_history_archiver.m", "HISTORY_ARCHIVER_README.md"]
 FILES += [
+    "archive_therma_history_incremental.m",
+    "verify_therma_history_remote.m",
+    "restore_therma_history_incremental.m",
+    "INCREMENTAL_HISTORY_README.md",
+]
+FILES += [
+    "history_reference/incremental_plan.json",
+    "history_reference/remote_models_verified.json",
+]
+FILES += ["tools/matlab/therma_incremental_part.m", "tools/matlab/therma_incremental_save.m"]
+FILES += [
     "history_reference/" + n
     for n in ["storage_audit.json", "history_plan.json", "preservation_manifest.json"]
 ]

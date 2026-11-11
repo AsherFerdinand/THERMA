@@ -60,3 +60,15 @@ for k=1:numel(sizes)
 end
 % Duplicate bytes at paths2/6 are deliberately retained as separate entries.
 end
+
+function testIncrementalRangeBoundaries(testCase)
+[root,records]=fixture;
+r=records(4); % exact1MiB+1 fixture,including singleton final range
+s=struct('path',r.path,'original_bytes',r.bytes,'original_sha256',r.sha256, ...
+    'offset',0,'bytes',1024*1024,'member','range0','part','fixture.zip');
+s(2)=s;s(2).offset=1024*1024;s(2).bytes=1;s(2).member='range1';
+file=fullfile(root,'incremental.zip');
+therma_incremental_part('write',file,root,'fixture.zip',s,repmat('a',1,64));
+therma_incremental_part('verify',file,root,'fixture.zip',s,repmat('a',1,64));
+info=dir(file);verifyLessThanOrEqual(testCase,info.bytes,45000000);
+end
