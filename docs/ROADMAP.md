@@ -239,3 +239,11 @@ Phase 1B.2 and later implementation await university diagnostic results.
 - [ ] Execute new native incremental self-test/archive/upload/remote-check loop on university PC.
 - [x] Remaining originals recovered through completed bulk Release archive;incremental route no longer required for this snapshot.
 - [ ] Complete final preservation/privacy conditions before any cleanup review.
+
+### Final cleanup readiness
+
+- [x] Prepare read-only native rescan and independent encrypted291-file recovery.
+- [x] Document exact preservation/privacy/deletion prerequisites.
+- [ ] Run native R2025a tests,rescan and independent recovery verification.
+- [ ] Preserve any drift,complete privacy/policy review and final inventory before requesting explicit cleanup approval.
+- [ ] C4.3 not started.

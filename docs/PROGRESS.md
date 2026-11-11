@@ -2011,3 +2011,17 @@ review;Git recovery dependencies and post-audit inventory remain preservation
 risks. No deletion recommended or authorized. No original/physics changes.
 238 Python tests pass,3 optional skips;Ruff/mypy/archive/mapping checks pass.
 No MATLAB executed;no C4.3 work.
+
+## 2026-11-11 — Final cleanup-readiness preparation
+
+Added read-only MATLAB R2025a rescan against the immutable602-file audit,
+explicit drift/preservation classifications,scan-error/link/concurrent-write
+guards and separate output. Prepared encrypted self-contained291-file Git
+recovery payload preserving11098106 original bytes;key kept outside Git.
+Existing279-file bulk archives/catalog/evidence remain unchanged.
+Privacy review flags university paths,36model creator metadata,third-party
+rights/policy decisions and unreviewed visual content. See CLEANUP_READINESS.md.
+No deletion authorized;new native rescan/tests/recovery and final fresh scan
+remain pending. Existing C4.2B workflow/thermal physics untouched;no C4.3.
+241 Python tests pass,3 optional skips;Ruff/mypy and static MATLAB lint pass.
+Delivery ZIP/source identities recorded separately after final packaging.
